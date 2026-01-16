@@ -10,9 +10,27 @@
 
 ### Проверка что всё работает:
 
- - npm run build - должен пройти без ошибок
+1. Проверка TypeScript
+`npm run type-check`
 
- - npm run lint - проверка кода
+2. Проверка линтера
+`npm run lint`
+
+3. Проверка стилей
+`npm run lint:styles`
+
+4. Проверка форматирования
+`npm run format:check`
+
+5. Запуск dev-сервера
+`npm run dev`
+
+6. Запуск Storybook
+`npm run storybook`
+
+**Основная команда для проверок**
+
+`npm run type-check && npm run lint && npm run format:check`
 
 #### Технологии проекта на 16.01
 
@@ -40,17 +58,15 @@
 
  - Именование: PascalCase для компонентов, camelCase для остального
 
-###### Рекомендации
+##### Рекомендации
 
 **Частые коммиты** - не ждите конца дня, коммитьте каждый завершенный кусок
-
-**Проверять билд** - если `npm run build` не проходит, нельзя пушить
 
 **Команды для фиксов**
 
 `npm run lint:fix`
 
-`npm run lint:styles:fix` - ошибка может возникать из-за пустых ксс файлов
+`npm run lint:styles:fix`
 
 `npm run format`
 
@@ -83,7 +99,7 @@ src/
 │   │   └── model/              # Модель данных и стейт-менеджмент
 │   │
 │   │
-│   └── hooks/                  # Общие хуки для фич
+│   └── hooks/                  # Общие хуки бизнеса для фич
 │       # Возможно: useAuth(), useSkills(), useLocalStorage()
 │
 ├── index.css                   # Глобальные стили (сброс, базовые стили)

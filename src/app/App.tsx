@@ -1,11 +1,9 @@
-import style from './App.module.css';
+import AppRoute from './AppRoute';
 
-function App() {
+export default function App() {
   return (
     <div>
-      <h1 className={style.logo}>Vite + React</h1>
+      <AppRoute />
     </div>
   );
 }
-
-export default App;

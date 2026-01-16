@@ -1,0 +1,26 @@
+:root {
+  /* ПРИМЕР!!!!! */
+
+  /*********** COLOR **************/
+
+  --text-color-ui: #fff;
+  --standart-color: #fff;
+  --bg-color: #667eea;
+  --form-text-color: #666;
+  --text-color: #1a1a1a;
+  --form-input-color: #ddd;
+  --box-shadow: rgb(0 0 0 / 30%);
+
+  /*********** SHRIFT **************/
+
+  --title-header-weight: 700;
+  --title-header-size: 22px;
+  --title-font-family: inter;
+  --title-font-weight: 600;
+  --title-font-size: 18px;
+  --welcome-font-size: 40px;
+  --only-font-family: 'IBM Plex mono';
+  --st-font-weight: 400;
+  --st-font-size: 16px;
+  --st-small-size: 12px;
+}
