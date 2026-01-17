@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+
+  /* Base typography */
+  font-family: var(--font-body-family);
+  font-size: var(--font-body-size);
+  line-height: var(--font-body-line-height);
+  font-weight: var(--font-body-weight);
+
+  /* Base colors */
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-main);
+
+  /* Font smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =====================================================
+   Headings
+===================================================== */
+
+h1 {
+  font-family: var(--font-h1-family);
+  font-size: var(--font-h1-size);
+  line-height: var(--font-h1-line-height);
+  font-weight: var(--font-h1-weight);
+  margin: 0;
+}
+
+h2 {
+  font-family: var(--font-h2-family);
+  font-size: var(--font-h2-size);
+  line-height: var(--font-h2-line-height);
+  font-weight: var(--font-h2-weight);
+  margin: 0;
+}
+
+h3 {
+  font-family: var(--font-h3-family);
+  font-size: var(--font-h3-size);
+  line-height: var(--font-h3-line-height);
+  font-weight: var(--font-h3-weight);
+  margin: 0;
+}
+
+h4 {
+  font-family: var(--font-h4-family);
+  font-size: var(--font-h4-size);
+  line-height: var(--font-h4-line-height);
+  font-weight: var(--font-h4-weight);
+  margin: 0;
+}
+
+/* =====================================================
+   Text helpers
+===================================================== */
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--color-text-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.caption {
+  font-family: var(--font-caption-family);
+  font-size: var(--font-caption-size);
+  line-height: var(--font-caption-line-height);
+  font-weight: var(--font-caption-weight);
+  color: var(--color-text-secondary);
+}
