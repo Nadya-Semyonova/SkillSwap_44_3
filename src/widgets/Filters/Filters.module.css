@@ -1,0 +1,50 @@
+.filterContainer {
+  padding: 20px;
+  background-color: var(--color-bg-filter);
+  border-radius: 12px;
+  max-inline-size: 324px;
+}
+
+.mainText {
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+}
+
+.title {
+  margin-block-end: 40px;
+  font-size: var(--font-h2-size);
+  line-height: 28px;
+}
+
+.filterTitle {
+  margin-block-end: 20px;
+  font-size: var(--font-h3-size);
+  line-height: 24px;
+}
+
+.filters {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 32px;
+}
+
+.moreButtonsContainer {
+  display: grid;
+  gap: 4px;
+  margin-block: 12px;
+  padding-inline: 20px;
+}
+
+.buttonsContainer {
+  display: grid;
+  gap: 12px;
+}
+
+.showMoreButton {
+  text-align: start;
+  background-color: transparent;
+  border: none;
+  font-size: var(--font-h4-size);
+  line-height: 24px;
+  color: var(--color-text-link);
+}
