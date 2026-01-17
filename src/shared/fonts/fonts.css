@@ -1,9 +1,5 @@
-/* =========================
-   JOST
-========================= */
-
 @font-face {
-  font-family: 'Jost';
+  font-family: Jost;
   src: 
     url('../fonts/Jost-Medium.woff2') format('woff2'),
     url('../fonts/Jost-Medium.woff') format('woff');
@@ -12,12 +8,8 @@
   font-display: swap;
 }
 
-/* =========================
-   ROBOTO
-========================= */
-
 @font-face {
-  font-family: 'Roboto';
+  font-family: Roboto;
   src: 
     url('../fonts/Roboto-Regular.woff2') format('woff2');
   font-weight: 400;
@@ -26,7 +18,7 @@
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: Roboto;
   src: 
     url('../fonts/Roboto-Medium.woff2') format('woff2');
   font-weight: 500;
