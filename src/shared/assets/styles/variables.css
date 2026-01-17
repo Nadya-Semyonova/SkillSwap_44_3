@@ -1,26 +1,73 @@
 :root {
-  /* ПРИМЕР!!!!! */
+  /*********** FONT FAMILIES **************/
 
-  /*********** COLOR **************/
+  /* Заголовки (H1–H3) */
+  --font-family-heading: 'Jost', sans-serif;
 
-  --text-color-ui: #fff;
-  --standart-color: #fff;
-  --bg-color: #667eea;
-  --form-text-color: #666;
-  --text-color: #1a1a1a;
-  --form-input-color: #ddd;
-  --box-shadow: rgb(0 0 0 / 30%);
+  /* Основной текст, подписи, UI */
+  --font-family-base: 'Roboto', sans-serif;
 
-  /*********** SHRIFT **************/
+  /*********** FONT WEIGHTS **************/
 
-  --title-header-weight: 700;
-  --title-header-size: 22px;
-  --title-font-family: inter;
-  --title-font-weight: 600;
-  --title-font-size: 18px;
-  --welcome-font-size: 40px;
-  --only-font-family: 'IBM Plex mono';
-  --st-font-weight: 400;
-  --st-font-size: 16px;
-  --st-small-size: 12px;
+  --font-weight-regular: 400; /* Body, Caption */
+  --font-weight-medium: 500; /* Заголовки, акцентный текст */
+
+  /* ---------- H1 ---------- */
+  --font-h1-size: 32px;
+  --font-h1-line-height: 40px;
+  --font-h1-weight: var(--font-weight-medium);
+  --font-h1-family: var(--font-family-heading);
+
+  /* ---------- H2 ---------- */
+  --font-h2-size: 24px;
+  --font-h2-line-height: 32px;
+  --font-h2-weight: var(--font-weight-medium);
+  --font-h2-family: var(--font-family-heading);
+
+  /* ---------- H3 ---------- */
+  --font-h3-size: 20px;
+  --font-h3-line-height: 24px;
+  --font-h3-weight: var(--font-weight-medium);
+  --font-h3-family: var(--font-family-heading);
+
+  /* ---------- H4 ---------- */
+  --font-h4-size: 16px;
+  --font-h4-line-height: 24px;
+  --font-h4-weight: var(--font-weight-medium);
+  --font-h4-family: var(--font-family-base);
+
+  /* ---------- Body text ---------- */
+  --font-body-size: 16px;
+  --font-body-line-height: 24px;
+  --font-body-weight: var(--font-weight-regular);
+  --font-body-family: var(--font-family-base);
+
+  /* ---------- Caption / Small text ---------- */
+  --font-caption-size: 12px;
+  --font-caption-line-height: 16px;
+  --font-caption-weight: var(--font-weight-regular);
+  --font-caption-family: var(--font-family-base);
+
+  /*********** COLORS **************/
+
+  --color-text-primary: #253017; /* основной текст */
+  --color-text-secondary: #69735d; /* подписи, вторичный текст */
+  --color-text-disabled: #9ca197; /* disabled текст */
+  --color-text-link: #508826; /* ссылки, активные состояния */
+  --color-bg-main: #f9faf7; /* основной фон приложения */
+  --color-bg-card: #fff; /* карточки, инпуты */
+  --color-bg-disabled: #e4e8df; /* disabled элементы */
+  --color-bg-toggle: #b2b9a9; /* toggle, switch */
+  --color-accent: #abd27a; /* основной акцент */
+  --color-accent-hover: #deebc5; /* hover кнопок */
+  --color-accent-pressed: #508826; /* pressed / active */
+  --color-error: #bf3920; /* ошибка */
+  --color-alarm: #e0796e; /* предупреждение */
+  --color-tag-business: #eee7f7; /* Бизнес и карьера */
+  --color-tag-art: #f7e7f2; /* Творчество и искусство */
+  --color-tag-languages: #ebe5c5; /* Иностранные языки */
+  --color-tag-education: #e7f2f6; /* Образование и развитие */
+  --color-tag-home: #f7ebe5; /* Дом и уют */
+  --color-tag-health: #e9f7e7; /* Здоровье и лайфстайл */
+  --color-tag-more: #e8ecf7; /* "+" */
 }

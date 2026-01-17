@@ -1,6 +1,8 @@
 import { StrictMode } from 'react'; // StrictMode - компонент для выявления проблем, возможен перерендеринг
 import { createRoot } from 'react-dom/client'; // рендер
-import './index.css';
+import './shared/fonts/fonts.css'; // шрифты
+import './shared/assets/styles/variables.css'; // переменные CSS
+import './shared/assets/styles/global.css'; // глобальные стили
 import App from './app/App';
 
 const rootElement = document.getElementById('root');

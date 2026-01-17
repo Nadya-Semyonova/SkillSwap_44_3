@@ -65,5 +65,6 @@ module.exports = {
     'node_modules',
     '*.js',
     '*.cjs',
+    'public/**/*',
   ],
 };
