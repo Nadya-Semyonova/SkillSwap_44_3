@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import ButtonDefault from '../shared/ui/ButtonDefault';
+import '../shared/ui/ButtonDefault/ButtonDefault.module.css'; // Импорт стилей
 
 const meta: Meta<typeof ButtonDefault> = {
-  title: 'Components/OwnerButton',
+  title: 'Components/ButtonDefault',
   component: ButtonDefault,
   tags: ['autodocs'],
   argTypes: {
@@ -24,7 +25,6 @@ type Story = StoryObj<typeof ButtonDefault>;
 export const Primary: Story = {
   args: {
     name: 'Кнопка владельца',
-    handleClick: () => console.log('Кнопка нажата'),
   },
 };
 
@@ -32,7 +32,6 @@ export const Primary: Story = {
 export const WithDifferentText: Story = {
   args: {
     name: 'Сохранить изменения',
-    handleClick: () => console.log('Сохранение...'),
   },
 };
 
@@ -40,13 +39,13 @@ export const WithDifferentText: Story = {
 export const LongText: Story = {
   args: {
     name: 'Очень длинный текст на кнопке который может не поместиться',
-    handleClick: () => console.log('Длинная кнопка нажата'),
   },
 };
 
-// Пример без обработчика (используем действие Storybook)
-export const NoHandler: Story = {
+// Пример с кастомным обработчиком
+export const WithCustomHandler: Story = {
   args: {
-    name: 'Кнопка без кастомного обработчика',
+    name: 'Кнопка с кастомным обработчиком',
+    handleClick: () => {},
   },
 };

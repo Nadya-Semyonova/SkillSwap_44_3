@@ -6,7 +6,8 @@
   padding-block: 12px;
   padding-inline: 24px;
   inline-size: 100%;
-  background-color: var(--color-accent);
   border-radius: 12px;
   margin: 50px;
+  background: transparent;
+  border: none;
 }
