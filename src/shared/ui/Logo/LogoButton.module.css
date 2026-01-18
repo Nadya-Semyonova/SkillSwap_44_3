@@ -1,0 +1,26 @@
+ .logoButton {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+   align-items: center;
+ margin-left: 36px;
+ margin-bottom: 24px;
+ margin-top: 40px;
+  background-color: transparent;
+  column-gap: 12px;
+  width: 165px;
+} 
+
+.logoText {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--color-text-primary);
+  font-family: var( --font-family-heading);
+  font-size: var( --font-h2-size);
+  font-weight: 600;
+  line-height: var(--font-h2-line-height);
+  text-decoration: none;
+  cursor: pointer;
+ }

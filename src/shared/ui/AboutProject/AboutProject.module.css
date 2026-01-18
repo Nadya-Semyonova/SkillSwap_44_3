@@ -1,0 +1,29 @@
+.AboutProjectbutton {
+display: flex;
+align-items: center;
+ margin-left: 36px;
+ margin-bottom: 24px;
+ margin-top: 40px;
+  background-color: transparent;
+  width: 160px;
+  border:1px;
+}
+
+.AboutProjecttext {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--color-text-primary);
+  font-family: var( --font-family-heading);
+  font-size: var( --font-h4-size);
+  font-weight: var( --font-weight-regular);
+  line-height: var( --font-body-line-height);
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.AboutProjectbutton:hover {
+  text-decoration: none;
+}
