@@ -1,30 +1,31 @@
-import { type ReactNode, useCallback } from 'react';
-import Overlay from '../overlay/Overlay';
+import { useEffect, useRef } from 'react';
 import styles from './Modal.module.css';
-
-interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  children: ReactNode;
-}
+import type { ModalProps } from './types';
 
 function Modal({ isOpen, onClose, children }: ModalProps) {
-  const handleOverlayClick = useCallback(() => {
-    onClose();
-  }, [onClose]);
+  const modalRef = useRef<HTMLDivElement>(null);
 
-  const handleModalClick = useCallback((e: React.MouseEvent) => {
-    e.stopPropagation();
-  }, []);
+  useEffect(() => {
+    if (!isOpen) return undefined;
+
+    const handleClickOutside = (e: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
+        onClose();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
   return (
-    <Overlay isOpen={isOpen} onClick={handleOverlayClick}>
-      <div className={styles.modal} onClick={handleModalClick}>
-        {children}
-      </div>
-    </Overlay>
+    <div ref={modalRef} className={styles.modal}>
+      {children}
+    </div>
   );
 }
 
