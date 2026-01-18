@@ -1,0 +1,95 @@
+.footer {
+  background-color: var(--color-bg-card);
+}
+
+.footerContainer {
+  display: flex;
+  gap: 0;
+  max-inline-size: 1440px;
+  margin-inline: auto;
+  padding: 32px 36px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.branding {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brandName {
+  font-family: var(--font-family-heading);
+  font-size: 20px;
+  font-weight: var(--font-weight-medium);
+  line-height: 24px;
+  color: var(--color-text-primary);
+}
+
+.copyright {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-size: 12px;
+  font-weight: var(--font-weight-regular);
+  line-height: 16px;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.3px;
+}
+
+.navMenu{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 32px;
+}
+
+.navSection,
+.legalSection {
+  display: flex;
+  flex-direction: column;
+  min-width: 324px;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding-inline-start: 20px;
+  list-style-type: disc;
+}
+
+.navMenu .navSection:not(:first-child) .navList {
+  padding: 0;
+  list-style-type: none;
+}
+
+.navLink {
+  font-family: var(--font-family-base);
+  font-size: var(--font-body-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-body-line-height);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: var(--color-text-link);
+}
+
+.navList li::marker {
+  color: var(--color-text-primary);
+  font-size: 10px;
+}
