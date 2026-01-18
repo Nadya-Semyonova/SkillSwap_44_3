@@ -14,3 +14,9 @@ export interface IMultiFilterButton {
 export interface ISvgIcon {
   fill?: string;
 }
+
+export interface IButtonDefault {
+  name: string;
+  handleClick: () => void;
+  styleButton?: string;
+}
