@@ -1,59 +1,31 @@
-import { useState } from 'react';
 import style from './Filters.module.css';
-import FilterMultiButtons from '../../shared/FilterMultiButton';
-import FilterSingleButtons from '../../shared/FilterSingleButton';
-import { FilterOptions } from './FilterConstants';
+import FilterMultiButtons from '../../shared/ui/FilterMultiButton';
+import FilterSingleButtons from '../../shared/ui/FilterSingleButton';
+import { FilterOptions, DEFAULT_SHOW_COUNT } from './libs/FilterConstants';
 import cities from '../../../public/db/city.json';
 import skillsCategory from '../../../public/db/skills.json';
+import { useFilters } from './hooks/useFilters';
 
 export default function Filters() {
-  const [activeLearn, setActiveLearn] = useState<string>('Всё');
-  const [activeCities, setActiveCities] = useState<string[]>(['']);
-  const [activeCategoryButton, setActiveCategoryButton] = useState<string[]>([]);
-  const [activeSkills, setActiveSkills] = useState<string[]>([]);
+  const {
+    activeLearn,
+    setActiveLearn,
+    activeAuthor,
+    setActiveAuthor,
+    activeCities,
+    activeCategoryButton,
+    activeSkills,
+    showAllCities,
+    showAllSkills,
+    handleClickCity,
+    handleClickArrayButton,
+    handleClickSkill,
+    toggleShowAllCities,
+    toggleShowAllSkills,
+  } = useFilters();
 
-  // Состояния для кнопок "Показать еще"
-  const [showAllCities, setShowAllCities] = useState<boolean>(false);
-  const [showAllSkills, setShowAllSkills] = useState<boolean>(false);
-
-  const DEFAULT_SHOW_COUNT = 5;
-
-  const handleClickCity = (city: string) => {
-    if (activeCities.includes(city)) {
-      setActiveCities(activeCities.filter((c) => c !== city));
-    } else {
-      setActiveCities([...activeCities, city]);
-    }
-  };
-
-  const handleClickArrayButton = (categoryName: string) => {
-    if (activeCategoryButton.includes(categoryName)) {
-      setActiveCategoryButton([]);
-      setActiveSkills([]);
-    } else {
-      setActiveCategoryButton([categoryName]);
-      setActiveSkills([]);
-    }
-  };
-
-  const handleClickSkill = (skillName: string) => {
-    setActiveSkills((prev) =>
-      prev.includes(skillName) ? prev.filter((s) => s !== skillName) : [...prev, skillName]
-    );
-  };
-
-  const toggleShowAllCities = () => {
-    setShowAllCities(!showAllCities);
-  };
-
-  const toggleShowAllSkills = () => {
-    setShowAllSkills(!showAllSkills);
-  };
-
-  // Получаем города для отображения
   const citiesToShow = showAllCities ? cities : cities.slice(0, DEFAULT_SHOW_COUNT);
 
-  // Получаем категории навыков для отображения
   const skillCategories = Object.entries(skillsCategory);
   const skillCategoriesToShow = showAllSkills
     ? skillCategories
@@ -74,8 +46,6 @@ export default function Filters() {
             </div>
           ))}
         </div>
-
-        {/* Секция навыков с кнопкой "Показать еще" */}
         <div>
           <h3 className={`${style.filterTitle} ${style.mainText}`}>Навыки</h3>
           {skillCategoriesToShow.map(([categoryName, skills]) => (
@@ -101,8 +71,6 @@ export default function Filters() {
               )}
             </div>
           ))}
-
-          {/* Кнопка "Показать еще" для навыков */}
           {skillCategories.length > DEFAULT_SHOW_COUNT && (
             <div className={style.buttonsContainer}>
               <button
@@ -115,21 +83,18 @@ export default function Filters() {
             </div>
           )}
         </div>
-
         <div>
           <h3 className={`${style.filterTitle} ${style.mainText}`}>Пол автора</h3>
           {FilterOptions.authors.map((filter) => (
             <div key={filter} className={style.buttonsContainer}>
               <FilterSingleButtons
                 name={filter}
-                handleClick={setActiveLearn}
-                isActive={activeLearn}
+                handleClick={setActiveAuthor}
+                isActive={activeAuthor}
               />
             </div>
           ))}
         </div>
-
-        {/* Секция городов с кнопкой "Показать еще" */}
         <div>
           <h3 className={`${style.filterTitle} ${style.mainText}`}>Город</h3>
           {citiesToShow.map((city) => (
@@ -141,8 +106,6 @@ export default function Filters() {
               />
             </div>
           ))}
-
-          {/* Кнопка "Показать еще" для городов */}
           {cities.length > DEFAULT_SHOW_COUNT && (
             <div className={style.buttonsContainer}>
               <button

@@ -10,6 +10,7 @@
   line-height: 24px;
   color: var(--color-text-primary);
   inline-size: 100%;
+  text-align: start;
 }
 
 .chevronContainer {
