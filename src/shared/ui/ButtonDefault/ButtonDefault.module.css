@@ -1,0 +1,12 @@
+.button {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-h4-size);
+  line-height: 24px;
+  padding-block: 12px;
+  padding-inline: 24px;
+  inline-size: 100%;
+  background-color: var(--color-accent);
+  border-radius: 12px;
+  margin: 50px;
+}
