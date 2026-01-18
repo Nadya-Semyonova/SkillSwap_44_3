@@ -1,4 +1,4 @@
-export interface IOvnerButton {
+export interface IButtonDefault {
   name: string;
   handleClick: () => void;
 }
