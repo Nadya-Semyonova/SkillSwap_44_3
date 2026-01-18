@@ -58,6 +58,7 @@
   --color-bg-card: #fff; /* карточки, инпуты */
   --color-bg-disabled: #e4e8df; /* disabled элементы */
   --color-bg-toggle: #b2b9a9; /* toggle, switch */
+  --color-bg-filter: #ffffff; /* Фильтры */
   --color-accent: #abd27a; /* основной акцент */
   --color-accent-hover: #deebc5; /* hover кнопок */
   --color-accent-pressed: #508826; /* pressed / active */

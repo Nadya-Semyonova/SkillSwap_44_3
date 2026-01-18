@@ -1,0 +1,13 @@
+.buttonFilter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: none;
+  font-family: var(--font-family-base), sans-serif;
+  font-weight: var(--font-weight-regular);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-text-primary);
+  text-align: start;
+}
