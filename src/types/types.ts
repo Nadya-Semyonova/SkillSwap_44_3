@@ -17,7 +17,7 @@ export interface ISvgIcon {
 
 export interface IButtonDefault {
   name: string;
-  handleClick: () => void;
+  handleClick?: () => void;
   styleButton?: string;
 }
 
