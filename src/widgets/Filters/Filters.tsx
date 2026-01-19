@@ -1,9 +1,9 @@
-import style from './Filters.module.css';
-import FilterMultiButtons from '../../shared/ui/FilterMultiButton';
-import FilterSingleButtons from '../../shared/ui/FilterSingleButton';
+import FilterMultiButtons from '@shared/ui/FilterMultiButton';
+import FilterSingleButtons from '@shared/ui/FilterSingleButton';
+import cities from '@public/db/city.json';
+import skillsCategory from '@public/db/skills.json';
 import { FilterOptions, DEFAULT_SHOW_COUNT } from './libs/FilterConstants';
-import cities from '../../../public/db/city.json';
-import skillsCategory from '../../../public/db/skills.json';
+import style from './Filters.module.css';
 import { useFilters } from './hooks/useFilters';
 
 export default function Filters() {
