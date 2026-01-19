@@ -8,7 +8,6 @@ const config: StorybookConfig = {
     options: {},
   },
   viteFinal: async (config) => {
-    // Отключил vite-plugin-eslint для Storybook
     if (config.plugins) {
       config.plugins = config.plugins.filter(
         (plugin) =>

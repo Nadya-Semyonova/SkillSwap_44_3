@@ -17,14 +17,26 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    /* Paths & Aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@shared/*": ["src/shared/*"],
+      "@store/*": ["src/store/*"],
+      "@types/*": ["src/types/*"],
+      "@widgets/*": ["src/widgets/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@features/*": ["src/features/*"],
+      "@public/*": ["public/*"],
+      "@db/*": ["src/db/*"],
+      "@img/*": ["src/img/*"]
+    },
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    // "experimentalDecorators": true,
-    // "emitDecoratorMetadata": true,
-    "noFallthroughCasesInSwitch": true,
-    // "noUncheckedSideEffectImports": true
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["src", "src/vite-env.d.ts"]
 }

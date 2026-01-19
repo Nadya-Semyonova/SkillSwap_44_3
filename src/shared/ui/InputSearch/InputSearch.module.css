@@ -5,7 +5,8 @@
   border: none;
   border-radius: 12px;
   overflow: hidden;
-  width: 527px; 
+  flex: 1; 
+  max-width: 527px;
   column-gap: 8px;
 }
 
@@ -13,14 +14,14 @@
   flex: 1;
   padding-top:12px;
   padding-bottom:12px;
+  padding-right: 373px;
   border: none;
   outline: none;
   font-family: var(--font-family-base);
   font-size: var(--font-h4-size);
   font-weight: var(--font-weight-regular);
   color: var(--color-text-primary);
-  background-color: transparent;
-  min-width: 0; 
+  background-color: var( --color-bg-filter);
 }
 
 .input::placeholder {

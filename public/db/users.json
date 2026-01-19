@@ -2,8 +2,8 @@
   "users": [
     {
       "id": 1,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
+      "liked": 1,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Jameson&backgroundColor=b6e3f4",
       "name": "Александр",
       "city": "Москва",
       "age": 30,
@@ -24,12 +24,12 @@
           "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d"
         ]
       },
-      "skill_off": ["Проектное управление"]
+      "skill_off": ["Проектное управление", "Личный бренд", "Предпринимательство", "Управление командой"]
     },
     {
       "id": 2,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/1.jpg",
+      "liked": 2,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Mackenzie&backgroundColor=b6e3f4",
       "name": "Анна",
       "city": "Санкт-Петербург",
       "age": 28,
@@ -50,12 +50,12 @@
           "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
         ]
       },
-      "skill_off": ["Личностное развитие"]
+      "skill_off": ["Личностное развитие", "Коучинг", "Ментальное здоровье", "Навыки преподавания"]
     },
     {
       "id": 3,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/2.jpg",
+      "liked": 3,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Aidan&backgroundColor=b6e3f4",
       "name": "Дмитрий",
       "city": "Новосибирск",
       "age": 27,
@@ -76,12 +76,12 @@
           "https://c.pxhere.com/photos/65/09/photographer_hand_man_holding_len-32792.jpg!d"
         ]
       },
-      "skill_off": ["Фотография"]
+      "skill_off": ["Фотография", "Видеомонтаж", "Рисование и иллюстрация", "Музыка и звук"]
     },
     {
       "id": 4,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/2.jpg",
+      "liked": 4,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Jessica&backgroundColor=b6e3f4",
       "name": "Екатерина",
       "city": "Екатеринбург",
       "age": 23,
@@ -102,12 +102,12 @@
           "https://c.pxhere.com/photos/f5/2a/hand_hand_drawing_drawing_sketch_design_symbol_drawn_pencil-1379092.jpg!d"
         ]
       },
-      "skill_off": ["Рисование и иллюстрация", "Йога и медитация"]
+      "skill_off": ["Рисование и иллюстрация", "Арт-терапия", "Декор и DIY", "Креативное письмо"]
     },
     {
       "id": 5,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/3.jpg",
+      "liked": 5,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Adrian&backgroundColor=b6e3f4",
       "name": "Сергей",
       "city": "Казань",
       "age": 42,
@@ -128,12 +128,12 @@
           "https://c.pxhere.com/photos/7a/9e/socialmedia_facebook_twitter_network_instagram_marketing_online-858156.jpg!d"
         ]
       },
-      "skill_off": ["Личный бренд", "Предпринимательство"]
+      "skill_off": ["Личный бренд", "Предпринимательство", "Продажи и переговоры", "Управление командой"]
     },
     {
       "id": 6,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/3.jpg",
+      "liked": 6,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Valentina&backgroundColor=b6e3f4",
       "name": "Ольга",
       "city": "Нижний Новгород",
       "age": 40,
@@ -154,12 +154,12 @@
           "https://c.pxhere.com/photos/f8/6f/food_eat_waffle_breakfast_gathering-4389.jpg!d"
         ]
       },
-      "skill_off": ["Приготовление еды"]
+      "skill_off": ["Приготовление еды", "Домашние финансы", "Уборка и организация", "Питание и ЗОЖ"]
     },
     {
       "id": 7,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/4.jpg",
+      "liked": 7,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Ryan&backgroundColor=b6e3f4",
       "name": "Артём",
       "city": "Челябинск",
       "age": 25,
@@ -180,12 +180,12 @@
           "https://c.pxhere.com/photos/91/bb/clock_time_hour_alarm_clock_alarm-237.jpg!d"
         ]
       },
-      "skill_off": ["Тайм-менеджмент", "Фотография"]
+      "skill_off": ["Тайм-менеджмент", "Фотография", "Йога и медитация", "Осознанность"]
     },
     {
       "id": 8,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/4.jpg",
+      "liked": 8,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Liliana&backgroundColor=b6e3f4",
       "name": "Татьяна",
       "city": "Самара",
       "age": 36,
@@ -206,12 +206,12 @@
           "https://c.pxhere.com/photos/20/fc/women_yoga_classes_asana_fitness_instructor_hatha_yoga_professor_posture-826575.jpg!d"
         ]
       },
-      "skill_off": ["Йога и медитация"]
+      "skill_off": ["Йога и медитация", "Ментальное здоровье", "Личностное развитие", "Коучинг"]
     },
     {
       "id": 9,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/5.jpg",
+      "liked": 9,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Leah&backgroundColor=b6e3f4",
       "name": "Максим",
       "city": "Омск",
       "age": 33,
@@ -232,12 +232,12 @@
           "https://c.pxhere.com/photos/3a/bc/handshake_hand_give_business_man_giving_offer_cooperation-1187331.jpg!d"
         ]
       },
-      "skill_off": ["Продажи и переговоры", "Приготовление еды"]
+      "skill_off": ["Продажи и переговоры", "Приготовление еды", "Резюме и собеседование", "Маркетинг и реклама"]
     },
     {
       "id": 10,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/5.jpg",
+      "liked": 10,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Christian&backgroundColor=b6e3f4",
       "name": "Наталья",
       "city": "Ростов-на-Дону",
       "age": 36,
@@ -258,12 +258,12 @@
           "https://c.pxhere.com/images/82/8a/fc8055a91dee3a352a02fd7e4920-1440163.jpg!d"
         ]
       },
-      "skill_off": ["Резюме и собеседование"]
+      "skill_off": ["Резюме и собеседование", "Личностное развитие", "Навыки преподавания", "Скорочтение"]
     },
     {
       "id": 11,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/6.jpg",
+      "liked": 9,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Sara&backgroundColor=b6e3f4",
       "name": "Игорь",
       "city": "Уфа",
       "age": 38,
@@ -284,12 +284,12 @@
           "https://c.pxhere.com/photos/8e/93/video_cinematography_film_movie_cinema_camera_entertainment_movie_camera-693703.jpg!d"
         ]
       },
-      "skill_off": ["Видеомонтаж"]
+      "skill_off": ["Видеомонтаж", "Фотография", "Музыка и звук", "Актёрское мастерство"]
     },
     {
       "id": 12,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/6.jpg",
+      "liked": 8,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=George&backgroundColor=b6e3f4",
       "name": "Юлия",
       "city": "Красноярск",
       "age": 22,
@@ -310,12 +310,12 @@
           "https://c.pxhere.com/photos/f5/2a/hand_hand_drawing_drawing_sketch_design_symbol_drawn_pencil-1379092.jpg!d"
         ]
       },
-      "skill_off": ["Рисование и иллюстрация"]
+      "skill_off": ["Рисование и иллюстрация", "Арт-терапия", "Креативное письмо", "Декор и DIY"]
     },
     {
       "id": 13,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/7.jpg",
+      "liked": 7,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Destiny&backgroundColor=b6e3f4",
       "name": "Павел",
       "city": "Воронеж",
       "age": 41,
@@ -336,12 +336,12 @@
           "https://c.pxhere.com/photos/ce/5d/startup_meeting_brainstorming_business_teamwork_team_people_office-764425.jpg!d"
         ]
       },
-      "skill_off": ["Управление командой", "Проектное управление"]
+      "skill_off": ["Управление командой", "Проектное управление", "Лидерство", "Коучинг"]
     },
     {
       "id": 14,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/7.jpg",
+      "liked": 6,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Eliza&backgroundColor=b6e3f4",
       "name": "Елена",
       "city": "Пермь",
       "age": 34,
@@ -362,12 +362,12 @@
           "https://c.pxhere.com/photos/73/bb/book_book_gift_by_heart_cord_gift_read_heart_give-399102.jpg!d"
         ]
       },
-      "skill_off": ["Креативное письмо"]
+      "skill_off": ["Креативное письмо", "Навыки преподавания", "Личностное развитие", "Скорочтение"]
     },
     {
       "id": 15,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/8.jpg",
+      "liked": 5,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Amaya&backgroundColor=b6e3f4",
       "name": "Владимир",
       "city": "Волгоград",
       "age": 43,
@@ -388,12 +388,12 @@
           "https://c.pxhere.com/photos/52/5c/building_glazurkarz_ceramic_tiles_terrakota_tile_tarakota_professional-1324057.jpg!d"
         ]
       },
-      "skill_off": ["Ремонт"]
+      "skill_off": ["Ремонт", "Хранение вещей", "Уборка и организация", "Домашние финансы"]
     },
     {
       "id": 16,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/8.jpg",
+      "liked": 4,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Aiden&backgroundColor=b6e3f4",
       "name": "Ирина",
       "city": "Краснодар",
       "age": 29,
@@ -414,12 +414,12 @@
           "https://c.pxhere.com/photos/ae/66/books_student_study_education_university_studying_school_college-1061854.jpg!d"
         ]
       },
-      "skill_off": ["Подготовка к экзаменам (IELTS, TOEFL)", "Хранение вещей"]
+      "skill_off": ["Подготовка к экзаменам (IELTS, TOEFL)", "Хранение вещей", "Уборка и организация", "Скорочтение"]
     },
     {
       "id": 17,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/9.jpg",
+      "liked": 3,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Ryker&backgroundColor=b6e3f4",
       "name": "Андрей",
       "city": "Саратов",
       "age": 24,
@@ -440,12 +440,12 @@
           "https://c.pxhere.com/photos/e6/37/usa_new_york_city_nyc_broadway_time_square_taxi-1124189.jpg!d"
         ]
       },
-      "skill_off": ["Маркетинг и реклама"]
+      "skill_off": ["Маркетинг и реклама", "Продажи и переговоры", "Личный бренд", "Предпринимательство"]
     },
     {
       "id": 18,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/9.jpg",
+      "liked": 2,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Valentina&backgroundColor=b6e3f4",
       "name": "Светлана",
       "city": "Тюмень",
       "age": 37,
@@ -466,12 +466,12 @@
           "https://c.pxhere.com/photos/63/4f/butterfly_children_drawing_colorful_animal_spring_child_children_painted-979312.jpg!d"
         ]
       },
-      "skill_off": ["Арт-терапия"]
+      "skill_off": ["Арт-терапия", "Рисование и иллюстрация", "Креативное письмо", "Декор и DIY"]
     },
     {
       "id": 19,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/10.jpg",
+      "liked": 1,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Andrea&backgroundColor=b6e3f4",
       "name": "Николай",
       "city": "Тольятти",
       "age": 32,
@@ -492,12 +492,12 @@
           "https://c.pxhere.com/photos/ce/5d/startup_meeting_brainstorming_business_teamwork_team_people_office-764425.jpg!d"
         ]
       },
-      "skill_off": ["Коучинг", "Баланс жизни и работы"]
+      "skill_off": ["Коучинг", "Баланс жизни и работы", "Личностное развитие", "Ментальное здоровье"]
     },
     {
       "id": 20,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/10.jpg",
+      "liked": 2,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Sophia&backgroundColor=b6e3f4",
       "name": "Марина",
       "city": "Ижевск",
       "age": 21,
@@ -518,12 +518,12 @@
           "https://c.pxhere.com/images/1f/71/40179c1481d681e615701f624a87-1590901.jpg!d"
         ]
       },
-      "skill_off": ["Декор и DIY"]
+      "skill_off": ["Декор и DIY", "Рисование и иллюстрация", "Фотография", "Музыка и звук"]
     },
     {
       "id": 21,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/11.jpg",
+      "liked": 3,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Jade&backgroundColor=b6e3f4",
       "name": "Роман",
       "city": "Москва",
       "age": 39,
@@ -544,12 +544,12 @@
           "https://c.pxhere.com/photos/5e/3f/shop_clothes_clothing_shopping_mall_shopping_kielce_crown_poland-862477.jpg!d"
         ]
       },
-      "skill_off": ["Хранение вещей"]
+      "skill_off": ["Хранение вещей", "Уборка и организация", "Ремонт", "Питание и ЗОЖ"]
     },
     {
       "id": 22,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/11.jpg",
+      "liked": 4,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Nolan&backgroundColor=b6e3f4",
       "name": "Дарья",
       "city": "Санкт-Петербург",
       "age": 26,
@@ -570,12 +570,12 @@
           "https://c.pxhere.com/photos/95/15/guitar_music_instrumental_melodic_musical_instrument_sound_rock-727442.jpg!d"
         ]
       },
-      "skill_off": ["Музыка и звук"]
+      "skill_off": ["Музыка и звук", "Актёрское мастерство", "Креативное письмо", "Фотография"]
     },
     {
       "id": 23,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/12.jpg",
+      "liked": 5,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Brooklynn&backgroundColor=b6e3f4",
       "name": "Константин",
       "city": "Новосибирск",
       "age": 20,
@@ -596,12 +596,12 @@
           "https://c.pxhere.com/photos/65/09/photographer_hand_man_holding_len-32792.jpg!d"
         ]
       },
-      "skill_off": ["Фотография"]
+      "skill_off": ["Фотография", "Скорочтение", "Тайм-менеджмент", "Личностное развитие"]
     },
     {
       "id": 24,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/12.jpg",
+      "liked": 6,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Mackenzie&backgroundColor=b6e3f4",
       "name": "Алёна",
       "city": "Екатеринбург",
       "age": 35,
@@ -622,12 +622,12 @@
           "https://c.pxhere.com/photos/af/67/startup_business_businessman_notebook_laptop_computer_company_office-914296.jpg!d"
         ]
       },
-      "skill_off": ["Личностное развитие", "Навыки обучения"]
+      "skill_off": ["Личностное развитие", "Навыки преподавания", "Коучинг", "Ментальное здоровье"]
     },
     {
       "id": 25,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/13.jpg",
+      "liked": 7,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Andrea&backgroundColor=b6e3f4",
       "name": "Виктор",
       "city": "Казань",
       "age": 44,
@@ -648,12 +648,12 @@
           "https://c.pxhere.com/photos/3a/bc/handshake_hand_give_business_man_giving_offer_cooperation-1187331.jpg!d"
         ]
       },
-      "skill_off": ["Продажи и переговоры", "Предпринимательство"]
+      "skill_off": ["Продажи и переговоры", "Предпринимательство", "Управление командой", "Лидерство"]
     },
     {
       "id": 26,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/13.jpg",
+      "liked": 8,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Valentina&backgroundColor=b6e3f4",
       "name": "Вера",
       "city": "Нижний Новгород",
       "age": 19,
@@ -674,12 +674,12 @@
           "https://c.pxhere.com/photos/ac/cf/universal_studios_cinema_movies_theme_park_usa_florida-503347.jpg!d"
         ]
       },
-      "skill_off": ["Актёрское мастерство"]
+      "skill_off": ["Актёрское мастерство", "Импровизация", "Публичные выступления", "Креативное письмо"]
     },
     {
       "id": 27,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/14.jpg",
+      "liked": 9,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Aiden&backgroundColor=b6e3f4",
       "name": "Борис",
       "city": "Челябинск",
       "age": 45,
@@ -700,12 +700,12 @@
           "https://c.pxhere.com/photos/64/e1/piggy_ruble_penny_kopek_coin_russia_handful_coins-658356.jpg!d"
         ]
       },
-      "skill_off": ["Домашние финансы"]
+      "skill_off": ["Домашние финансы", "Тайм-менеджмент", "Личностное развитие", "Питание и ЗОЖ"]
     },
     {
       "id": 28,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/14.jpg",
+      "liked": 10,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Sawyer&backgroundColor=b6e3f4",
       "name": "Полина",
       "city": "Самара",
       "age": 28,
@@ -726,12 +726,12 @@
           "https://c.pxhere.com/photos/5e/3f/shop_clothes_clothing_shopping_mall_shopping_kielce_crown_poland-862477.jpg!d"
         ]
       },
-      "skill_off": ["Уборка и организация"]
+      "skill_off": ["Уборка и организация", "Хранение вещей", "Ремонт", "Приготовление еды"]
     },
     {
       "id": 29,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/15.jpg",
+      "liked": 9,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Sophia&backgroundColor=b6e3f4",
       "name": "Георгий",
       "city": "Омск",
       "age": 32,
@@ -752,12 +752,12 @@
           "https://c.pxhere.com/photos/c8/8f/handshake_business_hand_agreement_communication_contract_cooperation_happiness-583378.jpg!d"
         ]
       },
-      "skill_off": ["Резюме и собеседование"]
+      "skill_off": ["Резюме и собеседование", "Продажи и переговоры", "Личный бренд", "Предпринимательство"]
     },
     {
       "id": 30,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/15.jpg",
+      "liked": 8,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Wyatt&backgroundColor=b6e3f4",
       "name": "Ксения",
       "city": "Ростов-на-Дону",
       "age": 25,
@@ -778,12 +778,12 @@
           "https://c.pxhere.com/photos/1f/af/school_book_know_study_education_read_learn_browse-494733.jpg!d"
         ]
       },
-      "skill_off": ["Скорочтение"]
+      "skill_off": ["Скорочтение", "Навыки преподавания", "Личностное развитие", "Тайм-менеджмент"]
     },
     {
       "id": 31,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/16.jpg",
+      "liked": 7,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Jade&backgroundColor=b6e3f4",
       "name": "Степан",
       "city": "Уфа",
       "age": 42,
@@ -804,12 +804,12 @@
           "https://c.pxhere.com/images/38/30/12d5509a55bf391289619ac7359d-1447403.jpg!d"
         ]
       },
-      "skill_off": ["Ментальное здоровье"]
+      "skill_off": ["Ментальное здоровье", "Осознанность", "Коучинг", "Личностное развитие"]
     },
     {
       "id": 32,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/16.jpg",
+      "liked": 6,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Jude&backgroundColor=b6e3f4",
       "name": "Анастасия",
       "city": "Красноярск",
       "age": 35,
@@ -830,12 +830,12 @@
           "https://c.pxhere.com/photos/81/c5/library_quiet_education_school_university_technology_online_education_web-686177.jpg!d"
         ]
       },
-      "skill_off": ["Навыки преподавания"]
+      "skill_off": ["Навыки преподавания", "Личностное развитие", "Скорочтение", "Креативное письмо"]
     },
     {
       "id": 33,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/17.jpg",
+      "liked": 5,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Brooklynn&backgroundColor=b6e3f4",
       "name": "Лев",
       "city": "Воронеж",
       "age": 23,
@@ -856,12 +856,12 @@
           "https://c.pxhere.com/photos/12/03/child_noodle_high_land_family_pass_north_vietnam_breakfast_emotion_happy-606519.jpg!d"
         ]
       },
-      "skill_off": ["Китайский"]
+      "skill_off": ["Китайский", "Английский", "Японский", "Корейский"]
     },
     {
       "id": 34,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/17.jpg",
+      "liked": 4,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Nolan&backgroundColor=b6e3f4",
       "name": "Валентина",
       "city": "Пермь",
       "age": 40,
@@ -882,12 +882,12 @@
           "https://c.pxhere.com/photos/a8/e4/diet_fat_health_weight_healthy_loss_nutrition_dieting-950856.jpg!d"
         ]
       },
-      "skill_off": ["Питание и ЗОЖ"]
+      "skill_off": ["Питание и ЗОЖ", "Приготовление еды", "Домашние финансы", "Хранение вещей"]
     },
     {
       "id": 35,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/18.jpg",
+      "liked": 3,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Kimberly&backgroundColor=b6e3f4",
       "name": "Ярослав",
       "city": "Волгоград",
       "age": 34,
@@ -908,12 +908,12 @@
           "https://c.pxhere.com/photos/8e/93/video_cinematography_film_movie_cinema_camera_entertainment_movie_camera-693703.jpg!d"
         ]
       },
-      "skill_off": ["Видеомонтаж"]
+      "skill_off": ["Видеомонтаж", "Фотография", "Музыка и звук", "Актёрское мастерство"]
     },
     {
       "id": 36,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/18.jpg",
+      "liked": 2,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Mackenzie&backgroundColor=b6e3f4",
       "name": "Зоя",
       "city": "Краснодар",
       "age": 22,
@@ -934,12 +934,12 @@
           "https://c.pxhere.com/photos/73/bb/book_book_gift_by_heart_cord_gift_read_heart_give-399102.jpg!d"
         ]
       },
-      "skill_off": ["Креативное письмо"]
+      "skill_off": ["Креативное письмо", "Арт-терапия", "Рисование и иллюстрация", "Декор и DIY"]
     },
     {
       "id": 37,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/19.jpg",
+      "liked": 1,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Liliana&backgroundColor=b6e3f4",
       "name": "Тимофей",
       "city": "Саратов",
       "age": 37,
@@ -960,12 +960,12 @@
           "https://c.pxhere.com/photos/91/bb/clock_time_hour_alarm_clock_alarm-237.jpg!d"
         ]
       },
-      "skill_off": ["Тайм-менеджмент"]
+      "skill_off": ["Тайм-менеджмент", "Личностное развитие", "Коучинг", "Ментальное здоровье"]
     },
     {
       "id": 38,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/19.jpg",
+      "liked": 2,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Jameson&backgroundColor=b6e3f4",
       "name": "Людмила",
       "city": "Тюмень",
       "age": 38,
@@ -986,12 +986,12 @@
           "https://c.pxhere.com/photos/f5/2a/hand_hand_drawing_drawing_sketch_design_symbol_drawn_pencil-1379092.jpg!d"
         ]
       },
-      "skill_off": ["Осознанность"]
+      "skill_off": ["Осознанность", "Йога и медитация", "Ментальное здоровье", "Личностное развитие"]
     },
     {
       "id": 39,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/men/20.jpg",
+      "liked": 3,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Alexander&backgroundColor=b6e3f4",
       "name": "Фёдор",
       "city": "Тольятти",
       "age": 21,
@@ -1012,12 +1012,12 @@
           "https://c.pxhere.com/photos/ac/cf/universal_studios_cinema_movies_theme_park_usa_florida-503347.jpg!d"
         ]
       },
-      "skill_off": ["Актёрское мастерство"]
+      "skill_off": ["Актёрское мастерство", "Импровизация", "Публичные выступления", "Креативное письмо"]
     },
     {
       "id": 40,
-      "liked": 0,
-      "avatar": "https://randomuser.me/api/portraits/women/20.jpg",
+      "liked": 4,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Sara&backgroundColor=b6e3f4",
       "name": "Галина",
       "city": "Ижевск",
       "age": 39,
@@ -1038,7 +1038,7 @@
           "https://c.pxhere.com/photos/7a/9e/socialmedia_facebook_twitter_network_instagram_marketing_online-858156.jpg!d"
         ]
       },
-      "skill_off": ["Личный бренд"]
+      "skill_off": ["Личный бренд", "Маркетинг и реклама", "Продажи и переговоры", "Предпринимательство"]
     }
   ]
 }

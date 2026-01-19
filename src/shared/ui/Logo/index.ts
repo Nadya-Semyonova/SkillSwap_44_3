@@ -1,3 +1,3 @@
-import LogoButton from './LogoButton';
+import LogoIcon from './Logo';
 
-export default LogoButton;
+export default LogoIcon;

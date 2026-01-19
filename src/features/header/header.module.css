@@ -1,0 +1,67 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 36px 20px;
+  background-color: var(--color-bg-main);
+  max-inline-size: 1440px;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+}
+
+/* Стили для контейнера логотипа с текстом */
+.logoContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--color-text-primary);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-h2-size);
+  font-weight: 600;
+  line-height: var(--font-h2-line-height);
+  text-decoration: none;
+  cursor: pointer;
+  column-gap: 12px;
+}
+
+/* Убираем подчеркивание */
+.logoContainer,
+.logoContainer:hover,
+.logoContainer:focus,
+.logoContainer:active {
+  text-decoration: none;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  text-decoration: none;
+  max-inline-size: fit-content;
+}
+
+.navLink .button {
+  margin: 0;
+}
+
+.loginButton {
+  /* Стили для кнопки Войти */
+  border: 1px solid var(--color-accent);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.registerButton {
+  /* Стили для кнопки Зарегистрироваться */
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+  border: none;
+  margin-left: 8px;
+  margin-right: 0;
+}

@@ -37,6 +37,15 @@ module.exports = {
         ],
       },
     ],
+    'no-param-reassign': [
+      'error',
+      {
+        props: true,
+        ignorePropertyModificationsFor: ['state', 'draft', 'acc', 'e'],
+        ignorePropertyModificationsForRegex: ['^state', '^draft', '^acc', '^e'],
+      },
+    ],
+    'no-empty-pattern': 'warn',
   },
   settings: {
     react: {
