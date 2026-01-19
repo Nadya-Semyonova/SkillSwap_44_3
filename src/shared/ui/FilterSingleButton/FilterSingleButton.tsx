@@ -1,7 +1,7 @@
-import type { ISingleFilterButton } from '../../../types/types';
+import RadioButtonEmpty from '@public/img/IconsSvg/RadioButtonEmpty';
+import RadioButtonActive from '@public/img/IconsSvg/RadioButtonActive';
+import type { ISingleFilterButton } from '@/types/types';
 import style from './FilterSingleButton.module.css';
-import RadioButtonEmpty from '../../../../public/img/IconsSvg/RadioButtonEmpty';
-import RadioButtonActive from '../../../../public/img/IconsSvg/RadioButtonActive';
 
 export default function FilterSingleButtons({ name, handleClick, isActive }: ISingleFilterButton) {
   const isSelected = isActive === name;

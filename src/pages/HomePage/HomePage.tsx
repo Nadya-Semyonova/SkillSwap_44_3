@@ -1,5 +1,5 @@
+import Filters from '@widgets/Filters';
 import style from './HomePage.module.css';
-import Filters from '../../widgets/Filters';
 
 export function HomePage() {
   return (

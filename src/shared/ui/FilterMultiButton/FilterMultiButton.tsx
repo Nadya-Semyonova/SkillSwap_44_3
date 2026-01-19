@@ -1,9 +1,9 @@
+import CheckBoxEmpty from '@public/img/IconsSvg/CheckBoxEmpty';
+import CheckBoxDone from '@public/img/IconsSvg/CheckBoxDone';
+import CheckBoxRemove from '@public/img/IconsSvg/CheckBoxRemove';
+import ChevronDown from '@public/img/IconsSvg/ChevronDown';
+import type { IMultiFilterButton } from '@/types/types';
 import style from './FilterMultiButton.module.css';
-import type { IMultiFilterButton } from '../../../types/types';
-import CheckBoxEmpty from '../../../../public/img/IconsSvg/CheckBoxEmpty';
-import CheckBoxDone from '../../../../public/img/IconsSvg/CheckBoxDone';
-import CheckBoxRemove from '../../../../public/img/IconsSvg/CheckBoxRemove';
-import ChevronDown from '../../../../public/img/IconsSvg/ChevronDown';
 
 export default function FilterMultiButtons({
   name,

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import ButtonDefault from '../shared/ui/ButtonDefault';
-import '../shared/ui/ButtonDefault/ButtonDefault.module.css'; // Импорт стилей
+import ButtonDefault from '@shared/ui/ButtonDefault';
+import '@shared/ui/ButtonDefault/ButtonDefault.module.css';
 
 const meta: Meta<typeof ButtonDefault> = {
   title: 'Components/ButtonDefault',

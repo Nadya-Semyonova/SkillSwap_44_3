@@ -1,4 +1,4 @@
-import type { ISvgIcon } from "../../../src/types/types";
+import type { ISvgIcon } from "@/types/types";
 
 const CheckBoxDone = ({fill}: ISvgIcon) => {
   return (
