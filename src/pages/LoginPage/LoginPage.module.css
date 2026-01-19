@@ -1,0 +1,168 @@
+.container {
+  --color-bg-main: #f9faf7;
+  margin: 0 auto;
+}
+
+.header {
+  min-inline-size: 1440px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-right: 36px;
+  padding-left: 36px;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brandName {
+  font-family: var(--font-family-heading);
+  font-size: 20px;
+  font-weight: var(--font-weight-medium);
+  line-height: 24px;
+  color: var(--color-text-primary);
+}
+
+.buttonWrapperClose {
+  display: flex;
+  max-inline-size: 147px;
+  max-block-size: 48px;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-bg-card);
+  padding-right: 24px;
+  border-radius: 12px;
+}
+
+.closeButton {
+  text-align: center;
+  margin: 0;
+}
+
+.headline {
+  text-align: center;
+}
+
+.title {
+  font-size: var(--font-h2-size);
+  font-weight: var(--font-h2-weight);
+  font-family: var(--font-h2-family);
+  line-height: var(--font-h3-line-height);
+  color: var(--color-text-primary);
+}
+
+.content {
+  max-inline-size: 1136px;
+  display: flex;
+  gap: 24px;
+  padding-top: 32px;
+  padding-left: 152px;
+  padding-right: 152px;
+}
+
+.form {
+  background-color: var(--color-bg-card);
+  padding: 112px 60px;
+  min-inline-size: 556px;
+  inline-size: 100%;
+}
+
+.formButtonsLogin {
+ display: flex;
+ flex-direction: column;
+ gap: 16px;
+}
+
+.formButtonsLogin .socialButton {
+  max-inline-size: 436px;
+  max-block-size: 48px;
+  border: 1px solid var(--color-text-secondary);
+  margin: 0;
+}
+
+.formText {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.formInput {
+  max-inline-size: 436px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.label {
+  font-size: var(--font-body-size);
+  font-weight: var(--font-body-weight);
+  font-family: var(--font-body-family);
+  line-height: var(--font-body-line-height);
+  color: var(--color-text-primary);
+}
+
+.input {
+  inline-size: 100%;
+  max-block-size: 48px;
+  border: 1px solid var(--color-text-secondary);
+  border-radius: 12px;
+  padding: 12px 20px;
+}
+
+.formButtonSubmit {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formButtonSubmit .loginButton {
+  max-inline-size: 436px;
+  max-block-size: 48px;
+  background-color: var(--color-accent);
+  margin: 0;
+}
+
+.registerLink {
+  font-size: var(--font-body-size);
+  font-weight: var(--font-body-weight);
+  font-family: var(--font-body-family);
+  line-height: var(--font-body-line-height);
+  text-align: center;
+}
+
+.onboarding {
+  background-color: var(--color-bg-card);
+  min-inline-size: 556px;
+}
+
+.iconWrapper {
+  padding-left: 128px;
+  padding-right: 128px;
+  padding-top: 132px;
+  padding-bottom: 40px;
+}
+
+.onboardingTitle {
+  font-size: var(--font-h2-size);
+  font-weight: var(--font-h2-weight);
+  font-family: var(--font-h2-family);
+  line-height: var(--font-h3-line-height);
+  color: var(--color-text-primary);
+  text-align: center;
+  padding-bottom: 12px;
+}
+
+.onboardingText {
+  font-size: var(--font-body-size);
+  font-weight: var(--font-body-weight);
+  font-family: var(--font-body-family);
+  line-height: var(--font-body-line-height);
+  color: var(--color-text-primary);
+  text-align: center;
+}
+

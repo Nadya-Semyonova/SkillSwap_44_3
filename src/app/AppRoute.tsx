@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from '../layouts/layout';
 import { ROUTES } from '../shared/lib/constants/routes';
 import { HomePage } from '../pages/HomePage/HomePage';
+import LoginPage from '../pages/LoginPage/LoginPage';
 
 export default function AppRoute() {
   return (
@@ -15,6 +16,7 @@ export default function AppRoute() {
         <Route element={<Layout />}>
           <Route path={ROUTES.HOME} element={<HomePage />} />
         </Route>
+        <Route path={ROUTES.LOGIN} element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   );
