@@ -1,0 +1,6 @@
+.modal {
+  background-color: var(--color-bg-card);
+  border-radius: 12px;
+  pointer-events: auto;
+  z-index: 1000;
+}
