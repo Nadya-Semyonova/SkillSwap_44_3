@@ -20,3 +20,25 @@ export interface IButtonDefault {
   handleClick: () => void;
   styleButton?: string;
 }
+
+export interface IUser {
+  id: number;
+  liked: number;
+  avatar: string;
+  name: string;
+  city: string;
+  age: number;
+  dateOfBirth: string;
+  gender: string;
+  email: string;
+  password: string;
+  about: string;
+  card_people: {
+    skill: string;
+    category: string;
+    subcategory: string;
+    description: string;
+    photos: string[];
+  };
+  skill_off: string[];
+}
