@@ -44,6 +44,16 @@ const usersDataSlice = createSlice({
       .addCase(getUsersData.fulfilled, (state, action) => {
         state.loading = false;
         state.users = action.payload;
+
+        // if (state.users !== null && state.users.length !== 0) {
+        //   state.popularUsers = [...state.users].sort((a, b) => b.liked - a.liked);
+
+        //   state.newUsers = [...state.users].sort((a, b) => {
+        //     const dateA = Number(a.createdAt.split('-').join(''));
+        //     const dateB = Number(b.createdAt.split('-').join(''));
+        //     return dateB - dateA;
+        //   });
+        // }
       })
       .addCase(getUsersData.rejected, (state, action) => {
         state.loading = false;

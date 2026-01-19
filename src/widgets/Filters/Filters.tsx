@@ -4,14 +4,14 @@ import cities from '@public/db/city.json';
 import skillsCategory from '@public/db/skills.json';
 import { FilterOptions, DEFAULT_SHOW_COUNT } from './libs/FilterConstants';
 import style from './Filters.module.css';
-import { useFilters } from './hooks/useFilters';
+import { useFiltersButtons } from './hooks/useFiltersButtons';
 
 export default function Filters() {
   const {
     activeLearn,
-    setActiveLearn,
+    setLearn,
     activeAuthor,
-    setActiveAuthor,
+    setAuthor,
     activeCities,
     activeCategoryButton,
     activeSkills,
@@ -22,7 +22,7 @@ export default function Filters() {
     handleClickSkill,
     toggleShowAllCities,
     toggleShowAllSkills,
-  } = useFilters();
+  } = useFiltersButtons();
 
   const citiesToShow = showAllCities ? cities : cities.slice(0, DEFAULT_SHOW_COUNT);
 
@@ -38,11 +38,7 @@ export default function Filters() {
         <div>
           {FilterOptions.base.map((filter) => (
             <div key={filter} className={style.buttonsContainer}>
-              <FilterSingleButtons
-                name={filter}
-                handleClick={setActiveLearn}
-                isActive={activeLearn}
-              />
+              <FilterSingleButtons name={filter} handleClick={setLearn} isActive={activeLearn} />
             </div>
           ))}
         </div>
@@ -87,11 +83,7 @@ export default function Filters() {
           <h3 className={`${style.filterTitle} ${style.mainText}`}>Пол автора</h3>
           {FilterOptions.authors.map((filter) => (
             <div key={filter} className={style.buttonsContainer}>
-              <FilterSingleButtons
-                name={filter}
-                handleClick={setActiveAuthor}
-                isActive={activeAuthor}
-              />
+              <FilterSingleButtons name={filter} handleClick={setAuthor} isActive={activeAuthor} />
             </div>
           ))}
         </div>

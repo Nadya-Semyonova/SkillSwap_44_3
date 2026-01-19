@@ -32,6 +32,7 @@ export interface IUser {
   gender: string;
   email: string;
   password: string;
+  createdAt: string;
   about: string;
   card_people: {
     skill: string;
