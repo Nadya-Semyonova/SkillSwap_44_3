@@ -42,3 +42,12 @@ export interface IUser {
   };
   skill_off: string[];
 }
+
+export interface SkillItem {
+  id: string;
+  name: string;
+}
+
+export interface SkillsData {
+  [category: string]: string[];
+}
