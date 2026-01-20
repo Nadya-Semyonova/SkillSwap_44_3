@@ -1,11 +1,13 @@
-import skills from '@public/db/skills.json';
 import { useState } from 'react';
+import { useSelector } from '@store/store';
 import type { SkillsData } from './libs/types';
 import styles from './SkillsSelector.module.css';
 import { SkillsCategoriesConstant } from './libs/SkillsCategoriesConstant';
 
-const skillsData = skills as SkillsData;
 function SkillsSelector() {
+  const skills = useSelector((state) => state.users.skills);
+
+  const skillsData = skills as SkillsData;
   const [selectedSkill, setSelectedSkill] = useState<string>('');
 
   const toggleSkill = (skill: string) => {

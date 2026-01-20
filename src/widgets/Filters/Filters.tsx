@@ -1,7 +1,6 @@
 import FilterMultiButtons from '@shared/ui/FilterMultiButton';
 import FilterSingleButtons from '@shared/ui/FilterSingleButton';
-import cities from '@public/db/city.json';
-import skillsCategory from '@public/db/skills.json';
+import { useSelector } from '@store/store';
 import { FilterOptions, DEFAULT_SHOW_COUNT } from './libs/FilterConstants';
 import style from './Filters.module.css';
 import { useFiltersButtons } from './hooks/useFiltersButtons';
@@ -23,6 +22,11 @@ export default function Filters() {
     toggleShowAllCities,
     toggleShowAllSkills,
   } = useFiltersButtons();
+  const cities = useSelector((state) => state.users.cities);
+  const skillsCategory = useSelector((state) => state.users.skills);
+  if (cities === null || skillsCategory === null) {
+    return null; // error 500
+  }
 
   const citiesToShow = showAllCities ? cities : cities.slice(0, DEFAULT_SHOW_COUNT);
 
