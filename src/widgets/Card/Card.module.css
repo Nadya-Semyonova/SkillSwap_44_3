@@ -54,7 +54,6 @@
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-medium);
   font-size: var(--font-caption-size);
-  background-color: none;
 }
 
 .like {
