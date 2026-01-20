@@ -38,6 +38,7 @@ export interface IUser {
   gender: string;
   email: string;
   password: string;
+  createdAt: string;
   about: string;
   card_people: {
     skill: string;
@@ -47,4 +48,8 @@ export interface IUser {
     photos: string[];
   };
   skill_off: string[];
+}
+
+export interface ISkillItem {
+  [categoryName: string]: string[];
 }
