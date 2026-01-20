@@ -5,7 +5,7 @@ import Apple from '../../../public/img/iconsSvg/Apple';
 import Eye from '../../../public/img/iconsSvg/Eye';
 import LightBulb from '../../../public/img/IllustrationsSvg/LightBulb';
 import styles from './RegisterPage.module.css';
-import ButtonDefault from '../../shared/ui/ButtonDefault/ButtonDefault';
+import ButtonDefault from '@shared/ui/ButtonDefault';
 
 interface ControllerField {
   value: string;
