@@ -6,8 +6,8 @@ import {
   getCitiesData,
   getSkillsData,
   getUsersData,
-} from '@store/slices/userDataSlice/userDataSlice';
-import Card from '@widgets/Card';
+} from '@/store/slices/userDataSlice/userDataSlice';
+import Card from '@/widgets/Card';
 import style from './HomePage.module.css';
 
 export function HomePage() {
