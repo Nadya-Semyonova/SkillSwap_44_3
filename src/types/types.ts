@@ -21,6 +21,12 @@ export interface IButtonDefault {
   styleButton?: string;
 }
 
+export interface ChildrenModalProps {
+  title: string;
+  message: string;
+  onConfirm: () => void;
+}
+
 export interface IUser {
   id: number;
   liked: number;
