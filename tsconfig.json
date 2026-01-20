@@ -5,6 +5,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
+      "@api/*": ["src/api/*"],
       "@pages/*": ["src/pages/*"],
       "@shared/*": ["src/shared/*"],
       "@store/*": ["src/store/*"],

@@ -21,6 +21,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
+      "@api/*": ["src/api/*"],
       "@shared/*": ["src/shared/*"],
       "@store/*": ["src/store/*"],
       "@types/*": ["src/types/*"],

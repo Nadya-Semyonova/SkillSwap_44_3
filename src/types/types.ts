@@ -43,3 +43,7 @@ export interface IUser {
   };
   skill_off: string[];
 }
+
+export interface ISkillItem {
+  [categoryName: string]: string[];
+}

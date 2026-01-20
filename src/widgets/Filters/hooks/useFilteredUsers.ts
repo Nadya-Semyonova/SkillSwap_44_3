@@ -10,10 +10,7 @@ export function useFilteredUsers({
 }: IFilteredUsers) {
   const usersData = useSelector((state) => state.users.users);
 
-  if (!usersData) {
-    console.log('массив пуст');
-    return null;
-  }
+  if (!usersData) return null;
 
   let result = [...usersData];
 
