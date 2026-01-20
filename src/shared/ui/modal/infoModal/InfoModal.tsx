@@ -12,11 +12,7 @@ function InfoModal({ title, message, onConfirm }: ChildrenModalProps) {
       <div className={styles.modalControl}>
         <h2 className={styles.modalTitle}>{title}</h2>
         <p className={styles.modalMessage}>{message}</p>
-        <ButtonDefault
-          name="Готово"
-          handleClick={onConfirm}
-          styleButton={styles.modalButton}
-        />
+        <ButtonDefault name="Готово" handleClick={onConfirm} styleButton={styles.modalButton} />
       </div>
     </div>
   );
