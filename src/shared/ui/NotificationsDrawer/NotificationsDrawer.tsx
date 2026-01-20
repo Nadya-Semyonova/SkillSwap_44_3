@@ -1,5 +1,7 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import Idea from '@public/img/IconsSvg/Idea';
+import { useClickOutside } from '@shared/lib/hooks/useClickOutside';
+import { usePressEsc } from '@shared/lib/hooks/usePressEsc';
 import ButtonDefault from '../ButtonDefault';
 import type { NotificationsProps, Notification } from './types';
 import style from './NotificationsDrawer.module.css';
@@ -13,20 +15,16 @@ export default function NotificationsDrawer({
 }: NotificationsProps) {
   const notificationsRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!isOpen) return undefined;
+  useClickOutside({
+    ref: notificationsRef,
+    handler: onClose,
+    isEnabled: isOpen,
+  });
 
-    const handleClickOutside = (e: MouseEvent) => {
-      if (notificationsRef.current && !notificationsRef.current.contains(e.target as Node)) {
-        onClose();
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isOpen, onClose]);
+  usePressEsc({
+    handler: onClose,
+    isEnabled: isOpen,
+  });
 
   const notificationsClassName = `${style.notifications} ${
     isOpen ? style.notificationsOpen : style.notificationsClosed
