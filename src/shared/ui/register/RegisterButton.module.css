@@ -1,0 +1,21 @@
+.button {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-h4-size);
+  line-height: 24px;
+  padding-block: 12px;
+  padding-inline: 24px;
+  inline-size: 161px;
+  border-radius: 12px;
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8px;
+}

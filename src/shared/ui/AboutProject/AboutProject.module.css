@@ -1,0 +1,20 @@
+.AboutProjectbutton {
+  display: flex;
+  align-items: center;
+  margin: 24px 0 24px 32px;
+  background-color: transparent;
+  white-space: nowrap;
+  border: none;
+  justify-content: center;
+  color: var(--color-text-primary);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-h4-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-body-line-height);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.AboutProjectbutton:hover {
+  text-decoration: none;
+}
