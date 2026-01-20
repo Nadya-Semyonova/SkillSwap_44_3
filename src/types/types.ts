@@ -21,6 +21,7 @@ export interface IButtonDefault {
   styleButton?: string;
 }
 
+// Полный интерфейс пользователя
 export interface IUser {
   id: number;
   liked: number;
