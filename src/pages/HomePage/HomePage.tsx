@@ -1,13 +1,13 @@
-import Filters from '@widgets/Filters';
 import { useDispatch, useSelector } from '@store/store';
 import { useFilteredUsers } from '@widgets/Filters/hooks/useFilteredUsers';
 import { useEffect } from 'react';
+import Card from '@widgets/Card';
+import Filters from '@/widgets/Filters';
 import {
   getCitiesData,
   getSkillsData,
   getUsersData,
 } from '@/store/slices/userDataSlice/userDataSlice';
-import Card from '@/widgets/Card';
 import style from './HomePage.module.css';
 
 export function HomePage() {
