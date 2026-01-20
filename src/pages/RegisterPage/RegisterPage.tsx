@@ -1,11 +1,10 @@
-import { Link } from 'react-router-dom';
 import Logo from '../../../public/img/LogoSvg/Logo';
 import Cross from '../../../public/img/iconsSvg/Cross';
 import Google from '../../../public/img/iconsSvg/Google';
 import Apple from '../../../public/img/iconsSvg/Apple';
 import Eye from '../../../public/img/iconsSvg/Eye';
 import LightBulb from '../../../public/img/IllustrationsSvg/LightBulb';
-import styles from './LoginPage.module.css';
+import styles from './RegisterPage.module.css';
 import ButtonDefault from '../../shared/ui/ButtonDefault/ButtonDefault';
 
 interface ControllerField {
@@ -30,7 +29,7 @@ const useController = (): UseControllerResult => {
   };
 };
 
-function LoginPage() {
+function RegisterPage() {
   const emailController = useController();
   const passwordController = useController();
 
@@ -52,8 +51,13 @@ function LoginPage() {
           </div>
         </div>
       </header>
-      <div className={styles.headline}>
-        <h2 className={styles.title}>Вход</h2>
+      <div className={styles.progressBarWrapper}>
+        <h2 className={styles.title}>Шаг 1 из 3</h2>
+        <div className={styles.progressLines}>
+          <div className={`${styles.line} ${styles.active}`} />
+          <div className={styles.line} />
+          <div className={styles.line} />
+        </div>
       </div>
       <div className={styles.content}>
         <form className={styles.form} onSubmit={handleSubmit}>
@@ -100,7 +104,7 @@ function LoginPage() {
                 <input
                   type="password"
                   className={styles.input}
-                  placeholder="Введите ваш пароль"
+                  placeholder="Придумайте надежный пароль"
                   value={passwordController.field.value}
                   onChange={passwordController.field.onChange}
                   onBlur={passwordController.field.onBlur}
@@ -115,13 +119,11 @@ function LoginPage() {
                   <Eye />
                 </button>
               </div>
+              <p className={styles.passwordText}>Пароль должен содержать не менее 8 знаков</p>
             </div>
           </div>
           <div className={styles.formButtonSubmit}>
-            <ButtonDefault name="Войти" handleClick={() => {}} styleButton={styles.loginButton} />
-            <Link to="/RegisterPage" className={styles.registerLink}>
-              Зарегистрироваться
-            </Link>
+            <ButtonDefault name="Далее" handleClick={() => {}} styleButton={styles.loginButton} />
           </div>
         </form>
         <div className={styles.onboarding}>
@@ -129,9 +131,9 @@ function LoginPage() {
             <LightBulb />
           </div>
           <div className={styles.onboardingContent}>
-            <h2 className={styles.onboardingTitle}>С возвращением в SkillSwap!</h2>
+            <h2 className={styles.onboardingTitle}>Добро пожаловать в SkillSwap!</h2>
             <p className={styles.onboardingText}>
-              Обменивайтесь знаниями и навыками с другими людьми
+              Присоединяйтесь к SkillSwap и обменивайтесь знаниями и навыками с другими людьми
             </p>
           </div>
         </div>
@@ -140,4 +142,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default RegisterPage;

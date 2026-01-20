@@ -53,9 +53,10 @@
   cursor: pointer;
 }
 
-.headline {
-  max-inline-size: 1440px;
-  text-align: center;
+.progressBarWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
@@ -64,6 +65,24 @@
   font-family: var(--font-h2-family);
   line-height: var(--font-h3-line-height);
   color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.progressLines {
+  display: flex;
+  gap: 16px;
+}
+
+.line {
+  width: 60px;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--color-bg-disabled);
+}
+
+.line.active {
+  background-color: var(--color-accent);
 }
 
 .content {
@@ -157,6 +176,14 @@
   z-index: 2;
 }
 
+.passwordText {
+  font-size: var(--font-caption-size);
+  font-weight: var(--font-caption-weight);
+  font-family: var(--font-caption-family);
+  line-height: var(--font-caption-line-height);
+  color: var(--color-text-primary);
+}
+
 .formButtonSubmit {
   margin-top: 32px;
   display: flex;
@@ -171,14 +198,6 @@
   background-color: var(--color-accent);
   margin: 0;
   cursor: pointer;
-}
-
-.registerLink {
-  font-size: var(--font-body-size);
-  font-weight: var(--font-body-weight);
-  font-family: var(--font-body-family);
-  line-height: var(--font-body-line-height);
-  text-align: center;
 }
 
 .onboarding {
@@ -222,4 +241,3 @@
   color: var(--color-text-primary);
   text-align: center;
 }
-
