@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ButtonDefault from '@shared/ui/ButtonDefault';
 import Logo from '../../../public/img/LogoSvg/Logo';
 import Cross from '../../../public/img/iconsSvg/Cross';
 import Google from '../../../public/img/iconsSvg/Google';
@@ -6,7 +7,6 @@ import Apple from '../../../public/img/iconsSvg/Apple';
 import Eye from '../../../public/img/iconsSvg/Eye';
 import LightBulb from '../../../public/img/IllustrationsSvg/LightBulb';
 import styles from './LoginPage.module.css';
-import ButtonDefault from '@shared/ui/ButtonDefault';
 
 interface ControllerField {
   value: string;
