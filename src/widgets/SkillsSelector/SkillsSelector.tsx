@@ -1,43 +1,33 @@
-import { useEffect, useState } from 'react';
-import type { SkillsData } from '../../types/types';
+import skills from '@public/db/skills.json';
+import { useState } from 'react';
+import type { SkillsData } from './libs/types';
 import styles from './SkillsSelector.module.css';
-import { categoryIcons } from './SkillsCategories';
+import { SkillsCategoriesConstant } from './libs/SkillsCategoriesConstant';
 
+const skillsData = skills as SkillsData;
 function SkillsSelector() {
-  const [skillsData, setSkillsData] = useState<SkillsData>({});
-  const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
-
-  useEffect(() => {
-    fetch('/db/skills.json')
-      .then((res) => res.json())
-      .then((data: SkillsData) => {
-        setSkillsData(data);
-      })
-      .catch((err) => {
-        console.error('Ошибка загрузки навыков', err);
-      });
-  }, []);
+  const [selectedSkill, setSelectedSkill] = useState<string>('');
 
   const toggleSkill = (skill: string) => {
-    setSelectedSkills((prev) =>
-      prev.includes(skill) ? prev.filter((item) => item !== skill) : [...prev, skill]
-    );
+    setSelectedSkill((prev) => (prev === skill ? '' : skill));
   };
 
   return (
     <div className={styles.wrapper}>
-      {Object.entries(skillsData).map(([category, skills]) => (
+      {Object.entries(skillsData).map(([category, categorySkills]) => (
         <section key={category} className={styles.category}>
-          <span className={`${styles.category__icon} ${styles[categoryIcons[category].className]}`}>
-            {categoryIcons[category].icon}
+          <span
+            className={`${styles.category__icon} ${styles[SkillsCategoriesConstant[category].className]}`}
+          >
+            {SkillsCategoriesConstant[category].icon}
           </span>
 
           <div className={styles.category__content}>
             <h2>{category}</h2>
 
             <ul className={styles.skills}>
-              {skills.map((skill) => {
-                const isSelected = selectedSkills.includes(skill);
+              {categorySkills.map((skill) => {
+                const isSelected = selectedSkill === skill;
 
                 return (
                   <li key={skill}>
