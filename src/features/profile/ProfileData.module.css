@@ -1,176 +1,180 @@
 .profileContainer {
-    display: grid;
-    grid-template-columns: 460px 244px;
-    gap: 196px;
-    padding: 60px;
-    background-color: var(--color-bg-card);
-    border-radius: 12px 12px 0 0;
+  display: grid;
+  grid-template-columns: 460px 244px;
+  gap: 196px;
+  padding: 60px;
+  background-color: var(--color-bg-card);
+  border-radius: 12px 12px 0 0;
 }
 
 .userForm {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .formSection {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .formRow {
-    display: flex;
-    flex-direction: column;
-    gap: 4px; 
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .label {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    font-family: var(--font-family-base);
-    font-weight: var(--font-weight-regular);
-    font-size: var(--font-h4-size);
-    line-height: 1.4;
-    color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-h4-size);
+  line-height: 1.4;
+  color: var(--color-text-primary);
 }
 
-.inputContainer, .textareaContainer {
-    position: relative;
-    width: 100%;
+.inputContainer,
+.textareaContainer {
+  position: relative;
+  width: 100%;
 }
 
-.textareaField, .selectField, .inputField {
-    width: 100%;
-    padding: 12px 20px;
-    border: 1px solid var(--color-text-primary);
-    border-radius: 12px;
-    font-family: var(--font-family-base);
-    font-size: var(--font-h4-size);
-    color: var(--color-text-primary);
-    line-height: 1.6; 
-    cursor: pointer;
-    box-sizing: border-box;
+.textareaField,
+.selectField,
+.inputField {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid var(--color-text-primary);
+  border-radius: 12px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-h4-size);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
 .selectField {
-    appearance: none; 
-    -webkit-appearance: none; 
-    -moz-appearance: none; 
-    background-image: none; 
-    padding-right: 20px; 
+  appearance: none;
+  background-image: none;
+  padding-right: 20px;
 }
 
-.selectField + .dropdownIcon {
-    pointer-events: none; 
-    z-index: 1; 
-}
+/* .selectField + .dropdownIcon {
+  pointer-events: none;
+  z-index: 1;
+} */
 
-.inputField:focus,
+/* .inputField:focus,
 .selectField:focus,
 .textareaField:focus {
-    outline: none;
-    border-color: var(--color-text-primary); 
-}
+  outline: none;
+  border-color: var(--color-text-primary);
+} */
 
-.inputField:focus-visible,
+/* .inputField:focus-visible,
 .selectField:focus-visible,
 .textareaField:focus-visible {
-    outline: none;
-}
+  outline: none;
+} */
 
 .textareaField {
-    min-height: 48px;
-    max-height: 120px;
-    overflow-y: auto;
-    resize: vertical;
+  min-height: 48px;
+  max-height: 120px;
+  overflow-y: auto;
+  resize: vertical;
 }
 
 .infoDateGender {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
 
-.editIcon, .calendarIcon, .dropdownIcon, .aboutEditIcon {
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none; 
+.editIcon,
+.calendarIcon,
+.dropdownIcon,
+.aboutEditIcon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .passwordLink {
-    margin-top: 12px;
+  margin-top: 12px;
 }
 
 .link {
-    text-decoration: none;
-    cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .saveButtonContainer {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .aboutRow {
-    min-height: 120px;
+  min-height: 120px;
 }
 
 .saveButton {
-    width: 100%;
-    padding: 12px;
-    background-color: var(--color-bg-disabled);
-    color: var(--color-text-secondary);
-    border: none;
-    border-radius: 12px;
-    font-family: var(--font-family-base);
-    font-size: var(--font-h4-size);
-    font-weight: var(--font-weight-regular);
-    height: 48px;
-    cursor: pointer;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-bg-disabled);
+  color: var(--color-text-secondary);
+  border: none;
+  border-radius: 12px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-h4-size);
+  font-weight: var(--font-weight-regular);
+  height: 48px;
+  cursor: pointer;
 }
 
 .avatarSection {
-    position: relative;
-    width: 244px;
-    height: 244px;
+  position: relative;
+  width: 244px;
+  height: 244px;
 }
 
 .avatar {
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .userPhoto {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .editPhotoButton {
-    position: absolute;
-    bottom: 1px;
-    right: 1px;
-    width: 56px;
-    height: 56px;
-    background-color: var(--color-accent-hover);
-    border: 1px solid var(--color-accent-hover);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  width: 56px;
+  height: 56px;
+  background-color: var(--color-accent-hover);
+  border: 1px solid var(--color-accent-hover);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .editPhotoButton svg {
-    width: 24px; 
-    height: 24px; 
-    fill: var(--color-text-primary); 
+  width: 24px;
+  height: 24px;
+  fill: var(--color-text-primary);
 }

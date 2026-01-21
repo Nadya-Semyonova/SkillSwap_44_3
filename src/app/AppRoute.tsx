@@ -6,6 +6,8 @@ import LoginPage from '../pages/LoginPage/LoginPage';
 import RegisterPage from '../pages/RegisterPage/RegisterPage';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import NotFoundPage from '../pages/NotFoundPage/NotFoundPage';
+import ProfilePage from '../pages/ProfilePage/ProfilePage';
+import { TestPage } from '../pages/TestPage/TestPage';
 
 export default function AppRoute() {
   return (
@@ -17,10 +19,12 @@ export default function AppRoute() {
     >
       <Routes>
         <Route element={<Layout />}>
+          <Route path={ROUTES.HOME} element={<HomePage />} />
           <Route path={ROUTES.ERROR} element={<ErrorPage />} />
           <Route path={ROUTES.NOTFOUND} element={<NotFoundPage />} />
-          <Route path={ROUTES.HOME} element={<HomePage />} />
+          <Route path={ROUTES.PROFILE} element={<ProfilePage />} />
         </Route>
+        <Route path={ROUTES.PAGE} element={<TestPage />} />
         <Route path={ROUTES.LOGIN} element={<LoginPage />} />
         <Route path={ROUTES.REGISTER} element={<RegisterPage />} />
       </Routes>

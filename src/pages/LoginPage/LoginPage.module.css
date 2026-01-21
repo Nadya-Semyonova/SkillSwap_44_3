@@ -81,9 +81,9 @@
 }
 
 .formButtonsLogin {
- display: flex;
- flex-direction: column;
- gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .socialButton {
@@ -222,4 +222,3 @@
   color: var(--color-text-primary);
   text-align: center;
 }
-

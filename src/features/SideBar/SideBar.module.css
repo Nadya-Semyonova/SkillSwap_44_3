@@ -1,48 +1,48 @@
 .sideBarContainer {
-    min-height: 100vh;
-    border-radius: 24px;
-    background-color: var(--color-bg-card);
-    display: flex;
-    width: 324px;
-    flex-shrink: 0;
-    justify-content: center;
+  min-height: 100vh;
+  border-radius: 24px;
+  background-color: var(--color-bg-card);
+  display: flex;
+  width: 324px;
+  flex-shrink: 0;
+  justify-content: center;
 }
 
 .sideBar {
-    display: flex;
-    flex-direction: column;
-    padding-inline: 40px;
-    padding-block-start: 40px;
-    width: 244px;
-    gap: 8px;
-    justify-items: start;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 40px;
+  padding-block-start: 40px;
+  width: 244px;
+  gap: 8px;
+  justify-items: start;
 }
 
 .item {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    width: 100%;
-    height: 48px;
-    min-height: 48px;
-    border-radius: 12px;
-    color: var(--color-text-primary);
-    cursor: pointer;
-    text-decoration: none;
-    font-family: var(--font-family-base);
-    font-weight: var(--font-weight-regular);
-    font-size: var(--font-h4-size);
-    line-height: var(--font-h4-line-height);
-    letter-spacing: 0.02em;
-    box-sizing: border-box;
-    padding-left: 20px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  min-height: 48px;
+  border-radius: 12px;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-h4-size);
+  line-height: var(--font-h4-line-height);
+  letter-spacing: 0.02em;
+  box-sizing: border-box;
+  padding-left: 20px;
 }
 
 .item:hover {
-    color: var(--color-text-secondary);
-    background-color: var(--color-accent-hover);
+  color: var(--color-text-secondary);
+  background-color: var(--color-accent-hover);
 }
 
 .active {
-    background-color: var(--color-accent-hover);
+  background-color: var(--color-accent-hover);
 }

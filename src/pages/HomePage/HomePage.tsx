@@ -2,12 +2,13 @@ import { useDispatch, useSelector } from '@store/store';
 import { useFilteredUsers } from '@widgets/Filters/hooks/useFilteredUsers';
 import { useEffect } from 'react';
 import Card from '@widgets/Card';
-import Filters from '@/widgets/Filters';
+import Filters from '@widgets/Filters';
 import {
   getCitiesData,
   getSkillsData,
   getUsersData,
-} from '@/store/slices/userDataSlice/userDataSlice';
+} from '@store/slices/userDataSlice/userDataSlice';
+
 import style from './HomePage.module.css';
 
 export function HomePage() {
@@ -31,9 +32,9 @@ export function HomePage() {
   const cities = useSelector((state) => state.users.cities);
   const skills = useSelector((state) => state.users.skills);
   useEffect(() => {
-    console.log(filteredUsers);
-    console.log(cities);
-    console.log(skills);
+    // console.log(filteredUsers);
+    // console.log(cities);
+    // console.log(skills);
   }, [filteredUsers, cities, skills]);
 
   if (loading) {
