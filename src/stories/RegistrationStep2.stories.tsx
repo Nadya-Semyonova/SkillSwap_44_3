@@ -43,7 +43,14 @@ export const Default: Story = {
 // История с центрированным контейнером для лучшего просмотра
 export const Centered: Story = {
   render: () => (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <div
+      style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
       <RegistrationStep2 />
     </div>
   ),

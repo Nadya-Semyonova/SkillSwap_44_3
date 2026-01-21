@@ -1,8 +1,10 @@
-import style from './RegistrationStep2.module.css';
 import UserCircle from '@public/img/IconsSvg/UserCircle';
-import PlusCircle from '@public/img/IconsSvg/PlusCircle';
+import Add from '@public/img/IconsSvg/Add';
 import Calendar from '@public/img/IconsSvg/Calendar';
 import ChevronDown from '@public/img/IconsSvg/ChevronDown';
+import UserInfo from '@public/img/IllustrationsSvg/UserInfo';
+import ButtonDefault from '@shared/ui/ButtonDefault';
+import style from './RegistrationStep2.module.css';
 
 export function RegistrationStep2() {
   return (
@@ -14,7 +16,7 @@ export function RegistrationStep2() {
               <UserCircle />
             </div>
             <div className={style.avatarPlus}>
-              <PlusCircle />
+              <Add />
             </div>
           </div>
 
@@ -22,12 +24,7 @@ export function RegistrationStep2() {
             <label className={style.label} htmlFor="name">
               Имя
             </label>
-            <input
-              type="text"
-              id="name"
-              className={style.input}
-              placeholder="Введите ваше имя"
-            />
+            <input type="text" id="name" className={style.input} placeholder="Введите ваше имя" />
           </div>
 
           <div className={style.rowFields}>
@@ -108,17 +105,29 @@ export function RegistrationStep2() {
           </div>
 
           <div className={style.buttonsRow}>
-            <button type="button" className={style.buttonBack}>
-              Назад
-            </button>
-            <button type="submit" className={style.buttonContinue}>
-              Продолжить
-            </button>
+            <ButtonDefault
+              name="Назад"
+              handleClick={() => {}}
+              variant="outline"
+              styleButton={style.buttonBack}
+            />
+            <ButtonDefault
+              name="Продолжить"
+              handleClick={() => {}}
+              variant="continue"
+              styleButton={style.buttonContinue}
+            />
           </div>
         </form>
       </div>
       <div className={style.rightColumn}>
-        {/* Информационная секция будет здесь */}
+        <div className={style.illustration}>
+          <UserInfo />
+        </div>
+        <h2 className={style.infoTitle}>Расскажите немного о себе</h2>
+        <p className={style.infoText}>
+          Это поможет другим людям лучше вас узнать, чтобы выбрать для обмена
+        </p>
       </div>
     </div>
   );
