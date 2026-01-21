@@ -12,47 +12,6 @@
   align-items: center;
 }
 
-.header {
-  max-inline-size: 1440px;
-  inline-size: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 40px;
-  padding-right: 36px;
-  padding-left: 36px;
-}
-
-.logoWrapper {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.brandName {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-h3-size);
-  font-weight: var(--font-weight-medium);
-  line-height: var(--font-body-line-height);
-  color: var(--color-text-primary);
-}
-
-.buttonWrapperClose {
-  display: flex;
-  max-inline-size: 147px;
-  max-block-size: 48px;
-  align-items: center;
-  gap: 8px;
-  background: var(--color-bg-card);
-  border-radius: 12px;
-  cursor: pointer;
-}
-
-.buttonWrapperClose .closeButton {
-  text-align: center;
-  margin: 0;
-  cursor: pointer;
-}
-
 .progressBarWrapper {
   display: flex;
   flex-direction: column;
@@ -100,9 +59,9 @@
 }
 
 .formButtonsLogin {
- display: flex;
- flex-direction: column;
- gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .socialButton {

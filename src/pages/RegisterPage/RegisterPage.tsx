@@ -1,6 +1,4 @@
 import ButtonDefault from '@shared/ui/ButtonDefault';
-import Logo from '../../../public/img/LogoSvg/Logo';
-import Cross from '../../../public/img/iconsSvg/Cross';
 import Google from '../../../public/img/iconsSvg/Google';
 import Apple from '../../../public/img/iconsSvg/Apple';
 import Eye from '../../../public/img/iconsSvg/Eye';
@@ -39,18 +37,6 @@ function RegisterPage() {
 
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <div className={styles.logoWrapper}>
-          <Logo />
-          <span className={styles.brandName}>SkillSwap</span>
-        </div>
-        <div className={styles.buttonWrapperClose}>
-          <ButtonDefault name="Закрыть" handleClick={() => {}} styleButton={styles.closeButton} />
-          <div className={styles.iconCloseWrapper}>
-            <Cross />
-          </div>
-        </div>
-      </header>
       <div className={styles.progressBarWrapper}>
         <h2 className={styles.title}>Шаг 1 из 3</h2>
         <div className={styles.progressLines}>

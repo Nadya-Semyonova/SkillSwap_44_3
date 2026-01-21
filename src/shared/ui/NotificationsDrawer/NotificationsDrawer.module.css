@@ -6,14 +6,15 @@
   width: 556px;
   max-width: 90vw;
   background-color: var(--color-bg-card);
-  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   max-height: 616px;
   border: solid 1px var(--color-text-secondary);
   border-radius: 12px;
   box-shadow: none;
   letter-spacing: 0.2px;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transition:
+    transform 0.3s ease-out,
+    opacity 0.3s ease-out;
   transform-origin: right center;
 }
 
@@ -34,20 +35,20 @@
 }
 
 .notificationsWrap:first-child {
-    padding-top: 60px;
+  padding-top: 60px;
 }
 
 .notificationsWrap:last-child {
-    max-height: 164px;
-    margin-top: 40px;
+  max-height: 164px;
+  margin-top: 40px;
 }
 
 .notificationsTitle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 28px;
-    letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  letter-spacing: -0.3px;
 }
 
 .notificationsTitleText {
@@ -58,21 +59,21 @@
 }
 
 .notificationsButton {
-    font-size: var(--font-h4-size);
-    line-height: var(--font-h4-line-height);
-    font-weight: var(--font-h4-weight);
-    font-family: var(--font-h4-family);
-    color: var(--color-text-link);
-    background-color: transparent;
-    border: none;
+  font-size: var(--font-h4-size);
+  line-height: var(--font-h4-line-height);
+  font-weight: var(--font-h4-weight);
+  font-family: var(--font-h4-family);
+  color: var(--color-text-link);
+  background-color: transparent;
+  border: none;
 }
 
 .notificationsButton:hover {
-    color: var(--color-accent-hover);
+  color: var(--color-accent-hover);
 }
 
 .notificationsButton:active {
-    color: var(--color-accent-pressed);
+  color: var(--color-accent-pressed);
 }
 
 .notificationsList {
@@ -116,7 +117,7 @@
   line-height: var(--font-body-line-height);
 }
 
-.notificationContainer p:first-child {
+.notificationContainer .p:first-child {
   font-size: var(--font-body-size);
   line-height: var(--font-body-line-height);
   font-family: var(--font-body-family);
@@ -124,7 +125,7 @@
   color: var(--color-text-primary);
 }
 
-.notificationContainer p:last-child {
+.notificationContainer .p:last-child {
   font-size: var(--font-caption-size);
   line-height: var(--font-caption-line-height);
   font-weight: var(--font-caption-weight);
@@ -133,19 +134,19 @@
 }
 
 .notificationItem .notificationButtonGo {
-    border: none;
-    inline-size: auto;
-    background-color: var(--color-accent);
-    padding: 12px 24px;
-    margin: 16px 0 0;
+  border: none;
+  inline-size: auto;
+  background-color: var(--color-accent);
+  padding: 12px 24px;
+  margin: 16px 0 0;
 }
 
 .notificationItem .notificationButtonGo:hover {
-    background-color: var(--color-accent-hover);
+  background-color: var(--color-accent-hover);
 }
 
 .notificationItem .notificationButtonGo:active {
-    background-color: var(--color-accent-pressed);
+  background-color: var(--color-accent-pressed);
 }
 
 .emptyState {

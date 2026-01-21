@@ -74,3 +74,13 @@ export interface ICitySelector {
 export interface ISkillItem {
   [categoryName: string]: string[];
 }
+
+export interface IInput {
+  title?: string;
+  placeholder?: string;
+  onChange?: (value: string) => void;
+  className?: string;
+  value?: string;
+  type?: 'text' | 'email' | 'password' | 'number' | 'tel';
+  disabled?: boolean;
+}
