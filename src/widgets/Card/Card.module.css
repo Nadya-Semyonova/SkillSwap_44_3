@@ -1,5 +1,5 @@
 .content {
-  max-width: 324px;
+  width: 324px;
   padding: 20px;
   border-radius: 12px;
   background-color: var(--color-bg-card);
@@ -85,6 +85,8 @@
 .skillItemsContainer {
   display: flex;
   gap: 4px;
+  /* здесь */
+  width: 100%;
 }
 
 .skillItem {
@@ -97,6 +99,9 @@
   padding: 8px 12px;
   white-space: nowrap;
   cursor: pointer;
+  /* здесь */
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .detailsButton {

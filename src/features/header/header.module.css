@@ -2,14 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 36px 20px;
   background-color: var(--color-bg-main);
+  /* здесь */
+  padding-left: 35px;
+  padding-right: 35px;
   max-inline-size: 1440px;
 }
 
 .leftSection {
   display: flex;
   align-items: center;
+  /* здесь */
+  gap: 20px;
 }
 
 /* Стили для контейнера логотипа с текстом */
@@ -21,7 +25,6 @@
   color: var(--color-text-primary);
   font-family: var(--font-family-heading);
   font-size: var(--font-h2-size);
-  font-weight: 600;
   line-height: var(--font-h2-line-height);
   text-decoration: none;
   cursor: pointer;

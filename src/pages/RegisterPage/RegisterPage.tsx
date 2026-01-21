@@ -4,6 +4,7 @@ import Apple from '../../../public/img/iconsSvg/Apple';
 import Eye from '../../../public/img/iconsSvg/Eye';
 import LightBulb from '../../../public/img/IllustrationsSvg/LightBulb';
 import styles from './RegisterPage.module.css';
+import HeaderRegister from '@/features/auth/registration/ui/HeaderRegistration/headerRegistration';
 
 interface ControllerField {
   value: string;
@@ -37,6 +38,7 @@ function RegisterPage() {
 
   return (
     <div className={styles.container}>
+      <HeaderRegister />
       <div className={styles.progressBarWrapper}>
         <h2 className={styles.title}>Шаг 1 из 3</h2>
         <div className={styles.progressLines}>
