@@ -1,5 +1,3 @@
-@import url('../../../../../shared/assets/styles/variables.css');
-
 .registrationStep3 {
   min-height: 100vh;
   background: var(--color-bg-main);
