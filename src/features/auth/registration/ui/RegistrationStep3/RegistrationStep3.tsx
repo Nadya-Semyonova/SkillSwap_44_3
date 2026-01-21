@@ -2,7 +2,7 @@ import Logo from '@public/img/LogoSvg/Logo';
 import ChevronDown from '@public/img/IconsSvg/ChevronDown';
 import GaleryAdd from '@public/img/IconsSvg/GaleryAdd';
 import SchoolBoard from '@public/img/IllustrationsSvg/SchoolBoard';
-import ButtonDefault from '../../../../../shared/ui/ButtonDefault/ButtonDefault';
+import ButtonDefault from '@shared/ui/ButtonDefault/ButtonDefault';
 import styles from './RegistrationStep3.module.css';
 
 export default function RegistrationStep3() {
