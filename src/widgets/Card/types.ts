@@ -12,22 +12,9 @@ export interface TeachSkill {
 // Тип для тега "skill_off" (хочет научиться)
 export type SkillOff = string;
 
-// Упрощенный тип для Card
-export interface CardUser {
-  id: number;
-  liked: number; // Для отображения иконки лайка
-  avatar: string;
-  name: string;
-  city: string;
-  age?: number; // Можно не показывать если не нужно
-  about?: string; // Можно показывать в tooltip или модалке
-  card_people?: TeachSkill;
-  skill_off: SkillOff[];
-}
-
 // Основные пропсы для Card компонента
 export interface CardProps {
-  user: CardUser; // Данные пользователя для карточки
+  user: IUser; // Данные пользователя для карточки
   onLikeClick?: () => void; // Колбэк для лайка
   onDetailsClick?: () => void; // Колбэк для кнопки "Подробнее"
   showFullName?: boolean; // Показывать ли возраст
