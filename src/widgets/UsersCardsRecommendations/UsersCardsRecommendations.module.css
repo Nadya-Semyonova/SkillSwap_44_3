@@ -1,6 +1,6 @@
 .container {
-  padding: 32px 0;
-  width: 100%;
+  padding-block-end: 32px;
+  width: min-content;
 }
 
 .header {
@@ -17,7 +17,6 @@
   font-weight: var(--font-weight-bold);
   color: var(--color-text-primary);
   margin: 0;
-  padding-right: 741px;
 }
 
 .viewAllButton {
@@ -28,9 +27,10 @@
 
 .cardsGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, auto);
   gap: 24px;
   align-content: start;
+  max-inline-size: 100%;
 }
 
 .loading,

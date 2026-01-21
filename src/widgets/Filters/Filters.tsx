@@ -37,7 +37,6 @@ export default function Filters() {
 
   return (
     <div className={style.filterContainer}>
-      <h2 className={`${style.title} ${style.mainText}`}>Фильтры</h2>
       <div className={style.filters}>
         <div>
           {FilterOptions.base.map((filter) => (
