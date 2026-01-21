@@ -43,7 +43,7 @@
   letter-spacing: 0.3px;
 }
 
-.navMenu{
+.navMenu {
   display: flex;
   justify-content: flex-end;
   align-items: center;

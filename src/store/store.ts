@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import type { TypedUseSelectorHook } from 'react-redux';
 import { useDispatch as dispatchHook, useSelector as selectorHook } from 'react-redux';
-import usersDataReducer from './slices/userDataSlice/userDataSlice';
+import usersDataReducer from '@store/slices/userDataSlice/userDataSlice';
+import filtersReducer from '@store/slices/filtersSlice/filtersSlice';
 
 const rootReducer = {
   users: usersDataReducer,
+  filters: filtersReducer,
 };
 
 const store = configureStore({

@@ -1,5 +1,6 @@
 .buttonFilter {
   display: flex;
+  justify-content: start;
   align-items: center;
   gap: 8px;
   background-color: transparent;

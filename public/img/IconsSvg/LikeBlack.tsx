@@ -1,9 +1,13 @@
-const LikeBlack = () => {
+interface LikeProps {
+  isActive?: boolean;
+}
+
+const Like = ({ isActive = false }: LikeProps) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
       <path
-        fill="#253017"
-        stroke="#253017"
+        fill={isActive ? '#ABD27A' : 'none'} // Изменение: неактивное = none
+        stroke={isActive ? '#ABD27A' : '#253017'} // Обводка меняет цвет
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -13,4 +17,4 @@ const LikeBlack = () => {
   );
 };
 
-export default LikeBlack;
+export default Like;
