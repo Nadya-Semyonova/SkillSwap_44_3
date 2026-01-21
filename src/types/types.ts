@@ -42,3 +42,25 @@ export interface IUser {
   };
   skill_off: string[];
 }
+
+// Добавим к существующим интерфейсам
+export interface IGender {
+  id: number;
+  name: string;
+  value: string;
+}
+
+export interface ICity {
+  id: number;
+  name: string;
+}
+
+export interface IGenderSelector {
+  selectedGender: IGender | null;
+  onSelect: (gender: IGender) => void;
+}
+
+export interface ICitySelector {
+  selectedCity: ICity | null;
+  onSelect: (city: ICity) => void;
+}

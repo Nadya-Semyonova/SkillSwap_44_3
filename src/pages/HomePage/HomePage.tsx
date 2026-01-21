@@ -6,6 +6,8 @@ export function HomePage() {
     <div>
       <h1 className={style.pageTitle}>skillswap</h1>
       <Filters />
+
+      {/* ВОТ ТУТ ПОЯВЯТСЯ НАШИ КОМПОНЕНТЫ */}
     </div>
   );
 }
