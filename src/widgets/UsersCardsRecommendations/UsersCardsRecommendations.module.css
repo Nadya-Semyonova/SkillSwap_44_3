@@ -1,0 +1,56 @@
+.container {
+  padding: 32px 0;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+  padding: 0 16px;
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-h2-size);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+  padding-right: 741px;
+}
+
+.viewAllButton {
+  background-color: var(--color-bg-card);
+  border-radius: 12px;
+  padding: 12px 24px;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-content: start;
+}
+
+.loading,
+.error,
+.empty {
+  text-align: center;
+  padding: 64px 32px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-h4-size);
+  border-radius: 12px;
+  background-color: var(--color-bg-secondary);
+  margin: 0 16px;
+}
+
+.error {
+  color: var(--color-error);
+  border: 1px solid var(--color-error-light);
+  background-color: var(--color-error-bg);
+}
+
+.empty {
+  color: var(--color-text-secondary);
+}
