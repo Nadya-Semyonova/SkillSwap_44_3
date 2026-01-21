@@ -1,18 +1,18 @@
-/* eslint-disable react/require-default-props */
-
 import styles from './ButtonAllSkills.module.css';
-import ChevronDown from '../../../../public/img/IconsSvg/ChevronDown';
+import ChevronRight from '../../../../public/img/IconsSvg/ChevronRight';
 
 export interface ButtonAllSkillsProps {
-  onClick?: () => void;
-  className?: string;
-  text?: string; // Добавляем пропс для текста
+  onClick: () => void;
+  className: string;
+  text: string; // Добавляем пропс для текста
+  icon: React.ReactNode;
 }
 
 export default function ButtonAllSkills({
   onClick,
   className = '',
   text = 'Все навыки', // Значение по умолчанию
+  icon = <ChevronRight />,
 }: ButtonAllSkillsProps) {
   return (
     <button
@@ -22,9 +22,7 @@ export default function ButtonAllSkills({
       aria-label={text}
     >
       {text}
-      <div>
-        <ChevronDown />
-      </div>
+      <div>{icon}</div>
     </button>
   );
 }

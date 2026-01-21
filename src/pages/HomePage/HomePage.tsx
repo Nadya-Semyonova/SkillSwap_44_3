@@ -80,7 +80,8 @@ export function HomePage() {
       .slice(0, 3);
     const recommendationsUsers = filteredUsers.slice(0, 9);
     return (
-      <div className={style.homeSection}>
+      <div>
+        {/* править наверное надо, что внизу */}
         <div className={style.filterButtonsContainer}>
           <h2 className={`${style.title} ${style.mainText}`}>Фильтры</h2>
         </div>

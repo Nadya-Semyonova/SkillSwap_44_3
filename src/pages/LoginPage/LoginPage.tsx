@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
-import ButtonDefault from '@shared/ui/ButtonDefault';
+import { Link, useNavigate } from 'react-router-dom';
+import { ROUTES } from '@/shared/lib/constants/routes';
+import ButtonDefault from '@/shared/ui/ButtonDefault';
 import Logo from '../../../public/img/LogoSvg/Logo';
 import Cross from '../../../public/img/iconsSvg/Cross';
 import Google from '../../../public/img/iconsSvg/Google';
@@ -33,6 +34,7 @@ const useController = (): UseControllerResult => {
 function LoginPage() {
   const emailController = useController();
   const passwordController = useController();
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,7 +48,11 @@ function LoginPage() {
           <span className={styles.brandName}>SkillSwap</span>
         </div>
         <div className={styles.buttonWrapperClose}>
-          <ButtonDefault name="Закрыть" handleClick={() => {}} styleButton={styles.closeButton} />
+          <ButtonDefault
+            name="Закрыть"
+            handleClick={() => navigate(ROUTES.HOME)}
+            styleButton={styles.closeButton}
+          />
           <div className={styles.iconCloseWrapper}>
             <Cross />
           </div>
@@ -119,7 +125,7 @@ function LoginPage() {
           </div>
           <div className={styles.formButtonSubmit}>
             <ButtonDefault name="Войти" handleClick={() => {}} styleButton={styles.loginButton} />
-            <Link to="/RegisterPage" className={styles.registerLink}>
+            <Link to={ROUTES.REGISTER} className={styles.registerLink}>
               Зарегистрироваться
             </Link>
           </div>

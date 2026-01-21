@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { ROUTES } from '@/shared/lib/constants/routes';
 import LogoIcon from '../../shared/ui/Logo/Logo';
 import AboutProject from '../../shared/ui/AboutProject/AboutProject';
 import ButtonAllSkills from '../../shared/ui/ButtonAllSkills/ButtonAllSkills';
@@ -6,6 +7,7 @@ import InputSearch from '../../shared/ui/InputSearch/InputSearch';
 import ThemeToggle from '../ChangeOfTopic/UI/ThemeToggle';
 import ButtonDefault from '../../shared/ui/ButtonDefault/ButtonDefault';
 import styles from './header.module.css';
+import ChevronDown from '../../../public/img/IconsSvg/ChevronDown';
 
 export default function Header() {
   return (
@@ -17,18 +19,19 @@ export default function Header() {
         </NavLink>
 
         <AboutProject />
-        <ButtonAllSkills />
+        {/* здесь */}
+        <ButtonAllSkills onClick={() => {}} className="" text="Все навыки" icon={<ChevronDown />} />
       </div>
 
       <div className={styles.rightSection}>
         <InputSearch />
         <ThemeToggle />
 
-        <NavLink to="/login" className={styles.navLink}>
+        <NavLink to={ROUTES.LOGIN} className={styles.navLink}>
           <ButtonDefault name="Войти" styleButton={styles.loginButton} />
         </NavLink>
 
-        <NavLink to="/register" className={styles.navLink}>
+        <NavLink to={ROUTES.REGISTER} className={styles.navLink}>
           <ButtonDefault name="Зарегистрироваться" styleButton={styles.registerButton} />
         </NavLink>
       </div>
