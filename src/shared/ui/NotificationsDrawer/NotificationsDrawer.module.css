@@ -1,0 +1,165 @@
+.notifications {
+  position: fixed;
+  top: 104px;
+  right: 0;
+  height: 100vh;
+  width: 556px;
+  max-width: 90vw;
+  background-color: var(--color-bg-card);
+  z-index: 1000;
+  max-height: 616px;
+  border: solid 1px var(--color-text-secondary);
+  border-radius: 12px;
+  box-shadow: none;
+  letter-spacing: 0.2px;
+  transition:
+    transform 0.3s ease-out,
+    opacity 0.3s ease-out;
+  transform-origin: right center;
+}
+
+.notificationsOpen {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.notificationsClosed {
+  transform: translateX(16px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.notificationsWrap {
+  overflow-y: auto;
+  padding: 0 60px;
+}
+
+.notificationsWrap:first-child {
+  padding-top: 60px;
+}
+
+.notificationsWrap:last-child {
+  max-height: 164px;
+  margin-top: 40px;
+}
+
+.notificationsTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  letter-spacing: -0.3px;
+}
+
+.notificationsTitleText {
+  font-size: var(--font-h2-size);
+  line-height: var(--font-h2-line-height);
+  font-weight: var(--font-h2-weight);
+  font-family: var(--font-h2-family);
+}
+
+.notificationsButton {
+  font-size: var(--font-h4-size);
+  line-height: var(--font-h4-line-height);
+  font-weight: var(--font-h4-weight);
+  font-family: var(--font-h4-family);
+  color: var(--color-text-link);
+  background-color: transparent;
+  border: none;
+}
+
+.notificationsButton:hover {
+  color: var(--color-accent-hover);
+}
+
+.notificationsButton:active {
+  color: var(--color-accent-pressed);
+}
+
+.notificationsList {
+  display: flex;
+  flex-direction: column;
+  max-height: 232px;
+  gap: 24px;
+}
+
+.notificationItemWrap {
+  font-size: var(--font-body-size);
+  line-height: var(--font-body-line-height);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-secondary);
+  display: flex;
+  gap: 8px;
+}
+
+.notificationIcon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notificationIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.notificationContainer {
+  flex: 1;
+}
+
+.notificationItem p {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-size: var(--font-body-size);
+  line-height: var(--font-body-line-height);
+}
+
+.notificationContainer .p:first-child {
+  font-size: var(--font-body-size);
+  line-height: var(--font-body-line-height);
+  font-family: var(--font-body-family);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+}
+
+.notificationContainer .p:last-child {
+  font-size: var(--font-caption-size);
+  line-height: var(--font-caption-line-height);
+  font-weight: var(--font-caption-weight);
+  font-family: var(--font-caption-family);
+  color: var(--color-text-primary);
+}
+
+.notificationItem .notificationButtonGo {
+  border: none;
+  inline-size: auto;
+  background-color: var(--color-accent);
+  padding: 12px 24px;
+  margin: 16px 0 0;
+}
+
+.notificationItem .notificationButtonGo:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.notificationItem .notificationButtonGo:active {
+  background-color: var(--color-accent-pressed);
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.emptyState p {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-size: var(--font-body-size);
+  color: var(--color-text-secondary);
+}

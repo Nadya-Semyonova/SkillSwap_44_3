@@ -4,6 +4,8 @@ import Filters from '@widgets/Filters';
 import { useDispatch, useSelector } from '@store/store';
 import { useFilteredUsers } from '@widgets/Filters/hooks/useFilteredUsers';
 import { useEffect } from 'react';
+import Card from '@widgets/Card';
+import Filters from '@widgets/Filters';
 import {
   getCitiesData,
   getSkillsData,
@@ -34,9 +36,9 @@ export function HomePage() {
   const cities = useSelector((state) => state.users.cities);
   const skills = useSelector((state) => state.users.skills);
   useEffect(() => {
-    console.log(filteredUsers);
-    console.log(cities);
-    console.log(skills);
+    // console.log(filteredUsers);
+    // console.log(cities);
+    // console.log(skills);
   }, [filteredUsers, cities, skills]);
 
   if (loading) {

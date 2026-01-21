@@ -1,4 +1,5 @@
-import cities from '@public/db/city.json';
+const response = await fetch('/db/city.json');
+const cities = await response.json();
 
 const fetchCitiesApi = async (): Promise<string[]> => {
   await new Promise((resolve) => {

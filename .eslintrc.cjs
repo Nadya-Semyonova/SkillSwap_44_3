@@ -22,16 +22,8 @@ module.exports = {
     'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
     'import/prefer-default-export': 'off',
     'react/jsx-one-expression-per-line': 'off',
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
+
+    'import/extensions': 'off',
 
     'import/no-extraneous-dependencies': [
       'error',
@@ -67,6 +59,8 @@ module.exports = {
       files: ['*.ts', '*.tsx'],
       rules: {
         'prettier/prettier': ['error', { endOfLine: 'auto' }],
+        'import/extensions': 'off',
+        'import/no-unresolved': 'off',
       },
     },
     {

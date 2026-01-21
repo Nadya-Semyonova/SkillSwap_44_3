@@ -1,7 +1,7 @@
 import ButtonDefault from '@shared/ui/ButtonDefault';
 import Notification from '@public/img/IconsSvg/Notification';
-import styles from '../style/ModalChildrenStyle.module.css';
 import type { ChildrenModalProps } from '@/types/types';
+import styles from '../style/ModalChildrenStyle.module.css';
 
 function NoticeModal({ title, message, onConfirm }: ChildrenModalProps) {
   return (

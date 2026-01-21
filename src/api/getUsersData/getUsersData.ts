@@ -1,5 +1,7 @@
-import usersData from '@public/db/users.json';
 import type { IUser } from '@/types/types';
+
+const response = await fetch('/db/users.json');
+const usersData = await response.json();
 
 interface UsersJsonData {
   users: IUser[];
