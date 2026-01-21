@@ -15,3 +15,10 @@ export interface UseFiltersProps {
   initialActiveCategoryButton?: string[];
   initialActiveSkills?: string[];
 }
+
+export interface IFilteredUsers {
+  activeLearn: string;
+  activeAuthor: string;
+  activeCities: string[];
+  activeSkills: string[];
+}

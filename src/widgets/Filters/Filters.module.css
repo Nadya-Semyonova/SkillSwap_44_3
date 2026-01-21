@@ -2,7 +2,7 @@
   padding: 20px;
   background-color: var(--color-bg-filter);
   border-radius: 12px;
-  max-inline-size: 324px;
+  min-inline-size: 324px;
 }
 
 .mainText {

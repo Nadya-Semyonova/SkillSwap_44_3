@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import CitySelector from './CitySelector';
+import CitySelector from '../features/auth/registration/ui/UserSelector/components/CitySelector';
 import type { ICity } from '@/types/types';
 
 const meta: Meta<typeof CitySelector> = {

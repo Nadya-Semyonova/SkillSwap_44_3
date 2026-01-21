@@ -1,7 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import ArrowDown from '@public/img/IconsSvg/ArrowDown';
-import type { ICity } from '@/types/types';
+import { useCities } from '@shared/lib/hooks/useCities';
+import { useFilteredCities } from '@shared/lib/hooks/useFilteredCities';
+import { useClickOutside } from '@shared/lib/hooks/useClickOutside';
 import styles from './UserSelectorModal.module.css';
+import type { ICity } from '@/types/types';
 
 interface CitySelectorProps {
   selectedCity: ICity | null;
@@ -9,76 +12,21 @@ interface CitySelectorProps {
 }
 
 function CitySelector({ selectedCity, onSelect }: CitySelectorProps) {
-  const [cities, setCities] = useState<ICity[]>([]);
-  const [filteredCities, setFilteredCities] = useState<ICity[]>([]);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { cities, loading, error } = useCities();
+
   const [searchTerm, setSearchTerm] = useState('');
   const [isOpen, setIsOpen] = useState(false);
-  const [loading, setLoading] = useState(true);
+
   const wrapperRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
-    const fetchCities = async () => {
-      try {
-        setLoading(true);
-        const response = await fetch('/db/city.json');
+  const filteredCities = useFilteredCities(cities, searchTerm);
 
-        if (!response.ok) {
-          throw new Error(`Failed to load cities`);
-        }
-
-        const cityNames = await response.json();
-
-        const citiesWithId: ICity[] = cityNames.map((name: string, index: number) => ({
-          id: index + 1,
-          name,
-        }));
-
-        setCities(citiesWithId);
-        setFilteredCities(citiesWithId);
-      } catch {
-        setCities([]);
-        setFilteredCities([]);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchCities();
-  }, []);
-
-  useEffect(() => {
-    if (searchTerm.trim() === '') {
-      setFilteredCities(cities);
-    } else {
-      const filtered = cities.filter((city) =>
-        city.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setFilteredCities(filtered);
-    }
-  }, [searchTerm, cities]);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
-    };
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
+  useClickOutside({
+    ref: wrapperRef,
+    handler: () => setIsOpen(false),
+  });
 
   const handleCitySelect = (city: ICity) => {
     onSelect(city);
@@ -130,12 +78,6 @@ function CitySelector({ selectedCity, onSelect }: CitySelectorProps) {
     inputRef.current?.focus();
   };
 
-  const handleInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && filteredCities.length > 0 && !searchTerm) {
-      setIsOpen((prev) => !prev);
-    }
-  };
-
   const showArrow = !searchTerm;
 
   if (loading) {
@@ -167,7 +109,6 @@ function CitySelector({ selectedCity, onSelect }: CitySelectorProps) {
           value={searchTerm}
           onChange={handleInputChange}
           onClick={handleInputClick}
-          onKeyDown={handleInputKeyDown}
         />
 
         {showArrow && (

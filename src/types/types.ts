@@ -21,6 +21,12 @@ export interface IButtonDefault {
   styleButton?: string;
 }
 
+export interface ChildrenModalProps {
+  title: string;
+  message: string;
+  onConfirm: () => void;
+}
+
 export interface IUser {
   id: number;
   liked: number;
@@ -32,6 +38,7 @@ export interface IUser {
   gender: string;
   email: string;
   password: string;
+  createdAt: string;
   about: string;
   card_people: {
     skill: string;
@@ -43,7 +50,6 @@ export interface IUser {
   skill_off: string[];
 }
 
-// Добавим к существующим интерфейсам
 export interface IGender {
   id: number;
   name: string;
@@ -63,4 +69,8 @@ export interface IGenderSelector {
 export interface ICitySelector {
   selectedCity: ICity | null;
   onSelect: (city: ICity) => void;
+}
+
+export interface ISkillItem {
+  [categoryName: string]: string[];
 }

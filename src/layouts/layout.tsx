@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
+import Header from '@/features/header/header';
 import { Footer } from '../widgets/Footer/index';
 // eslint-disable-next-line import/extensions
-import Header from '@/features/header/header';
 
 export function Layout() {
   return (

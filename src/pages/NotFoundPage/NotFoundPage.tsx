@@ -1,5 +1,5 @@
+import Error404 from '@public/img/IllustrationsSvg/Error404';
 import styles from './NotFoundPage.module.css';
-import Error404 from '../../../public/img/IllustrationsSvg/Error404';
 
 function NotFoundPage() {
   return (

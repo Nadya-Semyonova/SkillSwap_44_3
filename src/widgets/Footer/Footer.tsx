@@ -1,5 +1,5 @@
+import Logo from '@public/img/LogoSvg/Logo';
 import styles from './Footer.module.css';
-import Logo from '../../../public/img/LogoSvg/Logo';
 
 export default function Footer() {
   return (

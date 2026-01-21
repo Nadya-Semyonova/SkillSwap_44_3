@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import ArrowDown from '@public/img/IconsSvg/ArrowDown';
+import { useClickOutside } from '@shared/lib/hooks/useClickOutside';
 import { genders } from './data';
 import type { IGender } from '@/types/types';
 import styles from './UserSelectorModal.module.css';
@@ -11,30 +12,14 @@ interface GenderSelectorProps {
 
 function GenderSelector({ selectedGender, onSelect }: GenderSelectorProps) {
   const [isOpen, setIsOpen] = useState(false);
+
   const wrapperRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
-    };
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
+  useClickOutside({
+    ref: wrapperRef,
+    handler: () => setIsOpen(false),
+  });
 
   const handleGenderSelect = (gender: IGender) => {
     onSelect(gender);
@@ -70,12 +55,6 @@ function GenderSelector({ selectedGender, onSelect }: GenderSelectorProps) {
     inputRef.current?.focus();
   };
 
-  const handleInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') {
-      setIsOpen((prev) => !prev);
-    }
-  };
-
   return (
     <div className={`${styles.container} ${styles.genderContainer}`} ref={wrapperRef}>
       <h3 className={styles.title}>Пол</h3>
@@ -88,7 +67,6 @@ function GenderSelector({ selectedGender, onSelect }: GenderSelectorProps) {
           value={selectedGender?.name || ''}
           readOnly
           onClick={handleInputClick}
-          onKeyDown={handleInputKeyDown}
         />
 
         <button
