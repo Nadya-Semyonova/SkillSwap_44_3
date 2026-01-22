@@ -1,13 +1,12 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ROUTES } from '@/shared/lib/constants/routes';
 import ButtonDefault from '@/shared/ui/ButtonDefault';
-import Logo from '../../../public/img/LogoSvg/Logo';
-import Cross from '../../../public/img/iconsSvg/Cross';
 import Google from '../../../public/img/iconsSvg/Google';
 import Apple from '../../../public/img/iconsSvg/Apple';
 import Eye from '../../../public/img/iconsSvg/Eye';
 import LightBulb from '../../../public/img/IllustrationsSvg/LightBulb';
 import styles from './LoginPage.module.css';
+import HeaderAuth from '@/features/auth/registration/ui/HeaderAuth/HeaderAuth';
 
 interface ControllerField {
   value: string;
@@ -34,7 +33,6 @@ const useController = (): UseControllerResult => {
 function LoginPage() {
   const emailController = useController();
   const passwordController = useController();
-  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,22 +40,7 @@ function LoginPage() {
 
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <div className={styles.logoWrapper}>
-          <Logo />
-          <span className={styles.brandName}>SkillSwap</span>
-        </div>
-        <div className={styles.buttonWrapperClose}>
-          <ButtonDefault
-            name="Закрыть"
-            handleClick={() => navigate(ROUTES.HOME)}
-            styleButton={styles.closeButton}
-          />
-          <div className={styles.iconCloseWrapper}>
-            <Cross />
-          </div>
-        </div>
-      </header>
+      <HeaderAuth />
       <div className={styles.headline}>
         <h2 className={styles.title}>Вход</h2>
       </div>

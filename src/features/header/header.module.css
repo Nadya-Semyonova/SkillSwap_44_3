@@ -16,29 +16,6 @@
   gap: 20px;
 }
 
-/* Стили для контейнера логотипа с текстом */
-.logoContainer {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  color: var(--color-text-primary);
-  font-family: var(--font-family-heading);
-  font-size: var(--font-h2-size);
-  line-height: var(--font-h2-line-height);
-  text-decoration: none;
-  cursor: pointer;
-  column-gap: 12px;
-}
-
-/* Убираем подчеркивание */
-.logoContainer,
-.logoContainer:hover,
-.logoContainer:focus,
-.logoContainer:active {
-  text-decoration: none;
-}
-
 .rightSection {
   display: flex;
   align-items: center;
