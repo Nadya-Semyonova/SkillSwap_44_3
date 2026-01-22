@@ -123,3 +123,24 @@
   background-color: var(--color-tag-more);
   cursor: pointer;
 }
+
+/* Текст под аватаркой (скрыт по умолчанию) */
+.aboutText {
+  text-align: start;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-body-size);
+  /* здесь */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 24px;
+}
+
+/* Показываем текст под аватаркой только в profile варианте */
+.profile .aboutText {
+  display: block;
+}

@@ -18,7 +18,8 @@ export interface CardProps {
   onLikeClick?: () => void; // Колбэк для лайка
   onDetailsClick?: () => void; // Колбэк для кнопки "Подробнее"
   showFullName?: boolean; // Показывать ли возраст
-  className?: string; // Дополнительные CSS классы
+  className?: string;
+  variant?: 'default' | 'profile'; // Дополнительные CSS классы
 }
 
 // Тип для данных из users.json

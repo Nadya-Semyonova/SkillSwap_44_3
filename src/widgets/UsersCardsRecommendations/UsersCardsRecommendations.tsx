@@ -57,7 +57,13 @@ export default function UsersCardsRecommendations({
       <section className={styles.container}>
         <div className={styles.cardsGrid}>
           {visibleUsers.map((user) => (
-            <Card key={user.id} user={user} onDetailsClick={handle} onLikeClick={handle} />
+            <Card
+              key={user.id}
+              user={user}
+              onDetailsClick={handle}
+              onLikeClick={handle}
+              variant="default"
+            />
           ))}
         </div>
       </section>
