@@ -1,5 +1,4 @@
 import { forwardRef, useRef, useImperativeHandle, type ForwardedRef } from 'react';
-import { clsx } from 'clsx';
 import CalendarIcon from '@public/img/IconsSvg/Calendar';
 import styles from './DateOfBirthSelector.module.css';
 import type { DateInputProps } from './types';
@@ -45,7 +44,7 @@ export const DateInput = forwardRef(
     };
 
     return (
-      <div className={clsx(styles.inputField, { [styles.filled]: !!value })}>
+      <div className={`${styles.inputField} ${value ? styles.filled : ''}`}>
         <input
           className={styles.input}
           ref={inputRef}
