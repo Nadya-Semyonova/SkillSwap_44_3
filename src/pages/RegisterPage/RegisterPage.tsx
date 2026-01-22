@@ -4,7 +4,7 @@ import Apple from '../../../public/img/iconsSvg/Apple';
 import Eye from '../../../public/img/iconsSvg/Eye';
 import LightBulb from '../../../public/img/IllustrationsSvg/LightBulb';
 import styles from './RegisterPage.module.css';
-import HeaderRegister from '@/features/auth/registration/ui/HeaderRegistration/headerRegistration';
+import HeaderRegister from '@/features/auth/registration/ui/HeaderAuth/HeaderAuth';
 
 interface ControllerField {
   value: string;

@@ -22,20 +22,6 @@
   padding-left: 36px;
 }
 
-.logoWrapper {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.brandName {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-h3-size);
-  font-weight: var(--font-weight-medium);
-  line-height: var(--font-body-line-height);
-  color: var(--color-text-primary);
-}
-
 .buttonWrapperClose {
   display: flex;
   max-inline-size: 147px;
@@ -47,7 +33,7 @@
   cursor: pointer;
 }
 
-.buttonWrapperClose .closeButton {
+.buttonWrapperClose {
   text-align: center;
   margin: 0;
   cursor: pointer;
