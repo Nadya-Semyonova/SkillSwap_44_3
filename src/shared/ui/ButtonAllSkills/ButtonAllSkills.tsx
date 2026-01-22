@@ -1,5 +1,5 @@
+import ChevronRight from '@assets/img/IconsSvg/ChevronRight';
 import styles from './ButtonAllSkills.module.css';
-import ChevronRight from '../../../../public/img/IconsSvg/ChevronRight';
 
 export interface ButtonAllSkillsProps {
   onClick: () => void;

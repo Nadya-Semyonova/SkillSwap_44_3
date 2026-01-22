@@ -1,5 +1,5 @@
 import ButtonDefault from '@shared/ui/ButtonDefault';
-import UserCircle from '@public/img/IconsSvg/UserCircle';
+import UserCircle from '@assets/img/IconsSvg/UserCircle';
 import type { ChildrenModalProps } from '@/types/types';
 import styles from '../style/ModalChildrenStyle.module.css';
 

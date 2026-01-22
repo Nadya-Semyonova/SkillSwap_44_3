@@ -1,8 +1,8 @@
-import Request from '@public/img/IconsSvg/Request';
-import MessageText from '@public/img/IconsSvg/MessageText';
-import Like from '@public/img/IconsSvg/Like';
-import Idea from '@public/img/IconsSvg/Idea';
-import User from '@public/img/IconsSvg/User';
+import Request from '@assets/img/IconsSvg/Request';
+import MessageText from '@assets/img/IconsSvg/MessageText';
+import Like from '@assets/img/IconsSvg/Like';
+import Idea from '@assets/img/IconsSvg/Idea';
+import User from '@assets/img/IconsSvg/User';
 import styles from './SideBar.module.css';
 
 function SideBar() {

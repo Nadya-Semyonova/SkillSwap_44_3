@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import Idea from '@public/img/IconsSvg/Idea';
+import Idea from '@assets/img/IconsSvg/Idea';
 import { useClickOutside } from '@shared/lib/hooks/useClickOutside';
 import { usePressEsc } from '@shared/lib/hooks/usePressEsc';
 import ButtonDefault from '../ButtonDefault';

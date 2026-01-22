@@ -6,7 +6,7 @@ import ButtonAllSkills from '@shared/ui/ButtonAllSkills/ButtonAllSkills';
 import InputSearch from '@shared/ui/InputSearch/InputSearch';
 import ThemeToggle from '@features/ChangeOfTopic/UI/ThemeToggle';
 import ButtonDefault from '@shared/ui/ButtonDefault/ButtonDefault';
-import ChevronDown from '@public/img/IconsSvg/ChevronDown';
+import ChevronDown from '@assets/img/IconsSvg/ChevronDown';
 import styles from './header.module.css';
 
 export default function Header() {

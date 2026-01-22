@@ -1,7 +1,7 @@
-import Logo from '@public/img/LogoSvg/Logo';
-import ChevronDown from '@public/img/IconsSvg/ChevronDown';
-import GaleryAdd from '@public/img/IconsSvg/GaleryAdd';
-import SchoolBoard from '@public/img/IllustrationsSvg/SchoolBoard';
+import Logo from '@assets/img/LogoSvg/Logo';
+import ChevronDown from '@assets/img/IconsSvg/ChevronDown';
+import GaleryAdd from '@assets/img/IconsSvg/GaleryAdd';
+import SchoolBoard from '@assets/img/IllustrationsSvg/SchoolBoard';
 import ButtonDefault from '@shared/ui/ButtonDefault/ButtonDefault';
 import styles from './RegistrationStep3.module.css';
 

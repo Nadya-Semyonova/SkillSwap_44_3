@@ -30,7 +30,8 @@
       "@features/*": ["src/features/*"],
       "@public/*": ["public/*"],
       "@db/*": ["src/db/*"],
-      "@img/*": ["src/img/*"]
+      "@img/*": ["src/img/*"],
+      "@assets/*": ["src/assets/*"]
     },
 
     /* Linting */

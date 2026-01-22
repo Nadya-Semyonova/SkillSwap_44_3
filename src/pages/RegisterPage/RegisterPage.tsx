@@ -1,8 +1,8 @@
 import ButtonDefault from '@shared/ui/ButtonDefault';
-import Google from '../../../public/img/iconsSvg/Google';
-import Apple from '../../../public/img/iconsSvg/Apple';
-import Eye from '../../../public/img/iconsSvg/Eye';
-import LightBulb from '../../../public/img/IllustrationsSvg/LightBulb';
+import Google from '@assets/img/IconsSvg/Google';
+import Apple from '@assets/img/IconsSvg/Apple';
+import Eye from '@assets/img/IconsSvg/Eye';
+import LightBulb from '@assets/img/IllustrationsSvg/LightBulb';
 import styles from './RegisterPage.module.css';
 import HeaderRegister from '@/features/auth/registration/ui/HeaderAuth/HeaderAuth';
 

@@ -1,7 +1,7 @@
-import CheckBoxEmpty from '@public/img/IconsSvg/CheckBoxEmpty';
-import CheckBoxDone from '@public/img/IconsSvg/CheckBoxDone';
-import CheckBoxRemove from '@public/img/IconsSvg/CheckBoxRemove';
-import ChevronDown from '@public/img/IconsSvg/ChevronDown';
+import CheckBoxEmpty from '@assets/img/IconsSvg/CheckBoxEmpty';
+import CheckBoxDone from '@assets/img/IconsSvg/CheckBoxDone';
+import CheckBoxRemove from '@assets/img/IconsSvg/CheckBoxRemove';
+import ChevronDown from '@assets/img/IconsSvg/ChevronDown';
 import type { IMultiFilterButton } from '@/types/types';
 import style from './FilterMultiButton.module.css';
 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Card from '@widgets/Card/Card';
 import ButtonAllSkills from '@shared/ui/ButtonAllSkills';
-import ChevronRight from '../../../public/img/IconsSvg/ChevronRight';
+import ChevronRight from '@assets/img/IconsSvg/ChevronRight';
 import styles from './UsersCardsRecommendations.module.css';
 import { useInfiniteScroll } from '@/shared/lib/hooks/useInfiniteScroll'; // скролл доработать
 import type { UsersCardsRecommendationsProps } from './types/types';
@@ -29,9 +29,9 @@ export default function UsersCardsRecommendations({
   if (buttonMore) {
     return (
       <>
-        <header className={styles.header}>
+        <div className={styles.header}>
           <h2 className={styles.title}>{title}</h2>
-        </header>
+        </div>
         <section className={styles.container}>
           <div className={styles.cardsGrid}>
             {visibleUsers.map((user) => (
@@ -45,7 +45,7 @@ export default function UsersCardsRecommendations({
 
   return (
     <>
-      <header className={styles.header}>
+      <div className={styles.header}>
         <h2 className={styles.title}>{title}</h2>
         <ButtonAllSkills
           onClick={() => handleClickMore(title)}
@@ -53,7 +53,7 @@ export default function UsersCardsRecommendations({
           text="Смотреть все"
           icon={<ChevronRight />}
         />
-      </header>
+      </div>
       <section className={styles.container}>
         <div className={styles.cardsGrid}>
           {visibleUsers.map((user) => (
