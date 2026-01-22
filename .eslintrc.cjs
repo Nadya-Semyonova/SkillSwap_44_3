@@ -22,23 +22,29 @@ module.exports = {
     'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
     'import/prefer-default-export': 'off',
     'react/jsx-one-expression-per-line': 'off',
-
+    'import/no-extraneous-dependencies': 'off',
     'import/extensions': 'off',
-
-    'import/no-extraneous-dependencies': [
+    'react/require-default-props': [
       'error',
       {
-        devDependencies: [
-          'vite.config.ts',
-          '**/*.test.ts',
-          '**/*.test.tsx',
-          '**/*.spec.ts',
-          '**/*.spec.tsx',
-          '**/setupTests.ts',
-          'jest.config.*',
-        ],
+        functions: 'defaultArguments',
       },
     ],
+
+    // 'import/no-extraneous-dependencies': [
+    //   'error',
+    //   {
+    //     devDependencies: [
+    //       'vite.config.ts',
+    //       '**/*.test.ts',
+    //       '**/*.test.tsx',
+    //       '**/*.spec.ts',
+    //       '**/*.spec.tsx',
+    //       '**/setupTests.ts',
+    //       'jest.config.*',
+    //     ],
+    //   },
+    // ],
     'no-param-reassign': [
       'error',
       {

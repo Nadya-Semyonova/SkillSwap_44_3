@@ -1,4 +1,4 @@
-import Cross from '@public/img/iconsSvg/Cross';
+import Cross from '@assets/img/iconsSvg/Cross';
 import style from './ButtonCancelFilter.module.css';
 import type { IButtonCancelFilter } from './types/types';
 

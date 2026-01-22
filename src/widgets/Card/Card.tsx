@@ -4,7 +4,7 @@ import { getSkillColor } from '@shared/lib/constants/SkillColors';
 import { declensionAge } from '@shared/lib/helpers/declension';
 import { useLikeCounter } from '@shared/lib/hooks/useLikeCounter';
 import ButtonDefault from '@shared/ui/ButtonDefault';
-import LikeBlack from '../../../public/img/IconsSvg/LikeBlack';
+import LikeBlack from '@assets/img/IconsSvg/LikeBlack';
 import style from './Card.module.css';
 
 function Card({ user, onDetailsClick, onLikeClick, showFullName = true }: CardProps) {

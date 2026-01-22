@@ -1,4 +1,4 @@
-import Moon from '../../../../public/img/IconsSvg/Moon';
+import Moon from '@assets/img/IconsSvg/Moon';
 import styles from './ThemeToggle.module.css';
 
 export default function ThemeToggle() {

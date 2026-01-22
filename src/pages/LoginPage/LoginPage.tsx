@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-import { ROUTES } from '@/shared/lib/constants/routes';
-import ButtonDefault from '@/shared/ui/ButtonDefault';
-import Google from '../../../public/img/iconsSvg/Google';
-import Apple from '../../../public/img/iconsSvg/Apple';
-import Eye from '../../../public/img/iconsSvg/Eye';
-import LightBulb from '../../../public/img/IllustrationsSvg/LightBulb';
+import { ROUTES } from '@shared/lib/constants/routes';
+import ButtonDefault from '@shared/ui/ButtonDefault';
+import Google from '@assets/img/IconsSvg/Google';
+import Apple from '@assets/img/IconsSvg/Apple';
+import Eye from '@assets/img/IconsSvg/Eye';
+import LightBulb from '@assets/img/IllustrationsSvg/LightBulb';
+import HeaderAuth from '@features/auth/registration/ui/HeaderAuth/HeaderAuth';
 import styles from './LoginPage.module.css';
-import HeaderAuth from '@/features/auth/registration/ui/HeaderAuth/HeaderAuth';
 
 interface ControllerField {
   value: string;

@@ -23,6 +23,7 @@ export default defineConfig({
       '@db': path.resolve(__dirname, './src/db'),
       '@img': path.resolve(__dirname, './src/img'),
       '@public': path.resolve(__dirname, './public'),
+      '@assets': path.resolve(__dirname, './src/assets'),
     },
   },
 });
