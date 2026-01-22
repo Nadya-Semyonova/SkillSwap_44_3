@@ -6,7 +6,7 @@ import type { TDateOfBirthSelectorProps } from './types';
 import { DateInput } from './DateInput';
 import { CalendarContainer } from './CalendarContainer';
 import 'react-datepicker/dist/react-datepicker.css';
-import './DateOfBirthDatepicker.css';
+import './DateOfBirthDatepicker.module.css';
 import styles from './DateOfBirthSelector.module.css';
 
 registerLocale('ru', ru);
@@ -140,10 +140,10 @@ function DateOfBirthSelector(props: TDateOfBirthSelectorProps) {
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.container}>
       <span className={styles.label}>Дата рождения</span>
 
-      <div>
+      <div className={styles.datepicker}>
         <DatePicker
           selected={draftDate ?? value ?? null}
           minDate={MIN_DATE}
