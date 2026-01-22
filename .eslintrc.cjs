@@ -24,6 +24,7 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     'import/no-extraneous-dependencies': 'off',
     'import/extensions': 'off',
+    'react/button-has-type': 'off',
     'react/require-default-props': [
       'error',
       {

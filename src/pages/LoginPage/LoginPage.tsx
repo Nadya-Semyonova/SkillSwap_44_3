@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ROUTES } from '@shared/lib/constants/routes';
 import ButtonDefault from '@shared/ui/ButtonDefault';
 import Google from '@assets/img/IconsSvg/Google';
@@ -6,37 +6,36 @@ import Apple from '@assets/img/IconsSvg/Apple';
 import Eye from '@assets/img/IconsSvg/Eye';
 import LightBulb from '@assets/img/IllustrationsSvg/LightBulb';
 import HeaderAuth from '@features/auth/registration/ui/HeaderAuth/HeaderAuth';
+import { useState } from 'react';
 import styles from './LoginPage.module.css';
-
-interface ControllerField {
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onBlur: () => void;
-  ref: React.RefObject<HTMLInputElement>;
-}
-
-interface UseControllerResult {
-  field: ControllerField;
-}
-
-const useController = (): UseControllerResult => {
-  return {
-    field: {
-      value: '',
-      onChange: () => {},
-      onBlur: () => {},
-      ref: { current: null },
-    },
-  };
-};
+import { useDispatch } from '@/store/store';
+import { getUserInfoData } from '@/store/slices/authSlice/authSlice';
 
 function LoginPage() {
-  const emailController = useController();
-  const passwordController = useController();
+  const [showPass, setShowPass] = useState<boolean>(false);
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleClickEye = () => {
+    setShowPass(!showPass);
   };
+
+  const handleSubmit = async () => {
+    await dispatch(getUserInfoData({ email, password })).unwrap();
+    navigate('/profile');
+  };
+
+  const changeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const changePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
+
+  console.log(email, password);
 
   return (
     <div className={styles.container}>
@@ -77,28 +76,26 @@ function LoginPage() {
                 type="email"
                 className={styles.input}
                 placeholder="Введите email"
-                value={emailController.field.value}
-                onChange={emailController.field.onChange}
-                onBlur={emailController.field.onBlur}
-                ref={emailController.field.ref}
+                value={email}
+                onChange={(e) => changeEmail(e)}
               />
             </div>
             <div className={styles.field}>
               <div className={styles.label}>Пароль</div>
               <div className={styles.inputWrapper}>
                 <input
-                  type="password"
+                  type={showPass ? 'text' : 'password'}
                   className={styles.input}
                   placeholder="Введите ваш пароль"
-                  value={passwordController.field.value}
-                  onChange={passwordController.field.onChange}
-                  onBlur={passwordController.field.onBlur}
-                  ref={passwordController.field.ref}
+                  value={password}
+                  onChange={(e) => changePassword(e)}
                 />
                 <button
                   type="button"
                   className={styles.eyeButton}
-                  onClick={() => {}}
+                  onClick={() => {
+                    handleClickEye();
+                  }}
                   aria-label="Показать пароль"
                 >
                   <Eye />
@@ -107,7 +104,12 @@ function LoginPage() {
             </div>
           </div>
           <div className={styles.formButtonSubmit}>
-            <ButtonDefault name="Войти" handleClick={() => {}} styleButton={styles.loginButton} />
+            <ButtonDefault
+              name="Войти"
+              handleClick={handleSubmit}
+              styleButton={styles.loginButton}
+              type="button"
+            />
             <Link to={ROUTES.REGISTER} className={styles.registerLink}>
               Зарегистрироваться
             </Link>

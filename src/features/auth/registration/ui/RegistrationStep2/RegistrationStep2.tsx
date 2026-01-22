@@ -1,8 +1,8 @@
-import UserCircle from '@public/img/IconsSvg/UserCircle';
-import Add from '@public/img/IconsSvg/Add';
-import Calendar from '@public/img/IconsSvg/Calendar';
-import ChevronDown from '@public/img/IconsSvg/ChevronDown';
-import UserInfo from '@public/img/IllustrationsSvg/UserInfo';
+import UserCircle from '@assets/img/IconsSvg/UserCircle';
+import Add from '@assets/img/IconsSvg/Add';
+import Calendar from '@assets/img/IconsSvg/Calendar';
+import ChevronDown from '@assets/img/IconsSvg/ChevronDown';
+import UserInfo from '@assets/img/IllustrationsSvg/UserInfo';
 import ButtonDefault from '@shared/ui/ButtonDefault';
 import style from './RegistrationStep2.module.css';
 

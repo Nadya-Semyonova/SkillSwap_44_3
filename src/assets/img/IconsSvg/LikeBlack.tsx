@@ -17,8 +17,4 @@ function LikeBlack({ isActive = false }: LikeProps) {
   );
 }
 
-LikeBlack.defaultProps = {
-  isActive: false,
-};
-
 export default LikeBlack;
