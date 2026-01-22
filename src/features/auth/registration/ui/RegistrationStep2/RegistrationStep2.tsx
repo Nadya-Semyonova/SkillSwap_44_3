@@ -12,12 +12,22 @@ export function RegistrationStep2() {
       <div className={style.leftColumn}>
         <form className={style.form}>
           <div className={style.avatarContainer}>
-            <div className={style.avatarIcon}>
+            <button
+              type="button"
+              className={style.avatarIcon}
+              onClick={() => {}}
+              aria-label="Аватар пользователя"
+            >
               <UserCircle />
-            </div>
-            <div className={style.avatarPlus}>
+            </button>
+            <button
+              type="button"
+              className={style.avatarPlus}
+              onClick={() => {}}
+              aria-label="Добавить аватар"
+            >
               <Add />
-            </div>
+            </button>
           </div>
 
           <div className={style.fieldGroup}>
@@ -39,9 +49,14 @@ export function RegistrationStep2() {
                   className={style.input}
                   placeholder="дд.мм.гггг"
                 />
-                <div className={style.inputIcon}>
+                <button
+                  type="button"
+                  className={style.inputIcon}
+                  onClick={() => {}}
+                  aria-label="Выбрать дату из календаря"
+                >
                   <Calendar />
-                </div>
+                </button>
               </div>
             </div>
 
@@ -55,9 +70,14 @@ export function RegistrationStep2() {
                   <option value="male">Мужской</option>
                   <option value="female">Женский</option>
                 </select>
-                <div className={style.selectIcon}>
+                <button
+                  type="button"
+                  className={style.selectIcon}
+                  onClick={() => {}}
+                  aria-label="Открыть список выбора пола"
+                >
                   <ChevronDown />
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -70,9 +90,14 @@ export function RegistrationStep2() {
               <select id="city" className={style.select}>
                 <option value="">Не указан</option>
               </select>
-              <div className={style.selectIcon}>
+              <button
+                type="button"
+                className={style.selectIcon}
+                onClick={() => {}}
+                aria-label="Открыть список выбора города"
+              >
                 <ChevronDown />
-              </div>
+              </button>
             </div>
           </div>
 
@@ -84,9 +109,14 @@ export function RegistrationStep2() {
               <select id="skillCategory" className={style.select}>
                 <option value="">Выберите категорию</option>
               </select>
-              <div className={style.selectIcon}>
+              <button
+                type="button"
+                className={style.selectIcon}
+                onClick={() => {}}
+                aria-label="Открыть список выбора категории навыка"
+              >
                 <ChevronDown />
-              </div>
+              </button>
             </div>
           </div>
 
@@ -98,9 +128,14 @@ export function RegistrationStep2() {
               <select id="skillSubcategory" className={style.select}>
                 <option value="">Выберите подкатегорию</option>
               </select>
-              <div className={style.selectIcon}>
+              <button
+                type="button"
+                className={style.selectIcon}
+                onClick={() => {}}
+                aria-label="Открыть список выбора подкатегории навыка"
+              >
                 <ChevronDown />
-              </div>
+              </button>
             </div>
           </div>
 
