@@ -1,1 +1,1 @@
-export { default as RegistrationStep3 } from './RegistrationStep3/RegistrationStep3';
+export { default as DateOfBirthSelector } from './UserSelector/DateOfBirthSelector/DateOfBirthSelector';
