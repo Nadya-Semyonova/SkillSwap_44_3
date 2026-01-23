@@ -1,4 +1,4 @@
-import Search from '../../../../public/img/IconsSvg/Search';
+import Search from '@assets/img/IconsSvg/Search';
 import styles from './InputSearch.module.css';
 
 export default function InputSearch() {

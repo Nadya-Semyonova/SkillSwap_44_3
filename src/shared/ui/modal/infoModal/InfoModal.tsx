@@ -1,7 +1,7 @@
 import ButtonDefault from '@shared/ui/ButtonDefault';
-import Done from '@public/img/IconsSvg/Done';
-import styles from '../style/ModalChildrenStyle.module.css';
+import Done from '@assets/img/IconsSvg/Done';
 import type { ChildrenModalProps } from '@/types/types';
+import styles from '../style/ModalChildrenStyle.module.css';
 
 function InfoModal({ title, message, onConfirm }: ChildrenModalProps) {
   return (

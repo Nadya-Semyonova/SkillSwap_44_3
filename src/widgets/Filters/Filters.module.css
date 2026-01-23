@@ -1,19 +1,15 @@
 .filterContainer {
   padding: 20px;
-  background-color: var(--color-bg-filter);
+  background-color: var(--color-bg-card);
   border-radius: 12px;
-  max-inline-size: 324px;
+  inline-size: 100%;
+  /* здесь */
+  height: fit-content;
 }
 
 .mainText {
   font-weight: var(--font-weight-regular);
   color: var(--color-text-primary);
-}
-
-.title {
-  margin-block-end: 40px;
-  font-size: var(--font-h2-size);
-  line-height: 28px;
 }
 
 .filterTitle {

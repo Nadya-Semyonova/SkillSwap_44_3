@@ -1,0 +1,210 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: var(--color-bg-main);
+  min-inline-size: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  max-inline-size: 1440px;
+  inline-size: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-right: 36px;
+  padding-left: 36px;
+}
+
+.buttonWrapperClose {
+  display: flex;
+  max-inline-size: 147px;
+  max-block-size: 48px;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-bg-card);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.buttonWrapperClose {
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+}
+
+.headline {
+  max-inline-size: 1440px;
+  text-align: center;
+}
+
+.title {
+  font-size: var(--font-h2-size);
+  font-weight: var(--font-h2-weight);
+  font-family: var(--font-h2-family);
+  line-height: var(--font-h3-line-height);
+  color: var(--color-text-primary);
+}
+
+.content {
+  max-inline-size: 1136px;
+  display: flex;
+  gap: 24px;
+  padding: 32px 0 152px;
+  margin: 0 auto;
+}
+
+.form {
+  background-color: var(--color-bg-card);
+  padding: 112px 60px;
+  min-inline-size: 556px;
+}
+
+.formButtonsLogin {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.socialButton {
+  max-inline-size: 436px;
+  max-block-size: 48px;
+  border: 1px solid var(--color-text-secondary);
+  margin: 0;
+  border-radius: 12px;
+  background: transparent;
+  padding-block: 12px;
+  padding-inline: 24px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.socialText {
+  font-size: var(--font-body-size);
+  font-weight: var(--font-body-weight);
+  font-family: var(--font-body-family);
+  line-height: var(--font-body-line-height);
+  color: var(--color-text-primary);
+}
+
+.formText {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.formInput {
+  position: relative;
+  max-inline-size: 436px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.label {
+  font-size: var(--font-body-size);
+  font-weight: var(--font-body-weight);
+  font-family: var(--font-body-family);
+  line-height: var(--font-body-line-height);
+  color: var(--color-text-primary);
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  inline-size: 100%;
+  max-block-size: 48px;
+  border: 1px solid var(--color-text-secondary);
+  border-radius: 12px;
+  padding: 12px 20px;
+}
+
+.eyeButton {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--color-text-primary);
+  z-index: 2;
+}
+
+.formButtonSubmit {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.formButtonSubmit .loginButton {
+  max-inline-size: 436px;
+  max-block-size: 48px;
+  background-color: var(--color-accent);
+  margin: 0;
+  cursor: pointer;
+}
+
+.registerLink {
+  font-size: var(--font-body-size);
+  font-weight: var(--font-body-weight);
+  font-family: var(--font-body-family);
+  line-height: var(--font-body-line-height);
+  text-align: center;
+}
+
+.onboarding {
+  background-color: var(--color-bg-card);
+  max-inline-size: 556px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.iconWrapper {
+  padding-left: 128px;
+  padding-right: 128px;
+  padding-top: 132px;
+}
+
+.onboardingContent {
+  max-inline-size: 436px;
+  max-block-size: 88px;
+  padding-left: 60px;
+  padding-right: 60px;
+  align-self: center;
+}
+
+.onboardingTitle {
+  font-size: var(--font-h2-size);
+  font-weight: var(--font-h2-weight);
+  font-family: var(--font-h2-family);
+  line-height: var(--font-h3-line-height);
+  color: var(--color-text-primary);
+  text-align: center;
+  padding-bottom: 12px;
+  white-space: nowrap;
+}
+
+.onboardingText {
+  font-size: var(--font-body-size);
+  font-weight: var(--font-body-weight);
+  font-family: var(--font-body-family);
+  line-height: var(--font-body-line-height);
+  color: var(--color-text-primary);
+  text-align: center;
+}
