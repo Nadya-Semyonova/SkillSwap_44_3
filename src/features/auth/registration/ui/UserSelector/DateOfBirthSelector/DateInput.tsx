@@ -1,5 +1,5 @@
 import { forwardRef, useRef, useImperativeHandle, type ForwardedRef } from 'react';
-import CalendarIcon from '@public/img/IconsSvg/Calendar';
+import CalendarIcon from '@assets/img/IconsSvg/Calendar';
 import styles from './DateOfBirthSelector.module.css';
 import type { DateInputProps } from './types';
 
