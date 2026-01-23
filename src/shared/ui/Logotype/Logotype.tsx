@@ -1,4 +1,4 @@
-import Logo from '@assets/img/LogoSvg/Logo';
+import Logo from '@/shared/assets/images/LogoSvg/Logo';
 import style from './Logotype.module.css';
 
 export default function Logotype() {

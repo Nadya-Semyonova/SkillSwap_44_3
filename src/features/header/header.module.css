@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-bg-main);
+
   /* здесь */
   padding-left: 35px;
   padding-right: 35px;
@@ -12,6 +13,7 @@
 .leftSection {
   display: flex;
   align-items: center;
+
   /* здесь */
   gap: 20px;
 }

@@ -1,4 +1,4 @@
-import Error500 from '@assets/img/IllustrationsSvg/Error500';
+import Error500 from '@/shared/assets/images/IllustrationsSvg/Error500';
 import styles from './ErrorPage.module.css';
 
 function ErrorPage() {

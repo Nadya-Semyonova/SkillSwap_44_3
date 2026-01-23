@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import ToggledSelect from '@shared/ui/useSelector/ToggledSelect';
+import ToggledSelect from '@/shared/ui/ToggleSelector/ToggledSelect';
 
 const meta: Meta<typeof ToggledSelect> = {
   title: 'Shared/UI/ToggledSelect',

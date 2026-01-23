@@ -1,12 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import { ROUTES } from '@shared/lib/constants/routes';
 import Logotype from '@shared/ui/Logotype/Logotype';
-import AboutProject from '@shared/ui/AboutProject/AboutProject';
-import ButtonAllSkills from '@shared/ui/ButtonAllSkills/ButtonAllSkills';
-import InputSearch from '@shared/ui/InputSearch/InputSearch';
-import ThemeToggle from '@features/ChangeOfTopic/UI/ThemeToggle';
 import ButtonDefault from '@shared/ui/ButtonDefault/ButtonDefault';
-import ChevronDown from '@assets/img/IconsSvg/ChevronDown';
+import AboutProject from '@/shared/ui/AllButtons/AboutProject/AboutProject';
+import ButtonAllSkills from '@/shared/ui/AllButtons/ButtonAllSkills/ButtonAllSkills';
+import InputSearch from '@/shared/ui/AllButtons/InputSearch/InputSearch';
+import ThemeToggle from '@/features/themeToggle/ThemeToggle';
+import ChevronDown from '@/shared/assets/images/IconsSvg/ChevronDown';
 import styles from './header.module.css';
 
 export default function Header() {

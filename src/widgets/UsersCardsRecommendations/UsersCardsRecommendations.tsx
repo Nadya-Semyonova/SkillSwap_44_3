@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Card from '@widgets/Card/Card';
-import ButtonAllSkills from '@shared/ui/ButtonAllSkills';
-import ChevronRight from '@assets/img/IconsSvg/ChevronRight';
+import ButtonAllSkills from '@/shared/ui/AllButtons/ButtonAllSkills';
+import ChevronRight from '@/shared/assets/images/IconsSvg/ChevronRight';
 import styles from './UsersCardsRecommendations.module.css';
 import { useInfiniteScroll } from '@/shared/lib/hooks/useInfiniteScroll'; // скролл доработать
 import type { UsersCardsRecommendationsProps } from './types/types';

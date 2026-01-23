@@ -2,31 +2,31 @@
 
 ## Установка для разработчиков (Внимательно!):
 
- - Клонируйте репозиторий
+- Клонируйте репозиторий
 
- - Установите зависимости **`npm ci` вместо `npm install`** - это критически важно для одинаковых версий
+- Установите зависимости **`npm ci` вместо `npm install`** - это критически важно для одинаковых версий
 
- - Запуск в режиме разработки `npm run dev`
+- Запуск в режиме разработки `npm run dev`
 
 ### Проверка что всё работает:
 
 1. Проверка TypeScript
-`npm run type-check`
+   `npm run type-check`
 
 2. Проверка линтера
-`npm run lint`
+   `npm run lint`
 
 3. Проверка стилей
-`npm run lint:styles`
+   `npm run lint:styles`
 
 4. Проверка форматирования
-`npm run format:check`
+   `npm run format:check`
 
 5. Запуск dev-сервера
-`npm run dev`
+   `npm run dev`
 
 6. Запуск Storybook
-`npm run storybook`
+   `npm run storybook`
 
 **Основная команда для проверок**
 
@@ -34,29 +34,29 @@
 
 #### Технологии проекта на 16.01
 
- - Vite - сборщик
+- Vite - сборщик
 
- - React 18 + TypeScript - основной стек
+- React 18 + TypeScript - основной стек
 
- - Redux Toolkit - глобальное состояние
+- Redux Toolkit - глобальное состояние
 
- - React Router v6 - маршрутизация
+- React Router v6 - маршрутизация
 
- - React Hook Form + Yup - формы и валидация
+- React Hook Form + Yup - формы и валидация
 
- - Axios - HTTP-клиент
+- Axios - HTTP-клиент
 
- - Jest + RTL - тестирование
+- Jest + RTL - тестирование
 
- - ESLint (Airbnb) + Prettier + Stylelint - линтинг
+- ESLint (Airbnb) + Prettier + Stylelint - линтинг
 
- - Storybook - документация компонентов
+- Storybook - документация компонентов
 
 ##### Code Style
 
- - Типизация: Всегда используйте TypeScript типы
+- Типизация: Всегда используйте TypeScript типы
 
- - Именование: PascalCase для компонентов, camelCase для остального
+- Именование: PascalCase для компонентов, camelCase для остального
 
 ##### Рекомендации
 
@@ -74,7 +74,7 @@
 
 ```
 .storybook/                      # Основная папка сторибука
-│ 
+│
 public/                          # Общая папка для моков и img
 ├── db/
 │   ├── skills.json

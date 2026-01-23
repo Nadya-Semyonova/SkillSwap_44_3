@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { fetchUserInfoApi } from '@api/index';
+import { fetchUserInfoApi } from '@/entities/api/index';
 import type { IUser } from '@/types/types';
 
 interface AuthState {

@@ -1,6 +1,6 @@
 import Filters from '@widgets/Filters';
 import UsersCardsRecommendations from '@widgets/UsersCardsRecommendations';
-import { ButtonCancelFilter } from '@shared/ui/ButtonCancelFilter';
+import { ButtonCancelFilter } from '@/shared/ui/AllButtons/ButtonCancelFilter';
 import { useHomePage } from './libs/useHomePage';
 import style from './HomePage.module.css';
 import SectionsConstants from './libs/SectionsConstant';

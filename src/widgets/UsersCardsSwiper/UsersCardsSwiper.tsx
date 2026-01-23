@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 
 import Card from '@widgets/Card';
-import ChevronUp from '@assets/img/IconsSvg/ChevronUp';
+import ChevronUp from '@/shared/assets/images/IconsSvg/ChevronUp';
 
 import type { IUsersCardsSwiper } from './types/types';
 

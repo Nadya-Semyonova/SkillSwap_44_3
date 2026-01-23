@@ -1,6 +1,6 @@
-import FilterMultiButtons from '@shared/ui/FilterMultiButton';
-import FilterSingleButtons from '@shared/ui/FilterSingleButton';
 import { useSelector } from '@store/store';
+import FilterMultiButtons from '@/shared/ui/AllButtons/FilterMultiButton';
+import FilterSingleButtons from '@/shared/ui/AllButtons/FilterSingleButton';
 import { FilterOptions, DEFAULT_SHOW_COUNT } from './libs/FilterConstants';
 import style from './Filters.module.css';
 import { useFiltersButtons } from './hooks/useFiltersButtons';

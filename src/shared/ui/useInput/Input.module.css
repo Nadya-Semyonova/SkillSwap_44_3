@@ -42,10 +42,6 @@
   box-shadow: 0 0 0 2px var(--color-accent-hover);
 }
 
-.input:hover:not(:disabled):not(.inputDisabled) {
-  border-color: var(--color-text-link);
-}
-
 .inputDisabled,
 .input:disabled {
   background-color: var(--color-bg-disabled);
@@ -57,4 +53,8 @@
 .inputDisabled::placeholder,
 .input:disabled::placeholder {
   color: var(--color-text-disabled);
+}
+
+.input:hover:not(:disabled, .inputDisabled) {
+  border-color: var(--color-text-link);
 }
