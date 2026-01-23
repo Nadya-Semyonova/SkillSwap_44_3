@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { fetchUsersApi, fetchCitiesApi, fetchSkillsApi } from '@api/index';
+import { fetchUsersApi, fetchCitiesApi, fetchSkillsApi } from '@/entities/api/index';
 import type { ISkillItem, IUser } from '@/types/types';
 
 interface UsersState {

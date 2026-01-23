@@ -1,7 +1,7 @@
 import { useRef } from 'react';
-import Idea from '@assets/img/IconsSvg/Idea';
 import { useClickOutside } from '@shared/lib/hooks/useClickOutside';
 import { usePressEsc } from '@shared/lib/hooks/usePressEsc';
+import Idea from '@/shared/assets/images/IconsSvg/Idea';
 import ButtonDefault from '../ButtonDefault';
 import type { NotificationsProps, Notification } from './types';
 import style from './NotificationsDrawer.module.css';

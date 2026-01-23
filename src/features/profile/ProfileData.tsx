@@ -1,18 +1,16 @@
-import Edit from '@assets/img/IconsSvg/Edit';
-import Calendar from '@assets/img/IconsSvg/Calendar';
-import ChevronDown from '@assets/img/IconsSvg/ChevronDown';
-import GaleryEdit from '@assets/img/IconsSvg/GaleryEdit';
-import userPhoto from '@public/img/userPhoto.png';
+import userPhoto from '@shared/assets/images/userPhoto.png';
 import { useEffect } from 'react';
+import Edit from '@/shared/assets/images/IconsSvg/Edit';
+import Calendar from '@/shared/assets/images/IconsSvg/Calendar';
+import ChevronDown from '@/shared/assets/images/IconsSvg/ChevronDown';
+import GaleryEdit from '@/shared/assets/images/IconsSvg/GaleryEdit';
 import styles from './ProfileData.module.css';
 import { useSelector, type RootState } from '@/store/store';
 
 function ProfileData() {
   const user = useSelector((state: RootState) => state.auth.user);
 
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
+  useEffect(() => {}, [user]);
 
   return (
     <div className={styles.profileContainer}>

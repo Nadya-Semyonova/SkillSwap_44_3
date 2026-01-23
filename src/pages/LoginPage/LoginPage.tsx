@@ -1,12 +1,12 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { ROUTES } from '@shared/lib/constants/routes';
 import ButtonDefault from '@shared/ui/ButtonDefault';
-import Google from '@assets/img/IconsSvg/Google';
-import Apple from '@assets/img/IconsSvg/Apple';
-import Eye from '@assets/img/IconsSvg/Eye';
-import LightBulb from '@assets/img/IllustrationsSvg/LightBulb';
-import HeaderAuth from '@features/auth/registration/ui/HeaderAuth/HeaderAuth';
 import { useState } from 'react';
+import Google from '@/shared/assets/images/IconsSvg/Google';
+import Apple from '@/shared/assets/images/IconsSvg/Apple';
+import Eye from '@/shared/assets/images/IconsSvg/Eye';
+import LightBulb from '@/shared/assets/images/IllustrationsSvg/LightBulb';
+import HeaderAuth from '@/features/auth/HeaderAuth/HeaderAuth';
 import styles from './LoginPage.module.css';
 import { useDispatch } from '@/store/store';
 import { getUserInfoData } from '@/store/slices/authSlice/authSlice';
@@ -34,8 +34,6 @@ function LoginPage() {
   const changePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
   };
-
-  console.log(email, password);
 
   return (
     <div className={styles.container}>

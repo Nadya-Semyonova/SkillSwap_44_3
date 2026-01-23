@@ -31,12 +31,7 @@
   background: var(--color-bg-card);
   border-radius: 12px;
   cursor: pointer;
-}
-
-.buttonWrapperClose {
-  text-align: center;
   margin: 0;
-  cursor: pointer;
 }
 
 .headline {
