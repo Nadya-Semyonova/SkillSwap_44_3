@@ -5,6 +5,7 @@ import {
   getSkillsData,
   getUsersData,
 } from '@store/slices/userDataSlice/userDataSlice';
+import { loadUserFromStorage } from '@store/slices/authSlice/authSlice';
 import styles from './App.module.css';
 import AppRoute from './AppRoute';
 
@@ -14,6 +15,7 @@ export default function App() {
     dispatch(getUsersData());
     dispatch(getCitiesData());
     dispatch(getSkillsData());
+    dispatch(loadUserFromStorage());
   }, [dispatch]); // Иницилизация приложения
 
   return (
