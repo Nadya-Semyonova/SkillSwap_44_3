@@ -1,4 +1,4 @@
-import skills from '@assets/db/skills.json';
+import skills from '@public/db/skills.json';
 import BriefCase from '@/shared/assets/images/IconsSvg/BriefCase';
 import Global from '@/shared/assets/images/IconsSvg/Global';
 import Home from '@/shared/assets/images/IconsSvg/Home';
