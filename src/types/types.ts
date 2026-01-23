@@ -16,11 +16,13 @@ export interface ISvgIcon {
 }
 
 export interface IButtonDefault {
-  name: string;
+  name?: string;
   handleClick?: () => void;
   styleButton?: string;
   type?: 'button' | 'submit' | 'reset';
   variant?: 'outline' | 'continue';
+  ariaLabel?: string;
+  children?: React.ReactNode;
 }
 
 export interface ChildrenModalProps {
