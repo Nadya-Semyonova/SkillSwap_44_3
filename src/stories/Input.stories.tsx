@@ -18,6 +18,15 @@ const meta: Meta<typeof Input> = {
       control: 'text',
       description: 'Текст placeholder',
     },
+    type: {
+      control: 'select',
+      options: ['text', 'email', 'password', 'number', 'tel'],
+      description: 'Тип input поля',
+    },
+    disabled: {
+      control: 'boolean',
+      description: 'Отключенное состояние',
+    },
   },
 };
 
@@ -37,13 +46,37 @@ export const WithTitle: Story = {
   },
 };
 
+export const Email: Story = {
+  args: {
+    title: 'Email',
+    placeholder: 'example@mail.com',
+    type: 'email',
+  },
+};
+
+export const Password: Story = {
+  args: {
+    title: 'Пароль',
+    placeholder: 'Введите пароль',
+    type: 'password',
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    title: 'Отключенное поле',
+    placeholder: 'Недоступно для ввода',
+    disabled: true,
+  },
+};
+
 export const ControlledInput: Story = {
   render: function Render(args) {
     const [value, setValue] = useState('');
 
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '400px' }}>
-        <Input title={args.title} placeholder={args.placeholder} onChange={setValue} />
+        <Input {...args} value={value} onChange={setValue} />
         <div>
           <strong>Текущее значение:</strong> {value || 'пусто'}
         </div>
@@ -54,8 +87,4 @@ export const ControlledInput: Story = {
     title: 'Управляемое поле',
     placeholder: 'Введите текст...',
   },
-};
-
-export const Empty: Story = {
-  args: {},
 };

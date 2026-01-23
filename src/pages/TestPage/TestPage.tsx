@@ -1,11 +1,5 @@
-import { RegistrationStep3 } from '@features/auth/registration/ui';
-import HeaderRegister from '@/features/auth/registration/ui/HeaderAuth/HeaderAuth';
+import { Input } from '@shared/ui/useInput';
 
 export function TestPage() {
-  return (
-    <>
-      <HeaderRegister />
-      <RegistrationStep3 />
-    </>
-  );
+  return <Input />;
 }
