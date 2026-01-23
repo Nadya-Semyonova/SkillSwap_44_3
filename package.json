@@ -17,6 +17,7 @@
     "storybook": "storybook dev",
     "build-storybook": "storybook build",
     "test": "jest"
+    
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

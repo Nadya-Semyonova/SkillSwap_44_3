@@ -51,6 +51,37 @@ export interface IUser {
   skill_off: string[];
 }
 
+export interface IGender {
+  id: number;
+  name: string;
+  value: string;
+}
+
+export interface ICity {
+  id: number;
+  name: string;
+}
+
+export interface IGenderSelector {
+  selectedGender: IGender | null;
+  onSelect: (gender: IGender) => void;
+}
+
+export interface ICitySelector {
+  selectedCity: ICity | null;
+  onSelect: (city: ICity) => void;
+}
+
 export interface ISkillItem {
   [categoryName: string]: string[];
+}
+
+export interface IInput {
+  title?: string;
+  placeholder?: string;
+  onChange?: (value: string) => void;
+  className?: string;
+  value?: string;
+  type?: 'text' | 'email' | 'password' | 'number' | 'tel';
+  disabled?: boolean;
 }
