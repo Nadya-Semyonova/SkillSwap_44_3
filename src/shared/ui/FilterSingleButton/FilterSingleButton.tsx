@@ -1,5 +1,5 @@
-import RadioButtonEmpty from '@public/img/IconsSvg/RadioButtonEmpty';
-import RadioButtonActive from '@public/img/IconsSvg/RadioButtonActive';
+import RadioButtonEmpty from '@assets/img/IconsSvg/RadioButtonEmpty';
+import RadioButtonActive from '@assets/img/IconsSvg/RadioButtonActive';
 import type { ISingleFilterButton } from '@/types/types';
 import style from './FilterSingleButton.module.css';
 

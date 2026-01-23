@@ -1,6 +1,9 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import { FilterOptions } from '@widgets/Filters/libs/FilterConstants';
 
+const baseLearn = FilterOptions.base[0];
+const baseAuthor = FilterOptions.authors[0];
+
 interface FilterState {
   activeLearn: string;
   activeAuthor: string;
@@ -10,11 +13,11 @@ interface FilterState {
 }
 
 const initialState: FilterState = {
-  activeLearn: FilterOptions.base[0],
-  activeAuthor: FilterOptions.authors[0],
-  activeCities: [], // Исправлено
-  activeSkills: [], // Исправлено
-  activeCategory: [], // Исправлено
+  activeLearn: baseLearn,
+  activeAuthor: baseAuthor,
+  activeCities: [],
+  activeSkills: [],
+  activeCategory: [],
 };
 
 const FiltersSlice = createSlice({
@@ -57,6 +60,28 @@ const FiltersSlice = createSlice({
         state.activeCategory.push(category);
       }
     },
+    clearFilters: (state) => {
+      state.activeLearn = baseLearn;
+      state.activeAuthor = baseAuthor;
+      state.activeCities = [];
+      state.activeSkills = [];
+      state.activeCategory = [];
+    },
+    clearSelectedFilter: (state, action: PayloadAction<string>) => {
+      const filterValueToRemove = action.payload;
+
+      if (state.activeLearn === filterValueToRemove) {
+        state.activeLearn = baseLearn;
+      }
+      if (state.activeAuthor === filterValueToRemove) {
+        state.activeAuthor = baseAuthor;
+      }
+      state.activeCities = state.activeCities.filter((city) => city !== filterValueToRemove);
+      state.activeSkills = state.activeSkills.filter((skill) => skill !== filterValueToRemove);
+      state.activeCategory = state.activeCategory.filter(
+        (category) => category !== filterValueToRemove
+      );
+    },
   },
 });
 
@@ -66,6 +91,8 @@ export const {
   setActiveSkills,
   setActiveCities,
   setActiveCategory,
+  clearFilters,
+  clearSelectedFilter,
 } = FiltersSlice.actions;
 const filtersReducer = FiltersSlice.reducer;
 export default filtersReducer;

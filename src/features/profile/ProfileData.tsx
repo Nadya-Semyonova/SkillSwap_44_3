@@ -1,7 +1,7 @@
-import Edit from '@public/img/IconsSvg/Edit';
-import Calendar from '@public/img/IconsSvg/Calendar';
-import ChevronDown from '@public/img/IconsSvg/ChevronDown';
-import GaleryEdit from '@public/img/IconsSvg/GaleryEdit';
+import Edit from '@assets/img/IconsSvg/Edit';
+import Calendar from '@assets/img/IconsSvg/Calendar';
+import ChevronDown from '@assets/img/IconsSvg/ChevronDown';
+import GaleryEdit from '@assets/img/IconsSvg/GaleryEdit';
 import userPhoto from '@public/img/userPhoto.png';
 import styles from './ProfileData.module.css';
 

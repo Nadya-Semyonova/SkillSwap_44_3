@@ -1,7 +1,6 @@
 .allskillsButton {
   display: flex;
   align-items: center;
-  margin: 24px;
   background-color: transparent;
   white-space: nowrap;
   border: none;

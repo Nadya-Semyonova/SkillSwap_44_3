@@ -1,0 +1,48 @@
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.title {
+  margin-block-end: 32px;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-h2-size);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  padding-right: 5px;
+}
+
+.customButtonPrev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  z-index: 2;
+  padding: 8px;
+  background-color: var(--color-bg-disabled);
+  border-radius: 100px;
+  transform: rotate(-90deg);
+  border: none;
+}
+
+.customButtonNext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: -17px;
+  z-index: 2;
+  padding: 8px;
+  background-color: var(--color-bg-disabled);
+  border-radius: 100px;
+  transform: rotate(90deg);
+  border: none;
+}
+
+.buttonDeactive {
+  opacity: 0.3;
+}

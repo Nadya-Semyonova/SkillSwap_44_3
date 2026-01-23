@@ -1,70 +1,96 @@
-/* eslint-disable react/jsx-no-bind */
-/* eslint-disable import/extensions */
 import Filters from '@widgets/Filters';
-import { useDispatch, useSelector } from '@store/store';
-import { useFilteredUsers } from '@widgets/Filters/hooks/useFilteredUsers';
-import { useEffect } from 'react';
-import Card from '@widgets/Card';
-import Filters from '@widgets/Filters';
-import {
-  getCitiesData,
-  getSkillsData,
-  getUsersData,
-} from '@store/slices/userDataSlice/userDataSlice';
-import Card from '@widgets/Card';
-import UsersCardsRecommendations from '@/widgets/UsersCardsRecommendations'; // Импорт карточек с новыми рекомендациями- временно!!
+import UsersCardsRecommendations from '@widgets/UsersCardsRecommendations';
+import { ButtonCancelFilter } from '@shared/ui/ButtonCancelFilter';
+import { useHomePage } from './libs/useHomePage';
 import style from './HomePage.module.css';
+import SectionsConstants from './libs/SectionsConstant';
 
 export function HomePage() {
-  const dispatch = useDispatch();
-  const { loading } = useSelector((state) => state.users);
-
-  useEffect(() => {
-    dispatch(getUsersData());
-    dispatch(getCitiesData());
-    dispatch(getSkillsData());
-  }, [dispatch]);
-  // выше - иницилизация данных в приложение (обязательно установить в корневой элемент app || main)
-
-  const { activeLearn, activeAuthor, activeSkills, activeCities } = useSelector(
-    (state) => state.filters
-  ); // это получение данных с активных кнопок фильтрации которые выбрал пользователей, нужны для вызова функции фильтрации
-
-  const filteredUsers = useFilteredUsers({ activeLearn, activeAuthor, activeCities, activeSkills }); // вызов функции фильтрации. data становится массивом отфильтрованных товаров
-
-  // нижне проверка работоспособности (удалить)
-  const cities = useSelector((state) => state.users.cities);
-  const skills = useSelector((state) => state.users.skills);
-  useEffect(() => {
-    // console.log(filteredUsers);
-    // console.log(cities);
-    // console.log(skills);
-  }, [filteredUsers, cities, skills]);
+  const {
+    loading,
+    filteredUsers,
+    activeFilters,
+    hasActiveFilters,
+    handleClickMore,
+    handleClickReset,
+    handleClickResetSelected,
+    getSectionContent,
+  } = useHomePage();
 
   if (loading) {
-    return <div>Загрузка...</div>;
-  }
-
-  function handleViewAllFunction(): void {
-    throw new Error('Function not implemented.');
-  }
-
-  return (
-    <div className={style.homeSection}>
-      {/* Блок с новыми пользовательями- потом переставить на нужное место!!! */}
-      <div className={style.recommendationsSection}>
-        <UsersCardsRecommendations title="Новое" onViewAll={handleViewAllFunction} />
+    return (
+      <div>
+        <h1>Загрузка...</h1>
       </div>
-      <div className={style.main}>
-        <div className={style.sidebar}>
-          <Filters />
+    );
+  }
+
+  if (filteredUsers) {
+    if (hasActiveFilters) {
+      return (
+        <div className={style.homeSection}>
+          <div className={style.filterButtonsContainer}>
+            <h2 className={`${style.title} ${style.mainText}`}>Фильтры ({activeFilters.length})</h2>
+            <ButtonCancelFilter
+              title="Сбросить"
+              textStyle={style.textButtonReset}
+              fillSvg="var(--color-accent-pressed)"
+              handleClick={handleClickReset}
+            />
+            {activeFilters.map((filter) => (
+              <div key={filter} className={style.containerCancelButton}>
+                <ButtonCancelFilter
+                  title={filter}
+                  textStyle={style.textButtonCancelFilter}
+                  buttonStyle={style.buttonCancelFilter}
+                  fillSvg="var(--color-text-primary)"
+                  handleClick={() => handleClickResetSelected(filter)}
+                />
+              </div>
+            ))}
+          </div>
+          <div className={style.homeContainer}>
+            <Filters />
+            <div className={style.RecommendationsContainer}>
+              <UsersCardsRecommendations
+                title={`${SectionsConstants[3]} ${filteredUsers.length}`}
+                users={filteredUsers}
+                handleClickMore={handleClickMore}
+                buttonMore
+              />
+            </div>
+          </div>
         </div>
-        <div className={style.cards}>
-          {filteredUsers?.map((user) => (
-            <Card key={user.id} user={user} />
-          ))}
+      );
+    }
+
+    const { sections } = getSectionContent();
+
+    return (
+      <div>
+        <div className={style.filterButtonsContainer}>
+          <h2 className={`${style.title} ${style.mainText}`}>Фильтры</h2>
+        </div>
+        <div className={style.homeContainer}>
+          <Filters />
+          <div className={style.RecommendationsContainer}>
+            {sections.map((section) => (
+              <UsersCardsRecommendations
+                key={section.title}
+                title={section.title}
+                users={section.users}
+                buttonMore={section.buttonMore}
+                handleClickMore={handleClickMore}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
   );
+}
+    );
+  }
+
+  return null;
 }

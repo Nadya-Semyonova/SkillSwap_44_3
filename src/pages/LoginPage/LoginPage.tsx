@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
+import { ROUTES } from '@shared/lib/constants/routes';
 import ButtonDefault from '@shared/ui/ButtonDefault';
-import Logo from '../../../public/img/LogoSvg/Logo';
-import Cross from '../../../public/img/iconsSvg/Cross';
-import Google from '../../../public/img/iconsSvg/Google';
-import Apple from '../../../public/img/iconsSvg/Apple';
-import Eye from '../../../public/img/iconsSvg/Eye';
-import LightBulb from '../../../public/img/IllustrationsSvg/LightBulb';
+import Google from '@assets/img/IconsSvg/Google';
+import Apple from '@assets/img/IconsSvg/Apple';
+import Eye from '@assets/img/IconsSvg/Eye';
+import LightBulb from '@assets/img/IllustrationsSvg/LightBulb';
+import HeaderAuth from '@features/auth/registration/ui/HeaderAuth/HeaderAuth';
 import styles from './LoginPage.module.css';
 
 interface ControllerField {
@@ -40,18 +40,7 @@ function LoginPage() {
 
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <div className={styles.logoWrapper}>
-          <Logo />
-          <span className={styles.brandName}>SkillSwap</span>
-        </div>
-        <div className={styles.buttonWrapperClose}>
-          <ButtonDefault name="Закрыть" handleClick={() => {}} styleButton={styles.closeButton} />
-          <div className={styles.iconCloseWrapper}>
-            <Cross />
-          </div>
-        </div>
-      </header>
+      <HeaderAuth />
       <div className={styles.headline}>
         <h2 className={styles.title}>Вход</h2>
       </div>
@@ -119,7 +108,7 @@ function LoginPage() {
           </div>
           <div className={styles.formButtonSubmit}>
             <ButtonDefault name="Войти" handleClick={() => {}} styleButton={styles.loginButton} />
-            <Link to="/RegisterPage" className={styles.registerLink}>
+            <Link to={ROUTES.REGISTER} className={styles.registerLink}>
               Зарегистрироваться
             </Link>
           </div>

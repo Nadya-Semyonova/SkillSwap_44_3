@@ -1,7 +1,40 @@
 .homeSection {
-  max-width: 1920px;
-  padding: 20px;
   margin: 0 auto;
+}
+
+.homeContainer {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: minmax(0, 324px) auto;
+  gap: 24px;
+}
+
+.filterButtonsContainer {
+  /* здесь */
+  padding-block-end: 30px;
+  padding-inline-start: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.containerCancelButton {
+  inline-size: max-content;
+}
+
+.textButtonReset {
+  color: var(--color-accent-pressed);
+}
+
+.textButtonCancelFilter {
+  color: var(--color-text-primary);
+}
+
+.buttonCancelFilter {
+  background-color: var(--color-bg-card);
+  border-radius: 12px;
+  inline-size: max-content;
 }
 
 .main {
@@ -16,4 +49,21 @@
   grid-template-columns: repeat(3, 1fr); /* Жестко 3 колонки */
   gap: 24px;
   align-content: start;
+}
+
+/* поправить
+.RecommendationsContainer {
+  display: grid;
+  grid-auto-flow: row;
+} 
+*/
+
+.mainText {
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+}
+
+.title {
+  font-size: var(--font-h2-size);
+  line-height: 28px;
 }

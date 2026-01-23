@@ -4,10 +4,16 @@ import { getSkillColor } from '@shared/lib/constants/SkillColors';
 import { declensionAge } from '@shared/lib/helpers/declension';
 import { useLikeCounter } from '@shared/lib/hooks/useLikeCounter';
 import ButtonDefault from '@shared/ui/ButtonDefault';
-import LikeBlack from '../../../public/img/IconsSvg/LikeBlack';
+import LikeBlack from '@assets/img/IconsSvg/LikeBlack';
 import style from './Card.module.css';
 
-function Card({ user, onDetailsClick, onLikeClick, showFullName = true }: CardProps) {
+function Card({
+  user,
+  onDetailsClick,
+  onLikeClick,
+  variant = 'default',
+  showFullName = true,
+}: CardProps) {
   // Формируем текст возраста с правильным склонением
   const ageText = user.age ? declensionAge(user.age) : '';
 
@@ -43,19 +49,21 @@ function Card({ user, onDetailsClick, onLikeClick, showFullName = true }: CardPr
           </span>
         </div>
 
-        <div className={style.likeContainer}>
-          <button
-            type="button"
-            className={`${style.like} ${isLiked ? style.liked : ''}`}
-            onClick={handleLikeClick}
-            aria-label={isLiked ? 'Удалить из избранного' : 'Добавить в избранное'}
-          >
-            <LikeBlack isActive={isLiked} />
-          </button>
-          {likeCount > 0 && <span className={style.likeCount}>+{likeCount}</span>}
-        </div>
+        {variant === 'default' && (
+          <div className={style.likeContainer}>
+            <button
+              type="button"
+              className={`${style.like} ${isLiked ? style.liked : ''}`}
+              onClick={handleLikeClick}
+              aria-label={isLiked ? 'Удалить из избранного' : 'Добавить в избранное'}
+            >
+              <LikeBlack isActive={isLiked} />
+            </button>
+            {likeCount > 0 && <span className={style.likeCount}>+{likeCount}</span>}
+          </div>
+        )}
       </div>
-
+      {variant === 'profile' && <span className={style.aboutText}>{user.about}</span>}
       {user.card_people && (
         <div className={style.skillsSection}>
           <h4 className={style.skillTitle}>Может научить:</h4>
@@ -93,11 +101,13 @@ function Card({ user, onDetailsClick, onLikeClick, showFullName = true }: CardPr
           )}
         </div>
       </div>
-      <ButtonDefault
-        name="Подробнее" // обязательный пропс
-        handleClick={onDetailsClick} // обработчик
-        styleButton={style.detailsButton} // опционально
-      />
+      {variant !== 'profile' && (
+        <ButtonDefault
+          name="Подробнее" // обязательный пропс
+          handleClick={onDetailsClick} // обработчик
+          styleButton={style.detailsButton} // опционально
+        />
+      )}
     </div>
   );
 }

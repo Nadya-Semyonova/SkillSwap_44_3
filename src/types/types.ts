@@ -19,6 +19,7 @@ export interface IButtonDefault {
   name: string;
   handleClick?: () => void;
   styleButton?: string;
+  variant?: 'outline' | 'continue';
 }
 
 export interface ChildrenModalProps {
