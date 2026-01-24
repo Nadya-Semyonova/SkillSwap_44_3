@@ -1,4 +1,4 @@
-import type { Notification } from '@shared/ui/NotificationsDrawer';
+import type { Notification } from '@/shared/ui/Notifications';
 
 export const unreadNotificationsMock: Notification[] = [
   {
