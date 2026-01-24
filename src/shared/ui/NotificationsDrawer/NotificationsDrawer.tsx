@@ -64,7 +64,7 @@ export default function NotificationsDrawer({
       {/* Блок непрочитанных уведомлений */}
       <div className={style.notificationsWrap}>
         <div className={style.notificationsTitle}>
-          <p className={style.notificationsTitleText}>Новые уведомления</p>
+          <h2 className={style.notificationsTitleText}>Новые уведомления</h2>
           <button
             type="button"
             className={style.notificationsButton}

@@ -48,9 +48,19 @@
 }
 
 .iconButton {
+  position: relative;
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.badge {
+  position: absolute;
+  right: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-alarm);
 }
 
 .profile {
@@ -69,8 +79,10 @@
   object-fit: cover;
 }
 
+/* Модальное окно userMenu */
 .profileWrapper {
   position: relative;
+  display: inline-block;
 }
 
 .dropdown {

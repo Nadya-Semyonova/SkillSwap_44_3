@@ -9,11 +9,15 @@ import Notification from '@/shared/assets/images/IconsSvg/Notification';
 import ThemeToggle from '../themeToggle';
 import Logout from '@/shared/assets/images/IconsSvg/Logout';
 import Modal from '@/shared/ui/modal/Modal';
+import { NotificationsDrawer } from '@/shared/ui/NotificationsDrawer';
+import { readNotificationsMock, unreadNotificationsMock } from '@/shared/lib/mocks/notifications';
 
 export default function UserMenu() {
   const navigate = useNavigate();
   const user = useSelector((state: RootState) => state.auth.user);
   const [isOpen, setIsOpen] = useState(false);
+  const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
+  const unreadCount = unreadNotificationsMock.length;
 
   const guestMenu = (
     <div className={styles.guest}>
@@ -34,9 +38,30 @@ export default function UserMenu() {
     <div className={styles.user}>
       <div className={styles.actions}>
         <ThemeToggle />
-        <button type="button" className={styles.iconButton} aria-label="Уведомления">
-          <Notification />
-        </button>
+        <div>
+          <button
+            type="button"
+            className={styles.iconButton}
+            aria-label="Уведомления"
+            onMouseDown={(e) => {
+              e.stopPropagation();
+              setIsNotificationsOpen((prev) => !prev);
+            }}
+          >
+            <Notification />
+            {unreadCount > 0 && <span className={styles.badge} />}
+          </button>
+
+          <Modal isOpen={isNotificationsOpen} onClose={() => setIsNotificationsOpen(false)}>
+            <NotificationsDrawer
+              isOpen={isNotificationsOpen}
+              onClose={() => setIsNotificationsOpen(false)}
+              unreadNotifications={unreadNotificationsMock}
+              readNotifications={readNotificationsMock}
+            />
+          </Modal>
+        </div>
+
         <button type="button" className={styles.iconButton} aria-label="Лайки">
           <Like />
         </button>
@@ -46,7 +71,10 @@ export default function UserMenu() {
         <button
           type="button"
           className={styles.profile}
-          onClick={() => setIsOpen((prev) => !prev)}
+          onMouseDown={(e) => {
+            e.stopPropagation();
+            setIsOpen((prev) => !prev);
+          }}
           aria-haspopup="menu"
           aria-expanded={isOpen}
         >
@@ -54,7 +82,7 @@ export default function UserMenu() {
           <img className={styles.avatar} src={user?.avatar} alt={user?.name} />
         </button>
 
-        <Modal isOpen={isOpen} onClose={() => setIsOpen(true)}>
+        <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
           <div className={styles.dropdown}>
             <button
               type="button"
