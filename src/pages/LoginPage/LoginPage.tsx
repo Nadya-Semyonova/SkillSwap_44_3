@@ -1,12 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { ROUTES } from '@shared/lib/constants/routes';
 import ButtonDefault from '@shared/ui/ButtonDefault';
+import Apple from '@shared/assets/images/IconsSvg/Apple';
+import Eye from '@shared/assets/images/IconsSvg/Eye';
+import LightBulb from '@shared/assets/images/IllustrationsSvg/LightBulb';
+import HeaderAuth from '@features/auth/HeaderAuth/HeaderAuth';
+import { Input } from '@shared/ui/useInput';
 import { useState } from 'react';
 import Google from '@/shared/assets/images/IconsSvg/Google';
-import Apple from '@/shared/assets/images/IconsSvg/Apple';
-import Eye from '@/shared/assets/images/IconsSvg/Eye';
-import LightBulb from '@/shared/assets/images/IllustrationsSvg/LightBulb';
-import HeaderAuth from '@/features/auth/HeaderAuth/HeaderAuth';
 import styles from './LoginPage.module.css';
 import { useDispatch } from '@/store/store';
 import { getUserInfoData } from '@/store/slices/authSlice/authSlice';
@@ -27,78 +28,55 @@ function LoginPage() {
     navigate('/profile');
   };
 
-  const changeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
+  const changeEmail = (value: string) => {
+    setEmail(value);
   };
 
-  const changePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(e.target.value);
+  const changePassword = (value: string) => {
+    setPassword(value);
   };
 
   return (
     <div className={styles.container}>
       <HeaderAuth />
-      <div className={styles.headline}>
-        <h2 className={styles.title}>Вход</h2>
-      </div>
+      <h2 className={styles.title}>Вход</h2>
       <div className={styles.content}>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.formButtonsLogin}>
-            <button
-              className={`${styles.socialButton} ${styles.withIcon}`}
-              onClick={() => {}}
-              type="button"
-            >
-              <div className={styles.socialButtonIcon}>
-                <Google />
-              </div>
-              <p className={styles.socialText}>Продолжить с Google</p>
+            <button className={styles.socialButton} onClick={() => {}} type="button">
+              <Google />
+              <span className={styles.socialText}>Продолжить с Google</span>
             </button>
-
-            <button
-              className={`${styles.socialButton} ${styles.withIcon}`}
-              onClick={() => {}}
-              type="button"
-            >
-              <div className={styles.socialButtonIcon}>
-                <Apple />
-              </div>
-              <p className={styles.socialText}>Продолжить с Apple</p>
+            <button className={styles.socialButton} onClick={() => {}} type="button">
+              <Apple />
+              <span className={styles.socialText}>Продолжить с Apple</span>
             </button>
           </div>
           <p className={styles.formText}>или</p>
           <div className={styles.formInput}>
-            <div className={styles.field}>
-              <div className={styles.label}>Email</div>
-              <input
-                type="email"
-                className={styles.input}
-                placeholder="Введите email"
-                value={email}
-                onChange={(e) => changeEmail(e)}
+            <Input
+              title="Email"
+              placeholder="Введите email"
+              value={email}
+              onChange={changeEmail}
+              type="email"
+            />
+            <div className={styles.inputWrapper}>
+              <Input
+                title="Пароль"
+                placeholder="Введите ваш пароль"
+                value={password}
+                onChange={changePassword}
+                type={showPass ? 'text' : 'password'}
               />
-            </div>
-            <div className={styles.field}>
-              <div className={styles.label}>Пароль</div>
-              <div className={styles.inputWrapper}>
-                <input
-                  type={showPass ? 'text' : 'password'}
-                  className={styles.input}
-                  placeholder="Введите ваш пароль"
-                  value={password}
-                  onChange={(e) => changePassword(e)}
-                />
-                <button
-                  type="button"
-                  className={styles.eyeButton}
-                  onClick={() => {
-                    handleClickEye();
-                  }}
-                  aria-label="Показать пароль"
-                >
-                  <Eye />
-                </button>
-              </div>
+              <button
+                type="button"
+                className={styles.eyeButton}
+                onClick={handleClickEye}
+                aria-label="Показать пароль"
+              >
+                <Eye />
+              </button>
             </div>
           </div>
           <div className={styles.formButtonSubmit}>
