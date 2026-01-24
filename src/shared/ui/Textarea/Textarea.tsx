@@ -1,17 +1,18 @@
 import { useState } from 'react';
 import type { ChangeEvent } from 'react';
-import type { IInput } from '../../../types/types';
-import styles from './Input.module.css';
+import type { ITextarea } from './types';
+import styles from './Textarea.module.css';
 
-export function Input({
+export function Textarea({
   title,
   placeholder = '',
   onChange,
   className = '',
+  maxLength,
   value: externalValue,
-  type = 'text',
   disabled = false,
-}: IInput) {
+  children,
+}: ITextarea) {
   const [internalValue, setInternalValue] = useState('');
   const value = externalValue !== undefined ? externalValue : internalValue;
 
@@ -29,31 +30,32 @@ export function Input({
     }
   };
 
-  const inputId = `input-${title?.replace(/\s+/g, '-').toLowerCase() || 'field'}`;
+  const textareaId = `textarea-${title?.replace(/\s+/g, '-').toLowerCase() || 'field'}`;
 
-  const renderInput = () => {
+  const renderTextarea = () => {
     return (
-      <input
-        id={inputId}
-        type={type}
-        className={`${styles.input} ${disabled ? styles.inputDisabled : ''}`}
+      <textarea
+        id={textareaId}
+        className={`${styles.textarea} ${disabled ? styles.textareaDisabled : ''}`}
         placeholder={placeholder}
         value={value}
         onChange={handleChange}
         disabled={disabled}
         aria-label={title || placeholder}
-      />
+        maxLength={maxLength}
+      >
+        {children}
+      </textarea>
     );
   };
-
   return (
-    <div className={`${styles.inputContainer} ${className}`}>
+    <div className={`${styles.textareaContainer} ${className}`}>
       {title && (
-        <label htmlFor={inputId} className={styles.label}>
+        <label htmlFor={textareaId} className={styles.label}>
           {title}
         </label>
       )}
-      {renderInput()}
+      {renderTextarea()}
     </div>
   );
 }
