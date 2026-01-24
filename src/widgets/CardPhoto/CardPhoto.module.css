@@ -1,3 +1,10 @@
+.cardTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
 .skillExchangeCard {
   display: flex;
   flex-direction: column;
@@ -22,9 +29,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
+  min-width: 24px;
   height: 24px;
   transition: transform 0.2s ease;
+}
+
+.sectionButton svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 
 .sectionButton:hover {
@@ -35,33 +48,23 @@
   transform: scale(0.95);
 }
 
-.skillInfoSection {
+.likeCount {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-caption-size);
+  margin-left: 4px;
+}
+
+.contentSection {
   display: grid;
-  grid-template-columns: auto 440px;
+  grid-template-columns: 1fr 440px;
   gap: 77px;
 }
 
-.descriptionSection {
+.textSection {
   display: flex;
   flex-direction: column;
   flex: 1;
-}
-
-.sectionIcon {
-  width: 24px;
-  height: 24px;
-}
-
-.container {
-  min-height: 276px;
-  width: 400px;
-}
-
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background-color: var(--color-bg-card);  
 }
 
 .skillTitle {
@@ -93,25 +96,8 @@
   max-height: 200px;
 }
 
-.exchangeButtonWrapper {
-  position: relative;
-  margin-top: -28px; 
-  margin-left: -50px;
-  width: 100%;
-}
-
-.skillExchangeCard .exchangeButtonWrapper .button {
-  margin: 0;
-}
-
-.exchangeButtonCustom {
-  background-color: var(--color-accent);
-  color: var(--color-text-primary);
-}
-
-.exchangeButtonDisabled {
-  background-color: var(--color-bg-card);
-  color: var(--color-text-primary);
-  cursor: not-allowed;
-  border: 1px solid var(--color-accent);
+.buttonsWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
