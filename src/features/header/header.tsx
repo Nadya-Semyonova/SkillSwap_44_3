@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import Logotype from '@shared/ui/Logotype/Logotype';
+import { useEffect, useRef, useState } from 'react';
 import AboutProject from '@/shared/ui/AllButtons/AboutProject/AboutProject';
 import ButtonAllSkills from '@/shared/ui/AllButtons/ButtonAllSkills/ButtonAllSkills';
 import InputSearch from '@/shared/ui/AllButtons/InputSearch/InputSearch';
@@ -12,9 +13,9 @@ export default function Header() {
   const modalRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLDivElement>(null);
 
-  const toggleButtonAllSkills = () => {
-    setIsSkillsSelectorOpen((prevState) => !prevState);
-  };
+  // const toggleButtonAllSkills = () => {
+  //   setIsSkillsSelectorOpen((prevState) => !prevState);
+  // };
   const closeSkillsSelector = () => {
     setIsSkillsSelectorOpen(false);
   };
