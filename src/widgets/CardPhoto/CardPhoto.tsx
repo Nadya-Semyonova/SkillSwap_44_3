@@ -1,6 +1,6 @@
-import LikeBlack from '@public/img/IconsSvg/LikeBlack';
-import Share from '@public/img/IconsSvg/Share';
-import MoreSquare from '@public/img/IconsSvg/MoreSquare';
+import LikeBlack from '@/shared/assets/images/IconsSvg/LikeBlack';
+import Share from '@/shared/assets/images/IconsSvg/Share';
+import MoreSquare from '@/shared/assets/images/IconsSvg/MoreSquare';
 import { useLikeCounter } from '@/shared/lib/hooks/useLikeCounter';
 import styles from './CardPhoto.module.css';
 import type { CardPhotoProps } from './types/types';
