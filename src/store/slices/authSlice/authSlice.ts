@@ -33,14 +33,11 @@ export const getUserInfoData = createAsyncThunk(
       if (!user) {
         return rejectWithValue('Неверный email или пароль');
       }
-<<<<<<< HEAD
 
       const token = generateToken(user.id);
       setTokenCookie(token);
       setUserToLocalStorage(user);
 
-=======
->>>>>>> 017688f649d1f3a256178fd039c4b34f44675c5a
       return user;
     } catch (error) {
       return rejectWithValue(error instanceof Error ? error.message : 'Ошибка авторизации');

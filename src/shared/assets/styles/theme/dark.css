@@ -1,0 +1,23 @@
+[data-theme='dark'] {
+  --color-text-primary: #f0f2f7;
+  --color-text-secondary: #b0b9c8;
+  --color-text-disabled: #79848a;
+  --color-text-link: #4d9fff;
+  --color-bg-main: #111317;
+  --color-bg-card: #1c1f25;
+  --color-bg-disabled: #2a2d33;
+  --color-bg-toggle: #3d424c;
+  --color-bg-filter: #1f2329;
+  --color-accent: #3d8fff;
+  --color-accent-hover: #5da3ff;
+  --color-accent-pressed: #7bb7ff;
+  --color-error: #ff6b6b;
+  --color-alarm: #ff9c8a;
+  --color-tag-business: #4a3d9c;
+  --color-tag-art: #9c3d7a;
+  --color-tag-languages: #9c7a3d;
+  --color-tag-education: #3d8f9c;
+  --color-tag-home: #9c5d3d;
+  --color-tag-health: #3d9c6b;
+  --color-tag-more: #3d5d9c;
+}

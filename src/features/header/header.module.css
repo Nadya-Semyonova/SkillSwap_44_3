@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  background-color: var(--color-bg-main);
+  background-color: var(--color-bg-card);
   padding: 35px 35px 20px;
   max-inline-size: 1440px;
   gap: 30px;

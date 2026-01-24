@@ -1,3 +1,7 @@
+@import './variables.css';
+@import './theme/light.css';
+@import './theme/dark.css';
+
 *::after,
 *::before {
   box-sizing: border-box;

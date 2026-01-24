@@ -1,0 +1,24 @@
+[data-theme='light'],
+:root:not([data-theme='dark']) {
+  --color-text-primary: #253017; /* основной текст */
+  --color-text-secondary: #69735d; /* подписи, вторичный текст */
+  --color-text-disabled: #9ca197; /* disabled текст */
+  --color-text-link: #508826; /* ссылки, активные состояния */
+  --color-bg-main: #f9faf7; /* основной фон приложения */
+  --color-bg-card: #fff; /* карточки, инпуты */
+  --color-bg-disabled: #e4e8df; /* disabled элементы */
+  --color-bg-toggle: #b2b9a9; /* toggle, switch */
+  --color-bg-filter: #fff; /* Фильтры */
+  --color-accent: #abd27a; /* основной акцент */
+  --color-accent-hover: #deebc5; /* hover кнопок */
+  --color-accent-pressed: #508826; /* pressed / active */
+  --color-error: #bf3920; /* ошибка */
+  --color-alarm: #e0796e; /* предупреждение */
+  --color-tag-business: #eee7f7; /* Бизнес и карьера */
+  --color-tag-art: #f7e7f2; /* Творчество и искусство */
+  --color-tag-languages: #ebe5c5; /* Иностранные языки */
+  --color-tag-education: #e7f2f6; /* Образование и развитие */
+  --color-tag-home: #f7ebe5; /* Дом и уют */
+  --color-tag-health: #e9f7e7; /* Здоровье и лайфстайл */
+  --color-tag-more: #e8ecf7; /* "+" */
+}
