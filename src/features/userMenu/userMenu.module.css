@@ -1,0 +1,109 @@
+.guest,
+.user {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.guest {
+  gap: 20px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+} 
+
+.navLink {
+  text-decoration: none;
+  max-inline-size: fit-content;
+}
+
+.navLink .button {
+  margin: 0;
+}
+
+.loginButton {
+  border: 1px solid var(--color-accent);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.registerButton {
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+  border: none;
+  margin: 0;
+}
+
+.user {
+  gap: 24px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  overflow: hidden;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+}
+
+.profileWrapper {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  right: 0;
+  top: calc(100% + 20px);
+  padding: 40px;
+  z-index: 100;
+  white-space: nowrap;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-h4-size);
+  line-height: var(--font-h4-line-height);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-card);
+  border-color: var(--color-bg-toggle);
+  border-radius: 12px;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdownItem:hover {
+  background-color: var(--color-accent-hover);
+}

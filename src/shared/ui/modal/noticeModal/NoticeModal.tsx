@@ -1,5 +1,5 @@
 import ButtonDefault from '@shared/ui/ButtonDefault';
-import Notification from '@public/img/IconsSvg/Notification';
+import Notification from '@/shared/assets/images/IconsSvg/Notification';
 import type { ChildrenModalProps } from '@/types/types';
 import styles from '../style/ModalChildrenStyle.module.css';
 

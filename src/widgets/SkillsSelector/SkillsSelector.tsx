@@ -14,17 +14,21 @@ function SkillsSelector() {
     setSelectedSkill((prev) => (prev === skill ? '' : skill));
   };
 
+  if (!skillsData) {
+    return null;
+  }
+
   return (
     <div className={styles.wrapper}>
       {Object.entries(skillsData).map(([category, categorySkills]) => (
         <section key={category} className={styles.category}>
           <span
-            className={`${styles.category__icon} ${styles[SkillsCategoriesConstant[category].className]}`}
+            className={`${styles.categoryIcon} ${styles[SkillsCategoriesConstant[category].className]}`}
           >
             {SkillsCategoriesConstant[category].icon}
           </span>
 
-          <div className={styles.category__content}>
+          <div className={styles.categoryContent}>
             <h2>{category}</h2>
 
             <ul className={styles.skills}>

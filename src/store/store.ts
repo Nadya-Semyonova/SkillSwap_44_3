@@ -3,10 +3,12 @@ import type { TypedUseSelectorHook } from 'react-redux';
 import { useDispatch as dispatchHook, useSelector as selectorHook } from 'react-redux';
 import usersDataReducer from '@store/slices/userDataSlice/userDataSlice';
 import filtersReducer from '@store/slices/filtersSlice/filtersSlice';
+import authReducer from './slices/authSlice/authSlice';
 
 const rootReducer = {
   users: usersDataReducer,
   filters: filtersReducer,
+  auth: authReducer,
 };
 
 const store = configureStore({

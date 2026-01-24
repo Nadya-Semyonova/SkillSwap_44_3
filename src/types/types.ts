@@ -16,9 +16,13 @@ export interface ISvgIcon {
 }
 
 export interface IButtonDefault {
-  name: string;
+  name?: string;
   handleClick?: () => void;
   styleButton?: string;
+  type?: 'button' | 'submit' | 'reset';
+  variant?: 'outline' | 'continue';
+  ariaLabel?: string;
+  children?: React.ReactNode;
 }
 
 export interface ChildrenModalProps {
@@ -52,4 +56,14 @@ export interface IUser {
 
 export interface ISkillItem {
   [categoryName: string]: string[];
+}
+
+export interface IInput {
+  title?: string;
+  placeholder?: string;
+  onChange?: (value: string) => void;
+  className?: string;
+  value?: string;
+  type?: 'text' | 'email' | 'password' | 'number' | 'tel';
+  disabled?: boolean;
 }

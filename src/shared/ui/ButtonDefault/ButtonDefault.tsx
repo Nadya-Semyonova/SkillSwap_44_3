@@ -1,10 +1,30 @@
 import type { IButtonDefault } from '@/types/types';
 import style from './ButtonDefault.module.css';
 
-export default function ButtonDefault({ name, handleClick, styleButton }: IButtonDefault) {
+export default function ButtonDefault({
+  name,
+  handleClick,
+  styleButton,
+  type,
+  ariaLabel,
+  children,
+}: IButtonDefault) {
+  if (handleClick) {
+    return (
+      <button
+        type={type}
+        onClick={() => handleClick()}
+        className={`${style.button} ${styleButton}`}
+        aria-label={ariaLabel}
+      >
+        {children || name}
+      </button>
+    );
+  }
+
   return (
-    <button type="button" onClick={handleClick} className={`${style.button} ${styleButton}`}>
-      {name}
+    <button type={type} className={`${style.button} ${styleButton}`}>
+      {children || name}
     </button>
   );
 }

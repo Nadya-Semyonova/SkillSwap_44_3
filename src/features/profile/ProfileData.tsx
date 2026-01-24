@@ -1,11 +1,17 @@
-import Edit from '@public/img/IconsSvg/Edit';
-import Calendar from '@public/img/IconsSvg/Calendar';
-import ChevronDown from '@public/img/IconsSvg/ChevronDown';
-import GaleryEdit from '@public/img/IconsSvg/GaleryEdit';
-import userPhoto from '@public/img/userPhoto.png';
+import userPhoto from '@shared/assets/images/userPhoto.png';
+import { useEffect } from 'react';
+import Edit from '@/shared/assets/images/IconsSvg/Edit';
+import Calendar from '@/shared/assets/images/IconsSvg/Calendar';
+import ChevronDown from '@/shared/assets/images/IconsSvg/ChevronDown';
+import GaleryEdit from '@/shared/assets/images/IconsSvg/GaleryEdit';
 import styles from './ProfileData.module.css';
+import { useSelector, type RootState } from '@/store/store';
 
 function ProfileData() {
+  const user = useSelector((state: RootState) => state.auth.user);
+
+  useEffect(() => {}, [user]);
+
   return (
     <div className={styles.profileContainer}>
       <form className={styles.userForm}>
@@ -17,8 +23,8 @@ function ProfileData() {
                 <input
                   id="email"
                   type="email"
+                  value={user?.email}
                   className={styles.inputField}
-                  defaultValue="example@gmail.com"
                   readOnly
                 />
                 <span className={styles.editIcon}>
@@ -42,8 +48,8 @@ function ProfileData() {
               <input
                 id="name"
                 type="text"
+                value={user?.name}
                 className={styles.inputField}
-                defaultValue="Иван"
                 readOnly
               />
               <span className={styles.editIcon}>
@@ -61,8 +67,8 @@ function ProfileData() {
                 <input
                   id="birthday"
                   type="text"
+                  value={user?.dateOfBirth}
                   className={styles.inputField}
-                  defaultValue="ДД.ММ.ГГГГ"
                   readOnly
                 />
                 <span className={styles.calendarIcon}>
@@ -76,7 +82,7 @@ function ProfileData() {
             <label htmlFor="gender" className={styles.label}>
               Пол
               <div className={styles.inputContainer}>
-                <select id="gender" className={styles.selectField} defaultValue="female">
+                <select id="gender" className={styles.selectField} value={user?.gender}>
                   <option value="female">Женский</option>
                   <option value="male">Мужской</option>
                 </select>
@@ -93,7 +99,7 @@ function ProfileData() {
             Город
             <div className={styles.inputContainer}>
               <select id="city" className={styles.selectField} defaultValue="moscow">
-                <option value="moscow">Москва</option>
+                <option value={user?.city}>{user?.city}</option>
               </select>
               <span className={styles.dropdownIcon}>
                 <ChevronDown />
@@ -108,8 +114,8 @@ function ProfileData() {
             <div className={styles.textareaContainer}>
               <textarea
                 id="about"
+                value={user?.about}
                 className={styles.textareaField}
-                defaultValue="Расскажите о себе"
                 readOnly
                 rows={4}
               />
@@ -129,7 +135,11 @@ function ProfileData() {
 
       <div className={styles.avatarSection}>
         <div className={styles.avatar}>
-          <img src={userPhoto} alt="Аватар пользователя" className={styles.userPhoto} />
+          <img
+            src={user?.avatar || userPhoto}
+            alt="Аватар пользователя"
+            className={styles.userPhoto}
+          />
         </div>
         <button
           className={styles.editPhotoButton}

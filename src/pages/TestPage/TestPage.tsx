@@ -1,11 +1,19 @@
-import HeaderRegister from '@features/auth/registration/ui/HeaderRegistration/headerRegistration';
-import { RegistrationStep3 } from '@features/auth/registration/ui';
+import { Input } from '@shared/ui/useInput';
+import HeaderAuth from '@/features/auth/HeaderAuth/HeaderAuth';
+import { UserSelector } from '@/features/auth/UserCalendar/UserSelector';
+import Header from '@/features/header/header';
+import AboutProject from '@/shared/ui/AllButtons/AboutProject/AboutProject';
+import Logotype from '@/shared/ui/Logotype';
 
 export function TestPage() {
   return (
     <>
-      <HeaderRegister />
-      <RegistrationStep3 />
+      <HeaderAuth />
+      <Input />
+      <UserSelector />
+      <Header />
+      <Logotype />
+      <AboutProject />
     </>
   );
 }

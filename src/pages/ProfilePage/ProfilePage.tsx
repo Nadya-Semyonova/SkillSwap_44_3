@@ -1,5 +1,5 @@
-import SideBar from '@features/SideBar/SideBar';
 import ProfileData from '@features/profile/ProfileData';
+import SideBar from '@/features/profile/SideBar/SideBar';
 import styles from './ProfilePage.module.css';
 
 function ProfilePage() {

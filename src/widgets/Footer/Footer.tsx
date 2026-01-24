@@ -1,4 +1,4 @@
-import Logo from '@public/img/LogoSvg/Logo';
+import Logotype from '@/shared/ui/Logotype';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -6,10 +6,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
         <div className={styles.branding}>
-          <div className={styles.logoWrapper}>
-            <Logo />
-            <span className={styles.brandName}>SkillSwap</span>
-          </div>
+          <Logotype />
         </div>
 
         <div className={styles.navMenu}>

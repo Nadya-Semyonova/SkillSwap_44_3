@@ -4,8 +4,6 @@
   gap: 40px;
   max-width: 1136px;
   width: 100%;
-  margin-top: 94px;
-  margin-left: 36px;
   padding: 60px;
   border-radius: 12px;
   border-width: 1px;
@@ -18,7 +16,7 @@
   column-gap: 20px;
 }
 
-.category__icon {
+.categoryIcon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,36 +25,36 @@
   border-radius: 100px;
 }
 
-.category__icon svg {
+.categoryIcon svg {
   width: 24px;
   height: 24px;
 }
 
-.icon__business {
+.iconBusiness {
   background-color: var(--color-tag-business);
 }
 
-.icon__art {
+.iconArt {
   background-color: var(--color-tag-art);
 }
 
-.icon__languages {
+.iconLanguages {
   background-color: var(--color-tag-languages);
 }
 
-.icon__education {
+.iconEducation {
   background-color: var(--color-tag-education);
 }
 
-.icon__home {
+.iconHome {
   background-color: var(--color-tag-home);
 }
 
-.icon__health {
+.iconHealth {
   background-color: var(--color-tag-health);
 }
 
-.category__content {
+.categoryContent {
   display: flex;
   flex-direction: column;
   gap: 12px;

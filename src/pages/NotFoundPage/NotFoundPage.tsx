@@ -1,4 +1,4 @@
-import Error404 from '@public/img/IllustrationsSvg/Error404';
+import Error404 from '@/shared/assets/images/IllustrationsSvg/Error404';
 import styles from './NotFoundPage.module.css';
 
 function NotFoundPage() {

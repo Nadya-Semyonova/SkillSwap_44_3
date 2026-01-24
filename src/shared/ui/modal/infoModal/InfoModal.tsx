@@ -1,5 +1,5 @@
 import ButtonDefault from '@shared/ui/ButtonDefault';
-import Done from '@public/img/IconsSvg/Done';
+import Done from '@/shared/assets/images/IconsSvg/Done';
 import type { ChildrenModalProps } from '@/types/types';
 import styles from '../style/ModalChildrenStyle.module.css';
 

@@ -1,130 +1,91 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { ROUTES } from '@/shared/lib/constants/routes';
-import ButtonDefault from '@/shared/ui/ButtonDefault';
-import Logo from '../../../public/img/LogoSvg/Logo';
-import Cross from '../../../public/img/iconsSvg/Cross';
-import Google from '../../../public/img/iconsSvg/Google';
-import Apple from '../../../public/img/iconsSvg/Apple';
-import Eye from '../../../public/img/iconsSvg/Eye';
-import LightBulb from '../../../public/img/IllustrationsSvg/LightBulb';
+import { ROUTES } from '@shared/lib/constants/routes';
+import ButtonDefault from '@shared/ui/ButtonDefault';
+import Apple from '@shared/assets/images/IconsSvg/Apple';
+import Eye from '@shared/assets/images/IconsSvg/Eye';
+import LightBulb from '@shared/assets/images/IllustrationsSvg/LightBulb';
+import HeaderAuth from '@features/auth/HeaderAuth/HeaderAuth';
+import { Input } from '@shared/ui/useInput';
+import { useState } from 'react';
+import Google from '@/shared/assets/images/IconsSvg/Google';
 import styles from './LoginPage.module.css';
-
-interface ControllerField {
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onBlur: () => void;
-  ref: React.RefObject<HTMLInputElement>;
-}
-
-interface UseControllerResult {
-  field: ControllerField;
-}
-
-const useController = (): UseControllerResult => {
-  return {
-    field: {
-      value: '',
-      onChange: () => {},
-      onBlur: () => {},
-      ref: { current: null },
-    },
-  };
-};
+import { useDispatch } from '@/store/store';
+import { getUserInfoData } from '@/store/slices/authSlice/authSlice';
 
 function LoginPage() {
-  const emailController = useController();
-  const passwordController = useController();
+  const [showPass, setShowPass] = useState<boolean>(false);
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleClickEye = () => {
+    setShowPass(!showPass);
+  };
+
+  const handleSubmit = async () => {
+    await dispatch(getUserInfoData({ email, password })).unwrap();
+    navigate('/profile');
+  };
+
+  const changeEmail = (value: string) => {
+    setEmail(value);
+  };
+
+  const changePassword = (value: string) => {
+    setPassword(value);
   };
 
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <div className={styles.logoWrapper}>
-          <Logo />
-          <span className={styles.brandName}>SkillSwap</span>
-        </div>
-        <div className={styles.buttonWrapperClose}>
-          <ButtonDefault
-            name="Закрыть"
-            handleClick={() => navigate(ROUTES.HOME)}
-            styleButton={styles.closeButton}
-          />
-          <div className={styles.iconCloseWrapper}>
-            <Cross />
-          </div>
-        </div>
-      </header>
-      <div className={styles.headline}>
-        <h2 className={styles.title}>Вход</h2>
-      </div>
+      <HeaderAuth />
+      <h2 className={styles.title}>Вход</h2>
       <div className={styles.content}>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.formButtonsLogin}>
-            <button
-              className={`${styles.socialButton} ${styles.withIcon}`}
-              onClick={() => {}}
-              type="button"
-            >
-              <div className={styles.socialButtonIcon}>
-                <Google />
-              </div>
-              <p className={styles.socialText}>Продолжить с Google</p>
+            <button className={styles.socialButton} onClick={() => {}} type="button">
+              <Google />
+              <span className={styles.socialText}>Продолжить с Google</span>
             </button>
-
-            <button
-              className={`${styles.socialButton} ${styles.withIcon}`}
-              onClick={() => {}}
-              type="button"
-            >
-              <div className={styles.socialButtonIcon}>
-                <Apple />
-              </div>
-              <p className={styles.socialText}>Продолжить с Apple</p>
+            <button className={styles.socialButton} onClick={() => {}} type="button">
+              <Apple />
+              <span className={styles.socialText}>Продолжить с Apple</span>
             </button>
           </div>
           <p className={styles.formText}>или</p>
           <div className={styles.formInput}>
-            <div className={styles.field}>
-              <div className={styles.label}>Email</div>
-              <input
-                type="email"
-                className={styles.input}
-                placeholder="Введите email"
-                value={emailController.field.value}
-                onChange={emailController.field.onChange}
-                onBlur={emailController.field.onBlur}
-                ref={emailController.field.ref}
+            <Input
+              title="Email"
+              placeholder="Введите email"
+              value={email}
+              onChange={changeEmail}
+              type="email"
+            />
+            <div className={styles.inputWrapper}>
+              <Input
+                title="Пароль"
+                placeholder="Введите ваш пароль"
+                value={password}
+                onChange={changePassword}
+                type={showPass ? 'text' : 'password'}
               />
-            </div>
-            <div className={styles.field}>
-              <div className={styles.label}>Пароль</div>
-              <div className={styles.inputWrapper}>
-                <input
-                  type="password"
-                  className={styles.input}
-                  placeholder="Введите ваш пароль"
-                  value={passwordController.field.value}
-                  onChange={passwordController.field.onChange}
-                  onBlur={passwordController.field.onBlur}
-                  ref={passwordController.field.ref}
-                />
-                <button
-                  type="button"
-                  className={styles.eyeButton}
-                  onClick={() => {}}
-                  aria-label="Показать пароль"
-                >
-                  <Eye />
-                </button>
-              </div>
+              <button
+                type="button"
+                className={styles.eyeButton}
+                onClick={handleClickEye}
+                aria-label="Показать пароль"
+              >
+                <Eye />
+              </button>
             </div>
           </div>
           <div className={styles.formButtonSubmit}>
-            <ButtonDefault name="Войти" handleClick={() => {}} styleButton={styles.loginButton} />
+            <ButtonDefault
+              name="Войти"
+              handleClick={handleSubmit}
+              styleButton={styles.loginButton}
+              type="button"
+            />
             <Link to={ROUTES.REGISTER} className={styles.registerLink}>
               Зарегистрироваться
             </Link>

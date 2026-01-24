@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg-filter);
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  flex: 1;
+  width: clamp(527px, 100%, 648px);
+  column-gap: 8px;
+}
+
+.input {
+  flex: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: none;
+  outline: none;
+  font-family: var(--font-family-base);
+  font-size: var(--font-h4-size);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-filter);
+}
+
+.input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.iconContainer {
+  width: 34px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 12px;
+}

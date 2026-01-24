@@ -1,10 +1,10 @@
 import skills from '@public/db/skills.json';
-import BriefCase from '@public/img/IconsSvg/BriefCase';
-import Global from '@public/img/IconsSvg/Global';
-import Home from '@public/img/IconsSvg/Home';
-import Palette from '@public/img/IconsSvg/Palette';
-import Book from '@public/img/IconsSvg/Book';
-import LifeStyle from '@public/img/IconsSvg/LifeStyle';
+import BriefCase from '@/shared/assets/images/IconsSvg/BriefCase';
+import Global from '@/shared/assets/images/IconsSvg/Global';
+import Home from '@/shared/assets/images/IconsSvg/Home';
+import Palette from '@/shared/assets/images/IconsSvg/Palette';
+import Book from '@/shared/assets/images/IconsSvg/Book';
+import LifeStyle from '@/shared/assets/images/IconsSvg/LifeStyle';
 import type { SkillsData } from './types';
 
 export type CategoryConfig = {

@@ -21,7 +21,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@api/*": ["src/api/*"],
+      "@api/*": ["src/entities/api/*"],
       "@shared/*": ["src/shared/*"],
       "@store/*": ["src/store/*"],
       "@types/*": ["src/types/*"],
@@ -30,7 +30,8 @@
       "@features/*": ["src/features/*"],
       "@public/*": ["public/*"],
       "@db/*": ["src/db/*"],
-      "@img/*": ["src/img/*"]
+      "@img/*": ["src/shared/assets/images/*"],
+      "@assets/*": ["src/assets/*"]
     },
 
     /* Linting */
