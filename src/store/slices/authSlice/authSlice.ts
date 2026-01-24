@@ -19,6 +19,9 @@ export const getUserInfoData = createAsyncThunk(
   async ({ email, password }: { email: string; password: string }, { rejectWithValue }) => {
     try {
       const user = await fetchUserInfoApi(email, password);
+      if (!user) {
+        return rejectWithValue('Неверный email или пароль');
+      }
       return user;
     } catch (error) {
       return rejectWithValue(error instanceof Error ? error.message : 'Ошибка авторизации');

@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ROUTES } from '@shared/lib/constants/routes';
 import ButtonDefault from '@shared/ui/ButtonDefault';
 import Google from '@img/IconsSvg/Google';
@@ -6,88 +6,79 @@ import Apple from '@img/IconsSvg/Apple';
 import Eye from '@img/IconsSvg/Eye';
 import LightBulb from '@img/IllustrationsSvg/LightBulb';
 import HeaderAuth from '@features/auth/HeaderAuth/HeaderAuth';
-import { useState } from 'react';
 import { Input } from '@shared/ui/useInput';
 import styles from './LoginPage.module.css';
-import { useDispatch } from '@/store/store';
-import { getUserInfoData } from '@/store/slices/authSlice/authSlice';
+import { useLoginPage } from './libs/useLoginPage';
 
 function LoginPage() {
-  const [showPass, setShowPass] = useState<boolean>(false);
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  const handleClickEye = () => {
-    setShowPass(!showPass);
-  };
-
-  const handleSubmit = async () => {
-    await dispatch(getUserInfoData({ email, password })).unwrap();
-    navigate('/profile');
-  };
-
-  const changeEmail = (value: string) => {
-    setEmail(value);
-  };
-
-  const changePassword = (value: string) => {
-    setPassword(value);
-  };
+  const { formData, errors, showPass, texts, handleChange, handleSubmit, handleClickEye } =
+    useLoginPage();
 
   return (
     <div className={styles.container}>
       <HeaderAuth />
-      <h2 className={styles.title}>Вход</h2>
+      <h2 className={styles.title}>{texts.title}</h2>
       <div className={styles.content}>
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <form
+          className={styles.form}
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSubmit();
+          }}
+        >
           <div className={styles.formButtonsLogin}>
             <button className={styles.socialButton} onClick={() => {}} type="button">
               <Google />
-              <span className={styles.socialText}>Продолжить с Google</span>
+              <span className={styles.socialText}>{texts.socialGoogle}</span>
             </button>
             <button className={styles.socialButton} onClick={() => {}} type="button">
               <Apple />
-              <span className={styles.socialText}>Продолжить с Apple</span>
+              <span className={styles.socialText}>{texts.socialApple}</span>
             </button>
           </div>
           <p className={styles.formText}>или</p>
           <div className={styles.formInput}>
-            <Input
-              title="Email"
-              placeholder="Введите email"
-              value={email}
-              onChange={changeEmail}
-              type="email"
-            />
-            <div className={styles.inputWrapper}>
+            <div className={styles.inputContainer}>
               <Input
-                title="Пароль"
-                placeholder="Введите ваш пароль"
-                value={password}
-                onChange={changePassword}
-                type={showPass ? 'text' : 'password'}
+                title={texts.emailTitle}
+                placeholder={texts.emailPlaceholder}
+                value={formData.email}
+                onChange={(value) => handleChange('email', value)}
+                type="email"
               />
-              <button
-                type="button"
-                className={styles.eyeButton}
-                onClick={handleClickEye}
-                aria-label="Показать пароль"
-              >
-                <Eye />
-              </button>
+              {errors.email && <div className={styles.errorMessage}>{errors.email}</div>}
             </div>
+            <div className={styles.inputContainer}>
+              <div className={styles.inputWrapper}>
+                <Input
+                  title={texts.passwordTitle}
+                  placeholder={texts.passwordPlaceholder}
+                  value={formData.password}
+                  onChange={(value) => handleChange('password', value)}
+                  type={showPass ? 'text' : 'password'}
+                />
+                <button
+                  type="button"
+                  className={styles.eyeButton}
+                  onClick={handleClickEye}
+                  aria-label="Показать пароль"
+                >
+                  <Eye />
+                </button>
+              </div>
+              {errors.password && <div className={styles.errorMessage}>{errors.password}</div>}
+            </div>
+            {errors.credentials && <div className={styles.errorMessage}>{errors.credentials}</div>}
           </div>
           <div className={styles.formButtonSubmit}>
             <ButtonDefault
-              name="Войти"
+              name={texts.loginButton}
               handleClick={handleSubmit}
               styleButton={styles.loginButton}
               type="button"
             />
             <Link to={ROUTES.REGISTER} className={styles.registerLink}>
-              Зарегистрироваться
+              {texts.registerLink}
             </Link>
           </div>
         </form>
@@ -96,10 +87,8 @@ function LoginPage() {
             <LightBulb />
           </div>
           <div className={styles.onboardingContent}>
-            <h2 className={styles.onboardingTitle}>С возвращением в SkillSwap!</h2>
-            <p className={styles.onboardingText}>
-              Обменивайтесь знаниями и навыками с другими людьми
-            </p>
+            <h2 className={styles.onboardingTitle}>{texts.onboardingTitle}</h2>
+            <p className={styles.onboardingText}>{texts.onboardingText}</p>
           </div>
         </div>
       </div>
