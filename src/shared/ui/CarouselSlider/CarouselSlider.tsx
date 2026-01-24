@@ -1,17 +1,21 @@
 import { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 
-import Card from '@widgets/Card';
 import ChevronUp from '@/shared/assets/images/IconsSvg/ChevronUp';
 
 import type { IUsersCardsSwiper } from './types/types';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import styles from './UsersCardsSwiper.module.css';
+import styles from './CarouselSlider.module.css';
 
-export default function UsersCardsSwiper({ title, users }: IUsersCardsSwiper) {
+export default function CarouselSlider({
+  children,
+  bgButtons,
+  spaceBetween,
+  slidesPerView,
+}: IUsersCardsSwiper) {
   const [begButton, setBegButton] = useState<boolean>(true);
   const [endButton, setEndButton] = useState<boolean>(false);
 
@@ -30,10 +34,9 @@ export default function UsersCardsSwiper({ title, users }: IUsersCardsSwiper) {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>{title}</h2>
       <Swiper
-        spaceBetween={24}
-        slidesPerView={4}
+        spaceBetween={spaceBetween || 0}
+        slidesPerView={slidesPerView || 1}
         slidesPerGroup={1}
         modules={[Navigation]}
         navigation={{
@@ -43,14 +46,10 @@ export default function UsersCardsSwiper({ title, users }: IUsersCardsSwiper) {
         onReachBeginning={onBegging}
         onReachEnd={onEnd}
       >
-        {users.map((user) => (
-          <SwiperSlide key={user.id}>
-            <Card user={user} />
-          </SwiperSlide>
-        ))}
+        {children}
       </Swiper>
       <button
-        className={`custom-button-prev ${styles.customButtonPrev} ${begButton ? styles.buttonDeactive : ''}`}
+        className={`custom-button-prev ${bgButtons} ${styles.customButtonPrev} ${begButton ? styles.buttonDeactive : ''}`}
         onClick={handleClickPrev}
         type="button"
         tabIndex={0}
@@ -59,7 +58,7 @@ export default function UsersCardsSwiper({ title, users }: IUsersCardsSwiper) {
         <ChevronUp />
       </button>
       <button
-        className={`custom-button-next ${styles.customButtonNext} ${endButton ? styles.buttonDeactive : ''}`}
+        className={`custom-button-next ${bgButtons} ${styles.customButtonNext} ${endButton ? styles.buttonDeactive : ''}`}
         onClick={handleClickNext}
         type="button"
         tabIndex={0}
