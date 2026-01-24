@@ -6,7 +6,7 @@
   border-radius: 12px;
   overflow: hidden;
   flex: 1;
-  max-width: 527px;
+  width: clamp(527px, 100%, 648px);
   column-gap: 8px;
 }
 
@@ -14,7 +14,6 @@
   flex: 1;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-right: 373px;
   border: none;
   outline: none;
   font-family: var(--font-family-base);

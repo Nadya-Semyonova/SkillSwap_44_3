@@ -1,7 +1,6 @@
-.inputContainer {
+.textareaContainer {
   display: flex;
   flex-direction: column;
-  gap: 8px;
   width: 100%;
   max-width: 400px;
 }
@@ -14,7 +13,7 @@
   color: var(--color-text-primary);
 }
 
-.input {
+.textarea {
   padding: 12px 16px;
   border: 1px solid var(--color-bg-toggle);
   border-radius: 12px;
@@ -27,34 +26,40 @@
   transition: all 0.2s ease;
   width: 100%;
   box-sizing: border-box;
+  min-height: 96px;
+  max-height: 300px;
+  max-width: 436px;
+  resize: vertical;
+  vertical-align: top;
+  overflow-wrap: break-word;
 }
 
-.input::placeholder {
+.textarea::placeholder {
   color: var(--color-text-secondary);
   font-family: var(--font-family-base);
   font-size: var(--font-body-size);
   font-weight: var(--font-weight-regular);
 }
 
-.input:focus {
+.textarea:focus {
   outline: none;
   border-color: var(--color-accent);
   box-shadow: 0 0 0 2px var(--color-accent-hover);
 }
 
-.inputDisabled,
-.input:disabled {
+.textareaDisabled,
+.textarea:disabled {
   background-color: var(--color-bg-disabled);
   border-color: var(--color-text-disabled);
   color: var(--color-text-disabled);
   cursor: not-allowed;
 }
 
-.inputDisabled::placeholder,
-.input:disabled::placeholder {
+.textareaDisabled::placeholder,
+.textarea:disabled::placeholder {
   color: var(--color-text-disabled);
 }
 
-.input:hover:not(:disabled, .inputDisabled) {
+.textarea:hover:not(:disabled, .textareaDisabled) {
   border-color: var(--color-text-link);
 }
