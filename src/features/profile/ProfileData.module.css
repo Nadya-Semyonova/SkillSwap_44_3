@@ -25,9 +25,6 @@
 }
 
 .label {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-regular);
   font-size: var(--font-h4-size);
@@ -42,13 +39,11 @@
 }
 
 .inputFullWidth {
-  max-width: none !important;
+  max-width: none;
   width: 100%;
 }
 
-.textareaField,
-.selectField,
-.inputField {
+.textareaField {
   width: 100%;
   padding: 12px 20px;
   border: 1px solid var(--color-text-primary);
@@ -58,18 +53,11 @@
   color: var(--color-text-primary);
   line-height: 1.6;
   box-sizing: border-box;
-}
-
-.inputField,
-.textareaField {
   cursor: text;
-}
-
-.selectField {
-  appearance: none;
-  background-image: none;
-  padding-right: 20px;
-  cursor: pointer;
+  min-height: 48px;
+  max-height: 120px;
+  overflow-y: auto;
+  resize: vertical;
 }
 
 /* .selectField + .dropdownIcon {
@@ -90,28 +78,18 @@
   outline: none;
 } */
 
-.textareaField {
-  min-height: 48px;
-  max-height: 120px;
-  overflow-y: auto;
-  resize: vertical;
-}
-
 .infoDateGender {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
 }
 
-.editIcon,
-.calendarIcon,
-.dropdownIcon,
-.aboutEditIcon {
+.editIcon {
   position: absolute;
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
-  pointer-events: none;
+  cursor: pointer;
 }
 
 .passwordLink {
@@ -202,10 +180,6 @@
   width: 24px;
   height: 24px;
   fill: var(--color-text-primary);
-}
-
-.birthdateRow {
-  margin-top: 2px;
 }
 
 .genderSelected span {
