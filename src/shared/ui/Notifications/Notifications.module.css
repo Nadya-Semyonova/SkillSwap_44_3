@@ -1,7 +1,7 @@
 .notifications {
-  position: fixed;
-  top: 104px;
-  right: 0;
+  position: absolute;
+  top: 100%;
+  right: 36px;
   height: 100vh;
   width: 556px;
   max-width: 90vw;
@@ -117,7 +117,7 @@
   line-height: var(--font-body-line-height);
 }
 
-.notificationContainer .p:first-child {
+.notificationContainer p:first-child {
   font-size: var(--font-body-size);
   line-height: var(--font-body-line-height);
   font-family: var(--font-body-family);
@@ -125,7 +125,7 @@
   color: var(--color-text-primary);
 }
 
-.notificationContainer .p:last-child {
+.notificationContainer p:last-child {
   font-size: var(--font-caption-size);
   line-height: var(--font-caption-line-height);
   font-weight: var(--font-caption-weight);
@@ -155,9 +155,6 @@
   justify-content: center;
   padding: 40px 20px;
   text-align: center;
-}
-
-.emptyState p {
   margin: 0;
   font-family: var(--font-family-base);
   font-size: var(--font-body-size);
