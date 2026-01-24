@@ -4,6 +4,8 @@ import GaleryAdd from '@/shared/assets/images/IconsSvg/GaleryAdd';
 import SchoolBoard from '@/shared/assets/images/IllustrationsSvg/SchoolBoard';
 import styles from './RegistrationStep3.module.css';
 import { Input } from '@/shared/ui/useInput';
+import { ToggledSelect } from '@/shared/ui/ToggleSelector';
+import { Textarea } from '@/shared/ui/Textarea/Textarea';
 
 export default function RegistrationStep3() {
   return (
@@ -20,32 +22,18 @@ export default function RegistrationStep3() {
             title="Название навыка"
             placeholder="Введите название вашего навыка"
           />
-          <Input
-            className={styles.inputField}
-            title="Категория навыка"
-            placeholder="Выберите категорию навыка"
-            options={[
-              { value: 'art', label: 'Искусство' },
-              { value: 'music', label: 'Музыка' },
-              { value: 'programming', label: 'Программирование' },
-              { value: 'cooking', label: 'Кулинария' },
-            ]}
-          />
-          <Input
-            className={styles.inputField}
-            title="Подкатегория навыка"
-            placeholder="Выберите подкатегорию навыка"
-            options={[
-              { value: 'painting', label: 'Живопись' },
-              { value: 'sculpture', label: 'Скульптура' },
-              { value: 'drawing', label: 'Рисование' },
-            ]}
-          />
-          <Input
-            className={`${styles.inputField} ${styles.textarea}`}
+          <ToggledSelect title="Категория навыка" placeholder="Выберите категорию навыка">
+            заглушка
+          </ToggledSelect>
+          <ToggledSelect title="Подкатегория навыка" placeholder="Выберите подкатегорию навыка">
+            заглушка
+          </ToggledSelect>
+          <Textarea
+            className={styles.textarea}
             type="text"
             title="Описание"
             placeholder="Коротко опишите, чему можете научить"
+            maxLength={250}
           />
           <div className={styles.upload}>
             <p className={styles.uploadText}>Перетащите или выберите изображения навыка</p>

@@ -66,6 +66,4 @@ export interface IInput {
   value?: string;
   type?: 'text' | 'email' | 'password' | 'number' | 'tel';
   disabled?: boolean;
-  options?: Array<{ value: string; label: string }>;
-  variant?: 'input' | 'select';
 }

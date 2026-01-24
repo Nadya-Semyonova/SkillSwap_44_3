@@ -50,7 +50,8 @@
 
 .wrap {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 556px 556px;
+  justify-content: center;
   gap: 24px;
   padding: 0px 152px;
 }
@@ -62,18 +63,13 @@
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
   background-color: var(--color-bg-card);
   height: 692px;
 }
 
 .inputField {
   appearance: none;
-}
-
-.textarea {
-  resize: none;
-  color: var(--color-text-primary);
 }
 
 .form :global(div) {
@@ -83,6 +79,20 @@
 .form :global(input) {
   border-radius: 12px;
   padding: 10px 16px;
+  border-color: var(--color-text-secondary);
+}
+
+.form :global([class*="inputContainer"]) {
+  gap: 0;
+}
+
+.form :global(label) {
+  margin-bottom: 4px;
+  font-weight: var(--font-weight-medium);
+}
+
+.form :global([class*="selectorWrapper"]) {
+  padding: 12px 20px;
 }
 
 .upload {
@@ -141,7 +151,7 @@
 .actionButton {
   flex: 1 1 0;
   min-width: 0;
-  margin: 22px 50px 0;
+  margin: 10px 50px 0;
   height: 48px;
   border-radius: 12px;
   display: inline-flex;
