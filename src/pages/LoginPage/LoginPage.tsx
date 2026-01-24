@@ -1,6 +1,10 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { ROUTES } from '@shared/lib/constants/routes';
 import ButtonDefault from '@shared/ui/ButtonDefault';
+import Google from '@shared/assets/images/IconsSvg/Google';
+import Apple from '@shared/assets/images/IconsSvg/Apple';
+import Eye from '@shared/assets/images/IconsSvg/Eye';
+import LightBulb from '@shared/assets/images/IllustrationsSvg/LightBulb';
 import HeaderAuth from '@features/auth/HeaderAuth/HeaderAuth';
 import { Input } from '@shared/ui/useInput';
 import { useState } from 'react';
