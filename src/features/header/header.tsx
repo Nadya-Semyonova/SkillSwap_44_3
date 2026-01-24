@@ -7,15 +7,16 @@ import InputSearch from '@/shared/ui/AllButtons/InputSearch/InputSearch';
 import ChevronDown from '@/shared/assets/images/IconsSvg/ChevronDown';
 import styles from './header.module.css';
 import UserMenu from '../userMenu/userMenu';
+import SkillsSelector from '@/widgets/SkillsSelector/SkillsSelector';
 
 export default function Header() {
   const [isSkillsSelectorOpen, setIsSkillsSelectorOpen] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLDivElement>(null);
 
-  // const toggleButtonAllSkills = () => {
-  //   setIsSkillsSelectorOpen((prevState) => !prevState);
-  // };
+  const toggleButtonAllSkills = () => {
+    setIsSkillsSelectorOpen((prevState) => !prevState);
+  };
   const closeSkillsSelector = () => {
     setIsSkillsSelectorOpen(false);
   };
@@ -45,14 +46,20 @@ export default function Header() {
         <NavLink to="/" className={styles.logoContainer} aria-label="SkillSwap - Главная страница">
           <Logotype />
         </NavLink>
-        <div className={styles.navigation}>
-          <AboutProject />
+        <AboutProject />
+        <div className={styles.navigation} ref={buttonRef}>
           <ButtonAllSkills
-            onClick={() => {}}
+            onClick={toggleButtonAllSkills}
             className=""
             text="Все навыки"
             icon={<ChevronDown />}
           />
+        </div>
+        <div
+          ref={modalRef}
+          className={`${styles.modalContainer} ${isSkillsSelectorOpen ? styles.open : ''}`}
+        >
+          <SkillsSelector />
         </div>
       </div>
 
