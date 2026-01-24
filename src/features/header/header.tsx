@@ -1,14 +1,12 @@
 import { NavLink } from 'react-router-dom';
-import { useState, useRef, useEffect } from 'react';
-import { ROUTES } from '@shared/lib/constants/routes';
 import Logotype from '@shared/ui/Logotype/Logotype';
-import ButtonDefault from '@shared/ui/ButtonDefault/ButtonDefault';
+import { useEffect, useRef, useState } from 'react';
 import AboutProject from '@/shared/ui/AllButtons/AboutProject/AboutProject';
 import ButtonAllSkills from '@/shared/ui/AllButtons/ButtonAllSkills/ButtonAllSkills';
 import InputSearch from '@/shared/ui/AllButtons/InputSearch/InputSearch';
-import ThemeToggle from '@/features/themeToggle/ThemeToggle';
 import ChevronDown from '@/shared/assets/images/IconsSvg/ChevronDown';
 import styles from './header.module.css';
+import UserMenu from '../userMenu/userMenu';
 import SkillsSelector from '@/widgets/SkillsSelector/SkillsSelector';
 
 export default function Header() {
@@ -48,10 +46,8 @@ export default function Header() {
         <NavLink to="/" className={styles.logoContainer} aria-label="SkillSwap - Главная страница">
           <Logotype />
         </NavLink>
-
         <AboutProject />
-        {/* здесь */}
-        <div ref={buttonRef}>
+        <div className={styles.navigation} ref={buttonRef}>
           <ButtonAllSkills
             onClick={toggleButtonAllSkills}
             className=""
@@ -69,15 +65,7 @@ export default function Header() {
 
       <div className={styles.rightSection}>
         <InputSearch />
-        <ThemeToggle />
-
-        <NavLink to={ROUTES.LOGIN} className={styles.navLink}>
-          <ButtonDefault name="Войти" styleButton={styles.loginButton} />
-        </NavLink>
-
-        <NavLink to={ROUTES.REGISTER} className={styles.navLink}>
-          <ButtonDefault name="Зарегистрироваться" styleButton={styles.registerButton} />
-        </NavLink>
+        <UserMenu />
       </div>
     </header>
   );

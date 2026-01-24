@@ -18,7 +18,7 @@ export default function ButtonAllSkills({
     <button
       type="button"
       className={`${styles.allskillsButton} ${className}`}
-      onClick={onClick}
+      onClick={() => onClick()}
       aria-label={text}
     >
       {text}
