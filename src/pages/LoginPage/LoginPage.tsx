@@ -6,7 +6,6 @@ import Eye from '@shared/assets/images/IconsSvg/Eye';
 import LightBulb from '@shared/assets/images/IllustrationsSvg/LightBulb';
 import HeaderAuth from '@features/auth/HeaderAuth/HeaderAuth';
 import { Input } from '@shared/ui/useInput';
-import { useState } from 'react';
 import Google from '@/shared/assets/images/IconsSvg/Google';
 import styles from './LoginPage.module.css';
 import { useLoginPage } from './libs/useLoginPage';
