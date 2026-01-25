@@ -11,6 +11,18 @@ import style from './RegistrationStep2.module.css';
 export function RegistrationStep2() {
   const [name, setName] = useState<string>('');
 
+    // Заглушки для обработчиков
+    const handleAvatarClick = () => {};
+    const handleAvatarAdd = () => {};
+    const handleGenderNotSpecified = () => {};
+    const handleGenderMale = () => {};
+    const handleGenderFemale = () => {};
+    const handleCitySelect = () => {};
+    const handleSkillCategorySelect = () => {};
+    const handleSkillSubcategorySelect = () => {};
+    const handleBack = () => {};
+    const handleContinue = () => {};
+
   return (
     <div className={style.container}>
       <div className={style.leftColumn}>
@@ -19,7 +31,7 @@ export function RegistrationStep2() {
             <button
               type="button"
               className={style.avatarIcon}
-              onClick={() => {}}
+              onClick={handleAvatarClick}
               aria-label="Аватар пользователя"
             >
               <UserCircle />
@@ -27,7 +39,7 @@ export function RegistrationStep2() {
             <button
               type="button"
               className={style.avatarPlus}
-              onClick={() => {}}
+              onClick={handleAvatarAdd}
               aria-label="Добавить аватар"
             >
               <Add />
@@ -49,41 +61,41 @@ export function RegistrationStep2() {
 
             <div className={style.fieldGroup}>
               <ToggledSelect title="Пол" placeholder="Не указан">
-                <div onClick={() => {}}>Не указан</div>
-                <div onClick={() => {}}>Мужской</div>
-                <div onClick={() => {}}>Женский</div>
+                <div onClick={handleGenderNotSpecified}>Не указан</div>
+                <div onClick={handleGenderMale}>Мужской</div>
+                <div onClick={handleGenderFemale}>Женский</div>
               </ToggledSelect>
             </div>
           </div>
 
           <div className={style.fieldGroup}>
             <ToggledSelect title="Город" placeholder="Не указан">
-              <div onClick={() => {}}>Не указан</div>
+              <div onClick={handleCitySelect}>Не указан</div>
             </ToggledSelect>
           </div>
 
           <div className={style.fieldGroup}>
             <ToggledSelect title="Категория навыка, которому хотите научиться" placeholder="Выберите категорию">
-              <div onClick={() => {}}>Выберите категорию</div>
+              <div onClick={handleSkillCategorySelect}>Выберите категорию</div>
             </ToggledSelect>
           </div>
 
           <div className={style.fieldGroup}>
             <ToggledSelect title="Подкатегория навыка, которому хотите научиться" placeholder="Выберите подкатегорию">
-              <div onClick={() => {}}>Выберите подкатегорию</div>
+              <div onClick={handleSkillSubcategorySelect}>Выберите подкатегорию</div>
             </ToggledSelect>
           </div>
 
           <div className={style.buttonsRow}>
             <ButtonDefault
               name="Назад"
-              handleClick={() => {}}
+              handleClick={handleBack}
               variant="outline"
               styleButton={style.buttonBack}
             />
             <ButtonDefault
               name="Продолжить"
-              handleClick={() => {}}
+              handleClick={handleContinue}
               variant="continue"
               styleButton={style.buttonContinue}
             />
