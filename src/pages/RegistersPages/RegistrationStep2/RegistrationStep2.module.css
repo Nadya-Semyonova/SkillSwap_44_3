@@ -1,31 +1,23 @@
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
   background-color: var(--color-bg-main);
-}
-
-.leftColumn,
-.rightColumn {
+  min-inline-size: 1440px;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-bg-card);
-  border-radius: 12px;
-  padding: 40px 60px;
+  align-items: center;
 }
 
-.rightColumn {
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  padding: 40px 20px;
+.content {
+  max-inline-size: 1136px;
+  display: flex;
+  gap: 24px;
+  padding: 32px 0 152px;
+  margin: 0 auto;
 }
 
 .form {
+  background-color: var(--color-bg-card);
+  padding: 112px 60px;
+  min-inline-size: 556px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -36,7 +28,6 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,81 +74,10 @@
   fill: var(--color-bg-card);
 }
 
-.fieldGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 100%;
-}
-
-.label {
-  font-family: var(--font-family-base);
-  font-size: var(--font-body-size);
-  line-height: var(--font-body-line-height);
-  font-weight: var(--font-weight-regular);
-  color: var(--color-text-primary);
-}
-
-.input,
-.select {
-  width: 100%;
-  padding: 12px 16px;
-  border: 1px solid var(--color-text-disabled);
-  border-radius: 12px;
-  background-color: var(--color-bg-card);
-  font-family: var(--font-family-base);
-  font-size: var(--font-body-size);
-  line-height: var(--font-body-line-height);
-  color: var(--color-text-primary);
-  outline: none;
-  transition: border-color 0.2s;
-  box-sizing: border-box;
-}
-
-.select {
-  appearance: none;
-  cursor: pointer;
-  padding-right: 48px;
-}
-
-.input::placeholder {
-  color: var(--color-text-disabled);
-}
-
-.input:focus,
-.select:focus {
-  border-color: var(--color-accent-pressed);
-}
-
 .rowFields {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-}
-
-.inputWithIcon,
-.selectWrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.inputWithIcon {
-  width: 100%;
-}
-
-.inputWithIcon .input {
-  padding-right: 48px;
-}
-
-.inputIcon,
-.selectIcon {
-  position: absolute;
-  right: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
 }
 
 .buttonsRow {
@@ -166,16 +86,12 @@
   margin-top: 8px;
 }
 
-.buttonBack.buttonBack,
-.buttonContinue.buttonContinue {
-  border: 2px solid var(--color-accent);
-}
-
 .buttonBack,
 .buttonContinue {
   flex: 1;
   margin: 0;
   padding: 12px 24px;
+  border: 2px solid var(--color-accent);
   border-radius: 12px;
   font-family: var(--font-family-base);
   font-size: var(--font-h4-size);
@@ -193,38 +109,53 @@
   color: var(--color-text-primary);
 }
 
-.illustration {
+.onboarding {
+  background-color: var(--color-bg-card);
+  max-inline-size: 556px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.iconWrapper {
+  padding-left: 128px;
+  padding-right: 128px;
+  padding-top: 132px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.iconWrapper svg {
   width: 100%;
+  height: auto;
   max-width: 300px;
 }
 
-.illustration svg {
-  width: 100%;
-  height: auto;
+.onboardingContent {
+  max-inline-size: 436px;
+  padding-left: 60px;
+  padding-right: 60px;
+  align-self: center;
 }
 
-.infoTitle,
-.infoText {
+.onboardingTitle {
+  font-size: var(--font-h2-size);
+  font-weight: var(--font-h2-weight);
+  font-family: var(--font-h2-family);
+  line-height: var(--font-h3-line-height);
+  color: var(--color-text-primary);
   text-align: center;
+  padding-bottom: 12px;
   margin: 0;
 }
 
-.infoTitle {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-h2-size);
-  line-height: var(--font-h2-line-height);
-  font-weight: var(--font-h2-weight);
-  color: var(--color-text-primary);
-}
-
-.infoText {
-  font-family: var(--font-family-base);
+.onboardingText {
   font-size: var(--font-body-size);
+  font-weight: var(--font-body-weight);
+  font-family: var(--font-body-family);
   line-height: var(--font-body-line-height);
-  font-weight: var(--font-weight-regular);
-  color: var(--color-text-secondary);
-  max-width: 400px;
+  color: var(--color-text-primary);
+  text-align: center;
+  margin: 0;
 }

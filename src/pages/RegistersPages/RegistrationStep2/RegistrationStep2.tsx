@@ -1,31 +1,31 @@
 import ButtonDefault from '@shared/ui/ButtonDefault';
+import { Input } from '@shared/ui/useInput';
 import UserCircle from '@/shared/assets/images/IconsSvg/UserCircle';
 import Add from '@/shared/assets/images/IconsSvg/Add';
 import UserInfo from '@/shared/assets/images/IllustrationsSvg/UserInfo';
 import { UserSelector } from '@/features/auth/UserCalendar/UserSelector';
-import { Input } from '@shared/ui/useInput';
 import { ToggledSelect } from '@/shared/ui/ToggleSelector';
-import { useState } from 'react';
 import style from './RegistrationStep2.module.css';
 
 export function RegistrationStep2() {
-  const [name, setName] = useState<string>('');
-
-    // Заглушки для обработчиков
-    const handleAvatarClick = () => {};
-    const handleAvatarAdd = () => {};
-    const handleGenderNotSpecified = () => {};
-    const handleGenderMale = () => {};
-    const handleGenderFemale = () => {};
-    const handleCitySelect = () => {};
-    const handleSkillCategorySelect = () => {};
-    const handleSkillSubcategorySelect = () => {};
-    const handleBack = () => {};
-    const handleContinue = () => {};
+  // Заглушки для обработчиков
+  const handleAvatarClick = () => {};
+  const handleAvatarAdd = () => {};
+  const handleGenderNotSpecified = () => {};
+  const handleGenderMale = () => {};
+  const handleGenderFemale = () => {};
+  const handleCitySelect = () => {};
+  const handleSkillCategorySelect = () => {};
+  const handleSkillSubcategorySelect = () => {};
+  const handleBack = () => {};
+  const handleContinue = () => {};
+  const handleNameChange = (value: string) => {
+    // TODO: Implement name change handler
+  };
 
   return (
     <div className={style.container}>
-      <div className={style.leftColumn}>
+      <div className={style.content}>
         <form className={style.form}>
           <div className={style.avatarContainer}>
             <button
@@ -46,45 +46,46 @@ export function RegistrationStep2() {
             </button>
           </div>
 
-          <div className={style.fieldGroup}>
-            <Input 
-              title="Имя" 
-              placeholder="Введите ваше имя" 
-              onChange={(value: string) => setName(value)}
-            />
-          </div>
+          <Input title="Имя" placeholder="Введите ваше имя" onChange={handleNameChange} />
 
           <div className={style.rowFields}>
-            <div className={style.fieldGroup}>
-              <UserSelector />
-            </div>
-
-            <div className={style.fieldGroup}>
-              <ToggledSelect title="Пол" placeholder="Не указан">
-                <div onClick={handleGenderNotSpecified}>Не указан</div>
-                <div onClick={handleGenderMale}>Мужской</div>
-                <div onClick={handleGenderFemale}>Женский</div>
-              </ToggledSelect>
-            </div>
-          </div>
-
-          <div className={style.fieldGroup}>
-            <ToggledSelect title="Город" placeholder="Не указан">
-              <div onClick={handleCitySelect}>Не указан</div>
+            <UserSelector />
+            <ToggledSelect title="Пол" placeholder="Не указан">
+              <button type="button" onClick={handleGenderNotSpecified}>
+                Не указан
+              </button>
+              <button type="button" onClick={handleGenderMale}>
+                Мужской
+              </button>
+              <button type="button" onClick={handleGenderFemale}>
+                Женский
+              </button>
             </ToggledSelect>
           </div>
 
-          <div className={style.fieldGroup}>
-            <ToggledSelect title="Категория навыка, которому хотите научиться" placeholder="Выберите категорию">
-              <div onClick={handleSkillCategorySelect}>Выберите категорию</div>
-            </ToggledSelect>
-          </div>
+          <ToggledSelect title="Город" placeholder="Не указан">
+            <button type="button" onClick={handleCitySelect}>
+              Не указан
+            </button>
+          </ToggledSelect>
 
-          <div className={style.fieldGroup}>
-            <ToggledSelect title="Подкатегория навыка, которому хотите научиться" placeholder="Выберите подкатегорию">
-              <div onClick={handleSkillSubcategorySelect}>Выберите подкатегорию</div>
-            </ToggledSelect>
-          </div>
+          <ToggledSelect
+            title="Категория навыка, которому хотите научиться"
+            placeholder="Выберите категорию"
+          >
+            <button type="button" onClick={handleSkillCategorySelect}>
+              Выберите категорию
+            </button>
+          </ToggledSelect>
+
+          <ToggledSelect
+            title="Подкатегория навыка, которому хотите научиться"
+            placeholder="Выберите подкатегорию"
+          >
+            <button type="button" onClick={handleSkillSubcategorySelect}>
+              Выберите подкатегорию
+            </button>
+          </ToggledSelect>
 
           <div className={style.buttonsRow}>
             <ButtonDefault
@@ -101,15 +102,17 @@ export function RegistrationStep2() {
             />
           </div>
         </form>
-      </div>
-      <div className={style.rightColumn}>
-        <div className={style.illustration}>
-          <UserInfo />
+        <div className={style.onboarding}>
+          <div className={style.iconWrapper}>
+            <UserInfo />
+          </div>
+          <div className={style.onboardingContent}>
+            <h2 className={style.onboardingTitle}>Расскажите немного о себе</h2>
+            <p className={style.onboardingText}>
+              Это поможет другим людям лучше вас узнать, чтобы выбрать для обмена
+            </p>
+          </div>
         </div>
-        <h2 className={style.infoTitle}>Расскажите немного о себе</h2>
-        <p className={style.infoText}>
-          Это поможет другим людям лучше вас узнать, чтобы выбрать для обмена
-        </p>
       </div>
     </div>
   );
