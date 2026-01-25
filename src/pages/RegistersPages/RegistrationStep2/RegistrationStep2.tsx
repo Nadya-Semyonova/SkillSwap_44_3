@@ -1,9 +1,9 @@
 import ButtonDefault from '@shared/ui/ButtonDefault';
 import UserCircle from '@/shared/assets/images/IconsSvg/UserCircle';
 import Add from '@/shared/assets/images/IconsSvg/Add';
-import Calendar from '@/shared/assets/images/IconsSvg/Calendar';
 import ChevronDown from '@/shared/assets/images/IconsSvg/ChevronDown';
 import UserInfo from '@/shared/assets/images/IllustrationsSvg/UserInfo';
+import { UserSelector } from '@/features/auth/UserCalendar/UserSelector';
 import style from './RegistrationStep2.module.css';
 
 export function RegistrationStep2() {
@@ -42,21 +42,8 @@ export function RegistrationStep2() {
               <label className={style.label} htmlFor="dateOfBirth">
                 Дата рождения
               </label>
-              <div className={style.inputWithIcon}>
-                <input
-                  type="text"
-                  id="dateOfBirth"
-                  className={style.input}
-                  placeholder="дд.мм.гггг"
-                />
-                <button
-                  type="button"
-                  className={style.inputIcon}
-                  onClick={() => {}}
-                  aria-label="Выбрать дату из календаря"
-                >
-                  <Calendar />
-                </button>
+              <div className={style.datePickerWrapper}>
+                <UserSelector />
               </div>
             </div>
 
