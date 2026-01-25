@@ -1,6 +1,6 @@
-import ProfileData from '@features/profile/ProfileData';
 import SideBar from '@/features/profile/SideBar/SideBar';
-import styles from './ProfilePage.module.css';
+import ProfileData from '@/features/profile/ProfileData';
+import styles from '@/pages/ProfilePage/ProfilePage.module.css';
 
 function ProfilePage() {
   return (

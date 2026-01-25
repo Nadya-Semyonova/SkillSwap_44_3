@@ -1,135 +1,140 @@
+import { useState } from 'react';
 import userPhoto from '@shared/assets/images/userPhoto.png';
-import { useEffect } from 'react';
 import Edit from '@/shared/assets/images/IconsSvg/Edit';
-import Calendar from '@/shared/assets/images/IconsSvg/Calendar';
-import ChevronDown from '@/shared/assets/images/IconsSvg/ChevronDown';
 import GaleryEdit from '@/shared/assets/images/IconsSvg/GaleryEdit';
-import styles from './ProfileData.module.css';
 import { useSelector, type RootState } from '@/store/store';
+import { Input } from '@/shared/ui/useInput/Input';
+import ButtonDefault from '@/shared/ui/ButtonDefault/ButtonDefault';
+import ToggledSelect from '@/shared/ui/ToggleSelector/ToggledSelect';
+import { UserSelector } from '@/features/auth/UserCalendar/UserSelector';
+
+import styles from '@/features/profile/ProfileData.module.css';
+import { profileText, genderOptions } from '@/features/profile/ProfileDataConstants';
 
 function ProfileData() {
   const user = useSelector((state: RootState) => state.auth.user);
 
-  useEffect(() => {}, [user]);
+  const [about, setAbout] = useState(user?.about ?? '');
+  const [gender, setGender] = useState(user?.gender ?? '');
+
+  const cities = useSelector((state: RootState) => state.users.cities ?? []);
+  const [city, setCity] = useState(user?.city ?? '');
+
+  const genderLabel =
+    genderOptions.find((option) => option.value === gender)?.label ?? profileText.genderPlaceholder;
+
+  const isGenderSelected = Boolean(gender);
+  const cityPlaceholder = city || profileText.cityPlaceholder;
 
   return (
-    <div className={styles.profileContainer}>
+    <main className={styles.profileContainer}>
       <form className={styles.userForm}>
-        <div className={styles.formSection}>
+        <section className={styles.formSection}>
           <div className={styles.formRow}>
-            <label htmlFor="email" className={styles.label}>
-              Почта
-              <div className={styles.inputContainer}>
-                <input
-                  id="email"
-                  type="email"
-                  value={user?.email}
-                  className={styles.inputField}
-                  readOnly
-                />
-                <span className={styles.editIcon}>
-                  <Edit />
-                </span>
-              </div>
-            </label>
-          </div>
+            <p className={styles.label}>{profileText.email}</p>
 
-          <div className={styles.passwordLink}>
-            <a href="/change-password" className={styles.link}>
-              Изменить пароль
-            </a>
-          </div>
-        </div>
-
-        <div className={styles.formRow}>
-          <label htmlFor="name" className={styles.label}>
-            Имя
             <div className={styles.inputContainer}>
-              <input
-                id="name"
-                type="text"
-                value={user?.name}
-                className={styles.inputField}
-                readOnly
-              />
+              <Input type="email" value={user?.email ?? ''} className={styles.inputFullWidth} />
+
               <span className={styles.editIcon}>
                 <Edit />
               </span>
             </div>
-          </label>
+          </div>
+
+          <div className={styles.passwordLink}>
+            <a href="/change-password" className={styles.link}>
+              {profileText.changePassword}
+            </a>
+          </div>
+        </section>
+
+        <div className={styles.formRow}>
+          <p className={styles.label}>{profileText.name}</p>
+
+          <div className={styles.inputContainer}>
+            <Input value={user?.name ?? ''} className={styles.inputFullWidth} />
+
+            <span className={styles.editIcon}>
+              <Edit />
+            </span>
+          </div>
         </div>
 
         <div className={styles.infoDateGender}>
           <div className={styles.formRow}>
-            <label htmlFor="birthday" className={styles.label}>
-              Дата рождения
-              <div className={styles.inputContainer}>
-                <input
-                  id="birthday"
-                  type="text"
-                  value={user?.dateOfBirth}
-                  className={styles.inputField}
-                  readOnly
-                />
-                <span className={styles.calendarIcon}>
-                  <Calendar />
-                </span>
-              </div>
-            </label>
+            <UserSelector />
           </div>
 
-          <div className={styles.formRow}>
-            <label htmlFor="gender" className={styles.label}>
-              Пол
-              <div className={styles.inputContainer}>
-                <select id="gender" className={styles.selectField} value={user?.gender}>
-                  <option value="female">Женский</option>
-                  <option value="male">Мужской</option>
-                </select>
-                <span className={styles.dropdownIcon}>
-                  <ChevronDown />
-                </span>
+          <div
+            className={`${styles.formRow} ${styles.genderSelect} ${
+              isGenderSelected ? styles.genderSelected : ''
+            }`}
+          >
+            <ToggledSelect title={profileText.genderTitle} placeholder={genderLabel}>
+              <div className={styles.optionsStack}>
+                {genderOptions.map((option) => (
+                  <button
+                    key={option.value}
+                    type="button"
+                    className={`${styles.dropdownOption} ${
+                      gender === option.value ? styles.optionActive : ''
+                    }`}
+                    onClick={() => setGender(option.value)}
+                  >
+                    {option.label}
+                  </button>
+                ))}
               </div>
-            </label>
+            </ToggledSelect>
           </div>
         </div>
 
-        <div className={styles.formRow}>
-          <label htmlFor="city" className={styles.label}>
-            Город
-            <div className={styles.inputContainer}>
-              <select id="city" className={styles.selectField} defaultValue="moscow">
-                <option value={user?.city}>{user?.city}</option>
-              </select>
-              <span className={styles.dropdownIcon}>
-                <ChevronDown />
-              </span>
+        <div
+          className={`${styles.formRow} ${styles.citySelect} ${city ? styles.citySelectFilled : ''}`}
+        >
+          <ToggledSelect title={profileText.cityTitle} placeholder={cityPlaceholder}>
+            <div className={styles.optionsStack}>
+              {cities.map((cityName) => (
+                <button
+                  key={cityName}
+                  type="button"
+                  className={`${styles.dropdownOption} ${
+                    city === cityName ? styles.optionActive : ''
+                  }`}
+                  onClick={() => setCity(cityName)}
+                >
+                  {cityName}
+                </button>
+              ))}
             </div>
-          </label>
+          </ToggledSelect>
         </div>
 
         <div className={`${styles.formRow} ${styles.aboutRow}`}>
-          <label htmlFor="about" className={styles.label}>
-            О себе
-            <div className={styles.textareaContainer}>
-              <textarea
-                id="about"
-                value={user?.about}
-                className={styles.textareaField}
-                readOnly
-                rows={4}
-              />
-              <span className={`${styles.editIcon} ${styles.aboutEditIcon}`}>
-                <Edit />
-              </span>
-            </div>
-          </label>
+          <p className={styles.label}>{profileText.about}</p>
+
+          <div className={styles.textareaContainer}>
+            <textarea
+              value={about}
+              onChange={(e) => setAbout(e.target.value)}
+              className={styles.textareaField}
+              rows={4}
+            />
+
+            <span className={styles.editIcon}>
+              <Edit />
+            </span>
+          </div>
         </div>
 
         <div className={styles.saveButtonContainer}>
-          <button className={styles.saveButton} type="submit" disabled>
-            Сохранить
-          </button>
+          <ButtonDefault
+            name={profileText.save}
+            type="button"
+            styleButton={styles.saveButton}
+            handleClick={() => {}}
+          />
         </div>
       </form>
 
@@ -137,20 +142,25 @@ function ProfileData() {
         <div className={styles.avatar}>
           <img
             src={user?.avatar || userPhoto}
-            alt="Аватар пользователя"
+            alt={profileText.userAvatarAlt}
             className={styles.userPhoto}
           />
+
+          <div className={styles.editPhotoControl}>
+            <ButtonDefault
+              name=""
+              type="button"
+              styleButton={styles.editPhotoButton}
+              handleClick={() => {}}
+            />
+
+            <span className={styles.editPhotoIcon}>
+              <GaleryEdit />
+            </span>
+          </div>
         </div>
-        <button
-          className={styles.editPhotoButton}
-          type="button"
-          disabled
-          aria-label="Изменить фото"
-        >
-          <GaleryEdit />
-        </button>
       </div>
-    </div>
+    </main>
   );
 }
 
