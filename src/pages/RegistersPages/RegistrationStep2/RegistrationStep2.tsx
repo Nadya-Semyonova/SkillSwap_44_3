@@ -44,12 +44,7 @@ export function RegistrationStep2() {
 
           <div className={style.rowFields}>
             <div className={style.fieldGroup}>
-              <label className={style.label} htmlFor="dateOfBirth">
-                Дата рождения
-              </label>
-              <div className={style.datePickerWrapper}>
-                <UserSelector />
-              </div>
+              <UserSelector />
             </div>
 
             <div className={style.fieldGroup}>

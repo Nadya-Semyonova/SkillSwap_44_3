@@ -134,13 +134,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
-.datePickerWrapper {
-  position: relative;
-}
 
-.datePickerWrapper > :global(*) > :global(span) {
-  display: none; /* Скрываем внутренний лейбл календаря */
-}
 .inputWithIcon,
 .selectWrapper {
   position: relative;
