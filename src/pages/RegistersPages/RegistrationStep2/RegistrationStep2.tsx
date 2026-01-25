@@ -4,9 +4,13 @@ import Add from '@/shared/assets/images/IconsSvg/Add';
 import ChevronDown from '@/shared/assets/images/IconsSvg/ChevronDown';
 import UserInfo from '@/shared/assets/images/IllustrationsSvg/UserInfo';
 import { UserSelector } from '@/features/auth/UserCalendar/UserSelector';
+import { Input } from '@shared/ui/useInput';
+import { useState } from 'react';
 import style from './RegistrationStep2.module.css';
 
 export function RegistrationStep2() {
+  const [name, setName] = useState<string>('');
+
   return (
     <div className={style.container}>
       <div className={style.leftColumn}>
@@ -31,10 +35,11 @@ export function RegistrationStep2() {
           </div>
 
           <div className={style.fieldGroup}>
-            <label className={style.label} htmlFor="name">
-              Имя
-              <input type="text" id="name" className={style.input} placeholder="Введите ваше имя" />
-            </label>
+            <Input 
+              title="Имя" 
+              placeholder="Введите ваше имя" 
+              onChange={(value: string) => setName(value)}
+            />
           </div>
 
           <div className={style.rowFields}>
