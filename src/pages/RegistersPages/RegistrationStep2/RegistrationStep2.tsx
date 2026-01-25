@@ -1,169 +1,119 @@
-// import ButtonDefault from '@shared/ui/ButtonDefault';
-// import UserCircle from '@/shared/assets/images/IconsSvg/UserCircle';
-// import Add from '@/shared/assets/images/IconsSvg/Add';
-// import Calendar from '@/shared/assets/images/IconsSvg/Calendar';
-// import ChevronDown from '@/shared/assets/images/IconsSvg/ChevronDown';
-// import UserInfo from '@/shared/assets/images/IllustrationsSvg/UserInfo';
-// import style from './RegistrationStep2.module.css';
+import ButtonDefault from '@shared/ui/ButtonDefault';
+import { Input } from '@shared/ui/useInput';
+import UserCircle from '@/shared/assets/images/IconsSvg/UserCircle';
+import Add from '@/shared/assets/images/IconsSvg/Add';
+import UserInfo from '@/shared/assets/images/IllustrationsSvg/UserInfo';
+import { UserSelector } from '@/features/auth/UserCalendar/UserSelector';
+import { ToggledSelect } from '@/shared/ui/ToggleSelector';
+import style from './RegistrationStep2.module.css';
 
-// export function RegistrationStep2() {
-//   return (
-//     <div className={style.container}>
-//       <div className={style.leftColumn}>
-//         <form className={style.form}>
-//           <div className={style.avatarContainer}>
-//             <button
-//               type="button"
-//               className={style.avatarIcon}
-//               onClick={() => {}}
-//               aria-label="Аватар пользователя"
-//             >
-//               <UserCircle />
-//             </button>
-//             <button
-//               type="button"
-//               className={style.avatarPlus}
-//               onClick={() => {}}
-//               aria-label="Добавить аватар"
-//             >
-//               <Add />
-//             </button>
-//           </div>
+export function RegistrationStep2() {
+  // Заглушки для обработчиков
+  const handleAvatarClick = () => {};
+  const handleAvatarAdd = () => {};
+  const handleGenderNotSpecified = () => {};
+  const handleGenderMale = () => {};
+  const handleGenderFemale = () => {};
+  const handleCitySelect = () => {};
+  const handleSkillCategorySelect = () => {};
+  const handleSkillSubcategorySelect = () => {};
+  const handleBack = () => {};
+  const handleContinue = () => {};
+  const handleNameChange = (value: string) => {
+    // TODO: Implement name change handler
+  };
 
-//           <div className={style.fieldGroup}>
-//             <label className={style.label} htmlFor="name">
-//               Имя
-//               <input type="text" id="name" className={style.input} placeholder="Введите ваше имя" />
-//             </label>
-//           </div>
+  return (
+    <div className={style.container}>
+      <div className={style.content}>
+        <form className={style.form}>
+          <div className={style.avatarContainer}>
+            <button
+              type="button"
+              className={style.avatarIcon}
+              onClick={handleAvatarClick}
+              aria-label="Аватар пользователя"
+            >
+              <UserCircle />
+            </button>
+            <button
+              type="button"
+              className={style.avatarPlus}
+              onClick={handleAvatarAdd}
+              aria-label="Добавить аватар"
+            >
+              <Add />
+            </button>
+          </div>
 
-//           <div className={style.rowFields}>
-//             <div className={style.fieldGroup}>
-//               <label className={style.label} htmlFor="dateOfBirth">
-//                 Дата рождения
-//               </label>
-//               <div className={style.inputWithIcon}>
-//                 <input
-//                   type="text"
-//                   id="dateOfBirth"
-//                   className={style.input}
-//                   placeholder="дд.мм.гггг"
-//                 />
-//                 <button
-//                   type="button"
-//                   className={style.inputIcon}
-//                   onClick={() => {}}
-//                   aria-label="Выбрать дату из календаря"
-//                 >
-//                   <Calendar />
-//                 </button>
-//               </div>
-//             </div>
+          <Input title="Имя" placeholder="Введите ваше имя" onChange={handleNameChange} />
 
-//             <div className={style.fieldGroup}>
-//               <label className={style.label} htmlFor="gender">
-//                 Пол
-//               </label>
-//               <div className={style.selectWrapper}>
-//                 <select id="gender" className={style.select}>
-//                   <option value="">Не указан</option>
-//                   <option value="male">Мужской</option>
-//                   <option value="female">Женский</option>
-//                 </select>
-//                 <button
-//                   type="button"
-//                   className={style.selectIcon}
-//                   onClick={() => {}}
-//                   aria-label="Открыть список выбора пола"
-//                 >
-//                   <ChevronDown />
-//                 </button>
-//               </div>
-//             </div>
-//           </div>
+          <div className={style.rowFields}>
+            <UserSelector />
+            <ToggledSelect title="Пол" placeholder="Не указан">
+              <button type="button" onClick={handleGenderNotSpecified}>
+                Не указан
+              </button>
+              <button type="button" onClick={handleGenderMale}>
+                Мужской
+              </button>
+              <button type="button" onClick={handleGenderFemale}>
+                Женский
+              </button>
+            </ToggledSelect>
+          </div>
 
-//           <div className={style.fieldGroup}>
-//             <label className={style.label} htmlFor="city">
-//               Город
-//             </label>
-//             <div className={style.selectWrapper}>
-//               <select id="city" className={style.select}>
-//                 <option value="">Не указан</option>
-//               </select>
-//               <button
-//                 type="button"
-//                 className={style.selectIcon}
-//                 onClick={() => {}}
-//                 aria-label="Открыть список выбора города"
-//               >
-//                 <ChevronDown />
-//               </button>
-//             </div>
-//           </div>
+          <ToggledSelect title="Город" placeholder="Не указан">
+            <button type="button" onClick={handleCitySelect}>
+              Не указан
+            </button>
+          </ToggledSelect>
 
-//           <div className={style.fieldGroup}>
-//             <label className={style.label} htmlFor="skillCategory">
-//               Категория навыка, которому хотите научиться
-//             </label>
-//             <div className={style.selectWrapper}>
-//               <select id="skillCategory" className={style.select}>
-//                 <option value="">Выберите категорию</option>
-//               </select>
-//               <button
-//                 type="button"
-//                 className={style.selectIcon}
-//                 onClick={() => {}}
-//                 aria-label="Открыть список выбора категории навыка"
-//               >
-//                 <ChevronDown />
-//               </button>
-//             </div>
-//           </div>
+          <ToggledSelect
+            title="Категория навыка, которому хотите научиться"
+            placeholder="Выберите категорию"
+          >
+            <button type="button" onClick={handleSkillCategorySelect}>
+              Выберите категорию
+            </button>
+          </ToggledSelect>
 
-//           <div className={style.fieldGroup}>
-//             <label className={style.label} htmlFor="skillSubcategory">
-//               Подкатегория навыка, которому хотите научиться
-//             </label>
-//             <div className={style.selectWrapper}>
-//               <select id="skillSubcategory" className={style.select}>
-//                 <option value="">Выберите подкатегорию</option>
-//               </select>
-//               <button
-//                 type="button"
-//                 className={style.selectIcon}
-//                 onClick={() => {}}
-//                 aria-label="Открыть список выбора подкатегории навыка"
-//               >
-//                 <ChevronDown />
-//               </button>
-//             </div>
-//           </div>
+          <ToggledSelect
+            title="Подкатегория навыка, которому хотите научиться"
+            placeholder="Выберите подкатегорию"
+          >
+            <button type="button" onClick={handleSkillSubcategorySelect}>
+              Выберите подкатегорию
+            </button>
+          </ToggledSelect>
 
-//           <div className={style.buttonsRow}>
-//             <ButtonDefault
-//               name="Назад"
-//               handleClick={() => {}}
-//               variant="outline"
-//               styleButton={style.buttonBack}
-//             />
-//             <ButtonDefault
-//               name="Продолжить"
-//               handleClick={() => {}}
-//               variant="continue"
-//               styleButton={style.buttonContinue}
-//             />
-//           </div>
-//         </form>
-//       </div>
-//       <div className={style.rightColumn}>
-//         <div className={style.illustration}>
-//           <UserInfo />
-//         </div>
-//         <h2 className={style.infoTitle}>Расскажите немного о себе</h2>
-//         <p className={style.infoText}>
-//           Это поможет другим людям лучше вас узнать, чтобы выбрать для обмена
-//         </p>
-//       </div>
-//     </div>
-//   );
-// }
+          <div className={style.buttonsRow}>
+            <ButtonDefault
+              name="Назад"
+              handleClick={handleBack}
+              variant="outline"
+              styleButton={style.buttonBack}
+            />
+            <ButtonDefault
+              name="Продолжить"
+              handleClick={handleContinue}
+              variant="continue"
+              styleButton={style.buttonContinue}
+            />
+          </div>
+        </form>
+        <div className={style.onboarding}>
+          <div className={style.iconWrapper}>
+            <UserInfo />
+          </div>
+          <div className={style.onboardingContent}>
+            <h2 className={style.onboardingTitle}>Расскажите немного о себе</h2>
+            <p className={style.onboardingText}>
+              Это поможет другим людям лучше вас узнать, чтобы выбрать для обмена
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
