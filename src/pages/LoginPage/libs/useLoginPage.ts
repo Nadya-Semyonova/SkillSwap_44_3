@@ -24,6 +24,8 @@ export const useLoginPage = () => {
   const [errors, setErrors] = useState<LoginErrors>({});
   const [showPass, setShowPass] = useState<boolean>(false);
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [hasAttemptedLogin, setHasAttemptedLogin] = useState<boolean>(false);
+  const [hasError, setHasError] = useState<boolean>(false);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -41,11 +43,19 @@ export const useLoginPage = () => {
 
   // Обработка ошибок авторизации
   useEffect(() => {
-    if (authError) {
+    if (authError && hasAttemptedLogin) {
       setErrors((prev) => ({ ...prev, credentials: LOGIN_TEXTS.error.invalidCredentials }));
+      setHasError(true);
       dispatch(clearError());
     }
-  }, [authError, dispatch]);
+  }, [authError, dispatch, hasAttemptedLogin]);
+
+  // Сброс ошибки при начале ввода
+  useEffect(() => {
+    if (formData.email || formData.password) {
+      setHasError(false);
+    }
+  }, [formData.email, formData.password]);
 
   const validateForm = (): boolean => {
     const newErrors: LoginErrors = {};
@@ -74,6 +84,7 @@ export const useLoginPage = () => {
     }
 
     setIsSubmitting(true);
+    setHasAttemptedLogin(true);
     try {
       await dispatch(getUserInfoData(formData)).unwrap();
       navigate(ROUTES.PROFILE);
@@ -101,6 +112,7 @@ export const useLoginPage = () => {
     showPass,
     isSubmitting,
     isLoading: loading,
+    hasError,
     texts: LOGIN_TEXTS,
     handleChange,
     handleSubmit,

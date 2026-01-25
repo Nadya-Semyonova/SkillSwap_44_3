@@ -14,7 +14,8 @@ export const LOGIN_TEXTS = {
     requiredEmail: 'Email обязателен',
     requiredPassword: 'Пароль обязателен',
     invalidEmail: 'Некорректный email',
-    invalidCredentials: 'Неверный email или пароль',
+    invalidCredentials:
+      'Email или пароль введён неверно. Пожалуйста проверьте правильность введённых данных',
     minPasswordLength: 'Пароль должен быть не менее 6 символов',
   },
 };
