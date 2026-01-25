@@ -1,10 +1,10 @@
 import ButtonDefault from '@shared/ui/ButtonDefault';
 import UserCircle from '@/shared/assets/images/IconsSvg/UserCircle';
 import Add from '@/shared/assets/images/IconsSvg/Add';
-import ChevronDown from '@/shared/assets/images/IconsSvg/ChevronDown';
 import UserInfo from '@/shared/assets/images/IllustrationsSvg/UserInfo';
 import { UserSelector } from '@/features/auth/UserCalendar/UserSelector';
 import { Input } from '@shared/ui/useInput';
+import { ToggledSelect } from '@/shared/ui/ToggleSelector';
 import { useState } from 'react';
 import style from './RegistrationStep2.module.css';
 
@@ -53,82 +53,30 @@ export function RegistrationStep2() {
             </div>
 
             <div className={style.fieldGroup}>
-              <label className={style.label} htmlFor="gender">
-                Пол
-              </label>
-              <div className={style.selectWrapper}>
-                <select id="gender" className={style.select}>
-                  <option value="">Не указан</option>
-                  <option value="male">Мужской</option>
-                  <option value="female">Женский</option>
-                </select>
-                <button
-                  type="button"
-                  className={style.selectIcon}
-                  onClick={() => {}}
-                  aria-label="Открыть список выбора пола"
-                >
-                  <ChevronDown />
-                </button>
-              </div>
+              <ToggledSelect title="Пол" placeholder="Не указан">
+                <div onClick={() => {}}>Не указан</div>
+                <div onClick={() => {}}>Мужской</div>
+                <div onClick={() => {}}>Женский</div>
+              </ToggledSelect>
             </div>
           </div>
 
           <div className={style.fieldGroup}>
-            <label className={style.label} htmlFor="city">
-              Город
-            </label>
-            <div className={style.selectWrapper}>
-              <select id="city" className={style.select}>
-                <option value="">Не указан</option>
-              </select>
-              <button
-                type="button"
-                className={style.selectIcon}
-                onClick={() => {}}
-                aria-label="Открыть список выбора города"
-              >
-                <ChevronDown />
-              </button>
-            </div>
+            <ToggledSelect title="Город" placeholder="Не указан">
+              <div onClick={() => {}}>Не указан</div>
+            </ToggledSelect>
           </div>
 
           <div className={style.fieldGroup}>
-            <label className={style.label} htmlFor="skillCategory">
-              Категория навыка, которому хотите научиться
-            </label>
-            <div className={style.selectWrapper}>
-              <select id="skillCategory" className={style.select}>
-                <option value="">Выберите категорию</option>
-              </select>
-              <button
-                type="button"
-                className={style.selectIcon}
-                onClick={() => {}}
-                aria-label="Открыть список выбора категории навыка"
-              >
-                <ChevronDown />
-              </button>
-            </div>
+            <ToggledSelect title="Категория навыка, которому хотите научиться" placeholder="Выберите категорию">
+              <div onClick={() => {}}>Выберите категорию</div>
+            </ToggledSelect>
           </div>
 
           <div className={style.fieldGroup}>
-            <label className={style.label} htmlFor="skillSubcategory">
-              Подкатегория навыка, которому хотите научиться
-            </label>
-            <div className={style.selectWrapper}>
-              <select id="skillSubcategory" className={style.select}>
-                <option value="">Выберите подкатегорию</option>
-              </select>
-              <button
-                type="button"
-                className={style.selectIcon}
-                onClick={() => {}}
-                aria-label="Открыть список выбора подкатегории навыка"
-              >
-                <ChevronDown />
-              </button>
-            </div>
+            <ToggledSelect title="Подкатегория навыка, которому хотите научиться" placeholder="Выберите подкатегорию">
+              <div onClick={() => {}}>Выберите подкатегорию</div>
+            </ToggledSelect>
           </div>
 
           <div className={style.buttonsRow}>
