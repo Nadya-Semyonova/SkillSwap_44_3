@@ -19,7 +19,7 @@ export function RegistrationStep2() {
   const handleSkillSubcategorySelect = () => {};
   const handleBack = () => {};
   const handleContinue = () => {};
-  const handleNameChange = (value: string) => {
+  const handleNameChange = () => {
     // TODO: Implement name change handler
   };
 
