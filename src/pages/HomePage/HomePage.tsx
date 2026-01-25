@@ -1,5 +1,6 @@
 import Filters from '@widgets/Filters';
 import UsersCardsRecommendations from '@widgets/UsersCardsRecommendations';
+import Sort from '@/shared/assets/images/IconsSvg/Sort';
 import { ButtonCancelFilter } from '@/shared/ui/AllButtons/ButtonCancelFilter';
 import { useHomePage } from './libs/useHomePage';
 import style from './HomePage.module.css';
@@ -9,11 +10,14 @@ export function HomePage() {
   const {
     loading,
     filteredUsers,
+    sortedFilteredUsers,
     activeFilters,
     hasActiveFilters,
+    sortByNewest,
     handleClickMore,
     handleClickReset,
     handleClickResetSelected,
+    handleToggleSort,
     getSectionContent,
   } = useHomePage();
 
@@ -53,10 +57,16 @@ export function HomePage() {
             <Filters />
             <div className={style.RecommendationsContainer}>
               <UsersCardsRecommendations
-                title={`${SectionsConstants[3]} ${filteredUsers.length}`}
-                users={filteredUsers}
+                title={`${SectionsConstants[3]} ${sortedFilteredUsers?.length || 0}`}
+                users={sortedFilteredUsers || []}
                 handleClickMore={handleClickMore}
                 buttonMore
+                sortButton={
+                  <button className={style.sortingButton} onClick={handleToggleSort}>
+                    <Sort />
+                    <p>{sortByNewest ? 'Сначала новые' : 'Сначала старые'}</p>
+                  </button>
+                }
               />
             </div>
           </div>

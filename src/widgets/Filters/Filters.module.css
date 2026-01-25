@@ -3,8 +3,7 @@
   background-color: var(--color-bg-card);
   border-radius: 12px;
   inline-size: 100%;
-
-  /* здесь */
+  min-width: 284px;
   height: fit-content;
 }
 

@@ -31,10 +31,16 @@
 
 .cardsGrid {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   align-content: start;
   max-inline-size: 100%;
+}
+
+@media (max-width: 1440px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .loading,
