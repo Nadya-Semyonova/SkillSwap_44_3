@@ -10,7 +10,7 @@ export default function ThemeToggle() {
       type="button"
       className={styles.button}
       aria-label="Сменить тему"
-      title="Сменить тему (функционал в разработке)"
+      title="Сменить тему"
       onClick={switchTheme}
     >
       <Moon />

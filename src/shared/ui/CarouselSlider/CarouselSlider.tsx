@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Swiper } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import type { Swiper as SwiperType } from 'swiper';
 
 import ChevronUp from '@/shared/assets/images/IconsSvg/ChevronUp';
 
@@ -15,20 +16,33 @@ export default function CarouselSlider({
   bgButtons,
   spaceBetween,
   slidesPerView,
+  sliderId,
 }: IUsersCardsSwiper) {
   const [begButton, setBegButton] = useState<boolean>(true);
   const [endButton, setEndButton] = useState<boolean>(false);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   const onEnd = () => {
     setEndButton(true);
   };
+
   const handleClickPrev = () => {
+    console.log(`Prev clicked for ${sliderId}`);
+    if (swiperRef.current) {
+      swiperRef.current.slidePrev();
+    }
     setEndButton(false);
   };
+
   const onBegging = () => {
     setBegButton(true);
   };
+
   const handleClickNext = () => {
+    console.log(`Next clicked for ${sliderId}`);
+    if (swiperRef.current) {
+      swiperRef.current.slideNext();
+    }
     setBegButton(false);
   };
 
@@ -39,12 +53,13 @@ export default function CarouselSlider({
         slidesPerView={slidesPerView || 1}
         slidesPerGroup={1}
         modules={[Navigation]}
-        navigation={{
-          prevEl: '.custom-button-prev',
-          nextEl: '.custom-button-next',
-        }}
+        navigation={false} // ОТКЛЮЧАЕМ встроенную навигацию Swiper
         onReachBeginning={onBegging}
         onReachEnd={onEnd}
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+          console.log(`Swiper instance created for ${sliderId}`, swiper);
+        }}
       >
         {children}
       </Swiper>
