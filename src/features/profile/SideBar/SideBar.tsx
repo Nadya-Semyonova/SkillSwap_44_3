@@ -1,34 +1,42 @@
-import Request from '@/shared/assets/images/IconsSvg/Request';
-import MessageText from '@/shared/assets/images/IconsSvg/MessageText';
-import Like from '@/shared/assets/images/IconsSvg/Like';
-import Idea from '@/shared/assets/images/IconsSvg/Idea';
-import User from '@/shared/assets/images/IconsSvg/User';
+import { useCallback } from 'react';
 import styles from './SideBar.module.css';
+import { SIDEBAR_BUTTONS, ICON_COMPONENTS } from './libs/sideBarConstants';
+import type { SideBarProps } from './libs/types';
 
-function SideBar() {
+function SideBar({ activeButton, onButtonClick }: SideBarProps) {
+  const handleKeyDown = useCallback(
+    (event: React.KeyboardEvent, buttonId: string) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        onButtonClick(buttonId);
+      }
+    },
+    [onButtonClick]
+  );
+
   return (
     <div className={styles.sideBarContainer}>
       <ul className={styles.sideBar}>
-        <li className={styles.item}>
-          <Request />
-          Заявки
-        </li>
-        <li className={styles.item}>
-          <MessageText />
-          Мои обмены
-        </li>
-        <li className={styles.item}>
-          <Like />
-          Избранное
-        </li>
-        <li className={styles.item}>
-          <Idea />
-          Мои навыки
-        </li>
-        <li className={styles.item}>
-          <User />
-          Личные данные
-        </li>
+        {SIDEBAR_BUTTONS.map((button) => {
+          const IconComponent = ICON_COMPONENTS[button.icon];
+          const isActive = activeButton === button.id;
+
+          return (
+            <li key={button.id}>
+              <button
+                type="button"
+                className={`${styles.item} ${isActive ? styles.active : ''}`}
+                onClick={() => onButtonClick(button.id)}
+                onKeyDown={(e) => handleKeyDown(e, button.id)}
+                aria-label={button.label}
+                aria-current={isActive ? 'page' : undefined}
+              >
+                <IconComponent />
+                {button.label}
+              </button>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

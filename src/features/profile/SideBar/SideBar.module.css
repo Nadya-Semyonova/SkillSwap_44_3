@@ -35,13 +35,21 @@
   letter-spacing: 0.02em;
   box-sizing: border-box;
   padding-left: 20px;
+  background-color: transparent;
+  border: none; 
+  outline: none;
 }
 
-.item:hover {
+.item:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.05); 
   color: var(--color-text-secondary);
-  background-color: var(--color-accent-hover);
 }
 
 .active {
-  background-color: var(--color-accent-hover);
+  background-color: var(--color-accent-hover); 
+  color: var(--color-text-primary); 
+}
+
+.item:focus {
+  outline: none;
 }
