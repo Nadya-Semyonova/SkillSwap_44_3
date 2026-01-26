@@ -1,37 +1,24 @@
-import Request from '@/shared/assets/images/IconsSvg/Request';
-import MessageText from '@/shared/assets/images/IconsSvg/MessageText';
-import Like from '@/shared/assets/images/IconsSvg/Like';
-import Idea from '@/shared/assets/images/IconsSvg/Idea';
-import User from '@/shared/assets/images/IconsSvg/User';
+import { useCallback } from 'react';
 import styles from './SideBar.module.css';
-import { SIDEBAR_BUTTONS } from './sideBarConstants';
-
-const iconComponents = {
-  Request,
-  MessageText,
-  Like,
-  Idea,
-  User,
-};
-
-interface SideBarProps {
-  activeButton: string;
-  onButtonClick: (buttonId: string) => void;
-}
+import { SIDEBAR_BUTTONS, ICON_COMPONENTS } from './libs/sideBarConstants';
+import type { SideBarProps } from './libs/types';
 
 function SideBar({ activeButton, onButtonClick }: SideBarProps) {
-  const handleKeyDown = (event: React.KeyboardEvent, buttonId: string) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      onButtonClick(buttonId);
-    }
-  };
+  const handleKeyDown = useCallback(
+    (event: React.KeyboardEvent, buttonId: string) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        onButtonClick(buttonId);
+      }
+    },
+    [onButtonClick]
+  );
 
   return (
     <div className={styles.sideBarContainer}>
       <ul className={styles.sideBar}>
         {SIDEBAR_BUTTONS.map((button) => {
-          const IconComponent = iconComponents[button.icon];
+          const IconComponent = ICON_COMPONENTS[button.icon];
           const isActive = activeButton === button.id;
 
           return (
