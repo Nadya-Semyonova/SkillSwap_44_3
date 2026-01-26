@@ -72,6 +72,16 @@ export const useHomePage = () => {
     };
   }, [filteredUsers]);
 
+  const sortedPopularUsers = useMemo(() => {
+    if (!userCategories.popularUsers.length) return [];
+
+    return [...userCategories.popularUsers].sort((a, b) => {
+      const dateA = Number(a.createdAt.replace(/-/g, ''));
+      const dateB = Number(b.createdAt.replace(/-/g, ''));
+      return sortByNewest ? dateB - dateA : dateA - dateB;
+    });
+  }, [userCategories.popularUsers, sortByNewest]);
+
   const { popularUsers, newUsers, recommendationsUsers } = userCategories;
 
   const handleClickMore = (title: string) => {
@@ -92,12 +102,13 @@ export const useHomePage = () => {
 
   const getSectionContent = () => {
     if (!more) {
+      const popularForDisplay = sortedPopularUsers.slice(0, 3);
       return {
         showAllSections: true,
         sections: [
           {
             title: SectionsConstants[0],
-            users: popularUsers.slice(0, 3),
+            users: popularForDisplay,
             buttonMore: false,
           },
           {
@@ -121,7 +132,7 @@ export const useHomePage = () => {
           sections: [
             {
               title: SectionsConstants[0],
-              users: popularUsers,
+              users: sortedPopularUsers,
               buttonMore: true,
             },
           ],
@@ -185,5 +196,6 @@ export const useHomePage = () => {
     handleClickResetSelected,
     handleToggleSort,
     getSectionContent,
+    sortedPopularUsers,
   };
 };

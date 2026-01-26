@@ -19,6 +19,7 @@ export function HomePage() {
     handleClickResetSelected,
     handleToggleSort,
     getSectionContent,
+    more,
   } = useHomePage();
 
   if (loading) {
@@ -91,6 +92,14 @@ export function HomePage() {
                 users={section.users}
                 buttonMore={section.buttonMore}
                 handleClickMore={handleClickMore}
+                sortButton={
+                  section.title === SectionsConstants[0] && more === 'Популярное' ? (
+                    <button className={style.sortingButton} onClick={handleToggleSort}>
+                      <Sort />
+                      <p>{sortByNewest ? 'Сначала новые' : 'Сначала старые'}</p>
+                    </button>
+                  ) : undefined
+                }
               />
             ))}
           </div>
