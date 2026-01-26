@@ -1,10 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { setTokenCookie, getTokenCookie, removeTokenCookie } from '@shared/libs/cookies';
+import { setTokenCookie, getTokenCookie, removeTokenCookie } from '@/shared/lib/cookies';
 import {
   setUserToLocalStorage,
   getUserFromLocalStorage,
   removeUserFromLocalStorage,
-} from '@shared/libs/localstorage';
+} from '@/shared/lib/localstorage';
 import { fetchUserInfoApi } from '@/entities/api/index';
 import type { IUser } from '@/types/types';
 
