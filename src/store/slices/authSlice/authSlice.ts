@@ -1,5 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { setTokenCookie, getTokenCookie, removeTokenCookie } from '@shared/libs/cookies';
+import {
+  setTokenCookie,
+  getTokenCookie,
+  removeTokenCookie,
+  generateAuthToken,
+} from '@shared/libs/cookies';
 import {
   setUserToLocalStorage,
   getUserFromLocalStorage,
@@ -13,11 +18,6 @@ interface AuthState {
   loading: boolean;
   error: string | null;
 }
-
-const generateToken = (userId: number): string => {
-  const timestamp = Date.now();
-  return `token_${userId}_${timestamp}`;
-};
 
 const initialState: AuthState = {
   user: getUserFromLocalStorage(),
@@ -34,7 +34,7 @@ export const getUserInfoData = createAsyncThunk(
         return rejectWithValue('Неверный email или пароль');
       }
 
-      const token = generateToken(user.id);
+      const token = generateAuthToken(user.id);
       setTokenCookie(token);
       setUserToLocalStorage(user);
 
