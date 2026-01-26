@@ -11,6 +11,7 @@ export default function UsersCardsRecommendations({
   users,
   handleClickMore,
   buttonMore,
+  sortButton,
 }: UsersCardsRecommendationsProps) {
   const handle = () => {};
 
@@ -31,6 +32,7 @@ export default function UsersCardsRecommendations({
       <>
         <div className={styles.header}>
           <h2 className={styles.title}>{title}</h2>
+          {sortButton && <div>{sortButton}</div>}
         </div>
         <section className={styles.container}>
           <div className={styles.cardsGrid}>

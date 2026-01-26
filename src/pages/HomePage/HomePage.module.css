@@ -10,12 +10,22 @@
 }
 
 .filterButtonsContainer {
-  /* здесь */
+    /* здесь */
   padding-block-end: 30px;
   padding-inline-start: 20px;
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  align-items: center;
+}
+
+.sortingButton {
+  background-color: var(--color-bg-card);
+  border: none;
+  border-radius: 12px;
+  padding-inline: 24px;
+  padding-block: 12px;
+  display: flex;
   align-items: center;
 }
 
