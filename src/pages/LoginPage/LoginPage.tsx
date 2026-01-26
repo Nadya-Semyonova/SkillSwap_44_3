@@ -4,15 +4,23 @@ import ButtonDefault from '@shared/ui/ButtonDefault';
 import Apple from '@shared/assets/images/IconsSvg/Apple';
 import Eye from '@shared/assets/images/IconsSvg/Eye';
 import LightBulb from '@shared/assets/images/IllustrationsSvg/LightBulb';
-import HeaderAuth from '@features/auth/HeaderAuth/HeaderAuth';
 import { Input } from '@shared/ui/useInput';
+import HeaderAuth from '@/pages/RegistersPages/HeaderRegister/HeaderRegister';
 import Google from '@/shared/assets/images/IconsSvg/Google';
 import styles from './LoginPage.module.css';
 import { useLoginPage } from './libs/useLoginPage';
 
 function LoginPage() {
-  const { formData, errors, showPass, texts, handleChange, handleSubmit, handleClickEye } =
-    useLoginPage();
+  const {
+    formData,
+    errors,
+    showPass,
+    hasError,
+    texts,
+    handleChange,
+    handleSubmit,
+    handleClickEye,
+  } = useLoginPage();
 
   return (
     <div className={styles.container}>
@@ -37,7 +45,7 @@ function LoginPage() {
             </button>
           </div>
           <p className={styles.formText}>или</p>
-          <div className={styles.formInput}>
+          <div className={`${styles.formInput} ${hasError ? styles.formInputError : ''}`}>
             <div className={styles.inputContainer}>
               <Input
                 title={texts.emailTitle}
@@ -45,6 +53,7 @@ function LoginPage() {
                 value={formData.email}
                 onChange={(value) => handleChange('email', value)}
                 type="email"
+                className={errors.email ? styles.inputError : ''}
               />
               {errors.email && <div className={styles.errorMessage}>{errors.email}</div>}
             </div>
@@ -56,6 +65,7 @@ function LoginPage() {
                   value={formData.password}
                   onChange={(value) => handleChange('password', value)}
                   type={showPass ? 'text' : 'password'}
+                  className={errors.password ? styles.inputError : ''}
                 />
                 <button
                   type="button"

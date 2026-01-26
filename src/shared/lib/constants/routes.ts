@@ -1,9 +1,10 @@
 export const ROUTES = {
   HOME: '/',
+  SELECTED: '/:id',
   PAGE: '/TEST',
   REGISTER: '/RegisterPage',
   PROFILE: '/Profile',
-  LOGIN: '/login',
-  ERROR: '/error',
-  NOTFOUND: '/notfound',
+  LOGIN: '/Login',
+  ERROR: '/Error',
+  NOTFOUND: '/Notfound',
 } as const; // константа с сылками юрл - для автоматизации

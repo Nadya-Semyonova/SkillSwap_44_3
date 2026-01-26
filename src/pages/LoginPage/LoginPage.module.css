@@ -125,6 +125,11 @@
   padding: 12px 20px;
 }
 
+.formInputError .input,
+.inputContainer.inputError .input {
+  border-color: var(--color-error);
+}
+
 .eyeButton {
   position: absolute;
   right: 47px;
