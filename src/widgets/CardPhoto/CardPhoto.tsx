@@ -8,6 +8,7 @@ import type { CardPhotoProps } from './types/types';
 export default function CardPhoto({
   user,
   title,
+  showTitle = true, // ← Значение по умолчанию true
   onLike,
   onShare,
   onMoreDetails,
@@ -25,7 +26,8 @@ export default function CardPhoto({
 
   return (
     <>
-      {title && <h1 className={styles.cardTitle}>{title}</h1>}
+      {/* Условный рендеринг заголовка */}
+      {showTitle && title && <h1 className={styles.cardTitle}>{title}</h1>}
       <div className={styles.skillExchangeCard}>
         <div className={styles.actionSection}>
           <button
