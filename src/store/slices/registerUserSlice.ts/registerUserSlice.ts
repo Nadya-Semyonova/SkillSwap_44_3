@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import { setTokenCookie } from '@/shared/libs/cookies';
-import { setUserToLocalStorage } from '@/shared/libs/localstorage';
+import { setTokenCookie } from '@/shared/lib/cookies';
+import { setUserToLocalStorage } from '@/shared/lib/localstorage';
 import type { IUser } from '@/types/types';
 
 type RegistrationFields = Omit<IUser, 'id' | 'liked' | 'createdAt' | 'age'>;
