@@ -4,16 +4,19 @@ import styles from './NotFoundPage.module.css';
 function NotFoundPage() {
   return (
     <div className={styles.content}>
-      <div className={styles.illustration}>
-        <Error404 />
-      </div>
+      <section className={styles.section}>
+        <div className={styles.illustration}>
+          <Error404 />
+        </div>
 
-      <div className={styles.textBlock}>
-        <h1 className={styles.title}>Страница не найдена</h1>
-        <p className={styles.text}>
-          К сожалению, эта страница недоступна. Вернитесь на главную страницу или попробуйте позже.
-        </p>
-      </div>
+        <div className={styles.textBlock}>
+          <h1 className={styles.title}>Страница не найдена</h1>
+          <p className={styles.text}>
+            К сожалению, эта страница недоступна. Вернитесь на главную страницу или попробуйте
+            позже.
+          </p>
+        </div>
+      </section>
 
       <div className={styles.actions}>
         <button type="button" className={styles.button}>
