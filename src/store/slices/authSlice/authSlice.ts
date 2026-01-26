@@ -6,13 +6,7 @@ import {
   removeUserFromLocalStorage,
 } from '@shared/lib/localstorage';
 import { fetchUserInfoApi } from '@/entities/api/index';
-import type { IUser } from '@/types/types';
-
-interface AuthState {
-  user: IUser | null;
-  loading: boolean;
-  error: string | null;
-}
+import type { AuthState } from '@/types/types';
 
 const generateToken = (userId: number): string => {
   const timestamp = Date.now();

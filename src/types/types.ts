@@ -54,6 +54,12 @@ export interface IUser {
   skill_off: string[];
 }
 
+export interface AuthState {
+  user: IUser | null;
+  loading: boolean;
+  error: string | null;
+}
+
 export interface ISkillItem {
   [categoryName: string]: string[];
 }
