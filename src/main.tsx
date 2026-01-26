@@ -4,7 +4,7 @@ import '@/shared/assets/fonts/fonts.css'; // шрифты
 import '@/shared/assets/styles/variables.css'; // переменные CSS
 import '@/shared/assets/styles/global.css'; // глобальные стили
 import { Provider } from 'react-redux';
-import App from './app/AppRoute';
+import App from './app/App';
 import store from './store/store';
 
 const rootElement = document.getElementById('root');
