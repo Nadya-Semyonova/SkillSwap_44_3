@@ -4,7 +4,7 @@ import {
   setUserToLocalStorage,
   getUserFromLocalStorage,
   removeUserFromLocalStorage,
-} from '@/shared/lib/localstorage';
+} from '@shared/lib/localstorage';
 import { fetchUserInfoApi } from '@/entities/api/index';
 import type { IUser } from '@/types/types';
 
