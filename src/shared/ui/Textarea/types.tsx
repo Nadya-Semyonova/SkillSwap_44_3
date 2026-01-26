@@ -8,4 +8,8 @@ export interface ITextarea {
   disabled?: boolean;
   maxLength?: number;
   children?: React.ReactNode;
+  errorMessage?: string;
+  autoFocus?: boolean;
+  required?: boolean;
+  requiredErrorMessage?: string;
 }
