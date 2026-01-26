@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { setTokenCookie, getTokenCookie, removeTokenCookie } from '@/shared/lib/cookies';
+import { setTokenCookie, getTokenCookie, removeTokenCookie } from '@shared/lib/cookies';
 import {
   setUserToLocalStorage,
   getUserFromLocalStorage,
