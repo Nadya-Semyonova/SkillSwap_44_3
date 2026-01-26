@@ -1,0 +1,44 @@
+.header {
+  max-inline-size: 1440px;
+  inline-size: 100%;
+  padding-top: 40px;
+  padding-right: 36px;
+  padding-left: 36px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-size: var(--font-h2-size);
+  font-weight: var(--font-h2-weight);
+  font-family: var(--font-h2-family);
+  line-height: var(--font-h2-line-height);
+  color: var(--color-text-primary);
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.progressBar {
+  display: flex;
+  gap: 16px;
+}
+
+.line {
+  width: 60px;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--color-bg-disabled);
+  transition: background-color 0.3s ease;
+}
+
+.active {
+  background-color: var(--color-accent);
+}
