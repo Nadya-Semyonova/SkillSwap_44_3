@@ -3,30 +3,14 @@ import { setTokenCookie } from '@/shared/libs/cookies';
 import { setUserToLocalStorage } from '@/shared/libs/localstorage';
 import type { IUser } from '@/types/types';
 
-function calculateAge(dateOfBirth: string): number {
-  const [day, month, year] = dateOfBirth.split('.').map(Number);
-  if (!day || !month || !year) return 0;
-
-  const today = new Date();
-  let age = today.getFullYear() - year;
-
-  if (today.getMonth() + 1 < month || (today.getMonth() + 1 === month && today.getDate() < day)) {
-    age -= 1;
-  }
-
-  return age;
-}
-
 type RegistrationFields = Omit<IUser, 'id' | 'liked' | 'createdAt' | 'age'>;
 
 interface RegistrationState extends RegistrationFields {
-  step: 1 | 2 | 3;
   loading: boolean;
   error: string | null;
 }
 
 const initialState: RegistrationState = {
-  step: 1,
   avatar: '',
   name: '',
   city: '',
@@ -47,7 +31,7 @@ const initialState: RegistrationState = {
   error: null,
 };
 
-export const registerUser = createAsyncThunk(
+export const registerUser = createAsyncThunk<IUser, void>(
   'registration/registerUser',
   async (_, { getState }) => {
     const state = getState() as { registration: RegistrationState };
@@ -55,9 +39,18 @@ export const registerUser = createAsyncThunk(
     const newUser: IUser = {
       id: Date.now(),
       liked: 0,
-      age: calculateAge(state.registration.dateOfBirth),
+      age: 0,
       createdAt: new Date().toISOString(),
-      ...state.registration,
+      avatar: state.registration.avatar,
+      name: state.registration.name,
+      city: state.registration.city,
+      dateOfBirth: state.registration.dateOfBirth,
+      gender: state.registration.gender,
+      email: state.registration.email,
+      password: state.registration.password,
+      about: state.registration.about,
+      card_people: { ...state.registration.card_people },
+      skill_off: [...state.registration.skill_off],
     };
 
     setUserToLocalStorage(newUser);
@@ -67,13 +60,10 @@ export const registerUser = createAsyncThunk(
   }
 );
 
-const registrationSlice = createSlice({
+const registerUserSlice = createSlice({
   name: 'registration',
   initialState,
   reducers: {
-    setStep: (state, action: PayloadAction<1 | 2 | 3>) => {
-      state.step = action.payload;
-    },
     setAvatar: (state, action: PayloadAction<string>) => {
       state.avatar = action.payload;
     },
@@ -134,7 +124,6 @@ const registrationSlice = createSlice({
 });
 
 export const {
-  setStep,
   setAvatar,
   setName,
   setCity,
@@ -149,6 +138,7 @@ export const {
   setDescription,
   setPhotos,
   setSkillOff,
-} = registrationSlice.actions;
+} = registerUserSlice.actions;
 
-export default registrationSlice.reducer;
+const registerReducer = registerUserSlice.reducer;
+export default registerReducer;
