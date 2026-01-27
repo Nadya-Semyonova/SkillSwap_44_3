@@ -17,7 +17,7 @@ function SearchModal({ isOpen, onClose, users = [] }: SearchModalProps) {
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <div className={`${styles.searchModalContainer} ${isOpen ? styles.open : ''}`}>
+      <div className={styles.searchModalContainer}>
         <header className={styles.modalHeader}>
           <h3 className={styles.modalTitle}>Найдено пользователей: {users.length}</h3>
           <button className={styles.closeButton} onClick={onClose} aria-label="Закрыть">
