@@ -37,7 +37,7 @@ export default function UsersCardsRecommendations({
         <section className={styles.container}>
           <div className={styles.cardsGrid}>
             {visibleUsers.map((user) => (
-              <Card key={user.id} user={user} onDetailsClick={handle} onLikeClick={handle} />
+              <Card key={user.id} user={user} onLikeClick={handle} />
             ))}
           </div>
         </section>
@@ -59,13 +59,7 @@ export default function UsersCardsRecommendations({
       <section className={styles.container}>
         <div className={styles.cardsGrid}>
           {visibleUsers.map((user) => (
-            <Card
-              key={user.id}
-              user={user}
-              onDetailsClick={handle}
-              onLikeClick={handle}
-              variant="default"
-            />
+            <Card key={user.id} user={user} onLikeClick={handle} variant="default" />
           ))}
         </div>
       </section>
