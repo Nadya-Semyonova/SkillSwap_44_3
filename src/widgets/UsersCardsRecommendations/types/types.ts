@@ -1,5 +1,5 @@
-import type { ReactNode } from 'react';
 import type { IUser } from '@/types/types';
+import type { ReactNode } from 'react';
 
 export interface UsersCardsRecommendationsProps {
   title: string;
