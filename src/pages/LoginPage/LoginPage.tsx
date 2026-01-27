@@ -25,7 +25,6 @@ function LoginPage() {
   return (
     <div className={styles.container}>
       <HeaderAuth currentStep={0} />
-      {/* пофиксила горела ошибка ^ */}
       <h2 className={styles.title}>{texts.title}</h2>
       <div className={styles.content}>
         <form
