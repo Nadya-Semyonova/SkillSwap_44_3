@@ -4,13 +4,11 @@ import { useDispatch as dispatchHook, useSelector as selectorHook } from 'react-
 import usersDataReducer from '@store/slices/userDataSlice/userDataSlice';
 import filtersReducer from '@store/slices/filtersSlice/filtersSlice';
 import authReducer from './slices/authSlice/authSlice';
-import { profileEditReducer } from './slices/profileEditSlice';
 
 const rootReducer = {
   users: usersDataReducer,
   filters: filtersReducer,
   auth: authReducer,
-  profileEdit: profileEditReducer,
 };
 
 const store = configureStore({
