@@ -22,6 +22,7 @@
     "paths": {
       "@/*": ["src/*"],
       "@api/*": ["src/entities/api/*"],
+      "@pages/*": ["src/pages/*"],
       "@shared/*": ["src/shared/*"],
       "@store/*": ["src/store/*"],
       "@types/*": ["src/types/*"],

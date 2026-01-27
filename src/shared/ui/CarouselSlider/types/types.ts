@@ -3,6 +3,7 @@ export interface IUsersCardsSwiper {
   bgButtons?: string; // bg для кнопок вперед назад
   spaceBetween?: number; // gap между слайдами
   slidesPerView?: number; // количество слайдов  в видимой зоне (для карточек 4 для фото 1)
+  sliderId?: string; // ДОБАВЛЯЕМ для переключения разных слайдеров
 }
 
 // import { SwiperSlide } from "swiper/react";

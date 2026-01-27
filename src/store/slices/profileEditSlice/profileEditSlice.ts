@@ -1,65 +1,136 @@
-import { createSlice, createAsyncThunk, type PayloadAction } from '@reduxjs/toolkit';
-import { setTokenCookie, generateAuthToken } from '@shared/libs/cookies';
-import { setUserToLocalStorage } from '@shared/libs/localstorage';
-import type { IUser } from '@/types/types';
+import { createAsyncThunk, createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
-export type ProfileEditUpdatePayload = {
-  id: number;
-} & Partial<
-  Omit<IUser, 'card_people'> & {
-    card_people?: Partial<IUser['card_people']>;
-  }
+import type { IUser } from '@/types/types';
+import { getUserFromLocalStorage, updateUserInLocalStorage } from '@/shared/lib/localstorage';
+
+type ProfileEditFields = Pick<
+  IUser,
+  'email' | 'name' | 'dateOfBirth' | 'gender' | 'city' | 'about'
 >;
 
 interface ProfileEditState {
-  users: IUser[];
+  data: ProfileEditFields;
+  isLoading: boolean;
+  error: string | null;
 }
 
+const emptyData: ProfileEditFields = {
+  email: '',
+  name: '',
+  dateOfBirth: '',
+  gender: '',
+  city: '',
+  about: '',
+};
+
+const getInitialData = (): ProfileEditFields => {
+  const user = getUserFromLocalStorage();
+
+  if (!user) return emptyData;
+
+  return {
+    email: user.email,
+    name: user.name,
+    dateOfBirth: user.dateOfBirth,
+    gender: user.gender,
+    city: user.city,
+    about: user.about,
+  };
+};
+
+const sleep = (ms: number) =>
+  new Promise<void>((resolve) => {
+    setTimeout(resolve, ms);
+  });
+
+export const saveProfileEditToLocalStorage = createAsyncThunk<
+  ProfileEditFields,
+  void,
+  { rejectValue: string }
+>('profileEdit/saveProfileEditToLocalStorage', async (_, { getState, rejectWithValue }) => {
+  try {
+    const state = getState() as { profileEdit: ProfileEditState };
+    const patch = state.profileEdit.data;
+
+    await sleep(300);
+
+    const updatedUser = updateUserInLocalStorage(patch);
+
+    if (!updatedUser) {
+      return rejectWithValue('Пользователь не найден в localStorage');
+    }
+
+    return {
+      email: updatedUser.email,
+      name: updatedUser.name,
+      dateOfBirth: updatedUser.dateOfBirth,
+      gender: updatedUser.gender,
+      city: updatedUser.city,
+      about: updatedUser.about,
+    };
+  } catch {
+    return rejectWithValue('Ошибка при сохранении данных');
+  }
+});
+
 const initialState: ProfileEditState = {
-  users: [],
+  data: getInitialData(),
+  isLoading: false,
+  error: null,
 };
 
 const profileEditSlice = createSlice({
   name: 'profileEdit',
   initialState,
   reducers: {
-    setUsers: (state, action: PayloadAction<IUser[]>) => {
-      state.users = action.payload;
+    loadInitialState(state) {
+      state.data = getInitialData();
+      state.isLoading = false;
+      state.error = null;
     },
-    /* eslint-disable no-param-reassign -- Immer draft mutation */
-    updateUser: (state, action: PayloadAction<ProfileEditUpdatePayload>) => {
-      const { id, card_people: cardPeopleUpdate, ...rest } = action.payload;
-      const user = state.users.find((u) => u.id === id);
-      if (!user) return;
-      Object.entries(rest).forEach(([key, value]) => {
-        if (value !== undefined && key !== 'id') {
-          (user as Record<string, unknown>)[key] = value;
-        }
+
+    setEmail(state, action: PayloadAction<string>) {
+      state.data.email = action.payload;
+    },
+
+    setName(state, action: PayloadAction<string>) {
+      state.data.name = action.payload;
+    },
+
+    setDateOfBirth(state, action: PayloadAction<string>) {
+      state.data.dateOfBirth = action.payload;
+    },
+
+    setGender(state, action: PayloadAction<string>) {
+      state.data.gender = action.payload;
+    },
+
+    setCity(state, action: PayloadAction<string>) {
+      state.data.city = action.payload;
+    },
+
+    setAbout(state, action: PayloadAction<string>) {
+      state.data.about = action.payload;
+    },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(saveProfileEditToLocalStorage.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(saveProfileEditToLocalStorage.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.data = action.payload;
+      })
+      .addCase(saveProfileEditToLocalStorage.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload ?? 'Неизвестная ошибка';
       });
-      if (cardPeopleUpdate && typeof cardPeopleUpdate === 'object') {
-        user.card_people = { ...user.card_people, ...cardPeopleUpdate };
-      }
-    },
-    /* eslint-enable no-param-reassign */
   },
 });
 
-export const saveUserToStorage = createAsyncThunk(
-  'profileEdit/saveUserToStorage',
-  async (user: IUser, { rejectWithValue }) => {
-    try {
-      setUserToLocalStorage(user);
-      const token = generateAuthToken(user.id);
-      setTokenCookie(token);
-      return user;
-    } catch (error) {
-      return rejectWithValue(
-        error instanceof Error ? error.message : 'Ошибка сохранения в localStorage'
-      );
-    }
-  }
-);
+export const { loadInitialState, setEmail, setName, setDateOfBirth, setGender, setCity, setAbout } =
+  profileEditSlice.actions;
 
-export const { setUsers, updateUser } = profileEditSlice.actions;
-export const profileEditReducer = profileEditSlice.reducer;
-export default profileEditReducer;
+export default profileEditSlice.reducer;

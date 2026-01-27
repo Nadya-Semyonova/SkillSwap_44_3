@@ -4,14 +4,16 @@ import styles from './ErrorPage.module.css';
 function ErrorPage() {
   return (
     <div className={styles.content}>
-      <div className={styles.illustration}>
-        <Error500 />
-      </div>
+      <section className={styles.section}>
+        <div className={styles.illustration}>
+          <Error500 />
+        </div>
 
-      <div className={styles.textBlock}>
-        <h1 className={styles.title}>На сервере произошла ошибка</h1>
-        <p className={styles.text}>Попробуйте позже или вернитесь на главную страницу</p>
-      </div>
+        <div className={styles.textBlock}>
+          <h2 className={styles.title}>На сервере произошла ошибка</h2>
+          <p className={styles.text}>Попробуйте позже или вернитесь на главную страницу</p>
+        </div>
+      </section>
 
       <div className={styles.actions}>
         <button type="button" className={styles.button}>

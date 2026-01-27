@@ -10,6 +10,7 @@ export const useHomePage = () => {
   const { loading } = useSelector((state: RootState) => state.users);
   const dispatch = useDispatch();
   const [more, setMore] = useState<string>('');
+  const [sortByNewest, setSortByNewest] = useState<boolean>(true);
 
   const { activeLearn, activeAuthor, activeSkills, activeCities } = useSelector(
     (state: RootState) => state.filters
@@ -34,6 +35,16 @@ export const useHomePage = () => {
       activeCities.length > 0
     );
   }, [activeLearn, activeAuthor, activeSkills, activeCities]);
+
+  const sortedFilteredUsers = useMemo(() => {
+    if (!filteredUsers) return null;
+
+    return [...filteredUsers].sort((a, b) => {
+      const dateA = Number(a.createdAt.replace(/-/g, ''));
+      const dateB = Number(b.createdAt.replace(/-/g, ''));
+      return sortByNewest ? dateB - dateA : dateA - dateB;
+    });
+  }, [filteredUsers, sortByNewest]);
 
   const userCategories = useMemo(() => {
     if (!filteredUsers) {
@@ -61,6 +72,16 @@ export const useHomePage = () => {
     };
   }, [filteredUsers]);
 
+  const sortedPopularUsers = useMemo(() => {
+    if (!userCategories.popularUsers.length) return [];
+
+    return [...userCategories.popularUsers].sort((a, b) => {
+      const dateA = Number(a.createdAt.replace(/-/g, ''));
+      const dateB = Number(b.createdAt.replace(/-/g, ''));
+      return sortByNewest ? dateB - dateA : dateA - dateB;
+    });
+  }, [userCategories.popularUsers, sortByNewest]);
+
   const { popularUsers, newUsers, recommendationsUsers } = userCategories;
 
   const handleClickMore = (title: string) => {
@@ -75,14 +96,19 @@ export const useHomePage = () => {
     dispatch(clearSelectedFilter(title));
   };
 
+  const handleToggleSort = () => {
+    setSortByNewest((prev) => !prev);
+  };
+
   const getSectionContent = () => {
     if (!more) {
+      const popularForDisplay = sortedPopularUsers.slice(0, 3);
       return {
         showAllSections: true,
         sections: [
           {
             title: SectionsConstants[0],
-            users: popularUsers.slice(0, 3),
+            users: popularForDisplay,
             buttonMore: false,
           },
           {
@@ -106,7 +132,7 @@ export const useHomePage = () => {
           sections: [
             {
               title: SectionsConstants[0],
-              users: popularUsers,
+              users: sortedPopularUsers,
               buttonMore: true,
             },
           ],
@@ -160,12 +186,16 @@ export const useHomePage = () => {
   return {
     loading,
     filteredUsers,
+    sortedFilteredUsers,
     activeFilters,
     hasActiveFilters,
+    sortByNewest,
     more,
     handleClickMore,
     handleClickReset,
     handleClickResetSelected,
+    handleToggleSort,
     getSectionContent,
+    sortedPopularUsers,
   };
 };
