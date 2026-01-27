@@ -6,6 +6,7 @@ import { HomePage } from '@pages/HomePage/HomePage';
 import { lazy, Suspense } from 'react';
 import { LAZY } from '@shared/lib/constants/lazyApp';
 import { TestPage } from '@pages/TestPage/TestPage';
+import SelectedUserPage from '@/pages/SelectedUserPage/SelectedUserPage';
 
 const ProfilePage = lazy(() => import('@pages/ProfilePage/ProfilePage'));
 const SelectedUserPage = lazy(() => import('@/pages/SelectedUserPage/SelectedUserPage'));

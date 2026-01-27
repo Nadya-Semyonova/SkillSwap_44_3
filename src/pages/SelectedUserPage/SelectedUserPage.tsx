@@ -1,12 +1,21 @@
 import { SwiperSlide } from 'swiper/react';
+import { useParams } from 'react-router-dom';
 import Card from '@/widgets/Card';
 import CardPhoto from '@/widgets/CardPhoto';
 import { CarouselSlider } from '@/shared/ui/CarouselSlider';
 import ButtonDefault from '@/shared/ui/ButtonDefault';
-import { mockUser, similarUsers } from './mockData';
+import { similarUsers } from './mockData';
 import styles from './SelectedUserPage.module.css';
+import { useSelector, type RootState } from '@/store/store';
 
 export default function SelectedUserPage() {
+  const { id } = useParams();
+  // console.log(id);
+  const userSelected = useSelector((state: RootState) =>
+    state.users.users?.find((user) => user.id === Number(id))
+  );
+  // console.log(userSelected);
+
   // Обработчики
   const handleLikeClick = () => {};
 
@@ -15,125 +24,132 @@ export default function SelectedUserPage() {
   const handleMoreDetails = () => {};
 
   const handleExchangeClick = () => {};
+  if (userSelected) {
+    // ==== ДЕТАЛЬНАЯ КАРТОЧКА ПОЛЬЗОВАТЕЛЯ ====
+    const userCard = <Card user={userSelected} variant="profile" />;
 
-  // ==== ДЕТАЛЬНАЯ КАРТОЧКА ПОЛЬЗОВАТЕЛЯ ====
-  const userCard = <Card user={mockUser} variant="profile" />;
+    // ==== ФОТОГРАФИИ ДЛЯ CardPhoto ====
+    // 1. Слайдер (первая фотография)
+    const photoSlider =
+      userSelected.card_people?.photos && userSelected.card_people.photos.length > 0 ? (
+        <CarouselSlider
+          spaceBetween={0}
+          slidesPerView={1}
+          bgButtons="transparent"
+          sliderId="photos"
+        >
+          <div>
+            {userSelected.card_people.photos.map((photo, index) => {
+              const urlParts = photo.split('/');
+              const fileName = urlParts[urlParts.length - 1];
+              const cleanFileName = fileName.split('.').shift() || `photo-${index}`;
 
-  // ==== ФОТОГРАФИИ ДЛЯ CardPhoto ====
-  // 1. Слайдер (первая фотография)
-  const photoSlider =
-    mockUser.card_people?.photos && mockUser.card_people.photos.length > 0 ? (
-      <CarouselSlider spaceBetween={0} slidesPerView={1} bgButtons="transparent" sliderId="photos">
-        <div>
-          {mockUser.card_people.photos.map((photo, index) => {
-            const urlParts = photo.split('/');
-            const fileName = urlParts[urlParts.length - 1];
-            const cleanFileName = fileName.split('.').shift() || `photo-${index}`;
+              return (
+                <SwiperSlide key={`slide-${userSelected.id}-${cleanFileName}`}>
+                  <img
+                    src={photo}
+                    alt={`${userSelected.card_people?.skill} - фото ${index + 1}`}
+                    className={styles.photo}
+                  />
+                </SwiperSlide>
+              );
+            })}
+          </div>
+        </CarouselSlider>
+      ) : (
+        <div className={styles.photoPlaceholder}>Нет фотографий</div>
+      );
 
-            return (
-              <SwiperSlide key={`slide-${mockUser.id}-${cleanFileName}`}>
-                <img
-                  src={photo}
-                  alt={`${mockUser.card_people?.skill} - фото ${index + 1}`}
-                  className={styles.photo}
+    // 2. 3 статичные фотографии (начиная со второй)
+    const staticPhotos = userSelected.card_people?.photos?.slice(1, 4).map((photo, index) => {
+      const urlParts = photo.split('/');
+      const fileName = urlParts[urlParts.length - 1];
+      const cleanFileName = fileName.split('.').shift() || `static-${index}`;
+
+      return (
+        <img
+          key={`static-${userSelected.id}-${cleanFileName}`}
+          src={photo}
+          alt={`${userSelected.card_people?.skill} - фото ${index + 2}`}
+          className={styles.staticPhoto}
+        />
+      );
+    });
+
+    // ==== КАРТОЧКА НАВЫКА С ФОТО ====
+    const skillCard = (
+      <CardPhoto
+        user={userSelected}
+        title={userSelected.card_people?.skill || 'Навык'}
+        showTitle={false}
+        onLike={handleLikeClick}
+        onShare={handleShareClick}
+        onMoreDetails={handleMoreDetails}
+        buttons={
+          <div className={styles.fullWidthButtonWrapper}>
+            <ButtonDefault
+              name="Предложить обмен"
+              handleClick={handleExchangeClick}
+              styleButton={styles.exchangeButton}
+            />
+          </div>
+        }
+      >
+        {/* children: фотографии */}
+        <div className={styles.photoSection}>
+          <div className={styles.sliderContainer}>{photoSlider}</div>
+          {staticPhotos && staticPhotos.length > 0 && (
+            <div className={styles.staticPhotosContainer}>{staticPhotos}</div>
+          )}
+        </div>
+      </CardPhoto>
+    );
+
+    // ==== ПОХОЖИЕ ПОЛЬЗОВАТЕЛИ ====
+    // CarouselSlider + Card
+    const similarUsersCarousel =
+      similarUsers.length > 0 ? (
+        <CarouselSlider
+          spaceBetween={25}
+          slidesPerView={4}
+          bgButtons="transparent"
+          sliderId="similar"
+        >
+          <div>
+            {similarUsers.map((user) => (
+              <SwiperSlide key={`user-${user.id}`}>
+                <Card
+                  user={user}
+                  // onDetailsClick={() => {}}
+                  // onLikeClick={() => {}}
                 />
               </SwiperSlide>
-            );
-          })}
-        </div>
-      </CarouselSlider>
-    ) : (
-      <div className={styles.photoPlaceholder}>Нет фотографий</div>
-    );
+            ))}
+          </div>
+        </CarouselSlider>
+      ) : (
+        <p className={styles.noUsersText}>Нет похожих пользователей</p>
+      );
 
-  // 2. 3 статичные фотографии (начиная со второй)
-  const staticPhotos = mockUser.card_people?.photos?.slice(1, 4).map((photo, index) => {
-    const urlParts = photo.split('/');
-    const fileName = urlParts[urlParts.length - 1];
-    const cleanFileName = fileName.split('.').shift() || `static-${index}`;
-
+    // ==== СБОРКА СТРАНИЦЫ ====
     return (
-      <img
-        key={`static-${mockUser.id}-${cleanFileName}`}
-        src={photo}
-        alt={`${mockUser.card_people?.skill} - фото ${index + 2}`}
-        className={styles.staticPhoto}
-      />
-    );
-  });
+      <div className={styles.page}>
+        {/* 1. Верхняя часть: две колонки */}
+        <div className={styles.topSection}>
+          {/* Карточка выбранного пользователя */}
+          <section className={styles.profileSection}>{userCard}</section>
 
-  // ==== КАРТОЧКА НАВЫКА С ФОТО ====
-  const skillCard = (
-    <CardPhoto
-      user={mockUser}
-      title={mockUser.card_people?.skill || 'Навык'}
-      showTitle={false}
-      onLike={handleLikeClick}
-      onShare={handleShareClick}
-      onMoreDetails={handleMoreDetails}
-      buttons={
-        <div className={styles.fullWidthButtonWrapper}>
-          <ButtonDefault
-            name="Предложить обмен"
-            handleClick={handleExchangeClick}
-            styleButton={styles.exchangeButton}
-          />
+          {/* Карточка с навыком и фото */}
+          <section className={styles.skillSection}>{skillCard}</section>
         </div>
-      }
-    >
-      {/* children: фотографии */}
-      <div className={styles.photoSection}>
-        <div className={styles.sliderContainer}>{photoSlider}</div>
-        {staticPhotos && staticPhotos.length > 0 && (
-          <div className={styles.staticPhotosContainer}>{staticPhotos}</div>
-        )}
-      </div>
-    </CardPhoto>
-  );
 
-  // ==== ПОХОЖИЕ ПОЛЬЗОВАТЕЛИ ====
-  // CarouselSlider + Card
-  const similarUsersCarousel =
-    similarUsers.length > 0 ? (
-      <CarouselSlider
-        spaceBetween={25}
-        slidesPerView={4}
-        bgButtons="transparent"
-        sliderId="similar"
-      >
-        <div>
-          {similarUsers.map((user) => (
-            <SwiperSlide key={`user-${user.id}`}>
-              <Card
-                user={user}
-                onDetailsClick={() => console.log('Details for', user.id)}
-                onLikeClick={() => console.log('Like for', user.id)}
-              />
-            </SwiperSlide>
-          ))}
-        </div>
-      </CarouselSlider>
-    ) : (
-      <p className={styles.noUsersText}>Нет похожих пользователей</p>
+        {/* 2. Подборка похожих пользователей */}
+        <section className={styles.similarSection}>
+          <h2 className={styles.sectionTitle}>Похожие предложения</h2>
+          <div className={styles.similarCarouselWrapper}>{similarUsersCarousel}</div>
+        </section>
+      </div>
     );
-
-  // ==== СБОРКА СТРАНИЦЫ ====
-  return (
-    <div className={styles.page}>
-      {/* 1. Верхняя часть: две колонки */}
-      <div className={styles.topSection}>
-        {/* Карточка выбранного пользователя */}
-        <section className={styles.profileSection}>{userCard}</section>
-
-        {/* Карточка с навыком и фото */}
-        <section className={styles.skillSection}>{skillCard}</section>
-      </div>
-
-      {/* 2. Подборка похожих пользователей */}
-      <section className={styles.similarSection}>
-        <h2 className={styles.sectionTitle}>Похожие предложения</h2>
-        <div className={styles.similarCarouselWrapper}>{similarUsersCarousel}</div>
-      </section>
-    </div>
-  );
+  }
+  return null;
 }

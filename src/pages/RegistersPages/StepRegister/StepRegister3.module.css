@@ -3,12 +3,12 @@
   grid-template-columns: 556px 556px;
   justify-content: center;
   gap: 24px;
-  padding: 0px 152px;
+  padding: 0 152px;
 }
 
 .form {
   width: 556px;
-  margin: 40px 0px 50px;
+  margin: 40px 0 50px;
   padding: 48px 60px 0;
   max-width: 100%;
   display: flex;
@@ -32,7 +32,7 @@
   border-color: var(--color-text-secondary);
 }
 
-.form :global([class*="inputContainer"]) {
+.form :global([class*='inputContainer']) {
   gap: 0;
 }
 
@@ -41,7 +41,7 @@
   font-weight: var(--font-weight-medium);
 }
 
-.form :global([class*="selectorWrapper"]) {
+.form :global([class*='selectorWrapper']) {
   padding: 12px 20px;
 }
 
@@ -123,7 +123,6 @@
   border: 1px solid var(--color-accent);
   color: var(--color-text-primary);
 }
-
 
 .previewInner {
   background-color: var(--color-bg-card);

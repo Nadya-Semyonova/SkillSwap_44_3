@@ -16,7 +16,6 @@ export type SkillOff = string;
 export interface CardProps {
   user: IUser; // Данные пользователя для карточки
   onLikeClick?: () => void; // Колбэк для лайка
-  onDetailsClick?: () => void; // Колбэк для кнопки "Подробнее"
   showFullName?: boolean; // Показывать ли возраст
   className?: string;
   variant?: 'default' | 'profile'; // Дополнительные CSS классы
