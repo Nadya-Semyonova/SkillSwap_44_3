@@ -5,14 +5,15 @@ import { HomePage } from '@pages/HomePage/HomePage';
 
 import { lazy, Suspense } from 'react';
 import { LAZY } from '@shared/lib/constants/lazyApp';
-import LoginPage from '@pages/LoginPage/LoginPage';
-import RegisterPage from '@pages/RegistersPages/RegisterPage';
-import ErrorPage from '@pages/ErrorPage/ErrorPage';
-import NotFoundPage from '@pages/NotFoundPage/NotFoundPage';
 import { TestPage } from '@pages/TestPage/TestPage';
 import SelectedUserPage from '@/pages/SelectedUserPage/SelectedUserPage';
 
 const ProfilePage = lazy(() => import('@pages/ProfilePage/ProfilePage'));
+const SelectedUserPage = lazy(() => import('@/pages/SelectedUserPage/SelectedUserPage'));
+const ErrorPage = lazy(() => import('@pages/ErrorPage/ErrorPage'));
+const NotFoundPage = lazy(() => import('@pages/NotFoundPage/NotFoundPage'));
+const RegisterPage = lazy(() => import('@pages/RegistersPages/RegisterPage'));
+const LoginPage = lazy(() => import('@pages/LoginPage/LoginPage'));
 
 export default function AppRoute() {
   return (
@@ -43,13 +44,41 @@ export default function AppRoute() {
               </Suspense>
             }
           />
-
-          <Route path={ROUTES.ERROR} element={<ErrorPage />} />
-          <Route path={ROUTES.NOTFOUND} element={<NotFoundPage />} />
+          
+          <Route
+            path={ROUTES.ERROR}
+            element={
+              <Suspense fallback={<div>{LAZY.PAGE}</div>}>
+                <ErrorPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path={ROUTES.NOTFOUND}
+            element={
+              <Suspense fallback={<div>{LAZY.PAGE}</div>}>
+                <NotFoundPage />
+              </Suspense>
+            }
+          />
         </Route>
 
-        <Route path={ROUTES.LOGIN} element={<LoginPage />} />
-        <Route path={ROUTES.REGISTER} element={<RegisterPage />} />
+        <Route
+          path={ROUTES.LOGIN}
+          element={
+            <Suspense fallback={<div>{LAZY.PAGE}</div>}>
+              <LoginPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path={ROUTES.REGISTER}
+          element={
+            <Suspense fallback={<div>{LAZY.PAGE}</div>}>
+              <RegisterPage />
+            </Suspense>
+          }
+        />
         <Route path={ROUTES.PAGE} element={<TestPage />} />
       </Routes>
     </BrowserRouter>
