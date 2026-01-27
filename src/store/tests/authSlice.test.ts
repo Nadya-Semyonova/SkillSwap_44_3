@@ -14,7 +14,7 @@ export interface AuthState {
   error: string | null;
 }
 
-jest.mock('@shared/lib/cookies', () => ({
+jest.mock('@/shared/lib/cookies/cookies.ts', () => ({
   setTokenCookie: jest.fn(),
   getTokenCookie: jest.fn(),
   removeTokenCookie: jest.fn(),

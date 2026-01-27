@@ -1,5 +1,5 @@
 .content {
-  width: 324px;
+  width: 320px;
   padding: 20px;
   border-radius: 12px;
   background-color: var(--color-bg-card);
@@ -149,8 +149,8 @@
   /* здесь */
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 24px;

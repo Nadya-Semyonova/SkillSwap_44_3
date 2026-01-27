@@ -1,6 +1,6 @@
-@import './variables.css';
-@import './theme/light.css';
-@import './theme/dark.css';
+@import url('./variables.css');
+@import url('./theme/light.css');
+@import url('./theme/dark.css');
 
 *::after,
 *::before {
