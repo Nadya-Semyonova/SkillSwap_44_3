@@ -10,11 +10,11 @@ import { useSelector, type RootState } from '@/store/store';
 
 export default function SelectedUserPage() {
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
   const userSelected = useSelector((state: RootState) =>
     state.users.users?.find((user) => user.id === Number(id))
   );
-  console.log(userSelected);
+  // console.log(userSelected);
 
   // Обработчики
   const handleLikeClick = () => {};
@@ -120,8 +120,8 @@ export default function SelectedUserPage() {
               <SwiperSlide key={`user-${user.id}`}>
                 <Card
                   user={user}
-                  onDetailsClick={() => console.log('Details for', user.id)}
-                  onLikeClick={() => console.log('Like for', user.id)}
+                  // onDetailsClick={() => {}}
+                  // onLikeClick={() => {}}
                 />
               </SwiperSlide>
             ))}

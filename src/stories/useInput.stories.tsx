@@ -130,7 +130,7 @@ export const UsageDocumentation: Story = {
         <Input
           title="Имя"
           placeholder="Введите ваше имя"
-          onChange={(value) => console.log('Имя изменено:', value)}
+          // onChange={(value) => console.log('Имя изменено:', value)}
         />
       </div>
       <pre

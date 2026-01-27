@@ -71,7 +71,7 @@
 
 .textareaError:focus {
   border-color: var(--color-error);
-  box-shadow: 0 0 0 2px rgba(191, 57, 32, 0.2);
+  box-shadow: 0 0 0 2px rgb(191 57 32 / 20%);
 }
 
 .errorMessage {
