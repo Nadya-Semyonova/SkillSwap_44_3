@@ -10,6 +10,7 @@ import RegisterPage from '@pages/RegistersPages/RegisterPage';
 import ErrorPage from '@pages/ErrorPage/ErrorPage';
 import NotFoundPage from '@pages/NotFoundPage/NotFoundPage';
 import { TestPage } from '@pages/TestPage/TestPage';
+import SelectedUserPage from '@/pages/SelectedUserPage/SelectedUserPage';
 
 const ProfilePage = lazy(() => import('@pages/ProfilePage/ProfilePage'));
 
@@ -30,6 +31,15 @@ export default function AppRoute() {
             element={
               <Suspense fallback={<div>{LAZY.PAGE}</div>}>
                 <ProfilePage />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path={ROUTES.SELECTED}
+            element={
+              <Suspense fallback={<div>{LAZY.PAGE}</div>}>
+                <SelectedUserPage />
               </Suspense>
             }
           />
