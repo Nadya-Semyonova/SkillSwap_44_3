@@ -5,7 +5,7 @@ import type { Swiper as SwiperType } from 'swiper';
 
 import ChevronUp from '@/shared/assets/images/IconsSvg/ChevronUp';
 
-import type { IUsersCardsSwiper } from './types/types';
+import type { IUsersCardsSwiper } from './libs/types';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -16,7 +16,6 @@ export default function CarouselSlider({
   bgButtons,
   spaceBetween,
   slidesPerView,
-  sliderId,
 }: IUsersCardsSwiper) {
   const [begButton, setBegButton] = useState<boolean>(true);
   const [endButton, setEndButton] = useState<boolean>(false);
@@ -27,7 +26,6 @@ export default function CarouselSlider({
   };
 
   const handleClickPrev = () => {
-    console.log(`Prev clicked for ${sliderId}`);
     if (swiperRef.current) {
       swiperRef.current.slidePrev();
     }
@@ -39,7 +37,6 @@ export default function CarouselSlider({
   };
 
   const handleClickNext = () => {
-    console.log(`Next clicked for ${sliderId}`);
     if (swiperRef.current) {
       swiperRef.current.slideNext();
     }
@@ -58,7 +55,6 @@ export default function CarouselSlider({
         onReachEnd={onEnd}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
-          console.log(`Swiper instance created for ${sliderId}`, swiper);
         }}
       >
         {children}

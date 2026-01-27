@@ -7,6 +7,7 @@ import authReducer, {
 } from '../slices/authSlice/authSlice';
 
 import type { IUser } from '@/types/types';
+
 export interface AuthState {
   user: IUser | null;
   loading: boolean;
