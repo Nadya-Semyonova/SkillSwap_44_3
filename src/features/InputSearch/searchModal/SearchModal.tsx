@@ -1,5 +1,6 @@
 import Card from '@widgets/Card/Card';
 import Modal from '@/shared/ui/modal/Modal';
+import Cross from '@/shared/assets/images/IconsSvg/Cross';
 import styles from './SearchModal.module.css';
 import type { IUser } from '@/types/types';
 
@@ -16,20 +17,20 @@ function SearchModal({ isOpen, onClose, users = [] }: SearchModalProps) {
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <div className={styles.modalContent}>
-        <div className={styles.modalHeader}>
+      <div className={`${styles.searchModalContainer} ${isOpen ? styles.open : ''}`}>
+        <header className={styles.modalHeader}>
           <h3 className={styles.modalTitle}>Найдено пользователей: {users.length}</h3>
           <button className={styles.closeButton} onClick={onClose} aria-label="Закрыть">
-            ×
+            <Cross />
           </button>
-        </div>
+        </header>
 
         {users.length === 0 ? (
-          <div className={styles.noResults}>
-            <p>Пользователи не найдены</p>
-          </div>
+          <main className={styles.noResults}>
+            <p className={styles.textResults}>Пользователи не найдены</p>
+          </main>
         ) : (
-          <div className={styles.cardsContainer}>
+          <main className={styles.cardsContainer}>
             {users.map((user) => (
               <div key={user.id} className={styles.cardWrapper}>
                 <Card
@@ -41,7 +42,7 @@ function SearchModal({ isOpen, onClose, users = [] }: SearchModalProps) {
                 />
               </div>
             ))}
-          </div>
+          </main>
         )}
       </div>
     </Modal>

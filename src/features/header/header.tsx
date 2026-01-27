@@ -29,7 +29,6 @@ export default function Header() {
   const handleSearchChange = (value: string) => {
     setSearchQuery(value);
 
-    // Открываем модальное окно, если введен любой текст (даже если нет результатов)
     if (value.trim() !== '') {
       setIsSearchModalOpen(true);
     } else {
@@ -38,7 +37,6 @@ export default function Header() {
   };
 
   const handleSearchFocus = () => {
-    // Открываем модальное окно только если есть текст в поиске
     if (searchQuery.trim() !== '') {
       setIsSearchModalOpen(true);
     }
@@ -46,7 +44,7 @@ export default function Header() {
 
   const closeSearchModal = () => {
     setIsSearchModalOpen(false);
-    clearSearchQuery(); // Очищаем поисковый запрос при закрытии модального окна
+    clearSearchQuery();
   };
 
   useEffect(() => {
