@@ -1,11 +1,6 @@
 const TOKEN_COOKIE_NAME = 'auth_token';
 const TOKEN_EXPIRES_DAYS = 7;
 
-export const generateAuthToken = (userId: number): string => {
-  const timestamp = Date.now();
-  return `token_${userId}_${timestamp}`;
-};
-
 export const setTokenCookie = (token: string, expiresDays: number = TOKEN_EXPIRES_DAYS): void => {
   const date = new Date();
   date.setTime(date.getTime() + expiresDays * 24 * 60 * 60 * 1000);
