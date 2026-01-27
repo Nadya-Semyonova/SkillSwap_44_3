@@ -14,11 +14,6 @@ interface AuthState {
   error: string | null;
 }
 
-const generateToken = (userId: number): string => {
-  const timestamp = Date.now();
-  return `token_${userId}_${timestamp}`;
-};
-
 const initialState: AuthState = {
   user: getUserFromLocalStorage(),
   loading: false,
@@ -34,7 +29,7 @@ export const getUserInfoData = createAsyncThunk(
         return rejectWithValue('Неверный email или пароль');
       }
 
-      const token = generateToken(user.id);
+      const token = generateAuthToken(user.id);
       setTokenCookie(token);
       setUserToLocalStorage(user);
 
