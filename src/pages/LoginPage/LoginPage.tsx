@@ -24,8 +24,7 @@ function LoginPage() {
 
   return (
     <div className={styles.container}>
-      <HeaderAuth />
-      <h2 className={styles.title}>{texts.title}</h2>
+      <HeaderAuth currentStep={0} />
       <div className={styles.content}>
         <form
           className={styles.form}
