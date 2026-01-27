@@ -71,7 +71,11 @@ function ProfileData() {
               isGenderSelected ? styles.genderSelected : ''
             }`}
           >
-            <ToggledSelect title={profileText.genderTitle} placeholder={genderLabel}>
+            <ToggledSelect
+              title={profileText.genderTitle}
+              placeholder={genderLabel}
+              active={user?.gender}
+            >
               <div className={styles.optionsStack}>
                 {genderOptions.map((option) => (
                   <button
@@ -93,7 +97,11 @@ function ProfileData() {
         <div
           className={`${styles.formRow} ${styles.citySelect} ${city ? styles.citySelectFilled : ''}`}
         >
-          <ToggledSelect title={profileText.cityTitle} placeholder={cityPlaceholder}>
+          <ToggledSelect
+            title={profileText.cityTitle}
+            placeholder={cityPlaceholder}
+            active={user?.city}
+          >
             <div className={styles.optionsStack}>
               {cities.map((cityName) => (
                 <button

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import HeaderRegister from './HeaderRegister/HeaderRegister';
+import HeaderRegister from '../../shared/ui/HeaderAuth/HeaderRegister';
 import StepRegister1 from './StepRegister/StepRegister1';
 import StepRegister2 from './StepRegister/StepRegister2';
 import StepRegister3 from './StepRegister/StepRegister3';

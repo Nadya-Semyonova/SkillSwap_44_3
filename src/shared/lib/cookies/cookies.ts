@@ -33,3 +33,8 @@ export const removeTokenCookie = (): void => {
 export const hasTokenCookie = (): boolean => {
   return getTokenCookie() !== null;
 };
+
+export const generateAuthToken = (userId: string | number): string => {
+  const randomString = Math.random().toString(36).substring(2, 15);
+  return `${userId}_${randomString}`;
+};

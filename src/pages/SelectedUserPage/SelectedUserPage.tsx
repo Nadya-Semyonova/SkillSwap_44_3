@@ -8,21 +8,13 @@ import styles from './SelectedUserPage.module.css';
 
 export default function SelectedUserPage() {
   // Обработчики
-  const handleLikeClick = (userId: number, isLiked: boolean) => {
-    console.log(`Like clicked for user ${userId}, liked: ${isLiked}`);
-  };
+  const handleLikeClick = () => {};
 
-  const handleShareClick = (userId: number) => {
-    console.log(`Share clicked for user ${userId}`);
-  };
+  const handleShareClick = () => {};
 
-  const handleMoreDetails = (userId: number) => {
-    console.log(`More details clicked for user ${userId}`);
-  };
+  const handleMoreDetails = () => {};
 
-  const handleExchangeClick = () => {
-    console.log('Предложить обмен clicked');
-  };
+  const handleExchangeClick = () => {};
 
   // ==== ДЕТАЛЬНАЯ КАРТОЧКА ПОЛЬЗОВАТЕЛЯ ====
   const userCard = <Card user={mockUser} variant="profile" />;

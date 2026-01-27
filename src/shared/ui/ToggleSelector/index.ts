@@ -1,2 +1,2 @@
 export { default as ToggledSelect } from './ToggledSelect';
-export type { SelectorProps } from './types/types';
+export type { SelectorProps } from './libs/types';
