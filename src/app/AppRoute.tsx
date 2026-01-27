@@ -8,10 +8,12 @@ import { LAZY } from '@shared/lib/constants/lazyApp';
 import { TestPage } from '@pages/TestPage/TestPage';
 
 const ProfilePage = lazy(() => import('@pages/ProfilePage/ProfilePage'));
+const SelectedUserPage = lazy(() => import('@/pages/SelectedUserPage/SelectedUserPage'));
 const ErrorPage = lazy(() => import('@pages/ErrorPage/ErrorPage'));
 const NotFoundPage = lazy(() => import('@pages/NotFoundPage/NotFoundPage'));
 const RegisterPage = lazy(() => import('@pages/RegistersPages/RegisterPage'));
 const LoginPage = lazy(() => import('@pages/LoginPage/LoginPage'));
+
 export default function AppRoute() {
   return (
     <BrowserRouter
@@ -32,6 +34,16 @@ export default function AppRoute() {
               </Suspense>
             }
           />
+
+          <Route
+            path={ROUTES.SELECTED}
+            element={
+              <Suspense fallback={<div>{LAZY.PAGE}</div>}>
+                <SelectedUserPage />
+              </Suspense>
+            }
+          />
+          
           <Route
             path={ROUTES.ERROR}
             element={
