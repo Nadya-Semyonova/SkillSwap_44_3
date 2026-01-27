@@ -4,7 +4,7 @@ import ButtonAllSkills from '@/shared/ui/AllButtons/ButtonAllSkills';
 import ChevronRight from '@/shared/assets/images/IconsSvg/ChevronRight';
 import styles from './UsersCardsRecommendations.module.css';
 import { useInfiniteScroll } from '@/shared/lib/hooks/useInfiniteScroll'; // скролл доработать
-import type { UsersCardsRecommendationsProps } from './types/types';
+import type { UsersCardsRecommendationsProps } from './libs/types';
 
 export default function UsersCardsRecommendations({
   title,

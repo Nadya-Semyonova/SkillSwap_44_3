@@ -5,7 +5,7 @@ import type { Swiper as SwiperType } from 'swiper';
 
 import ChevronUp from '@/shared/assets/images/IconsSvg/ChevronUp';
 
-import type { IUsersCardsSwiper } from './types/types';
+import type { IUsersCardsSwiper } from './libs/types';
 
 import 'swiper/css';
 import 'swiper/css/navigation';

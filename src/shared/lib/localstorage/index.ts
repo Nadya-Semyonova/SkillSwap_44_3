@@ -34,3 +34,20 @@ export const removeUserFromLocalStorage = (): void => {
 export const hasUserInLocalStorage = (): boolean => {
   return getUserFromLocalStorage() !== null;
 };
+
+export const updateUserInLocalStorage = (patch: Partial<IUser>): IUser | null => {
+  try {
+    const current = getUserFromLocalStorage();
+    if (!current) return null;
+
+    const updated: IUser = {
+      ...current,
+      ...patch,
+    };
+
+    setUserToLocalStorage(updated);
+    return updated;
+  } catch {
+    return null;
+  }
+};

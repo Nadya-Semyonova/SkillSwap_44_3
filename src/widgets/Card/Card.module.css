@@ -91,19 +91,32 @@
 }
 
 .skillItem {
-  display: inline-flex;
+  display: inline-block; /* вместо inline-flex */
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-regular);
   font-size: var(--font-caption-size);
   line-height: var(--font-caption-line-height);
   border-radius: 20px;
   padding: 8px 12px;
-  white-space: nowrap;
   cursor: pointer;
 
-  /* здесь */
-  max-width: 100%;
+  /* Стили для обрезки текста */
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 120px;
+  box-sizing: border-box; /* важно для корректного расчета ширины с padding */
+}
+
+.skillItemNumber {
+  display: inline-block; /* вместо inline-flex */
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-caption-size);
+  line-height: var(--font-caption-line-height);
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
 }
 
 .detailsButton {
