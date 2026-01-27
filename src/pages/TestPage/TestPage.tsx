@@ -9,7 +9,7 @@ import ProfilePage from '@/pages/ProfilePage/ProfilePage';
 export function TestPage() {
   return (
     <>
-      <HeaderAuth currentStep={0} />
+      <HeaderAuth />
       <Input />
       <UserSelector />
       <Header />
