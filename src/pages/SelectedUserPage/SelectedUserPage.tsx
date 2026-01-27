@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { SwiperSlide } from 'swiper/react';
 import Card from '@/widgets/Card';
 import CardPhoto from '@/widgets/CardPhoto';
@@ -5,23 +7,44 @@ import { CarouselSlider } from '@/shared/ui/CarouselSlider';
 import ButtonDefault from '@/shared/ui/ButtonDefault';
 import { mockUser, similarUsers } from './mockData';
 import styles from './SelectedUserPage.module.css';
+import { useSelector } from '@/store/store';
+import Clock from '@/shared/assets/images/IconsSvg/Clock';
+import { Modal, NoticeModal } from '@/shared/ui/modal';
 
 export default function SelectedUserPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isExchangeSent, setIsExchangeSent] = useState(false);
+
+  const currentUser = useSelector((state) => state.auth.user);
+  const navigate = useNavigate();
+
   // Обработчики
-  const handleLikeClick = (userId: number, isLiked: boolean) => {
+  const handleLikeClick = (userId?: number, isLiked?: boolean) => {
     console.log(`Like clicked for user ${userId}, liked: ${isLiked}`);
   };
 
-  const handleShareClick = (userId: number) => {
+  const handleShareClick = (userId?: number) => {
     console.log(`Share clicked for user ${userId}`);
   };
 
-  const handleMoreDetails = (userId: number) => {
+  const handleMoreDetails = (userId?: number) => {
     console.log(`More details clicked for user ${userId}`);
   };
 
   const handleExchangeClick = () => {
     console.log('Предложить обмен clicked');
+    if (!currentUser) {
+      navigate('/Login');
+      return;
+    }
+    if (isExchangeSent) return; // предотвращаем повторное открытие
+    setIsExchangeSent(true); // сразу меняем кнопку
+    setIsModalOpen(true); // открываем модалку
+  };
+
+  const handleModalConfirm = () => {
+    console.log('Модалка подтверждена');
+    setIsModalOpen(false);
   };
 
   // ==== ДЕТАЛЬНАЯ КАРТОЧКА ПОЛЬЗОВАТЕЛЯ ====
@@ -82,10 +105,17 @@ export default function SelectedUserPage() {
       buttons={
         <div className={styles.fullWidthButtonWrapper}>
           <ButtonDefault
-            name="Предложить обмен"
             handleClick={handleExchangeClick}
-            styleButton={styles.exchangeButton}
-          />
+            styleButton={`${styles.exchangeButton} ${isExchangeSent ? styles.exchangeButtonActive : ''}`}
+          >
+            {isExchangeSent ? (
+              <span className={styles.buttonContent}>
+                <Clock /> Обмен предложен
+              </span>
+            ) : (
+              'Предложить обмен'
+            )}
+          </ButtonDefault>
         </div>
       }
     >
@@ -142,6 +172,19 @@ export default function SelectedUserPage() {
         <h2 className={styles.sectionTitle}>Похожие предложения</h2>
         <div className={styles.similarCarouselWrapper}>{similarUsersCarousel}</div>
       </section>
+
+      {/* Модалка */}
+      {isModalOpen && (
+        <div className={styles.modalOverlay}>
+          <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+            <NoticeModal
+              title="Вы предложили обмен"
+              message="Теперь дождитесь подтверждения. Вам придет уведомление"
+              onConfirm={handleModalConfirm}
+            />
+          </Modal>
+        </div>
+      )}
     </div>
   );
 }
