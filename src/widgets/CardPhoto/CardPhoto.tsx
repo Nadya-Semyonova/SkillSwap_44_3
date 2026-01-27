@@ -3,7 +3,7 @@ import Share from '@/shared/assets/images/IconsSvg/Share';
 import MoreSquare from '@/shared/assets/images/IconsSvg/MoreSquare';
 import { useLikeCounter } from '@/shared/lib/hooks/useLikeCounter';
 import styles from './CardPhoto.module.css';
-import type { CardPhotoProps } from './types/types';
+import type { CardPhotoProps } from './libs/types';
 
 export default function CardPhoto({
   user,

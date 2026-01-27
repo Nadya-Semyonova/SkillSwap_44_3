@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import { setTokenCookie } from '@/shared/lib/cookies';
+import { setTokenCookie } from '@/shared/lib/cookies/cookies';
 import { setUserToLocalStorage } from '@/shared/lib/localstorage';
 import type { IUser } from '@/types/types';
 

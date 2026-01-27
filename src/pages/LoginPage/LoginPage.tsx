@@ -5,7 +5,7 @@ import Apple from '@shared/assets/images/IconsSvg/Apple';
 import Eye from '@shared/assets/images/IconsSvg/Eye';
 import LightBulb from '@shared/assets/images/IllustrationsSvg/LightBulb';
 import { Input } from '@shared/ui/useInput';
-import HeaderAuth from '@/pages/RegistersPages/HeaderRegister/HeaderRegister';
+import HeaderAuth from '@/shared/ui/HeaderAuth/HeaderRegister';
 import Google from '@/shared/assets/images/IconsSvg/Google';
 import styles from './LoginPage.module.css';
 import { useLoginPage } from './libs/useLoginPage';
@@ -24,7 +24,7 @@ function LoginPage() {
 
   return (
     <div className={styles.container}>
-      <HeaderAuth/>
+      <HeaderAuth />
       <h2 className={styles.title}>{texts.title}</h2>
       <div className={styles.content}>
         <form
