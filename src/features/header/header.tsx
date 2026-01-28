@@ -3,22 +3,48 @@ import Logotype from '@shared/ui/Logotype/Logotype';
 import { useEffect, useRef, useState } from 'react';
 import AboutProject from '@/shared/ui/AllButtons/AboutProject/AboutProject';
 import ButtonAllSkills from '@/shared/ui/AllButtons/ButtonAllSkills/ButtonAllSkills';
-import InputSearch from '@/shared/ui/AllButtons/InputSearch/InputSearch';
+import InputSearch from '@/features/InputSearch/InputSearch';
 import ChevronDown from '@/shared/assets/images/IconsSvg/ChevronDown';
 import styles from './header.module.css';
 import UserMenu from '../userMenu/userMenu';
 import SkillsSelector from '@/widgets/SkillsSelector/SkillsSelector';
+import SearchModal from '@/features/InputSearch//searchModal/SearchModal';
+import useInputSearchLogic from '@/features/InputSearch/searchModal/SearchLogic';
 
 export default function Header() {
   const [isSkillsSelectorOpen, setIsSkillsSelectorOpen] = useState(false);
+  const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLDivElement>(null);
+  const searchInputRef = useRef<HTMLDivElement>(null);
+
+  const { searchQuery, setSearchQuery, filteredUsers, clearSearchQuery } = useInputSearchLogic();
 
   const toggleButtonAllSkills = () => {
     setIsSkillsSelectorOpen((prevState) => !prevState);
   };
   const closeSkillsSelector = () => {
     setIsSkillsSelectorOpen(false);
+  };
+  const handleSearchChange = (value: string) => {
+    setSearchQuery(value);
+
+    if (value.trim() !== '') {
+      setIsSearchModalOpen(true);
+    } else {
+      setIsSearchModalOpen(false);
+    }
+  };
+
+  const handleSearchFocus = () => {
+    if (searchQuery.trim() !== '') {
+      setIsSearchModalOpen(true);
+    }
+  };
+
+  const closeSearchModal = () => {
+    setIsSearchModalOpen(false);
+    clearSearchQuery();
   };
 
   useEffect(() => {
@@ -63,9 +89,14 @@ export default function Header() {
         </div>
       </div>
 
-      <div className={styles.rightSection}>
-        <InputSearch />
+      <div className={styles.rightSection} ref={searchInputRef}>
+        <InputSearch
+          value={searchQuery}
+          onChange={handleSearchChange}
+          onFocus={handleSearchFocus}
+        />
         <UserMenu />
+        <SearchModal isOpen={isSearchModalOpen} onClose={closeSearchModal} users={filteredUsers} />
       </div>
     </header>
   );
