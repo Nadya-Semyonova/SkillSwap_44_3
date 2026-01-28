@@ -11,7 +11,6 @@ type SearchModalProps = {
 };
 
 function SearchModal({ isOpen, onClose, users = [] }: SearchModalProps) {
-  const handleDetailsClick = () => {};
 
   const handleLikeClick = () => {};
 
@@ -35,7 +34,6 @@ function SearchModal({ isOpen, onClose, users = [] }: SearchModalProps) {
               <div key={user.id} className={styles.cardWrapper}>
                 <Card
                   user={user}
-                  onDetailsClick={() => handleDetailsClick()}
                   onLikeClick={() => handleLikeClick()}
                   variant="default"
                   showFullName
