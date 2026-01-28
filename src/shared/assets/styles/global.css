@@ -8,11 +8,9 @@
 }
 
 body {
-  /* здесь */
-  min-inline-size: 470px;
-  max-inline-size: 1440px;
-  margin: 0 auto;
   background-color: grey;
+  margin: 0;
+  padding: 0;
 }
 
 h1,

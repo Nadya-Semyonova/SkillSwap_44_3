@@ -9,7 +9,13 @@ import LikeBlack from '@/shared/assets/images/IconsSvg/LikeBlack';
 import style from './Card.module.css';
 import CardConstants from './libs/CardConstants';
 
-function Card({ user, onLikeClick, variant = 'default', showFullName = true }: CardProps) {
+function Card({
+  user,
+  onLikeClick,
+  variant = 'default',
+  showFullName = true,
+  fixedHeight = undefined,
+}: CardProps & { fixedHeight?: string }) {
   // Формируем текст возраста с правильным склонением
   const ageText = user.age ? declensionAge(user.age) : '';
 
@@ -27,7 +33,7 @@ function Card({ user, onLikeClick, variant = 'default', showFullName = true }: C
   });
 
   return (
-    <div className={style.content}>
+    <div className={style.content} style={fixedHeight ? { height: fixedHeight } : {}}>
       <div className={style.header}>
         <img
           className={style.avatar}
