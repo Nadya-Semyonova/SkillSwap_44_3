@@ -1,53 +1,27 @@
 import { SwiperSlide } from 'swiper/react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import useSelectedUserPage from '@pages/SelectedUserPage/libs/SelectedUserPageLogic';
 import Card from '@/widgets/Card';
 import CardPhoto from '@/widgets/CardPhoto';
 import { CarouselSlider } from '@/shared/ui/CarouselSlider';
 import ButtonDefault from '@/shared/ui/ButtonDefault';
-import { similarUsers } from './mockData';
 import styles from './SelectedUserPage.module.css';
-import { useSelector, type RootState } from '@/store/store';
 import Clock from '@/shared/assets/images/IconsSvg/Clock';
 import { Modal, NoticeModal } from '@/shared/ui/modal';
 
 export default function SelectedUserPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isExchangeSent, setIsExchangeSent] = useState(false);
-  const { id } = useParams();
-  const currentUser = useSelector((state) => state.auth.user);
-  const navigate = useNavigate();
-  const userSelected = useSelector((state: RootState) =>
-    state.users.users?.find((user) => user.id === Number(id))
-  );
+  const {
+    userSelected,
+    usersData,
+    isModalOpen,
+    isExchangeSent,
+    handleLikeClick,
+    handleShareClick,
+    handleMoreDetails,
+    handleExchangeClick,
+    handleModalConfirm,
+    setIsModalOpen,
+  } = useSelectedUserPage();
 
-  // Обработчики
-  const handleLikeClick = (userId?: number, isLiked?: boolean) => {
-    console.log(`Like clicked for user ${userId}, liked: ${isLiked}`);
-  };
-
-  const handleShareClick = (userId?: number) => {
-    console.log(`Share clicked for user ${userId}`);
-  };
-
-  const handleMoreDetails = (userId?: number) => {
-    console.log(`More details clicked for user ${userId}`);
-  };
-
-  const handleExchangeClick = () => {
-    if (!currentUser) {
-      navigate('/Login');
-      return;
-    }
-    if (isExchangeSent) return; // предотвращаем повторное открытие
-    setIsExchangeSent(true); // сразу меняем кнопку
-    setIsModalOpen(true); // открываем модалку
-  };
-
-  const handleModalConfirm = () => {
-    console.log('Модалка подтверждена');
-    setIsModalOpen(false);
-  };
   if (userSelected) {
     // ==== ДЕТАЛЬНАЯ КАРТОЧКА ПОЛЬЗОВАТЕЛЯ ====
     const userCard = <Card user={userSelected} variant="profile" />;
@@ -139,7 +113,7 @@ export default function SelectedUserPage() {
     // ==== ПОХОЖИЕ ПОЛЬЗОВАТЕЛИ ====
     // CarouselSlider + Card
     const similarUsersCarousel =
-      similarUsers.length > 0 ? (
+      usersData && usersData.length > 0 ? (
         <CarouselSlider
           spaceBetween={25}
           slidesPerView={4}
@@ -147,7 +121,7 @@ export default function SelectedUserPage() {
           sliderId="similar"
         >
           <div>
-            {similarUsers.map((user) => (
+            {usersData.map((user) => (
               <SwiperSlide key={`user-${user.id}`}>
                 <Card
                   user={user}
