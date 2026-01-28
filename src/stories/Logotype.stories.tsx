@@ -14,7 +14,11 @@ type LogotypeStoryArgs = {
   ariaLabel?: string;
 };
 
-function LogotypeWithWrapper({ isLink = false, href = '/', ariaLabel = 'SkillSwap — главная страница' }: LogotypeStoryArgs) {
+function LogotypeWithWrapper({
+  isLink = false,
+  href = '/',
+  ariaLabel = 'SkillSwap — главная страница',
+}: LogotypeStoryArgs) {
   if (isLink) {
     return (
       <a href={href} aria-label={ariaLabel} style={linkStyle}>
