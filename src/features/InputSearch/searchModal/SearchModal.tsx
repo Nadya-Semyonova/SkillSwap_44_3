@@ -11,7 +11,6 @@ type SearchModalProps = {
 };
 
 function SearchModal({ isOpen, onClose, users = [] }: SearchModalProps) {
-
   const handleLikeClick = () => {};
 
   return (
