@@ -63,3 +63,27 @@
 .textarea:hover:not(:disabled, .textareaDisabled) {
   border-color: var(--color-text-link);
 }
+
+.textareaError,
+.textarea.textareaError {
+  border-color: var(--color-error);
+}
+
+.textareaError:focus {
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 2px rgb(191 57 32 / 20%);
+}
+
+.errorMessage {
+  color: var(--color-error);
+  font-size: var(--font-caption-size);
+  font-weight: var(--font-caption-weight);
+  font-family: var(--font-caption-family);
+  line-height: var(--font-caption-line-height);
+  margin-top: 4px;
+  min-height: 18px;
+}
+
+.required {
+  color: var(--color-error);
+}

@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SwiperSlide } from 'swiper/react';
+import { useParams } from 'react-router-dom';
 import Card from '@/widgets/Card';
 import CardPhoto from '@/widgets/CardPhoto';
 import { CarouselSlider } from '@/shared/ui/CarouselSlider';
 import ButtonDefault from '@/shared/ui/ButtonDefault';
-import { mockUser, similarUsers } from './mockData';
+import { similarUsers } from './mockData';
 import styles from './SelectedUserPage.module.css';
 import { useSelector } from '@/store/store';
 import Clock from '@/shared/assets/images/IconsSvg/Clock';
@@ -17,6 +18,11 @@ export default function SelectedUserPage() {
 
   const currentUser = useSelector((state) => state.auth.user);
   const navigate = useNavigate();
+  const { id } = useParams(); // Получаем ID пользователя из URL
+
+  // Здесь должна быть логика получения данных выбранного пользователя
+  // Пока используем заглушку или мок-данные
+  const userSelected = similarUsers[0] || {}; // Временное решение
 
   // Обработчики
   const handleLikeClick = (userId?: number, isLiked?: boolean) => {
@@ -47,25 +53,36 @@ export default function SelectedUserPage() {
     setIsModalOpen(false);
   };
 
-  // ==== ДЕТАЛЬНАЯ КАРТОЧКА ПОЛЬЗОВАТЕЛЯ ====
-  const userCard = <Card user={mockUser} variant="profile" />;
+  // ==== КАРТОЧКА ПОЛЬЗОВАТЕЛЯ ====
+  const userCard = (
+    <div className={styles.userCard}>
+      {/* Заглушка для карточки пользователя */}
+      <h2>{userSelected.name || 'Пользователь'}</h2>
+      <p>{userSelected.card_people?.skill || 'Навык не указан'}</p>
+    </div>
+  );
 
   // ==== ФОТОГРАФИИ ДЛЯ CardPhoto ====
   // 1. Слайдер (первая фотография)
   const photoSlider =
-    mockUser.card_people?.photos && mockUser.card_people.photos.length > 0 ? (
-      <CarouselSlider spaceBetween={0} slidesPerView={1} bgButtons="transparent" sliderId="photos">
+    userSelected.card_people?.photos && userSelected.card_people.photos.length > 0 ? (
+      <CarouselSlider
+        spaceBetween={0}
+        slidesPerView={1}
+        bgButtons="transparent"
+        sliderId="photos"
+      >
         <div>
-          {mockUser.card_people.photos.map((photo, index) => {
+          {userSelected.card_people.photos.map((photo, index) => {
             const urlParts = photo.split('/');
             const fileName = urlParts[urlParts.length - 1];
             const cleanFileName = fileName.split('.').shift() || `photo-${index}`;
 
             return (
-              <SwiperSlide key={`slide-${mockUser.id}-${cleanFileName}`}>
+              <SwiperSlide key={`slide-${userSelected.id}-${cleanFileName}`}>
                 <img
                   src={photo}
-                  alt={`${mockUser.card_people?.skill} - фото ${index + 1}`}
+                  alt={`${userSelected.card_people?.skill} - фото ${index + 1}`}
                   className={styles.photo}
                 />
               </SwiperSlide>
@@ -78,16 +95,16 @@ export default function SelectedUserPage() {
     );
 
   // 2. 3 статичные фотографии (начиная со второй)
-  const staticPhotos = mockUser.card_people?.photos?.slice(1, 4).map((photo, index) => {
+  const staticPhotos = userSelected.card_people?.photos?.slice(1, 4).map((photo, index) => {
     const urlParts = photo.split('/');
     const fileName = urlParts[urlParts.length - 1];
     const cleanFileName = fileName.split('.').shift() || `static-${index}`;
 
     return (
       <img
-        key={`static-${mockUser.id}-${cleanFileName}`}
+        key={`static-${userSelected.id}-${cleanFileName}`}
         src={photo}
-        alt={`${mockUser.card_people?.skill} - фото ${index + 2}`}
+        alt={`${userSelected.card_people?.skill} - фото ${index + 2}`}
         className={styles.staticPhoto}
       />
     );
@@ -96,8 +113,8 @@ export default function SelectedUserPage() {
   // ==== КАРТОЧКА НАВЫКА С ФОТО ====
   const skillCard = (
     <CardPhoto
-      user={mockUser}
-      title={mockUser.card_people?.skill || 'Навык'}
+      user={userSelected}
+      title={userSelected.card_people?.skill || 'Навык'}
       showTitle={false}
       onLike={handleLikeClick}
       onShare={handleShareClick}
@@ -144,8 +161,8 @@ export default function SelectedUserPage() {
             <SwiperSlide key={`user-${user.id}`}>
               <Card
                 user={user}
-                onDetailsClick={() => console.log('Details for', user.id)}
-                onLikeClick={() => console.log('Like for', user.id)}
+                // onDetailsClick={() => {}}
+                // onLikeClick={() => {}}
               />
             </SwiperSlide>
           ))}

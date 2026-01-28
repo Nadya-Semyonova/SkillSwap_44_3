@@ -7,13 +7,14 @@ import authReducer, {
 } from '../slices/authSlice/authSlice';
 
 import type { IUser } from '@/types/types';
+
 export interface AuthState {
   user: IUser | null;
   loading: boolean;
   error: string | null;
 }
 
-jest.mock('@shared/lib/cookies', () => ({
+jest.mock('@/shared/lib/cookies/cookies.ts', () => ({
   setTokenCookie: jest.fn(),
   getTokenCookie: jest.fn(),
   removeTokenCookie: jest.fn(),
