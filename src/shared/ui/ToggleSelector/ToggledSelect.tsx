@@ -1,24 +1,14 @@
 import { useState, useRef, useEffect } from 'react';
-import type { ReactNode } from 'react';
 import ChevronDown from '@/shared/assets/images/IconsSvg/ChevronDown';
 import ChevronUp from '@/shared/assets/images/IconsSvg/ChevronUp';
+import type { SelectorProps } from './libs/types';
 import styles from './ToggledSelect.module.css';
 
-interface ToggledSelectProps {
-  title?: string;
-  placeholder: string;
-  children: ReactNode;
-  active?: ReactNode;
-}
-
-function ToggledSelect({
-  title = '',
-  placeholder,
-  children,
-  active = null,
-}: ToggledSelectProps): JSX.Element {
+function ToggledSelect({ title, placeholder, children, className }: SelectorProps): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
   const selectorRef = useRef<HTMLDivElement>(null);
+
+  // Генерация уникального id для кнопки
   const buttonId = `toggled-select-${Math.random().toString(36).substr(2, 9)}`;
 
   const toggleDropdown = () => setIsOpen(!isOpen);
@@ -34,28 +24,27 @@ function ToggledSelect({
   }, []);
 
   return (
-    <div ref={selectorRef} className={styles.selectorContainer}>
-      {title && (
-        <label className={styles.label} htmlFor={buttonId}>
-          {title}
-        </label>
-      )}
+    <div ref={selectorRef} className={`${styles.selectorContainer} ${className || ''}`}>
+      <label className={styles.label} htmlFor={buttonId}>
+        {title}
+      </label>
 
       <button
         type="button"
         id={buttonId}
         className={styles.selectorWrapper}
         onClick={toggleDropdown}
+        aria-haspopup="listbox"
         aria-expanded={isOpen}
       >
         <div className={styles.selectorContent}>
-          <span className={styles.placeholder}>{active || placeholder}</span>
+          <span className={styles.placeholder}>{placeholder}</span>
           <span className={styles.iconWrapper}>{isOpen ? <ChevronUp /> : <ChevronDown />}</span>
         </div>
       </button>
 
       {isOpen && (
-        <div className={styles.dropdownMenu}>
+        <div className={styles.dropdownMenu} role="listbox" aria-labelledby={buttonId}>
           <div className={styles.dropdownContent}>{children}</div>
         </div>
       )}
