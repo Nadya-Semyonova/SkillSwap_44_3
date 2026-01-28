@@ -15,7 +15,6 @@
 }
 
 .profileSection {
-  display: flex;
   background-color: var(--color-bg-card);
   border-radius: 12px;
   padding: 12px;
