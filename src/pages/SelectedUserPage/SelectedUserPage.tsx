@@ -24,7 +24,9 @@ export default function SelectedUserPage() {
 
   if (userSelected) {
     // ==== ДЕТАЛЬНАЯ КАРТОЧКА ПОЛЬЗОВАТЕЛЯ ====
-    const userCard = <Card user={userSelected} variant="profile" />;
+    const userCard = (
+      <Card user={userSelected} variant="profile" fixedHeight="min(max(420px, 50vh), 460px)" />
+    );
 
     // ==== ФОТОГРАФИИ ДЛЯ CardPhoto ====
     // 1. Слайдер (первая фотография)

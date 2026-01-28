@@ -54,7 +54,7 @@
   --color-text-secondary: #69735d; /* подписи, вторичный текст */
   --color-text-disabled: #9ca197; /* disabled текст */
   --color-text-link: #508826; /* ссылки, активные состояния */
-  --color-border-search: rgba(80, 136, 38, 0.3);
+  --color-border-search: rgb(80 136 38 / 30%);
   --color-bg-main: #f9faf7; /* основной фон приложения */
   --color-bg-card: #fff; /* карточки, инпуты */
   --color-bg-disabled: #e4e8df; /* disabled элементы */

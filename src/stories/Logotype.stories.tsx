@@ -29,9 +29,9 @@ function LogotypeWithWrapper({
   return <Logotype />;
 }
 
-const meta: Meta<typeof Logotype> = {
+const meta: Meta<LogotypeStoryArgs> = {
   title: 'Components/Logotype',
-  component: Logotype,
+  component: LogotypeWithWrapper,
   tags: ['autodocs'],
   argTypes: {
     isLink: {
@@ -50,30 +50,32 @@ const meta: Meta<typeof Logotype> = {
       if: { arg: 'isLink', truthy: true },
     },
   },
-};
+} as Meta<typeof LogotypeWithWrapper>;
 
 export default meta;
 
-type Story = StoryObj<typeof Logotype & LogotypeStoryArgs>;
+type Story = StoryObj<typeof LogotypeWithWrapper>;
 
-/** Логотип по умолчанию. */
 export const Default: Story = {
   args: {
     isLink: false,
     href: '/',
     ariaLabel: 'SkillSwap — главная страница',
   },
-  render: (args) => <LogotypeWithWrapper {...(args as LogotypeStoryArgs)} />,
+  render: (args: LogotypeStoryArgs) => (
+    <LogotypeWithWrapper isLink={args.isLink} href={args.href} ariaLabel={args.ariaLabel} />
+  ),
 };
 
-/** **isLink** включён: логотип обёрнут в <a>. */
 export const AsLink: Story = {
   args: {
     isLink: true,
     href: '/',
     ariaLabel: 'SkillSwap — главная страница',
   },
-  render: (args) => <LogotypeWithWrapper {...(args as LogotypeStoryArgs)} />,
+  render: (args: LogotypeStoryArgs) => (
+    <LogotypeWithWrapper isLink={args.isLink} href={args.href} ariaLabel={args.ariaLabel} />
+  ),
   parameters: {
     docs: {
       description: {
@@ -84,12 +86,13 @@ export const AsLink: Story = {
   },
 };
 
-/** Ссылка с кастомным aria-label. */
 export const AsLinkWithAriaLabel: Story = {
   args: {
     isLink: true,
     href: '/',
     ariaLabel: 'SkillSwap — вернуться на главную',
   },
-  render: (args) => <LogotypeWithWrapper {...(args as LogotypeStoryArgs)} />,
+  render: (args: LogotypeStoryArgs) => (
+    <LogotypeWithWrapper isLink={args.isLink} href={args.href} ariaLabel={args.ariaLabel} />
+  ),
 };

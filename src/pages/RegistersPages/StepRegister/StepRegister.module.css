@@ -1,18 +1,8 @@
-/* ============================================
-   1. ОБЩИЕ КОНТЕЙНЕРЫ И LAYOUT
-   ============================================ */
-
 .content {
   display: flex;
   justify-content: center;
   margin-block-start: 32px;
 }
-
-/* ============================================
-   2. БАЗОВЫЕ КОМПОНЕНТЫ
-   ============================================ */
-
-/* --- 2.1. Формы --- */
 
 .form {
   background-color: var(--color-bg-card);
@@ -79,6 +69,7 @@
   background-color: var(--color-accent);
   color: var(--color-text-primary);
 }
+
 .buttonsRow {
   display: flex;
   gap: 20px;
@@ -143,6 +134,7 @@
 .previewText {
   max-width: 436px;
 }
+
 .uploadText {
   color: var(--color-text-secondary);
   text-align: center;
@@ -166,16 +158,10 @@
   cursor: pointer;
 }
 
-.loginButton {
-}
-
 /* --- 3.3. Модификаторы онбординга --- */
 
 .onboardingStep2 {
   gap: 40px;
-}
-
-.onboardingTitleStep1 {
 }
 
 .onboardingTextStep1 {
@@ -246,10 +232,6 @@
   color: var(--color-text-primary);
   letter-spacing: 0.2px;
 }
-
-/* ============================================
-   5. УНИКАЛЬНЫЕ СТИЛИ STEP 2
-   ============================================ */
 
 .avatarContainer {
   position: relative;
@@ -330,10 +312,6 @@
   padding-right: 60px;
   align-self: center;
 }
-
-/* ============================================
-   6. УНИКАЛЬНЫЕ СТИЛИ STEP 3
-   ============================================ */
 
 .upload {
   width: 100%;

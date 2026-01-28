@@ -1,13 +1,12 @@
 .app {
   min-height: 100vh;
-
-  /* Base typography */
+  min-width: 470px;
+  max-width: 1440px;
+  margin: 0 auto;
   font-family: var(--font-body-family);
   font-size: var(--font-body-size);
   line-height: var(--font-body-line-height);
   font-weight: var(--font-body-weight);
-
-  /* Base colors */
   color: var(--color-text-primary);
   background-color: var(--color-bg-main);
 }

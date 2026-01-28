@@ -29,7 +29,7 @@
   font-size: var(--font-h2-size);
   font-weight: var(--font-body-weight);
   font-family: var(--font-body-family);
-  color:var(--color-text-primary);
+  color: var(--color-text-primary);
 }
 
 .closeButton {
@@ -42,7 +42,7 @@
   height: 30px;
   border-radius: 50%;
   transition: background-color 0.2s;
-  padding: 0; 
+  padding: 0;
 }
 
 .closeButton svg {
@@ -73,7 +73,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
-  place-items: center;
+  justify-items: center;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent) transparent;
 }
 
 .cardsContainer::-webkit-scrollbar {
@@ -93,9 +95,4 @@
 
 .cardsContainer::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent-hover);
-}
-
-.cardsContainer {
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-accent) transparent;
 }

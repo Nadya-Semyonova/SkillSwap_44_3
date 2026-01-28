@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from '@layouts/layout';
 import { ROUTES } from '@shared/lib/constants/routes';
 import { HomePage } from '@pages/HomePage/HomePage';
+import LoginPage from '@pages/LoginPage/LoginPage';
+import RegisterPage from '@pages/RegistersPages/RegisterPage';
 
 import { lazy, Suspense } from 'react';
 import { LAZY } from '@shared/lib/constants/lazyApp';
@@ -11,8 +13,6 @@ const ProfilePage = lazy(() => import('@pages/ProfilePage/ProfilePage'));
 const SelectedUserPage = lazy(() => import('@pages/SelectedUserPage/SelectedUserPage'));
 const ErrorPage = lazy(() => import('@pages/ErrorPage/ErrorPage'));
 const NotFoundPage = lazy(() => import('@pages/NotFoundPage/NotFoundPage'));
-const RegisterPage = lazy(() => import('@pages/RegistersPages/RegisterPage'));
-const LoginPage = lazy(() => import('@pages/LoginPage/LoginPage'));
 
 export default function AppRoute() {
   return (
@@ -62,22 +62,9 @@ export default function AppRoute() {
           />
         </Route>
 
-        <Route
-          path={ROUTES.LOGIN}
-          element={
-            <Suspense fallback={<div>{LAZY.PAGE}</div>}>
-              <LoginPage />
-            </Suspense>
-          }
-        />
-        <Route
-          path={ROUTES.REGISTER}
-          element={
-            <Suspense fallback={<div>{LAZY.PAGE}</div>}>
-              <RegisterPage />
-            </Suspense>
-          }
-        />
+        <Route path={ROUTES.LOGIN} element={<LoginPage />} />
+        <Route path={ROUTES.REGISTER} element={<RegisterPage />} />
+
         <Route path={ROUTES.PAGE} element={<TestPage />} />
       </Routes>
     </BrowserRouter>
