@@ -3,7 +3,6 @@ import HeaderRegister from '../../shared/ui/HeaderAuth/HeaderRegister';
 import StepRegister1 from './StepRegister/StepRegister1';
 import StepRegister2 from './StepRegister/StepRegister2';
 import StepRegister3 from './StepRegister/StepRegister3';
-import styles from './RegisterPage.module.css';
 
 type RegisterStep = 0 | 1 | 2 | 3;
 
@@ -27,9 +26,9 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className={styles.container}>
+    <>
       <HeaderRegister currentStep={step} />
       {renderStep()}
-    </div>
+    </>
   );
 }

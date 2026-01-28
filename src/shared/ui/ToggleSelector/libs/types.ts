@@ -2,5 +2,5 @@ export interface SelectorProps {
   title: string;
   placeholder: string;
   children: React.ReactNode;
-  active: string;
+  className?: string;
 }
