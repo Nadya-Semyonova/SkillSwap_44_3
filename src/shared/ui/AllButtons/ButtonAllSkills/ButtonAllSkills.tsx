@@ -22,7 +22,7 @@ export default function ButtonAllSkills({
       aria-label={text}
     >
       {text}
-      <div>{icon}</div>
+      <div className={styles.iconWrapper}>{icon}</div>
     </button>
   );
 }
