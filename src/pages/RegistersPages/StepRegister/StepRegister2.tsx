@@ -10,18 +10,56 @@ import styles from './StepRegister.module.css';
 type Props = {
   onNext: () => void;
   onBack: () => void;
+
+  name: string;
+  onNameChange: (value: string) => void;
+
+  dateOfBirth: string;
+  onDateOfBirthChange: (value: string) => void;
+
+  gender: string;
+  onGenderChange: (value: string) => void;
+
+  city: string;
+  cities: string[];
+  onCityChange: (value: string) => void;
+
+  category: string;
+  categories: string[];
+  onCategoryChange: (value: string) => void;
+
+  subcategory: string;
+  subcategories: string[];
+  onSubcategoryChange: (value: string) => void;
 };
 
-function StepRegister2({ onNext, onBack }: Props) {
+function StepRegister2({
+  onNext,
+  onBack,
+
+  name,
+  onNameChange,
+
+  dateOfBirth,
+  onDateOfBirthChange,
+
+  gender,
+  onGenderChange,
+
+  city,
+  cities,
+  onCityChange,
+
+  category,
+  categories,
+  onCategoryChange,
+
+  subcategory,
+  subcategories,
+  onSubcategoryChange,
+}: Props) {
   const handleAvatarClick = () => {};
   const handleAvatarAdd = () => {};
-  const handleGenderNotSpecified = () => {};
-  const handleGenderMale = () => {};
-  const handleGenderFemale = () => {};
-  const handleCitySelect = () => {};
-  const handleSkillCategorySelect = () => {};
-  const handleSkillSubcategorySelect = () => {};
-  const handleNameChange = () => {};
 
   return (
     <div className={styles.content}>
@@ -51,24 +89,26 @@ function StepRegister2({ onNext, onBack }: Props) {
             className={styles.inputField}
             title="Имя"
             placeholder="Введите ваше имя"
-            onChange={handleNameChange}
+            value={name}
+            onChange={onNameChange}
           />
 
           <div className={styles.rowFields}>
-            <UserSelector />
+            <UserSelector bithDay={dateOfBirth} setBithDay={onDateOfBirthChange} />
 
             <ToggledSelect
               className={styles.toggledSelectField}
               title="Пол"
-              placeholder="Не указан"
+              placeholder={gender || 'Не указан'}
+              active={gender}
             >
-              <button type="button" onClick={handleGenderNotSpecified}>
+              <button type="button" onClick={() => onGenderChange('Не указан')}>
                 Не указан
               </button>
-              <button type="button" onClick={handleGenderMale}>
+              <button type="button" onClick={() => onGenderChange('Мужской')}>
                 Мужской
               </button>
-              <button type="button" onClick={handleGenderFemale}>
+              <button type="button" onClick={() => onGenderChange('Женский')}>
                 Женский
               </button>
             </ToggledSelect>
@@ -77,32 +117,42 @@ function StepRegister2({ onNext, onBack }: Props) {
           <ToggledSelect
             className={styles.toggledSelectField}
             title="Город"
-            placeholder="Не указан"
+            placeholder={city || 'Не указан'}
+            active={city}
           >
-            <button type="button" onClick={handleCitySelect}>
-              Не указан
-            </button>
+            {cities.map((c) => (
+              <button key={c} type="button" onClick={() => onCityChange(c)}>
+                {c}
+              </button>
+            ))}
           </ToggledSelect>
 
           <ToggledSelect
             className={styles.toggledSelectField}
             title="Категория навыка, которому хотите научиться"
-            placeholder="Выберите категорию"
+            placeholder={category || 'Выберите категорию'}
+            active={category}
           >
-            <button type="button" onClick={handleSkillCategorySelect}>
-              Выберите категорию
-            </button>
+            {categories.map((cat) => (
+              <button key={cat} type="button" onClick={() => onCategoryChange(cat)}>
+                {cat}
+              </button>
+            ))}
           </ToggledSelect>
 
           <ToggledSelect
             className={styles.toggledSelectField}
             title="Подкатегория навыка, которому хотите научиться"
-            placeholder="Выберите подкатегорию"
+            placeholder={subcategory || 'Выберите подкатегорию'}
+            active={subcategory}
           >
-            <button type="button" onClick={handleSkillSubcategorySelect}>
-              Выберите подкатегорию
-            </button>
+            {subcategories.map((sub) => (
+              <button key={sub} type="button" onClick={() => onSubcategoryChange(sub)}>
+                {sub}
+              </button>
+            ))}
           </ToggledSelect>
+
           <div className={styles.buttonsRow}>
             <ButtonDefault
               name="Назад"
