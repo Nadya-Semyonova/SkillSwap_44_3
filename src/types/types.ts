@@ -23,6 +23,7 @@ export interface IButtonDefault {
   variant?: 'outline' | 'continue';
   ariaLabel?: string;
   children?: React.ReactNode;
+  status?: boolean;
 }
 
 export interface ChildrenModalProps {
@@ -66,4 +67,13 @@ export interface IInput {
   value?: string;
   type?: 'text' | 'email' | 'password' | 'number' | 'tel';
   disabled?: boolean;
+}
+
+export interface IEditUser {
+  email: string;
+  name: string;
+  dateOfBirth: string;
+  gender: string;
+  city: string;
+  about: string;
 }

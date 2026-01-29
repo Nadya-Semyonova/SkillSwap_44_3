@@ -3,4 +3,5 @@ export interface SelectorProps {
   placeholder: string;
   children: React.ReactNode;
   className?: string;
+  active: string;
 }

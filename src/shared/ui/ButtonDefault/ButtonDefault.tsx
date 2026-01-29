@@ -8,6 +8,7 @@ export default function ButtonDefault({
   type,
   ariaLabel,
   children,
+  status = true,
 }: IButtonDefault) {
   if (handleClick) {
     return (
@@ -16,6 +17,7 @@ export default function ButtonDefault({
         onClick={() => handleClick()}
         className={`${style.button} ${styleButton}`}
         aria-label={ariaLabel}
+        disabled={!status}
       >
         {children || name}
       </button>
