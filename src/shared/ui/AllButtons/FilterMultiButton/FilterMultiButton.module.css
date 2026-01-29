@@ -16,6 +16,7 @@
 
 .chevronContainer {
   margin-left: auto;
+  display: flex;
 }
 
 .chevronContainerActive {

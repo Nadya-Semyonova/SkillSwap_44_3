@@ -12,5 +12,9 @@
   line-height: var(--font-body-line-height);
   text-decoration: none;
   cursor: pointer;
-  column-gap: 12px;
+  column-gap: 4px;
+}
+
+.iconWrapper {
+  display: flex;
 }
