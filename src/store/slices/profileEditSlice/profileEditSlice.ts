@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import type { IUser } from '@/types/types';
+import type { IEditUser, IUser } from '@/types/types';
 import { getUserFromLocalStorage, updateUserInLocalStorage } from '@/shared/lib/localstorage';
 
 interface ProfileEditState {
-  user: IUser | null;
+  user: IEditUser | null;
   isLoading: boolean;
   error: string | null;
 }
@@ -17,7 +17,12 @@ const sleep = (ms: number) =>
     setTimeout(resolve, ms);
   });
 
-export const saveProfileEdit = createAsyncThunk<IUser, void, { rejectValue: string }>(
+const calculateAge = (date: string) => {
+  console.log(date);
+  return 0;
+};
+
+export const saveProfileEdit = createAsyncThunk<IEditUser, void, { rejectValue: string }>(
   'profileEdit/saveProfileEdit',
   async (_, { getState, rejectWithValue }) => {
     try {
@@ -30,13 +35,25 @@ export const saveProfileEdit = createAsyncThunk<IUser, void, { rejectValue: stri
 
       await sleep(300);
 
-      const updatedUser = updateUserInLocalStorage(user);
+      // Приводим IEditUser к Partial<IUser> и добавляем расчет возраста
+      const updatedUser = updateUserInLocalStorage({
+        ...user,
+        age: calculateAge(user.dateOfBirth),
+      });
 
       if (!updatedUser) {
         return rejectWithValue('Ошибка при сохранении данных');
       }
 
-      return updatedUser;
+      // Возвращаем обновленные данные
+      return {
+        email: updatedUser.email,
+        name: updatedUser.name,
+        dateOfBirth: updatedUser.dateOfBirth,
+        gender: updatedUser.gender,
+        city: updatedUser.city,
+        about: updatedUser.about,
+      };
     } catch {
       return rejectWithValue('Ошибка при сохранении данных');
     }
@@ -53,16 +70,8 @@ const profileEditSlice = createSlice({
   name: 'profileEdit',
   initialState,
   reducers: {
-    setUserData(state: ProfileEditState, action: PayloadAction<IUser>) {
+    setUserData(state: ProfileEditState, action: PayloadAction<IEditUser>) {
       state.user = action.payload;
-    },
-    updateUserField<T extends keyof IUser>(
-      state: ProfileEditState,
-      action: PayloadAction<{ field: T; value: IUser[T] }>
-    ) {
-      if (state.user) {
-        state.user[action.payload.field] = action.payload.value;
-      }
     },
   },
   extraReducers: (builder) => {
@@ -81,6 +90,6 @@ const profileEditSlice = createSlice({
   },
 });
 
-export const { setUserData, updateUserField } = profileEditSlice.actions;
+export const { setUserData } = profileEditSlice.actions;
 
 export default profileEditSlice.reducer;

@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import userPhoto from '@shared/assets/images/userPhoto.png';
 import Edit from '@/shared/assets/images/IconsSvg/Edit';
 import GaleryEdit from '@/shared/assets/images/IconsSvg/GaleryEdit';
-import { useSelector, type RootState } from '@/store/store';
+import { useDispatch, useSelector, type RootState } from '@/store/store';
 import { Input } from '@/shared/ui/useInput/Input';
 import ButtonDefault from '@/shared/ui/ButtonDefault/ButtonDefault';
 import ToggledSelect from '@/shared/ui/ToggleSelector/ToggledSelect';
@@ -10,21 +10,43 @@ import { UserSelector } from '@/features/auth/UserCalendar/UserSelector';
 
 import styles from '@/features/profile/ProfileData.module.css';
 import { profileText, genderOptions } from '@/features/profile/ProfileDataConstants';
+import { saveProfileEdit, setUserData } from '@/store/slices/profileEditSlice/profileEditSlice';
+import type { IEditUser } from '@/types/types';
 
 function ProfileData() {
   const user = useSelector((state: RootState) => state.auth.user);
-
-  const [about, setAbout] = useState(user?.about ?? '');
-  const [gender, setGender] = useState(user?.gender ?? '');
-
   const cities = useSelector((state: RootState) => state.users.cities ?? []);
-  const [city, setCity] = useState(user?.city ?? '');
+  const [email, setEmail] = useState<string>(user?.email || '');
+  const [name, setName] = useState<string>(user?.name || '');
+  const [bithDay, setBirthDay] = useState<string>(user?.dateOfBirth || '');
+  const [gender, setGender] = useState(user?.gender || '');
+  const [city, setCity] = useState(user?.city || '');
+  const [about, setAbout] = useState(user?.about || '');
+  const dispatch = useDispatch();
 
-  const genderLabel =
-    genderOptions.find((option) => option.value === gender)?.label ?? profileText.genderPlaceholder;
+  const genderLabel = useMemo(
+    () =>
+      genderOptions.find((option) => option.value === gender)?.label ??
+      profileText.genderPlaceholder,
+    [gender]
+  );
 
-  const isGenderSelected = Boolean(gender);
-  const cityPlaceholder = city || profileText.cityPlaceholder;
+  const isGenderSelected = useMemo(() => Boolean(gender), [gender]);
+
+  const cityPlaceholder = useMemo(() => city || profileText.cityPlaceholder, [city]);
+
+  const handleClickSave = () => {
+    const userEdit: IEditUser = {
+      email,
+      name,
+      dateOfBirth: bithDay,
+      gender,
+      city,
+      about,
+    };
+    dispatch(setUserData(userEdit));
+    dispatch(saveProfileEdit());
+  };
 
   return (
     <main className={styles.profileContainer}>
@@ -34,8 +56,12 @@ function ProfileData() {
             <p className={styles.label}>{profileText.email}</p>
 
             <div className={styles.inputContainer}>
-              <Input type="email" value={user?.email ?? ''} className={styles.inputFullWidth} />
-
+              <Input
+                type="email"
+                value={email}
+                className={styles.inputFullWidth}
+                onChange={setEmail}
+              />
               <span className={styles.editIcon}>
                 <Edit />
               </span>
@@ -53,7 +79,7 @@ function ProfileData() {
           <p className={styles.label}>{profileText.name}</p>
 
           <div className={styles.inputContainer}>
-            <Input value={user?.name ?? ''} className={styles.inputFullWidth} />
+            <Input value={name} className={styles.inputFullWidth} onChange={setName} />
 
             <span className={styles.editIcon}>
               <Edit />
@@ -63,7 +89,7 @@ function ProfileData() {
 
         <div className={styles.infoDateGender}>
           <div className={styles.formRow}>
-            <UserSelector />
+            <UserSelector bithDay={bithDay} setBithDay={setBirthDay} />
           </div>
 
           <div
@@ -74,7 +100,7 @@ function ProfileData() {
             <ToggledSelect
               title={profileText.genderTitle}
               placeholder={genderLabel}
-              active={user?.gender}
+              active={gender}
             >
               <div className={styles.optionsStack}>
                 {genderOptions.map((option) => (
@@ -84,7 +110,7 @@ function ProfileData() {
                     className={`${styles.dropdownOption} ${
                       gender === option.value ? styles.optionActive : ''
                     }`}
-                    onClick={() => setGender(option.value)}
+                    onClick={() => setGender(option.label)}
                   >
                     {option.label}
                   </button>
@@ -97,11 +123,7 @@ function ProfileData() {
         <div
           className={`${styles.formRow} ${styles.citySelect} ${city ? styles.citySelectFilled : ''}`}
         >
-          <ToggledSelect
-            title={profileText.cityTitle}
-            placeholder={cityPlaceholder}
-            active={user?.city}
-          >
+          <ToggledSelect title={profileText.cityTitle} placeholder={cityPlaceholder} active={city}>
             <div className={styles.optionsStack}>
               {cities.map((cityName) => (
                 <button
@@ -141,7 +163,7 @@ function ProfileData() {
             name={profileText.save}
             type="button"
             styleButton={styles.saveButton}
-            handleClick={() => {}}
+            handleClick={handleClickSave}
           />
         </div>
       </form>

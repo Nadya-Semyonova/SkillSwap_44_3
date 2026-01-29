@@ -67,3 +67,12 @@ export interface IInput {
   type?: 'text' | 'email' | 'password' | 'number' | 'tel';
   disabled?: boolean;
 }
+
+export interface IEditUser {
+  email: string;
+  name: string;
+  dateOfBirth: string;
+  gender: string;
+  city: string;
+  about: string;
+}

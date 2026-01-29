@@ -4,7 +4,13 @@ import ChevronUp from '@/shared/assets/images/IconsSvg/ChevronUp';
 import type { SelectorProps } from './libs/types';
 import styles from './ToggledSelect.module.css';
 
-function ToggledSelect({ title, placeholder, children, className }: SelectorProps): JSX.Element {
+function ToggledSelect({
+  title,
+  placeholder,
+  children,
+  className,
+  active, // строка с изначально выбранным значением
+}: SelectorProps): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
   const selectorRef = useRef<HTMLDivElement>(null);
 
@@ -38,7 +44,10 @@ function ToggledSelect({ title, placeholder, children, className }: SelectorProp
         aria-expanded={isOpen}
       >
         <div className={styles.selectorContent}>
-          <span className={styles.placeholder}>{placeholder}</span>
+          {/* Показываем active, если он есть, иначе placeholder */}
+          <span className={`${styles.displayText} ${active ? styles.activeText : ''}`}>
+            {active || placeholder}
+          </span>
           <span className={styles.iconWrapper}>{isOpen ? <ChevronUp /> : <ChevronDown />}</span>
         </div>
       </button>
