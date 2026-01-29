@@ -23,6 +23,7 @@ export interface IButtonDefault {
   variant?: 'outline' | 'continue';
   ariaLabel?: string;
   children?: React.ReactNode;
+  status?: boolean;
 }
 
 export interface ChildrenModalProps {

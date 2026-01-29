@@ -15,7 +15,8 @@ import type { IEditUser } from '@/types/types';
 
 function ProfileData() {
   const user = useSelector((state: RootState) => state.auth.user);
-  const cities = useSelector((state: RootState) => state.users.cities ?? []);
+  const citiesData = useSelector((state: RootState) => state.users.cities);
+  const cities = useMemo(() => citiesData || [], [citiesData]);
   const [email, setEmail] = useState<string>(user?.email || '');
   const [name, setName] = useState<string>(user?.name || '');
   const [bithDay, setBirthDay] = useState<string>(user?.dateOfBirth || '');
@@ -34,6 +35,14 @@ function ProfileData() {
   const isGenderSelected = useMemo(() => Boolean(gender), [gender]);
 
   const cityPlaceholder = useMemo(() => city || profileText.cityPlaceholder, [city]);
+
+  const buttonActive =
+    email !== user?.email ||
+    name !== user.name ||
+    bithDay !== user.dateOfBirth ||
+    gender !== user.gender ||
+    city !== user.city ||
+    about !== user.about;
 
   const handleClickSave = () => {
     const userEdit: IEditUser = {
@@ -162,8 +171,9 @@ function ProfileData() {
           <ButtonDefault
             name={profileText.save}
             type="button"
-            styleButton={styles.saveButton}
+            styleButton={`${styles.saveButton} ${buttonActive ? styles.saveButtonActive : ''}`} // доделать стили
             handleClick={handleClickSave}
+            status={buttonActive}
           />
         </div>
       </form>

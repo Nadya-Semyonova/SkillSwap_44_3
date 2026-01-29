@@ -1,16 +1,12 @@
 import { createAsyncThunk, createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import type { IEditUser, IUser } from '@/types/types';
-import { getUserFromLocalStorage, updateUserInLocalStorage } from '@/shared/lib/localstorage';
+import type { IEditUser } from '@/types/types';
+import { updateUserInLocalStorage } from '@/shared/lib/localstorage';
 
 interface ProfileEditState {
   user: IEditUser | null;
   isLoading: boolean;
   error: string | null;
 }
-
-const getInitialUser = (): IUser | null => {
-  return getUserFromLocalStorage();
-};
 
 const sleep = (ms: number) =>
   new Promise<void>((resolve) => {
@@ -35,7 +31,6 @@ export const saveProfileEdit = createAsyncThunk<IEditUser, void, { rejectValue: 
 
       await sleep(300);
 
-      // Приводим IEditUser к Partial<IUser> и добавляем расчет возраста
       const updatedUser = updateUserInLocalStorage({
         ...user,
         age: calculateAge(user.dateOfBirth),
@@ -45,7 +40,6 @@ export const saveProfileEdit = createAsyncThunk<IEditUser, void, { rejectValue: 
         return rejectWithValue('Ошибка при сохранении данных');
       }
 
-      // Возвращаем обновленные данные
       return {
         email: updatedUser.email,
         name: updatedUser.name,
@@ -61,7 +55,7 @@ export const saveProfileEdit = createAsyncThunk<IEditUser, void, { rejectValue: 
 );
 
 const initialState: ProfileEditState = {
-  user: getInitialUser(),
+  user: null,
   isLoading: false,
   error: null,
 };

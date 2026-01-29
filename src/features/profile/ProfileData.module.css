@@ -127,6 +127,10 @@
   cursor: pointer;
 }
 
+.saveButtonActive {
+  background-color: red; /* mock */
+}
+
 .avatarSection {
   position: relative;
   width: 244px;
