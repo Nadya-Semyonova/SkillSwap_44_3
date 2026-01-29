@@ -84,4 +84,5 @@ describe('useInfiniteScroll', () => {
     act(() => scrollEvent());
     expect(onLoadMore).not.toHaveBeenCalled();
   });
+  
 });
