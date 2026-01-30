@@ -13,6 +13,7 @@ import registerReducer, {
   setSkillOff,
   registerUser,
 } from '../slices/registerUserSlice.ts/registerUserSlice';
+import type { RegistrationState } from '../slices/registerUserSlice.ts/registerUserSlice';
 
 jest.mock('@/shared/lib/cookies/cookies', () => ({
   setTokenCookie: jest.fn(),
@@ -44,7 +45,7 @@ const mockUser = {
 };
 
 describe('registerUserSlice', () => {
-  const initialState = {
+  const initialState: RegistrationState = {
     avatar: '',
     name: '',
     city: '',
@@ -140,7 +141,7 @@ describe('registerUserSlice', () => {
         error: { message: errorMessage },
       };
       const state = registerReducer(
-        { ...initialState, loading: true },
+        { ...initialState, loading: true } as RegistrationState,
         action as unknown as TestAction
       );
       expect(state.loading).toBe(false);
@@ -170,7 +171,7 @@ describe('registerUserSlice', () => {
     });
 
     test('Должен очищать error при new pending', () => {
-      let state = {
+      let state: RegistrationState = {
         ...initialState,
         error: 'Предыдущая ошибка',
         loading: false,
