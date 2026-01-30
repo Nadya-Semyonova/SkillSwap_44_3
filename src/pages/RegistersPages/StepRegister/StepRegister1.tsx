@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import ButtonDefault from '@shared/ui/ButtonDefault';
 import { Input } from '@shared/ui/useInput';
 import Google from '@/shared/assets/images/IconsSvg/Google';
@@ -8,13 +7,14 @@ import LightBulb from '@/shared/assets/images/IllustrationsSvg/LightBulb';
 import styles from './StepRegister.module.css';
 
 type Props = {
+  email: string;
+  password: string;
+  onEmailChange: (value: string) => void;
+  onPasswordChange: (value: string) => void;
   onNext: () => void;
 };
 
-function StepRegister1({ onNext }: Props) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
+function StepRegister1({ email, password, onEmailChange, onPasswordChange, onNext }: Props) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onNext();
@@ -56,7 +56,7 @@ function StepRegister1({ onNext }: Props) {
               title="Email"
               placeholder="Введите email"
               value={email}
-              onChange={setEmail}
+              onChange={onEmailChange}
               type="email"
             />
 
@@ -65,7 +65,7 @@ function StepRegister1({ onNext }: Props) {
               title="Пароль"
               placeholder="Придумайте надежный пароль"
               value={password}
-              onChange={setPassword}
+              onChange={onPasswordChange}
               type="password"
             />
 

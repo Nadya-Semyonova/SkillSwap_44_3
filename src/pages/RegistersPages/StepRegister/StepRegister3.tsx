@@ -8,11 +8,41 @@ import styles from './StepRegister.module.css';
 
 type Props = {
   onBack: () => void;
+  onNext: () => void;
+
+  skillName: string;
+  onSkillNameChange: (value: string) => void;
+
+  category: string;
+  categories: string[];
+  onCategoryChange: (value: string) => void;
+
+  subcategory: string;
+  subcategories: string[];
+  onSubcategoryChange: (value: string) => void;
+
+  description: string;
+  onDescriptionChange: (value: string) => void;
 };
 
-function StepRegister3({ onBack }: Props) {
-  const handleSkillSubcategorySelect = () => {};
-  const handleSkillCategorySelect = () => {};
+function StepRegister3({
+  onBack,
+  onNext,
+
+  skillName,
+  onSkillNameChange,
+
+  category,
+  categories,
+  onCategoryChange,
+
+  subcategory,
+  subcategories,
+  onSubcategoryChange,
+
+  description,
+  onDescriptionChange,
+}: Props) {
   return (
     <div className={styles.content}>
       <div className={styles.containerForm}>
@@ -21,25 +51,34 @@ function StepRegister3({ onBack }: Props) {
             className={styles.inputField}
             title="Название навыка"
             placeholder="Введите название вашего навыка"
+            value={skillName}
+            onChange={onSkillNameChange}
           />
 
           <ToggledSelect
             className={styles.toggledSelectField}
             title="Категория навыка"
-            placeholder="Выберите категорию навыка"
+            placeholder={category || 'Выберите категорию навыка'}
+            active={category}
           >
-            <button type="button" onClick={handleSkillCategorySelect}>
-              Выберите категорию
-            </button>
+            {categories.map((cat) => (
+              <button key={cat} type="button" onClick={() => onCategoryChange(cat)}>
+                {cat}
+              </button>
+            ))}
           </ToggledSelect>
+
           <ToggledSelect
             className={styles.toggledSelectField}
             title="Подкатегория навыка"
-            placeholder="Выберите подкатегорию навыка"
+            placeholder={subcategory || 'Выберите подкатегорию навыка'}
+            active={subcategory}
           >
-            <button type="button" onClick={handleSkillSubcategorySelect}>
-              Выберите подкатегорию
-            </button>
+            {subcategories.map((sub) => (
+              <button key={sub} type="button" onClick={() => onSubcategoryChange(sub)}>
+                {sub}
+              </button>
+            ))}
           </ToggledSelect>
 
           <Textarea
@@ -48,7 +87,10 @@ function StepRegister3({ onBack }: Props) {
             title="Описание"
             placeholder="Коротко опишите, чему можете научить"
             maxLength={250}
+            value={description}
+            onChange={onDescriptionChange}
           />
+
           <div className={styles.upload}>
             <p className={styles.uploadText}>Перетащите или выберите изображения навыка</p>
 
@@ -59,6 +101,7 @@ function StepRegister3({ onBack }: Props) {
               <span>Выбрать изображения</span>
             </a>
           </div>
+
           <div className={styles.actions}>
             <ButtonDefault
               name="Назад"
@@ -69,7 +112,7 @@ function StepRegister3({ onBack }: Props) {
             <ButtonDefault
               name="Продолжить"
               styleButton={`${styles.button} ${styles.buttonContinue} ${styles.buttonStep3}`}
-              handleClick={() => {}}
+              handleClick={onNext}
             />
           </div>
         </div>
