@@ -6,10 +6,7 @@ const scrollEvent = () => window.dispatchEvent(new Event('scroll'));
 describe('useInfiniteScroll', () => {
   const originalScrollY = Object.getOwnPropertyDescriptor(window, 'scrollY');
   const originalInnerHeight = Object.getOwnPropertyDescriptor(window, 'innerHeight');
-  const originalOffsetHeight = Object.getOwnPropertyDescriptor(
-    document.body,
-    'offsetHeight'
-  );
+  const originalOffsetHeight = Object.getOwnPropertyDescriptor(document.body, 'offsetHeight');
 
   function setWindowDimensions(innerHeight: number, scrollY: number, offsetHeight: number) {
     Object.defineProperty(window, 'innerHeight', { value: innerHeight, writable: true });
@@ -85,4 +82,3 @@ describe('useInfiniteScroll', () => {
     expect(onLoadMore).not.toHaveBeenCalled();
   });
 });
-
