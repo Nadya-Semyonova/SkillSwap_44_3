@@ -1,0 +1,14 @@
+.wrapper {
+  padding-block-end: 32px;
+  width: min-content;
+  display: grid;
+  gap: 32px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 24px;
+  align-items: start;
+  max-inline-size: 100%;
+}
