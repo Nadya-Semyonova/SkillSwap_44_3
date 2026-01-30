@@ -1158,6 +1158,327 @@
         "Продажи и переговоры",
         "Предпринимательство"
       ]
+    },
+    {
+      "id": 41,
+      "liked": 5,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Marcus&backgroundColor=b6e3f4",
+      "name": "Евгений",
+      "city": "Брянск",
+      "age": 31,
+      "dateOfBirth": "14-03-1994",
+      "gender": "Мужской",
+      "email": "evgeniy94@email.com",
+      "password": "Mq2wE7rT3yU9iO4p",
+      "createdAt": "2023-08-14",
+      "about": "Работаю в области лидерства и управления. Готов делиться опытом и учиться новому!",
+      "card_people": {
+        "skill": "Лидерство",
+        "category": "Бизнес и карьера",
+        "subcategory": "Лидерство",
+        "description": "Руководил командами в международных компаниях и понимаю, что настоящий лидер вдохновляет, а не приказывает. Поделюсь принципами эмоционального интеллекта, методами развития команды и способами влиять без власти. Научу выстраивать доверие и создавать культуру, где люди хотят работать.",
+        "photos": [
+          "https://c.pxhere.com/images/75/62/4a4a01028a07fc42b82cb86712d6-1433619.jpg!d",
+          "https://c.pxhere.com/images/4c/dc/b8241ba96f9b05d4fbe13846acb5-1446037.jpg!d",
+          "https://c.pxhere.com/photos/c9/7c/startup_start_up_people_silicon_valley_teamwork_business_team_office-764669.jpg!d",
+          "https://c.pxhere.com/photos/ce/5d/startup_meeting_brainstorming_business_teamwork_team_people_office-764425.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Лидерство",
+        "Управление командой",
+        "Коучинг",
+        "Личностное развитие"
+      ]
+    },
+    {
+      "id": 42,
+      "liked": 6,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Julian&backgroundColor=b6e3f4",
+      "name": "Раиса",
+      "city": "Курск",
+      "age": 44,
+      "dateOfBirth": "02-07-1981",
+      "gender": "Женский",
+      "email": "raisa81@email.com",
+      "password": "Xa1sD4fG7hJ2kL5z",
+      "createdAt": "2022-11-30",
+      "about": "Обожаю языки и путешествия. Могу помочь с английским — а сама хочу выучить испанский!",
+      "card_people": {
+        "skill": "Английский",
+        "category": "Иностранные языки",
+        "subcategory": "Английский",
+        "description": "Живу в англоязычной стране и свободно говорю по-английски уже 12 лет. Помогу преодолеть языковой барьер, научу произношению через прямое общение и поделюсь лайфхаками для быстрого улучшения. Делаю обучение весёлым — без занудных грамматических таблиц, только живой язык.",
+        "photos": [
+          "https://c.pxhere.com/photos/38/a6/teacher_classroom_school_education_learning_teaching_students_people-800355.jpg!d",
+          "https://c.pxhere.com/photos/90/af/london_uk_england_british_landmark_westminster_big_ben-23876.jpg!d",
+          "https://c.pxhere.com/photos/a2/8b/books_read_reading_education_school_study_student_literature-756129.jpg!d",
+          "https://c.pxhere.com/photos/af/89/book_textbook_college_learning_highlight_school_education_literature-710892.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Английский",
+        "Испанский",
+        "Французский",
+        "Путешествия"
+      ]
+    },
+    {
+      "id": 43,
+      "liked": 7,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=David&backgroundColor=b6e3f4",
+      "name": "Анатолий",
+      "city": "Магнитогорск",
+      "age": 28,
+      "dateOfBirth": "23-11-1997",
+      "gender": "Мужской",
+      "email": "anatoly97@email.com",
+      "password": "Cv3xB8nM1zL6kJ9h",
+      "createdAt": "2023-02-18",
+      "about": "Интересуюсь гигиеной сна и здоровьем в целом. Готов поделиться лайфхаками!",
+      "card_people": {
+        "skill": "Сон и восстановление",
+        "category": "Здоровье и лайфстайл",
+        "subcategory": "Сон и восстановление",
+        "description": "Работаю в области сомнологии и помог сотням людей улучшить качество сна. Научу создавать идеальные условия для сна, избегать ошибок в режиме дня и работать с бессонницей естественным способом. Поделюсь техниками релаксации и объясню, почему сон — это не роскошь, а основа здоровья.",
+        "photos": [
+          "https://c.pxhere.com/photos/84/c1/bed_bedroom_comfortable_double_bed_furniture_girl_person_pillow-1032949.jpg!d",
+          "https://c.pxhere.com/photos/7b/0d/sleeping_girl_bed_female_person_sleep_bedroom_rest_cozy-930000.jpg!d",
+          "https://c.pxhere.com/photos/e6/3f/bedroom_home_interior_cozy_room_house_furniture-1118882.jpg!d",
+          "https://c.pxhere.com/photos/64/54/spa_relax_relaxation_stress_relief_massage_spa_treatments_wellness-820354.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Сон и восстановление",
+        "Питание и ЗОЖ",
+        "Ментальное здоровье",
+        "Йога и медитация"
+      ]
+    },
+    {
+      "id": 44,
+      "liked": 8,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Emma&backgroundColor=b6e3f4",
+      "name": "Кристина",
+      "city": "Авангард",
+      "age": 26,
+      "dateOfBirth": "15-06-1999",
+      "gender": "Женский",
+      "email": "kristina99@email.com",
+      "password": "Nm4bV9cX3zL7kJ6h",
+      "createdAt": "2023-05-09",
+      "about": "Работаю фотографом и веду курсы по композиции. Обожаю природу и портреты!",
+      "card_people": {
+        "skill": "Фотография",
+        "category": "Творчество и искусство",
+        "subcategory": "Фотография",
+        "description": "Фотографирую свадьбы, портреты и природу более 7 лет. Веду курсы для начинающих фотографов. Научу видеть свет, выстраивать композицию по золотому сечению и создавать эмоциональные кадры. Покажу, как работать с камерой и светом, чтобы выражать свою уникальную точку зрения.",
+        "photos": [
+          "https://c.pxhere.com/photos/9c/e6/camera_photography_vintage_photographer_antique-72.jpg!d",
+          "https://c.pxhere.com/photos/e2/2b/track_photographer_railway_person_walk_away-38140.jpg!d",
+          "https://c.pxhere.com/photos/b7/5e/photography_camera_photographer_digital_camera_dslr-99202.jpg!d",
+          "https://c.pxhere.com/photos/65/09/photographer_hand_man_holding_len-32792.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Фотография",
+        "Видеомонтаж",
+        "Рисование и иллюстрация",
+        "Фотошоп и обработка"
+      ]
+    },
+    {
+      "id": 45,
+      "liked": 9,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Olivia&backgroundColor=b6e3f4",
+      "name": "Павлина",
+      "city": "Иваново",
+      "age": 33,
+      "dateOfBirth": "06-09-1992",
+      "gender": "Женский",
+      "email": "pavlina92@email.com",
+      "password": "Pq5tR8yU2iO4oP7a",
+      "createdAt": "2022-06-03",
+      "about": "Интересуюсь баланс жизни и работы. Помогу найти гармонию!",
+      "card_people": {
+        "skill": "Баланс жизни и работы",
+        "category": "Образование и развитие",
+        "subcategory": "Баланс жизни и работы",
+        "description": "Выгорела от работы и восстановилась — теперь помогаю другим не наступать на те же грабли. Поделюсь стратегией, как расставить приоритеты, установить границы с работой и время на личную жизнь. Научу говорить 'нет' без вины и создавать жизнь, в которой место для всего важного.",
+        "photos": [
+          "https://c.pxhere.com/photos/b0/2d/student_typing_keyboard_text_woman_startup_business_people-871986.jpg!d",
+          "https://c.pxhere.com/photos/e3/64/notebook_workplace_desk_iphone_library_study_studying_learning-971381.jpg!d",
+          "https://c.pxhere.com/photos/ce/aa/keyboard_coffee_watch_notebook_hand-36717.jpg!d",
+          "https://c.pxhere.com/photos/7a/9e/socialmedia_facebook_twitter_network_instagram_marketing_online-858156.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Баланс жизни и работы",
+        "Тайм-менеджмент",
+        "Коучинг",
+        "Ментальное здоровье"
+      ]
+    },
+    {
+      "id": 46,
+      "liked": 10,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Ethan&backgroundColor=b6e3f4",
+      "name": "Игнат",
+      "city": "Липецк",
+      "age": 40,
+      "dateOfBirth": "20-04-1985",
+      "gender": "Мужской",
+      "email": "ignat85@email.com",
+      "password": "Wr6tY9uI2pL5kM3v",
+      "createdAt": "2023-03-28",
+      "about": "Занимаюсь импровизацией и люблю делиться этим умением. Очень креативный!",
+      "card_people": {
+        "skill": "Импровизация",
+        "category": "Творчество и искусство",
+        "subcategory": "Импровизация",
+        "description": "Участвую в импровизационных группах уже 8 лет и веду мастер-классы по импровизации. Научу мыслить быстро, доверять себе и создавать забавные и живые сцены. Эти навыки развивают креативность и уверенность в себе, которые работают везде — на сцене, в работе, в личной жизни.",
+        "photos": [
+          "https://c.pxhere.com/photos/5a/c0/ben_turpin_charlie_chaplin_comedian_actor_scene_movie_motion_picture_vintage-925144.jpg!d",
+          "https://c.pxhere.com/images/c5/1c/fc760ea61065e82a10007a9f139e-1588373.jpg!d",
+          "https://c.pxhere.com/photos/d8/6c/cinema_theatre_tv_camera-870677.jpg!d",
+          "https://c.pxhere.com/photos/ac/cf/universal_studios_cinema_movies_theme_park_usa_florida-503347.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Импровизация",
+        "Актёрское мастерство",
+        "Публичные выступления",
+        "Креативное письмо"
+      ]
+    },
+    {
+      "id": 47,
+      "liked": 5,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Charlotte&backgroundColor=b6e3f4",
+      "name": "Маргарита",
+      "city": "Сочи",
+      "age": 27,
+      "dateOfBirth": "12-08-1998",
+      "gender": "Женский",
+      "email": "margarita98@email.com",
+      "password": "Zx2cV5bN8mK1jH4s",
+      "createdAt": "2022-07-24",
+      "about": "Помогаю с публичными выступлениями и презентациями. Тренирую страх сцены!",
+      "card_people": {
+        "skill": "Публичные выступления",
+        "category": "Бизнес и карьера",
+        "subcategory": "Публичные выступления",
+        "description": "Провожу корпоративные тренинги по выступлениям и презентациям уже 5 лет. Помогу преодолеть страх сцены, выстроить структуру выступления и доставить информацию так, чтобы слушатели запомнили. Научу работать с голосом, жестами и паузами — всем, что делает спикера уверенным и интересным.",
+        "photos": [
+          "https://c.pxhere.com/photos/c0/16/audience_speech_speaker_presentation_business_seminar_meeting_public-489447.jpg!d",
+          "https://c.pxhere.com/photos/d4/d4/university_lecture_campus_education_people_seminar_study_school-1246944.jpg!d",
+          "https://c.pxhere.com/photos/16/f6/castle_lawn_great_britain_england_mansion_villa_turrets_architecture-971447.jpg!d",
+          "https://c.pxhere.com/photos/81/c5/library_quiet_education_school_university_technology_online_education_web-686177.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Публичные выступления",
+        "Личный бренд",
+        "Актёрское мастерство",
+        "Тайм-менеджмент"
+      ]
+    },
+    {
+      "id": 48,
+      "liked": 6,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Lucas&backgroundColor=b6e3f4",
+      "name": "Ефим",
+      "city": "Азов",
+      "age": 51,
+      "dateOfBirth": "03-01-1974",
+      "gender": "Мужской",
+      "email": "efim74@email.com",
+      "password": "Qa9wS2eD5rF8tY1u",
+      "createdAt": "2023-04-16",
+      "about": "Работаю в IT и готов делиться знаниями по программированию. Люблю помогать новичкам!",
+      "card_people": {
+        "skill": "Программирование",
+        "category": "Технологии и IT",
+        "subcategory": "Программирование",
+        "description": "Разрабатываю ПО более 20 лет и очень люблю преподавать. Помогу с базовыми языками программирования, архитектурой и best practices. Поделюсь опытом рядовых ошибок новичков и тем, как избежать их в своём коде. Веду обучение методом 'learning by doing'.",
+        "photos": [
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/ff/c2/ux_prototyping_design_webdesign_app_mobile_business_interface-723648.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Программирование",
+        "Веб-разработка",
+        "Базы данных",
+        "Системный дизайн"
+      ]
+    },
+    {
+      "id": 49,
+      "liked": 7,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Samantha&backgroundColor=b6e3f4",
+      "name": "Ирис",
+      "city": "Гатчина",
+      "age": 30,
+      "dateOfBirth": "25-04-1995",
+      "gender": "Женский",
+      "email": "iris95@email.com",
+      "password": "Mj8kL1hG4fD7sA9q",
+      "createdAt": "2022-08-07",
+      "about": "Интересуюсь дизайном интерьера и хочу помочь другим украшать свои пространства красиво!",
+      "card_people": {
+        "skill": "Дизайн интерьера",
+        "category": "Дом и уют",
+        "subcategory": "Дизайн интерьера",
+        "description": "Работаю дизайнером интерьера более 6 лет, помогла трансформировать более сотни квартир и домов. Научу основам дизайна, выбору цветов, расстановке мебели и созданию функционального пространства. Поделюсь тем, как работать с маленькими площадями и делать квартиру уютной без больших бюджетов.",
+        "photos": [
+          "https://c.pxhere.com/photos/04/06/home_interior_room_house_furniture_design_decor_modern-610551.jpg!d",
+          "https://c.pxhere.com/photos/15/fa/house_history_old_furniture_warm_glow_light_historical_room-1191792.jpg!d",
+          "https://c.pxhere.com/images/1f/71/40179c1481d681e615701f624a87-1590901.jpg!d",
+          "https://c.pxhere.com/photos/61/6c/decor_interior_wood_lamp_frame-111204.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Дизайн интерьера",
+        "Декор и DIY",
+        "Хранение вещей",
+        "Уборка и организация"
+      ]
+    },
+    {
+      "id": 50,
+      "liked": 8,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Ryan&backgroundColor=b6e3f4",
+      "name": "Ида",
+      "city": "Прокопьевск",
+      "age": 43,
+      "dateOfBirth": "18-05-1982",
+      "gender": "Женский",
+      "email": "ida82@email.com",
+      "password": "Tf4gH7jK9lM2nQ6w",
+      "createdAt": "2023-07-01",
+      "about": "Работаю в области психотерапии и помогаю людям разбираться в себе. Открыта для новых контактов!",
+      "card_people": {
+        "skill": "Психотерапия",
+        "category": "Здоровье и лайфстайл",
+        "subcategory": "Психотерапия",
+        "description": "Квалифицированный психолог с опытом более 12 лет. Помогаю людям справляться со стрессом, тревогой и травмами через эмпатию и доказанные методики. Не осуждаю, слушаю внимательно и помогаю находить свои решения. Веду как индивидуальные консультации, так и групповые сессии.",
+        "photos": [
+          "https://c.pxhere.com/images/38/30/12d5509a55bf391289619ac7359d-1447403.jpg!d",
+          "https://c.pxhere.com/images/b1/d9/5f0e5dbb8fa5b860376e29e81574-1687258.jpg!d",
+          "https://c.pxhere.com/photos/38/3a/sadness_alone_being_alone_archetype_archetypes_expression_burnout_exhausted-775653.jpg!d",
+          "https://c.pxhere.com/photos/4e/b9/despair_alone_being_alone_archetype_archetypes_expression_burnout_exhausted-1048705.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Психотерапия",
+        "Ментальное здоровье",
+        "Коучинг",
+        "Личностное развитие"
+      ]
     }
+   
   ]
 }
