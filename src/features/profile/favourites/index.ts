@@ -1,3 +1,3 @@
-import { FavouritesContent } from "./FavouritesContent";
+import { FavouritesContent } from './FavouritesContent';
 
 export default FavouritesContent;
