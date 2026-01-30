@@ -1,9 +1,10 @@
 import { createAsyncThunk, createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import type { IEditUser } from '@/types/types';
+import type { IEditUser, IUser } from '@/types/types';
 import { updateUserInLocalStorage } from '@/shared/lib/localstorage';
 
 interface ProfileEditState {
   user: IEditUser | null;
+  favoritesUsers: IUser[];
   isLoading: boolean;
   error: string | null;
 }
@@ -56,6 +57,7 @@ export const saveProfileEdit = createAsyncThunk<IEditUser, void, { rejectValue: 
 
 const initialState: ProfileEditState = {
   user: null,
+  favoritesUsers: [],
   isLoading: false,
   error: null,
 };
@@ -66,6 +68,17 @@ const profileEditSlice = createSlice({
   reducers: {
     setUserData(state: ProfileEditState, action: PayloadAction<IEditUser>) {
       state.user = action.payload;
+    },
+    addUser(state, action: PayloadAction<IUser>) {
+      const existingUserIndex = state.favoritesUsers.findIndex(
+        (user) => user.id === action.payload.id
+      );
+
+      if (existingUserIndex !== -1) {
+        state.favoritesUsers = state.favoritesUsers.filter((user) => user.id !== action.payload.id);
+      } else {
+        state.favoritesUsers.push(action.payload);
+      }
     },
   },
   extraReducers: (builder) => {
@@ -84,6 +97,6 @@ const profileEditSlice = createSlice({
   },
 });
 
-export const { setUserData } = profileEditSlice.actions;
+export const { setUserData, addUser } = profileEditSlice.actions;
 
 export default profileEditSlice.reducer;

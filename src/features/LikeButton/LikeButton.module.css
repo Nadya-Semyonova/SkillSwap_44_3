@@ -1,0 +1,23 @@
+.buttonLike {
+  position: relative;
+}
+
+.likeCount {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-caption-size);
+}
+
+.like {
+  position: absolute;
+  top: 1px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.like svg {
+  width: 24px;
+  height: 24px;
+}

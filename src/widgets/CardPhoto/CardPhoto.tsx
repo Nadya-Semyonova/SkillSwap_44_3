@@ -1,27 +1,18 @@
-import LikeBlack from '@/shared/assets/images/IconsSvg/LikeBlack';
 import Share from '@/shared/assets/images/IconsSvg/Share';
 import MoreSquare from '@/shared/assets/images/IconsSvg/MoreSquare';
-import { useLikeCounter } from '@/shared/lib/hooks/useLikeCounter';
 import styles from './CardPhoto.module.css';
 import type { CardPhotoProps } from './libs/types';
+import LikeButton from '@/features/LikeButton';
 
 export default function CardPhoto({
   user,
   title,
   showTitle = true, // ← Значение по умолчанию true
-  onLike,
   onShare,
   onMoreDetails,
   buttons,
   children,
 }: CardPhotoProps) {
-  const { likeCount, isLiked, handleLikeClick } = useLikeCounter({
-    initialLikes: user.liked || 0,
-    onLikeClick: () => {
-      onLike?.(user.id, !isLiked);
-    },
-  });
-
   const suggestionSkill = user.card_people;
 
   return (
@@ -30,7 +21,7 @@ export default function CardPhoto({
       {showTitle && title && <h1 className={styles.cardTitle}>{title}</h1>}
       <div className={styles.skillExchangeCard}>
         <div className={styles.actionSection}>
-          <button
+          {/* <button
             type="button"
             className={`${styles.sectionButton} ${isLiked ? styles.liked : ''}`}
             onClick={handleLikeClick}
@@ -38,7 +29,8 @@ export default function CardPhoto({
           >
             <LikeBlack isActive={isLiked} />
             {likeCount > 0 && <span className={styles.likeCount}>+{likeCount}</span>}
-          </button>
+          </button> */}
+          <LikeButton user={user} />
 
           <button
             type="button"

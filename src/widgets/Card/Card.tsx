@@ -1,17 +1,15 @@
 import { getSkillColor } from '@shared/lib/constants/SkillColors';
 import { declensionAge } from '@shared/lib/helpers/declension';
-import { useLikeCounter } from '@shared/lib/hooks/useLikeCounter';
 import ButtonDefault from '@shared/ui/ButtonDefault';
 import { NavLink } from 'react-router-dom';
 import { CARD_CONSTANTS } from '@/widgets/Card/libs/types';
 import type { CardProps } from '@/widgets/Card/libs/types';
-import LikeBlack from '@/shared/assets/images/IconsSvg/LikeBlack';
 import style from './Card.module.css';
 import CardConstants from './libs/CardConstants';
+import LikeButton from '@/features/LikeButton';
 
 function Card({
   user,
-  onLikeClick,
   variant = 'default',
   showFullName = true,
   fixedHeight = undefined,
@@ -25,12 +23,6 @@ function Card({
   // Ограничиваем количество видимых тегов
   const visibleSkills = user.skill_off.slice(0, CARD_CONSTANTS.MAX_VISIBLE_SKILLS);
   const hiddenSkillsCount = Math.max(0, user.skill_off.length - CARD_CONSTANTS.MAX_VISIBLE_SKILLS);
-
-  // универсальная логика лайков
-  const { likeCount, isLiked, handleLikeClick } = useLikeCounter({
-    initialLikes: user.liked || 0,
-    onLikeClick,
-  });
 
   return (
     <div className={style.content} style={fixedHeight ? { height: fixedHeight } : {}}>
@@ -53,15 +45,7 @@ function Card({
 
         {variant === 'default' && (
           <div className={style.likeContainer}>
-            <button
-              type="button"
-              className={`${style.like} ${isLiked ? style.liked : ''}`}
-              onClick={handleLikeClick}
-              aria-label={isLiked ? 'Удалить из избранного' : 'Добавить в избранное'}
-            >
-              <LikeBlack isActive={isLiked} />
-            </button>
-            {likeCount > 0 && <span className={style.likeCount}>+{likeCount}</span>}
+            <LikeButton user={user} />
           </div>
         )}
       </div>
