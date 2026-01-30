@@ -7,31 +7,7 @@ import { UserSelector } from '@/features/auth/UserCalendar/UserSelector';
 import { ToggledSelect } from '@/shared/ui/ToggleSelector';
 import styles from './StepRegister.module.css';
 
-type Props = {
-  onNext: () => void;
-  onBack: () => void;
-
-  name: string;
-  onNameChange: (value: string) => void;
-
-  dateOfBirth: string;
-  onDateOfBirthChange: (value: string) => void;
-
-  gender: string;
-  onGenderChange: (value: string) => void;
-
-  city: string;
-  cities: string[];
-  onCityChange: (value: string) => void;
-
-  category: string;
-  categories: string[];
-  onCategoryChange: (value: string) => void;
-
-  subcategory: string;
-  subcategories: string[];
-  onSubcategoryChange: (value: string) => void;
-};
+import type { StepRegister2Props } from '@/pages/RegistersPages/libs/types';
 
 function StepRegister2({
   onNext,
@@ -57,7 +33,7 @@ function StepRegister2({
   subcategory,
   subcategories,
   onSubcategoryChange,
-}: Props) {
+}: StepRegister2Props) {
   const handleAvatarClick = () => {};
   const handleAvatarAdd = () => {};
 
@@ -155,6 +131,7 @@ function StepRegister2({
 
           <div className={styles.buttonsRow}>
             <ButtonDefault
+              type="button"
               name="Назад"
               variant="outline"
               styleButton={styles.button}
@@ -162,6 +139,7 @@ function StepRegister2({
             />
 
             <ButtonDefault
+              type="button"
               name="Продолжить"
               variant="continue"
               styleButton={`${styles.button} ${styles.buttonContinue}`}
