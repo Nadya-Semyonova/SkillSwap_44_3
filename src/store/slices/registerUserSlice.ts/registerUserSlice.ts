@@ -5,7 +5,7 @@ import type { IUser } from '@/types/types';
 
 type RegistrationFields = Omit<IUser, 'id' | 'liked' | 'createdAt' | 'age'>;
 
-interface RegistrationState extends RegistrationFields {
+export interface RegistrationState extends RegistrationFields {
   loading: boolean;
   error: string | null;
 }
