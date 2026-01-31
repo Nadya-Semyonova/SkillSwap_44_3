@@ -25,10 +25,11 @@
         ]
       },
       "skill_off": [
-        "Проектное управление",
-        "Личный бренд",
+        "Навыки преподавания",
+        "Маркетинг и реклама",
         "Предпринимательство",
-        "Управление командой"
+        "Резюме и собеседование",
+        "Лидерство"
       ]
     },
     {
@@ -56,7 +57,12 @@
           "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
         ]
       },
-      "skill_off": ["Личностное развитие", "Коучинг", "Ментальное здоровье", "Навыки преподавания"]
+      "skill_off": [
+        "Музыка и звук",
+        "Навыки преподавания",
+        "Скорочтение",
+        "Коучинг"
+      ]
     },
     {
       "id": 3,
@@ -83,7 +89,12 @@
           "https://c.pxhere.com/photos/65/09/photographer_hand_man_holding_len-32792.jpg!d"
         ]
       },
-      "skill_off": ["Фотография", "Видеомонтаж", "Рисование и иллюстрация", "Музыка и звук"]
+      "skill_off": [
+        "Лидерство",
+        "Арт-терапия",
+        "Музыка и звук",
+        "Видеомонтаж"
+      ]
     },
     {
       "id": 4,
@@ -110,7 +121,11 @@
           "https://c.pxhere.com/photos/f5/2a/hand_hand_drawing_drawing_sketch_design_symbol_drawn_pencil-1379092.jpg!d"
         ]
       },
-      "skill_off": ["Рисование и иллюстрация", "Арт-терапия", "Декор и DIY", "Креативное письмо"]
+      "skill_off": [
+        "Управление командой",
+        "Фотография",
+        "Креативное письмо"
+      ]
     },
     {
       "id": 5,
@@ -138,10 +153,9 @@
         ]
       },
       "skill_off": [
-        "Личный бренд",
-        "Предпринимательство",
-        "Продажи и переговоры",
-        "Управление командой"
+        "Уборка и организация",
+        "Лидерство",
+        "Проектное управление"
       ]
     },
     {
@@ -170,10 +184,9 @@
         ]
       },
       "skill_off": [
-        "Приготовление еды",
+        "Предпринимательство",
         "Домашние финансы",
-        "Уборка и организация",
-        "Питание и ЗОЖ"
+        "Уборка и организация"
       ]
     },
     {
@@ -201,7 +214,13 @@
           "https://c.pxhere.com/photos/91/bb/clock_time_hour_alarm_clock_alarm-237.jpg!d"
         ]
       },
-      "skill_off": ["Тайм-менеджмент", "Фотография", "Йога и медитация", "Осознанность"]
+      "skill_off": [
+        "Питание и ЗОЖ",
+        "Управление командой",
+        "Личный бренд",
+        "Предпринимательство",
+        "Продажи и переговоры"
+      ]
     },
     {
       "id": 8,
@@ -228,7 +247,12 @@
           "https://c.pxhere.com/photos/20/fc/women_yoga_classes_asana_fitness_instructor_hatha_yoga_professor_posture-826575.jpg!d"
         ]
       },
-      "skill_off": ["Йога и медитация", "Ментальное здоровье", "Личностное развитие", "Коучинг"]
+      "skill_off": [
+        "Личный бренд",
+        "Ментальное здоровье",
+        "Осознанность",
+        "Питание и ЗОЖ"
+      ]
     },
     {
       "id": 9,
@@ -256,10 +280,11 @@
         ]
       },
       "skill_off": [
-        "Продажи и переговоры",
-        "Приготовление еды",
-        "Резюме и собеседование",
-        "Маркетинг и реклама"
+        "Маркетинг и реклама",
+        "Личный бренд",
+        "Предпринимательство",
+        "Управление командой",
+        "Лидерство"
       ]
     },
     {
@@ -288,10 +313,10 @@
         ]
       },
       "skill_off": [
-        "Резюме и собеседование",
-        "Личностное развитие",
-        "Навыки преподавания",
-        "Скорочтение"
+        "Арт-терапия",
+        "Маркетинг и реклама",
+        "Продажи и переговоры",
+        "Управление командой"
       ]
     },
     {
@@ -319,7 +344,11 @@
           "https://c.pxhere.com/photos/8e/93/video_cinematography_film_movie_cinema_camera_entertainment_movie_camera-693703.jpg!d"
         ]
       },
-      "skill_off": ["Видеомонтаж", "Фотография", "Музыка и звук", "Актёрское мастерство"]
+      "skill_off": [
+        "Актёрское мастерство",
+        "Декор и DIY",
+        "Арт-терапия"
+      ]
     },
     {
       "id": 12,
@@ -346,7 +375,11 @@
           "https://c.pxhere.com/photos/f5/2a/hand_hand_drawing_drawing_sketch_design_symbol_drawn_pencil-1379092.jpg!d"
         ]
       },
-      "skill_off": ["Рисование и иллюстрация", "Арт-терапия", "Креативное письмо", "Декор и DIY"]
+      "skill_off": [
+        "Продажи и переговоры",
+        "Декор и DIY",
+        "Видеомонтаж"
+      ]
     },
     {
       "id": 13,
@@ -373,7 +406,10 @@
           "https://c.pxhere.com/photos/ce/5d/startup_meeting_brainstorming_business_teamwork_team_people_office-764425.jpg!d"
         ]
       },
-      "skill_off": ["Управление командой", "Проектное управление", "Лидерство", "Коучинг"]
+      "skill_off": [
+        "Домашние финансы",
+        "Продажи и переговоры"
+      ]
     },
     {
       "id": 14,
@@ -401,10 +437,8 @@
         ]
       },
       "skill_off": [
-        "Креативное письмо",
-        "Навыки преподавания",
-        "Личностное развитие",
-        "Скорочтение"
+        "Китайский",
+        "Актёрское мастерство"
       ]
     },
     {
@@ -432,7 +466,13 @@
           "https://c.pxhere.com/photos/52/5c/building_glazurkarz_ceramic_tiles_terrakota_tile_tarakota_professional-1324057.jpg!d"
         ]
       },
-      "skill_off": ["Ремонт", "Хранение вещей", "Уборка и организация", "Домашние финансы"]
+      "skill_off": [
+        "Японский",
+        "Приготовление еды",
+        "Хранение вещей",
+        "Уборка и организация",
+        "Домашние финансы"
+      ]
     },
     {
       "id": 16,
@@ -460,10 +500,11 @@
         ]
       },
       "skill_off": [
-        "Подготовка к экзаменам",
-        "Хранение вещей",
-        "Уборка и организация",
-        "Скорочтение"
+        "Предпринимательство",
+        "Корейский",
+        "Японский",
+        "Китайский",
+        "Английский"
       ]
     },
     {
@@ -492,9 +533,8 @@
         ]
       },
       "skill_off": [
-        "Маркетинг и реклама",
-        "Продажи и переговоры",
-        "Личный бренд",
+        "Рисование и иллюстрация",
+        "Резюме и собеседование",
         "Предпринимательство"
       ]
     },
@@ -523,7 +563,13 @@
           "https://c.pxhere.com/photos/63/4f/butterfly_children_drawing_colorful_animal_spring_child_children_painted-979312.jpg!d"
         ]
       },
-      "skill_off": ["Арт-терапия", "Рисование и иллюстрация", "Креативное письмо", "Декор и DIY"]
+      "skill_off": [
+        "Баланс жизни и работы",
+        "Видеомонтаж",
+        "Рисование и иллюстрация",
+        "Актёрское мастерство",
+        "Креативное письмо"
+      ]
     },
     {
       "id": 19,
@@ -551,10 +597,8 @@
         ]
       },
       "skill_off": [
-        "Коучинг",
-        "Баланс жизни и работы",
-        "Личностное развитие",
-        "Ментальное здоровье"
+        "Домашние финансы",
+        "Баланс жизни и работы"
       ]
     },
     {
@@ -582,7 +626,12 @@
           "https://c.pxhere.com/images/1f/71/40179c1481d681e615701f624a87-1590901.jpg!d"
         ]
       },
-      "skill_off": ["Декор и DIY", "Рисование и иллюстрация", "Фотография", "Музыка и звук"]
+      "skill_off": [
+        "Приготовление еды",
+        "Рисование и иллюстрация",
+        "Музыка и звук",
+        "Актёрское мастерство"
+      ]
     },
     {
       "id": 21,
@@ -609,7 +658,13 @@
           "https://c.pxhere.com/photos/5e/3f/shop_clothes_clothing_shopping_mall_shopping_kielce_crown_poland-862477.jpg!d"
         ]
       },
-      "skill_off": ["Хранение вещей", "Уборка и организация", "Ремонт", "Питание и ЗОЖ"]
+      "skill_off": [
+        "Видеомонтаж",
+        "Приготовление еды",
+        "Уборка и организация",
+        "Ремонт",
+        "Домашние финансы"
+      ]
     },
     {
       "id": 22,
@@ -636,7 +691,10 @@
           "https://c.pxhere.com/photos/95/15/guitar_music_instrumental_melodic_musical_instrument_sound_rock-727442.jpg!d"
         ]
       },
-      "skill_off": ["Музыка и звук", "Актёрское мастерство", "Креативное письмо", "Фотография"]
+      "skill_off": [
+        "Рисование и иллюстрация",
+        "Креативное письмо"
+      ]
     },
     {
       "id": 23,
@@ -663,7 +721,13 @@
           "https://c.pxhere.com/photos/65/09/photographer_hand_man_holding_len-32792.jpg!d"
         ]
       },
-      "skill_off": ["Фотография", "Скорочтение", "Тайм-менеджмент", "Личностное развитие"]
+      "skill_off": [
+        "Маркетинг и реклама",
+        "Видеомонтаж",
+        "Арт-терапия",
+        "Креативное письмо",
+        "Рисование и иллюстрация"
+      ]
     },
     {
       "id": 24,
@@ -690,7 +754,10 @@
           "https://c.pxhere.com/photos/af/67/startup_business_businessman_notebook_laptop_computer_company_office-914296.jpg!d"
         ]
       },
-      "skill_off": ["Личностное развитие", "Навыки преподавания", "Коучинг", "Ментальное здоровье"]
+      "skill_off": [
+        "Тайм-менеджмент",
+        "Баланс жизни и работы"
+      ]
     },
     {
       "id": 25,
@@ -718,10 +785,11 @@
         ]
       },
       "skill_off": [
-        "Продажи и переговоры",
-        "Предпринимательство",
-        "Управление командой",
-        "Лидерство"
+        "Декор и DIY",
+        "Проектное управление",
+        "Тайм-менеджмент",
+        "Маркетинг и реклама",
+        "Резюме и собеседование"
       ]
     },
     {
@@ -750,10 +818,10 @@
         ]
       },
       "skill_off": [
-        "Актёрское мастерство",
-        "Импровизация",
-        "Публичные выступления",
-        "Креативное письмо"
+        "Ремонт",
+        "Видеомонтаж",
+        "Фотография",
+        "Декор и DIY"
       ]
     },
     {
@@ -781,7 +849,11 @@
           "https://c.pxhere.com/photos/64/e1/piggy_ruble_penny_kopek_coin_russia_handful_coins-658356.jpg!d"
         ]
       },
-      "skill_off": ["Домашние финансы", "Тайм-менеджмент", "Личностное развитие", "Питание и ЗОЖ"]
+      "skill_off": [
+        "Приготовление еды",
+        "Хранение вещей",
+        "Ремонт"
+      ]
     },
     {
       "id": 28,
@@ -808,7 +880,13 @@
           "https://c.pxhere.com/photos/5e/3f/shop_clothes_clothing_shopping_mall_shopping_kielce_crown_poland-862477.jpg!d"
         ]
       },
-      "skill_off": ["Уборка и организация", "Хранение вещей", "Ремонт", "Приготовление еды"]
+      "skill_off": [
+        "Тайм-менеджмент",
+        "Ремонт",
+        "Хранение вещей",
+        "Домашние финансы",
+        "Приготовление еды"
+      ]
     },
     {
       "id": 29,
@@ -836,10 +914,10 @@
         ]
       },
       "skill_off": [
-        "Резюме и собеседование",
-        "Продажи и переговоры",
-        "Личный бренд",
-        "Предпринимательство"
+        "Домашние финансы",
+        "Маркетинг и реклама",
+        "Предпринимательство",
+        "Тайм-менеджмент"
       ]
     },
     {
@@ -867,7 +945,11 @@
           "https://c.pxhere.com/photos/1f/af/school_book_know_study_education_read_learn_browse-494733.jpg!d"
         ]
       },
-      "skill_off": ["Скорочтение", "Навыки преподавания", "Личностное развитие", "Тайм-менеджмент"]
+      "skill_off": [
+        "Подготовка к экзаменам",
+        "Навыки преподавания",
+        "Баланс жизни и работы"
+      ]
     },
     {
       "id": 31,
@@ -894,7 +976,10 @@
           "https://c.pxhere.com/images/38/30/12d5509a55bf391289619ac7359d-1447403.jpg!d"
         ]
       },
-      "skill_off": ["Ментальное здоровье", "Осознанность", "Коучинг", "Личностное развитие"]
+      "skill_off": [
+        "Баланс жизни и работы",
+        "Осознанность"
+      ]
     },
     {
       "id": 32,
@@ -922,10 +1007,8 @@
         ]
       },
       "skill_off": [
-        "Навыки преподавания",
-        "Личностное развитие",
-        "Скорочтение",
-        "Креативное письмо"
+        "Осознанность",
+        "Баланс жизни и работы"
       ]
     },
     {
@@ -953,7 +1036,10 @@
           "https://c.pxhere.com/photos/12/03/child_noodle_high_land_family_pass_north_vietnam_breakfast_emotion_happy-606519.jpg!d"
         ]
       },
-      "skill_off": ["Китайский", "Английский", "Японский", "Корейский"]
+      "skill_off": [
+        "Ментальное здоровье",
+        "Подготовка к экзаменам"
+      ]
     },
     {
       "id": 34,
@@ -980,7 +1066,11 @@
           "https://c.pxhere.com/photos/a8/e4/diet_fat_health_weight_healthy_loss_nutrition_dieting-950856.jpg!d"
         ]
       },
-      "skill_off": ["Питание и ЗОЖ", "Приготовление еды", "Домашние финансы", "Хранение вещей"]
+      "skill_off": [
+        "Рисование и иллюстрация",
+        "Ментальное здоровье",
+        "Осознанность"
+      ]
     },
     {
       "id": 35,
@@ -1007,7 +1097,13 @@
           "https://c.pxhere.com/photos/8e/93/video_cinematography_film_movie_cinema_camera_entertainment_movie_camera-693703.jpg!d"
         ]
       },
-      "skill_off": ["Видеомонтаж", "Фотография", "Музыка и звук", "Актёрское мастерство"]
+      "skill_off": [
+        "Актёрское мастерство",
+        "Фотография",
+        "Рисование и иллюстрация",
+        "Музыка и звук",
+        "Арт-терапия"
+      ]
     },
     {
       "id": 36,
@@ -1034,7 +1130,10 @@
           "https://c.pxhere.com/photos/73/bb/book_book_gift_by_heart_cord_gift_read_heart_give-399102.jpg!d"
         ]
       },
-      "skill_off": ["Креативное письмо", "Арт-терапия", "Рисование и иллюстрация", "Декор и DIY"]
+      "skill_off": [
+        "Предпринимательство",
+        "Актёрское мастерство"
+      ]
     },
     {
       "id": 37,
@@ -1061,7 +1160,11 @@
           "https://c.pxhere.com/photos/91/bb/clock_time_hour_alarm_clock_alarm-237.jpg!d"
         ]
       },
-      "skill_off": ["Тайм-менеджмент", "Личностное развитие", "Коучинг", "Ментальное здоровье"]
+      "skill_off": [
+        "Йога и медитация",
+        "Предпринимательство",
+        "Лидерство"
+      ]
     },
     {
       "id": 38,
@@ -1089,10 +1192,8 @@
         ]
       },
       "skill_off": [
-        "Осознанность",
-        "Йога и медитация",
-        "Ментальное здоровье",
-        "Личностное развитие"
+        "Тайм-менеджмент",
+        "Йога и медитация"
       ]
     },
     {
@@ -1121,9 +1222,8 @@
         ]
       },
       "skill_off": [
-        "Актёрское мастерство",
-        "Импровизация",
-        "Публичные выступления",
+        "Лидерство",
+        "Фотография",
         "Креативное письмо"
       ]
     },
@@ -1153,10 +1253,325 @@
         ]
       },
       "skill_off": [
-        "Личный бренд",
+        "Тайм-менеджмент",
+        "Лидерство"
+      ]
+    },
+    {
+      "id": 41,
+      "liked": 9,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Владимир&backgroundColor=b6e3f4",
+      "name": "Владимир",
+      "city": "Казань",
+      "age": 21,
+      "dateOfBirth": "16-12-1981",
+      "gender": "Мужской",
+      "email": "vladimirkuznecov@email.com",
+      "password": "Gvu2DWLnLEuudakc",
+      "createdAt": "2023-06-08",
+      "about": "Помогу вам построить и развивать свой личный бренд в цифровом пространстве.",
+      "card_people": {
+        "skill": "Личный бренд",
+        "category": "Бизнес и карьера",
+        "subcategory": "Личный бренд",
+        "description": "Практикующий эксперт в создании и продвижении личного бренда. Помогу вам выделиться на рынке и привлечь правильную аудиторию через стратегическое позиционирование.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Личностное развитие",
         "Маркетинг и реклама",
-        "Продажи и переговоры",
-        "Предпринимательство"
+        "Резюме и собеседование",
+        "Тайм-менеджмент",
+        "Лидерство"
+      ]
+    },
+    {
+      "id": 42,
+      "liked": 7,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Леонид&backgroundColor=b6e3f4",
+      "name": "Леонид",
+      "city": "Смоленск",
+      "age": 43,
+      "dateOfBirth": "13-11-1982",
+      "gender": "Мужской",
+      "email": "leonidd@email.com",
+      "password": "jaXIznnCe4ibUJVm",
+      "createdAt": "2023-08-12",
+      "about": "С удовольствием поделюсь своим опытом в области запуска и развития собственного бизнеса.",
+      "card_people": {
+        "skill": "Предпринимательство",
+        "category": "Бизнес и карьера",
+        "subcategory": "Предпринимательство",
+        "description": "Опытный предприниматель с многолетней практикой в создании и масштабировании бизнеса. Помогу вам разобраться в стратегии, финансировании и развитии своего проекта.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Личностное развитие",
+        "Тайм-менеджмент"
+      ]
+    },
+    {
+      "id": 43,
+      "liked": 9,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Владимир&backgroundColor=b6e3f4",
+      "name": "Владимир",
+      "city": "Рязань",
+      "age": 22,
+      "dateOfBirth": "12-09-1977",
+      "gender": "Мужской",
+      "email": "vladimirvolk@email.com",
+      "password": "Kev5hxKggfitvO9t",
+      "createdAt": "2022-07-01",
+      "about": "Помогу вам найти гармонию между карьерой и личной жизнью, чтобы чувствовать себя счастливым везде.",
+      "card_people": {
+        "skill": "Баланс жизни и работы",
+        "category": "Образование и развитие",
+        "subcategory": "Баланс жизни и работы",
+        "description": "Коуч по гармонизации жизни и карьеры. Помогу вам создать устойчивый режим, избежать выгорания и наслаждаться жизнью во всех её аспектах.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Управление командой",
+        "Личностное развитие",
+        "Скорочтение",
+        "Навыки преподавания",
+        "Коучинг"
+      ]
+    },
+    {
+      "id": 44,
+      "liked": 6,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Кирилл&backgroundColor=b6e3f4",
+      "name": "Кирилл",
+      "city": "Сочи",
+      "age": 39,
+      "dateOfBirth": "18-07-1986",
+      "gender": "Мужской",
+      "email": "kirillpetrov@email.com",
+      "password": "8hU8s3nm1V8qnhZu",
+      "createdAt": "2023-11-26",
+      "about": "Обменяюсь знаниями о том, как построить и успешно развивать свой бизнес с нуля.",
+      "card_people": {
+        "skill": "Предпринимательство",
+        "category": "Бизнес и карьера",
+        "subcategory": "Предпринимательство",
+        "description": "Серьёзный бизнесмен с опытом создания прибыльных проектов. Делюсь практическими советами по стратегии, управлению ресурсами и достижению целей в предпринимательстве.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Уборка и организация",
+        "Проектное управление",
+        "Управление командой",
+        "Резюме и собеседование"
+      ]
+    },
+    {
+      "id": 45,
+      "liked": 4,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Виктория&backgroundColor=b6e3f4",
+      "name": "Виктория",
+      "city": "Рязань",
+      "age": 40,
+      "dateOfBirth": "09-08-1989",
+      "gender": "Женский",
+      "email": "viktoriayivanovа@email.com",
+      "password": "VOg6hUCkWz0Sjai5",
+      "createdAt": "2023-08-05",
+      "about": "Люблю готовить вкусно и просто — научу вас кулинарному искусству без сложностей!",
+      "card_people": {
+        "skill": "Приготовление еды",
+        "category": "Дом и уют",
+        "subcategory": "Приготовление еды",
+        "description": "Опытная кулинар, которая делает приготовление пищи доступным и удовольствием. Делюсь быстрыми рецептами, секретами техник и советами по выбору продуктов.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Йога и медитация",
+        "Ремонт",
+        "Уборка и организация",
+        "Хранение вещей"
+      ]
+    },
+    {
+      "id": 46,
+      "liked": 3,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Денис&backgroundColor=b6e3f4",
+      "name": "Денис",
+      "city": "Сочи",
+      "age": 27,
+      "dateOfBirth": "21-06-1979",
+      "gender": "Мужской",
+      "email": "denissinica@email.com",
+      "password": "eggSTrOEi346jg3r",
+      "createdAt": "2023-12-27",
+      "about": "Преподаю японский язык с увлечением и помогу вам освоить это интересное языковое путешествие.",
+      "card_people": {
+        "skill": "Японский",
+        "category": "Иностранные языки",
+        "subcategory": "Японский",
+        "description": "Преподаватель японского языка с глубоким знанием культуры. Научу вас не только грамматике, но и погружу в мир японского языка через аутентичный материал и живое общение.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Йога и медитация",
+        "Английский",
+        "Корейский",
+        "Подготовка к экзаменам"
+      ]
+    },
+    {
+      "id": 47,
+      "liked": 5,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Александра&backgroundColor=b6e3f4",
+      "name": "Александра",
+      "city": "Москва",
+      "age": 28,
+      "dateOfBirth": "04-06-1986",
+      "gender": "Женский",
+      "email": "aleksandracolosova@email.com",
+      "password": "vgJ4FPFRF6tszkvB",
+      "createdAt": "2022-03-26",
+      "about": "Помогаю людям заботиться о своём психическом здоровье через полезные практики и поддержку.",
+      "card_people": {
+        "skill": "Ментальное здоровье",
+        "category": "Здоровье и лайфстайл",
+        "subcategory": "Ментальное здоровье",
+        "description": "Психолог и консультант по ментальному здоровью. Помогу вам разобраться с эмоциями, стрессом и найти путь к внутреннему благополучию через проверенные методы.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Японский",
+        "Йога и медитация",
+        "Питание и ЗОЖ"
+      ]
+    },
+    {
+      "id": 48,
+      "liked": 1,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Ирина&backgroundColor=b6e3f4",
+      "name": "Елена",
+      "city": "Екатеринбург",
+      "age": 48,
+      "dateOfBirth": "05-08-1982",
+      "gender": "Женский",
+      "email": "elenasmirnova@email.com",
+      "password": "sJXM2TPeCV4CPQay",
+      "createdAt": "2022-10-28",
+      "about": "Обучаю английскому языку на продвинутом уровне, помогу вам говорить свободно и уверенно.",
+      "card_people": {
+        "skill": "Английский",
+        "category": "Иностранные языки",
+        "subcategory": "Английский",
+        "description": "Опытный преподаватель английского с международным опытом. Делюсь не только грамматикой, но и культурой, помогу вам общаться естественно и без барьеров.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Питание и ЗОЖ",
+        "Корейский",
+        "Японский",
+        "Китайский"
+      ]
+    },
+    {
+      "id": 49,
+      "liked": 5,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Сергей&backgroundColor=b6e3f4",
+      "name": "Сергей",
+      "city": "Рязань",
+      "age": 48,
+      "dateOfBirth": "26-02-2001",
+      "gender": "Мужской",
+      "email": "sergeypetrov@email.com",
+      "password": "iXHHr5TIFFtceld9",
+      "createdAt": "2022-01-17",
+      "about": "Увлечён здоровым образом жизни и с удовольствием помогу вам начать путь к лучшему самочувствию.",
+      "card_people": {
+        "skill": "Питание и ЗОЖ",
+        "category": "Здоровье и лайфстайл",
+        "subcategory": "Питание и ЗОЖ",
+        "description": "Энтузиаст здорового образа жизни и правильного питания. Помогу вам построить устойчивые привычки, улучшить самочувствие и найти баланс между удовольствием и здоровьем.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Английский",
+        "Осознанность",
+        "Ментальное здоровье",
+        "Йога и медитация"
+      ]
+    },
+    {
+      "id": 50,
+      "liked": 6,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Алин&backgroundColor=b6e3f4",
+      "name": "Алина",
+      "city": "Братск",
+      "age": 36,
+      "dateOfBirth": "10-05-1991",
+      "gender": "Женский",
+      "email": "alinasergeeva@email.com",
+      "password": "06EILhEYU04xWgTl",
+      "createdAt": "2022-01-05",
+      "about": "Помогу вам организовать жизнь так, чтобы была энергия и для работы, и для семьи, и для себя.",
+      "card_people": {
+        "skill": "Баланс жизни и работы",
+        "category": "Образование и развитие",
+        "subcategory": "Баланс жизни и работы",
+        "description": "Коуч по жизненному балансу, помогу вам найти правильный режим и приоритеты. Покажу, как работать продуктивно, не теряя при этом качество жизни и время на себя.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Ментальное здоровье",
+        "Навыки преподавания"
       ]
     }
   ]
