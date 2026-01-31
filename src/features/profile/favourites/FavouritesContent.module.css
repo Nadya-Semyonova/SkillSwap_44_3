@@ -1,6 +1,4 @@
 .wrapper {
-  padding-block-end: 32px;
-  width: min-content;
   display: grid;
   gap: 32px;
 }
@@ -11,4 +9,12 @@
   gap: 24px;
   align-items: start;
   max-inline-size: 100%;
+}
+
+.empty {
+  font-family: var(--font-family-base);
+  font-size: var(--font-h3-size);
+  font-weight: var(--font-body-weight);
+  color: var(--color-text-primary);
+  text-align: center;
 }
