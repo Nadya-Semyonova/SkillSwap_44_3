@@ -11,6 +11,7 @@ export function Input({
   value: externalValue,
   type = 'text',
   disabled = false,
+  readOnly = false,
 }: IInput) {
   const [internalValue, setInternalValue] = useState('');
   const value = externalValue !== undefined ? externalValue : internalValue;
@@ -41,6 +42,7 @@ export function Input({
         value={value}
         onChange={handleChange}
         disabled={disabled}
+        readOnly={readOnly}
         aria-label={title || placeholder}
       />
     );

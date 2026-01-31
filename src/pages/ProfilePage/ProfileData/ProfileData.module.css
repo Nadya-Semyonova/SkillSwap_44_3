@@ -90,6 +90,13 @@
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .passwordLink {
@@ -124,11 +131,18 @@
   font-size: var(--font-h4-size);
   font-weight: var(--font-weight-regular);
   height: 48px;
-  cursor: pointer;
+  cursor: default;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .saveButtonActive {
-  background-color: red; /* mock */
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.saveButtonActive:hover {
+  background-color: var(--color-accent-hover);
 }
 
 .avatarSection {

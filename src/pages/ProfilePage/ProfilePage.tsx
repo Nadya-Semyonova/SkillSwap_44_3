@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import SideBar from '@/features/profile/SideBar/SideBar';
-import ProfileData from '@/features/profile/ProfileData';
+import ProfileData from '@/pages/ProfilePage/ProfileData/ProfileData';
 import styles from '@/pages/ProfilePage/ProfilePage.module.css';
 import { FavouritesContent } from '@/features/profile/favourites/FavouritesContent';
 

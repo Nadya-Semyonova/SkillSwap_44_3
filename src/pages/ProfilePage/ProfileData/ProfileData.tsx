@@ -1,61 +1,42 @@
-import { useState, useMemo } from 'react';
 import userPhoto from '@shared/assets/images/userPhoto.png';
 import Edit from '@/shared/assets/images/IconsSvg/Edit';
 import GaleryEdit from '@/shared/assets/images/IconsSvg/GaleryEdit';
-import { useDispatch, useSelector, type RootState } from '@/store/store';
 import { Input } from '@/shared/ui/useInput/Input';
 import ButtonDefault from '@/shared/ui/ButtonDefault/ButtonDefault';
 import ToggledSelect from '@/shared/ui/ToggleSelector/ToggledSelect';
 import { UserSelector } from '@/features/auth/UserCalendar/UserSelector';
-
-import styles from '@/features/profile/ProfileData.module.css';
-import { profileText, genderOptions } from '@/features/profile/ProfileDataConstants';
-import { saveProfileEdit, setUserData } from '@/store/slices/profileEditSlice/profileEditSlice';
-import type { IEditUser } from '@/types/types';
+import styles from '@/pages/ProfilePage/ProfileData/ProfileData.module.css';
+import { profileText, genderOptions } from '@/pages/ProfilePage/ProfileData/ProfileDataConstants';
+import { useProfileData } from '@/pages/ProfilePage/ProfileData/libs/useProfileData';
 
 function ProfileData() {
-  const user = useSelector((state: RootState) => state.auth.user);
-  const citiesData = useSelector((state: RootState) => state.users.cities);
-  const cities = useMemo(() => citiesData || [], [citiesData]);
-  const [email, setEmail] = useState<string>(user?.email || '');
-  const [name, setName] = useState<string>(user?.name || '');
-  const [bithDay, setBirthDay] = useState<string>(user?.dateOfBirth || '');
-  const [gender, setGender] = useState(user?.gender || '');
-  const [city, setCity] = useState(user?.city || '');
-  const [about, setAbout] = useState(user?.about || '');
-  const dispatch = useDispatch();
-
-  const genderLabel = useMemo(
-    () =>
-      genderOptions.find((option) => option.value === gender)?.label ??
-      profileText.genderPlaceholder,
-    [gender]
-  );
-
-  const isGenderSelected = useMemo(() => Boolean(gender), [gender]);
-
-  const cityPlaceholder = useMemo(() => city || profileText.cityPlaceholder, [city]);
-
-  const buttonActive =
-    email !== user?.email ||
-    name !== user.name ||
-    bithDay !== user.dateOfBirth ||
-    gender !== user.gender ||
-    city !== user.city ||
-    about !== user.about;
-
-  const handleClickSave = () => {
-    const userEdit: IEditUser = {
-      email,
-      name,
-      dateOfBirth: bithDay,
-      gender,
-      city,
-      about,
-    };
-    dispatch(setUserData(userEdit));
-    dispatch(saveProfileEdit());
-  };
+  const {
+    user,
+    email,
+    setEmail,
+    name,
+    setName,
+    bithDay,
+    setBirthDay,
+    gender,
+    setGender,
+    city,
+    setCity,
+    about,
+    setAbout,
+    cities,
+    genderLabel,
+    isGenderSelected,
+    cityPlaceholder,
+    buttonActive,
+    handleClickSave,
+    emailEditable,
+    setEmailEditable,
+    nameEditable,
+    setNameEditable,
+    aboutEditable,
+    setAboutEditable,
+  } = useProfileData();
 
   return (
     <main className={styles.profileContainer}>
@@ -70,10 +51,16 @@ function ProfileData() {
                 value={email}
                 className={styles.inputFullWidth}
                 onChange={setEmail}
+                readOnly={!emailEditable}
               />
-              <span className={styles.editIcon}>
+              <button
+                type="button"
+                className={styles.editIcon}
+                onClick={() => setEmailEditable(true)}
+                aria-label="Редактировать почту"
+              >
                 <Edit />
-              </span>
+              </button>
             </div>
           </div>
 
@@ -88,11 +75,20 @@ function ProfileData() {
           <p className={styles.label}>{profileText.name}</p>
 
           <div className={styles.inputContainer}>
-            <Input value={name} className={styles.inputFullWidth} onChange={setName} />
-
-            <span className={styles.editIcon}>
+            <Input
+              value={name}
+              className={styles.inputFullWidth}
+              onChange={setName}
+              readOnly={!nameEditable}
+            />
+            <button
+              type="button"
+              className={styles.editIcon}
+              onClick={() => setNameEditable(true)}
+              aria-label="Редактировать имя"
+            >
               <Edit />
-            </span>
+            </button>
           </div>
         </div>
 
@@ -119,7 +115,7 @@ function ProfileData() {
                     className={`${styles.dropdownOption} ${
                       gender === option.value ? styles.optionActive : ''
                     }`}
-                    onClick={() => setGender(option.label)}
+                    onClick={() => setGender(option.value)}
                   >
                     {option.label}
                   </button>
@@ -159,11 +155,16 @@ function ProfileData() {
               onChange={(e) => setAbout(e.target.value)}
               className={styles.textareaField}
               rows={4}
+              readOnly={!aboutEditable}
             />
-
-            <span className={styles.editIcon}>
+            <button
+              type="button"
+              className={styles.editIcon}
+              onClick={() => setAboutEditable(true)}
+              aria-label="Редактировать поле О себе"
+            >
               <Edit />
-            </span>
+            </button>
           </div>
         </div>
 
@@ -171,7 +172,7 @@ function ProfileData() {
           <ButtonDefault
             name={profileText.save}
             type="button"
-            styleButton={`${styles.saveButton} ${buttonActive ? styles.saveButtonActive : ''}`} // доделать стили
+            styleButton={`${styles.saveButton} ${buttonActive ? styles.saveButtonActive : ''}`}
             handleClick={handleClickSave}
             status={buttonActive}
           />
