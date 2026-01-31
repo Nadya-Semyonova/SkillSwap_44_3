@@ -6,24 +6,7 @@ import { ToggledSelect } from '@/shared/ui/ToggleSelector';
 import { Textarea } from '@/shared/ui/Textarea/Textarea';
 import styles from './StepRegister.module.css';
 
-type Props = {
-  onBack: () => void;
-  onNext: () => void;
-
-  skillName: string;
-  onSkillNameChange: (value: string) => void;
-
-  category: string;
-  categories: string[];
-  onCategoryChange: (value: string) => void;
-
-  subcategory: string;
-  subcategories: string[];
-  onSubcategoryChange: (value: string) => void;
-
-  description: string;
-  onDescriptionChange: (value: string) => void;
-};
+import type { StepRegister3Props } from '@/pages/RegistersPages/libs/types';
 
 function StepRegister3({
   onBack,
@@ -42,7 +25,7 @@ function StepRegister3({
 
   description,
   onDescriptionChange,
-}: Props) {
+}: StepRegister3Props) {
   return (
     <div className={styles.content}>
       <div className={styles.containerForm}>
@@ -104,12 +87,14 @@ function StepRegister3({
 
           <div className={styles.actions}>
             <ButtonDefault
+              type="button"
               name="Назад"
               styleButton={`${styles.button} ${styles.buttonStep3}`}
               handleClick={onBack}
             />
 
             <ButtonDefault
+              type="button"
               name="Продолжить"
               styleButton={`${styles.button} ${styles.buttonContinue} ${styles.buttonStep3}`}
               handleClick={onNext}

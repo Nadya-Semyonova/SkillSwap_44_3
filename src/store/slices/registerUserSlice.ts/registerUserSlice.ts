@@ -6,6 +6,9 @@ import type { IUser } from '@/types/types';
 type RegistrationFields = Omit<IUser, 'id' | 'liked' | 'createdAt' | 'age'>;
 
 export interface RegistrationState extends RegistrationFields {
+  learn_category: string;
+  learn_subcategory: string;
+
   loading: boolean;
   error: string | null;
 }
@@ -26,6 +29,8 @@ const initialState: RegistrationState = {
     description: '',
     photos: [],
   },
+  learn_category: '',
+  learn_subcategory: '',
   skill_off: [],
   loading: false,
   error: null,
@@ -67,42 +72,63 @@ const registerUserSlice = createSlice({
     setAvatar: (state, action: PayloadAction<string>) => {
       state.avatar = action.payload;
     },
+
     setName: (state, action: PayloadAction<string>) => {
       state.name = action.payload;
     },
+
     setCity: (state, action: PayloadAction<string>) => {
       state.city = action.payload;
     },
+
     setDateOfBirth: (state, action: PayloadAction<string>) => {
       state.dateOfBirth = action.payload;
     },
+
     setGender: (state, action: PayloadAction<string>) => {
       state.gender = action.payload;
     },
+
     setEmail: (state, action: PayloadAction<string>) => {
       state.email = action.payload;
     },
+
     setPassword: (state, action: PayloadAction<string>) => {
       state.password = action.payload;
     },
+
     setAbout: (state, action: PayloadAction<string>) => {
       state.about = action.payload;
     },
+
     setSkill: (state, action: PayloadAction<string>) => {
       state.card_people.skill = action.payload;
     },
+
     setCategory: (state, action: PayloadAction<string>) => {
       state.card_people.category = action.payload;
     },
+
     setSubcategory: (state, action: PayloadAction<string>) => {
       state.card_people.subcategory = action.payload;
     },
+
     setDescription: (state, action: PayloadAction<string>) => {
       state.card_people.description = action.payload;
     },
+
     setPhotos: (state, action: PayloadAction<string[]>) => {
       state.card_people.photos = action.payload;
     },
+
+    setLearnCategory: (state, action: PayloadAction<string>) => {
+      state.learn_category = action.payload;
+    },
+
+    setLearnSubcategory: (state, action: PayloadAction<string>) => {
+      state.learn_subcategory = action.payload;
+    },
+
     setSkillOff: (state, action: PayloadAction<string[]>) => {
       state.skill_off = action.payload;
     },
@@ -137,6 +163,8 @@ export const {
   setSubcategory,
   setDescription,
   setPhotos,
+  setLearnCategory,
+  setLearnSubcategory,
   setSkillOff,
 } = registerUserSlice.actions;
 

@@ -6,24 +6,19 @@ import Eye from '@/shared/assets/images/IconsSvg/Eye';
 import LightBulb from '@/shared/assets/images/IllustrationsSvg/LightBulb';
 import styles from './StepRegister.module.css';
 
-type Props = {
-  email: string;
-  password: string;
-  onEmailChange: (value: string) => void;
-  onPasswordChange: (value: string) => void;
-  onNext: () => void;
-};
+import type { StepRegister1Props } from '@/pages/RegistersPages/libs/types';
 
-function StepRegister1({ email, password, onEmailChange, onPasswordChange, onNext }: Props) {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onNext();
-  };
-
+function StepRegister1({
+  email,
+  password,
+  onEmailChange,
+  onPasswordChange,
+  onNext,
+}: StepRegister1Props) {
   return (
     <div className={styles.content}>
       <div className={styles.containerForm}>
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <form className={styles.form}>
           <div className={styles.formButtonsLogin}>
             <ButtonDefault
               name="Продолжить с Google"
@@ -83,9 +78,10 @@ function StepRegister1({ email, password, onEmailChange, onPasswordChange, onNex
 
           <ButtonDefault
             name="Далее"
-            type="submit"
+            type="button"
             styleButton={styles.loginButton}
             aria-label="Продолжить"
+            handleClick={onNext}
           />
         </form>
 
