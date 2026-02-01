@@ -7,7 +7,8 @@ import LikeButton from '@/features/LikeButton';
 export default function CardPhoto({
   user,
   title,
-  showTitle = true, // ← Значение по умолчанию true
+  showTitle = true,
+  showActions = true, // Добавляем пропс со значением по умолчанию
   onShare,
   onMoreDetails,
   buttons,
@@ -20,36 +21,30 @@ export default function CardPhoto({
       {/* Условный рендеринг заголовка */}
       {showTitle && title && <h1 className={styles.cardTitle}>{title}</h1>}
       <div className={styles.skillExchangeCard}>
-        <div className={styles.actionSection}>
-          {/* <button
-            type="button"
-            className={`${styles.sectionButton} ${isLiked ? styles.liked : ''}`}
-            onClick={handleLikeClick}
-            aria-label={isLiked ? 'Удалить из избранного' : 'Добавить в избранное'}
-          >
-            <LikeBlack isActive={isLiked} />
-            {likeCount > 0 && <span className={styles.likeCount}>+{likeCount}</span>}
-          </button> */}
-          <LikeButton user={user} />
+        {/* Условный рендеринг actionSection */}
+        {showActions && (
+          <div className={styles.actionSection}>
+            <LikeButton user={user} />
 
-          <button
-            type="button"
-            className={styles.sectionButton}
-            onClick={() => onShare(user.id)}
-            aria-label="Поделиться информацией о профиле"
-          >
-            <Share />
-          </button>
+            <button
+              type="button"
+              className={styles.sectionButton}
+              onClick={() => onShare(user.id)}
+              aria-label="Поделиться информацией о профиле"
+            >
+              <Share />
+            </button>
 
-          <button
-            type="button"
-            className={styles.sectionButton}
-            onClick={() => onMoreDetails(user.id)}
-            aria-label="Посмотреть детали профиля"
-          >
-            <MoreSquare />
-          </button>
-        </div>
+            <button
+              type="button"
+              className={styles.sectionButton}
+              onClick={() => onMoreDetails(user.id)}
+              aria-label="Посмотреть детали профиля"
+            >
+              <MoreSquare />
+            </button>
+          </div>
+        )}
 
         <div className={styles.contentSection}>
           <div className={styles.textSection}>
@@ -58,7 +53,7 @@ export default function CardPhoto({
               {suggestionSkill.category} / {suggestionSkill.subcategory}
             </h3>
             <p className={styles.description}>{suggestionSkill.description}</p>
-            {buttons && <div className={styles.buttonsWrapper}>{buttons}</div>}
+            {buttons && <div>{buttons}</div>}
           </div>
 
           <div className={styles.photoSection}>{children}</div>

@@ -1,19 +1,27 @@
-import { useEffect } from 'react';
 import HeaderRegister from '../../shared/ui/HeaderAuth/HeaderRegister';
 import StepRegister1 from './StepRegister/StepRegister1';
 import StepRegister2 from './StepRegister/StepRegister2';
 import StepRegister3 from './StepRegister/StepRegister3';
 
+import { ModalWithOverlay } from '@/shared/ui/modalWithOverlay';
+import { PreviewModal } from '@/shared/ui/modal';
+import { InfoModal } from '@/shared/ui/modal/infoModal';
+
 import { useRegisterPage } from '@/pages/RegistersPages/libs/useRegisterPage';
 
 export default function RegisterPage() {
-  const { step, step1Props, step2Props, step3Props, finishData } = useRegisterPage();
-
-  useEffect(() => {
-    if (finishData) {
-      console.log('REGISTER DATA:', finishData);
-    }
-  }, [finishData]);
+  const {
+    step,
+    step1Props,
+    step2Props,
+    step3Props,
+    isPreviewModalOpen,
+    isSuccessModalOpen,
+    previewData,
+    handleEditProfile,
+    handleSaveProfile,
+    handleSuccessConfirm,
+  } = useRegisterPage();
 
   const renderStep = () => {
     if (step === 1) {
@@ -78,6 +86,24 @@ export default function RegisterPage() {
     <>
       <HeaderRegister currentStep={step} />
       {renderStep()}
+
+      {/* Модальное окно предпросмотра */}
+      <ModalWithOverlay isOpen={isPreviewModalOpen} onClose={handleEditProfile}>
+        <PreviewModal
+          userData={previewData}
+          onEdit={handleEditProfile}
+          onSave={handleSaveProfile}
+        />
+      </ModalWithOverlay>
+
+      {/* Модальное окно успешного сохранения */}
+      <ModalWithOverlay isOpen={isSuccessModalOpen} onClose={handleSuccessConfirm}>
+        <InfoModal
+          title="Ваше предложение создано."
+          message="Теперь вы можете предложить обмен."
+          onConfirm={handleSuccessConfirm}
+        />
+      </ModalWithOverlay>
     </>
   );
 }

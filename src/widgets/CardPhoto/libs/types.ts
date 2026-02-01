@@ -4,7 +4,8 @@ import type { IUser } from '@/types/types';
 export interface CardPhotoProps {
   user: IUser;
   onLike?: (userId: number, liked: boolean) => void;
-  showTitle?: boolean; // ← Добавляем новый пропс
+  showTitle?: boolean;
+  showActions?: boolean;
   onShare: (userId: number) => void;
   onMoreDetails: (userId: number) => void;
   title?: string;
