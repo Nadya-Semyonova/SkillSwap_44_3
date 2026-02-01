@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from '@/store/store';
 
 import {
@@ -16,6 +17,7 @@ import {
   setLearnCategory,
   setLearnSubcategory,
   setSkillOff,
+  registerUser,
 } from '@/store/slices/registerUserSlice.ts/registerUserSlice';
 
 import { getCitiesData, getSkillsData } from '@/store/slices/userDataSlice/userDataSlice';
@@ -27,32 +29,15 @@ import type {
   StepRegister3Props,
 } from '@/pages/RegistersPages/libs/types';
 
-type FinishData = {
-  avatar: string;
-  name: string;
-  city: string;
-  dateOfBirth: string;
-  gender: string;
-  email: string;
-  password: string;
-  about: string;
-  card_people: {
-    skill: string;
-    category: string;
-    subcategory: string;
-    description: string;
-    photos: string[];
-  };
-  skill_off: string[];
-  loading: boolean;
-  error: string | null;
-};
+import type { IUser } from '@/types/types';
 
 export function useRegisterPage() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [step, setStep] = useState<RegisterStep>(1);
-  const [finishData, setFinishData] = useState<FinishData | null>(null);
+  const [isPreviewModalOpen, setIsPreviewModalOpen] = useState(false);
+  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
 
   const registration = useSelector((state) => state.registration);
   const cities = useSelector((state) => state.users.cities);
@@ -122,10 +107,35 @@ export function useRegisterPage() {
 
   const handleFinish = useCallback(() => {
     const finalSkillOff = buildSkillOff();
-
     dispatch(setSkillOff(finalSkillOff));
+    setIsPreviewModalOpen(true);
+  }, [buildSkillOff, dispatch]);
 
-    const data: FinishData = {
+  const handleEditProfile = useCallback(() => {
+    setIsPreviewModalOpen(false);
+  }, []);
+
+  const handleSaveProfile = useCallback(async () => {
+    try {
+      const result = await dispatch(registerUser()).unwrap();
+      setIsPreviewModalOpen(false);
+      setIsSuccessModalOpen(true);
+      console.log('Профиль сохранен с ID:', result.id);
+    } catch (error) {
+      console.error('Ошибка сохранения профиля:', error);
+    }
+  }, [dispatch]);
+
+  const handleSuccessConfirm = useCallback(() => {
+    setIsSuccessModalOpen(false);
+    // Редирект на страницу профиля
+    navigate('/profile');
+  }, [navigate]);
+
+  const previewData = useMemo(() => {
+    const finalSkillOff = buildSkillOff();
+
+    const userData: Omit<IUser, 'id' | 'liked' | 'age' | 'createdAt'> = {
       avatar: registration.avatar,
       name: registration.name,
       city: registration.city,
@@ -136,12 +146,10 @@ export function useRegisterPage() {
       about: registration.about,
       card_people: { ...registration.card_people },
       skill_off: finalSkillOff,
-      loading: registration.loading,
-      error: registration.error,
     };
 
-    setFinishData(data);
-  }, [buildSkillOff, dispatch, registration]);
+    return userData;
+  }, [registration, buildSkillOff]);
 
   const step1Props: StepRegister1Props = {
     email: registration.email,
@@ -196,5 +204,16 @@ export function useRegisterPage() {
     onDescriptionChange: handleDescriptionChange,
   };
 
-  return { step, step1Props, step2Props, step3Props, finishData };
+  return {
+    step,
+    step1Props,
+    step2Props,
+    step3Props,
+    isPreviewModalOpen,
+    isSuccessModalOpen,
+    previewData,
+    handleEditProfile,
+    handleSaveProfile,
+    handleSuccessConfirm,
+  };
 }
