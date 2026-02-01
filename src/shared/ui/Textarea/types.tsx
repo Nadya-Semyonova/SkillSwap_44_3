@@ -6,10 +6,13 @@ export interface ITextarea {
   value?: string;
   type?: 'text';
   disabled?: boolean;
+  readOnly?: boolean;
   maxLength?: number;
+  rows?: number;
   children?: React.ReactNode;
   errorMessage?: string;
   autoFocus?: boolean;
   required?: boolean;
   requiredErrorMessage?: string;
+  textareaClassName?: string;
 }

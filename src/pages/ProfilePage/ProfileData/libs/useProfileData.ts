@@ -41,7 +41,7 @@ export function useProfileData() {
       about !== (user.about ?? ''))
   );
 
-  const handleClickSave = () => {
+  const handleClickSave = async () => {
     const userEdit: IEditUser = {
       email,
       name,
@@ -51,8 +51,12 @@ export function useProfileData() {
       about,
     };
     dispatch(setUserData(userEdit));
-    dispatch(saveProfileEdit());
-    window.location.reload();
+    try {
+      await dispatch(saveProfileEdit()).unwrap();
+      window.location.reload();
+    } catch {
+      // Ошибка сохранения уже в state.profileEdit.error
+    }
   };
 
   return {

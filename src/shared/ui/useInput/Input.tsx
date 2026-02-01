@@ -37,7 +37,7 @@ export function Input({
       <input
         id={inputId}
         type={type}
-        className={`${styles.input} ${disabled ? styles.inputDisabled : ''}`}
+        className={`${styles.input} ${disabled ? styles.inputDisabled : ''} ${readOnly ? styles.inputReadOnly : ''}`}
         placeholder={placeholder}
         value={value}
         onChange={handleChange}

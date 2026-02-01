@@ -2,6 +2,7 @@ import userPhoto from '@shared/assets/images/userPhoto.png';
 import Edit from '@/shared/assets/images/IconsSvg/Edit';
 import GaleryEdit from '@/shared/assets/images/IconsSvg/GaleryEdit';
 import { Input } from '@/shared/ui/useInput/Input';
+import { Textarea } from '@/shared/ui/Textarea/Textarea';
 import ButtonDefault from '@/shared/ui/ButtonDefault/ButtonDefault';
 import ToggledSelect from '@/shared/ui/ToggleSelector/ToggledSelect';
 import { UserSelector } from '@/features/auth/UserCalendar/UserSelector';
@@ -44,7 +45,6 @@ function ProfileData() {
         <section className={styles.formSection}>
           <div className={styles.formRow}>
             <p className={styles.label}>{profileText.email}</p>
-
             <div className={styles.inputContainer}>
               <Input
                 type="email"
@@ -63,17 +63,14 @@ function ProfileData() {
               </button>
             </div>
           </div>
-
           <div className={styles.passwordLink}>
             <a href="/change-password" className={styles.link}>
               {profileText.changePassword}
             </a>
           </div>
         </section>
-
         <div className={styles.formRow}>
           <p className={styles.label}>{profileText.name}</p>
-
           <div className={styles.inputContainer}>
             <Input
               value={name}
@@ -91,12 +88,10 @@ function ProfileData() {
             </button>
           </div>
         </div>
-
         <div className={styles.infoDateGender}>
           <div className={styles.formRow}>
             <UserSelector bithDay={bithDay} setBithDay={setBirthDay} />
           </div>
-
           <div
             className={`${styles.formRow} ${styles.genderSelect} ${
               isGenderSelected ? styles.genderSelected : ''
@@ -124,7 +119,6 @@ function ProfileData() {
             </ToggledSelect>
           </div>
         </div>
-
         <div
           className={`${styles.formRow} ${styles.citySelect} ${city ? styles.citySelectFilled : ''}`}
         >
@@ -145,15 +139,13 @@ function ProfileData() {
             </div>
           </ToggledSelect>
         </div>
-
         <div className={`${styles.formRow} ${styles.aboutRow}`}>
           <p className={styles.label}>{profileText.about}</p>
-
           <div className={styles.textareaContainer}>
-            <textarea
+            <Textarea
               value={about}
-              onChange={(e) => setAbout(e.target.value)}
-              className={styles.textareaField}
+              onChange={setAbout}
+              textareaClassName={styles.textareaField}
               rows={4}
               readOnly={!aboutEditable}
             />
@@ -167,38 +159,29 @@ function ProfileData() {
             </button>
           </div>
         </div>
-
-        <div className={styles.saveButtonContainer}>
-          <ButtonDefault
-            name={profileText.save}
-            type="button"
-            styleButton={`${styles.saveButton} ${buttonActive ? styles.saveButtonActive : ''}`}
-            handleClick={handleClickSave}
-            status={buttonActive}
-          />
-        </div>
+        <ButtonDefault
+          name={profileText.save}
+          type="button"
+          styleButton={`${styles.saveButton} ${buttonActive ? styles.saveButtonActive : ''}`}
+          handleClick={handleClickSave}
+          status={buttonActive}
+        />
       </form>
-
-      <div className={styles.avatarSection}>
-        <div className={styles.avatar}>
-          <img
-            src={user?.avatar || userPhoto}
-            alt={profileText.userAvatarAlt}
-            className={styles.userPhoto}
-          />
-
-          <div className={styles.editPhotoControl}>
-            <ButtonDefault
-              name=""
-              type="button"
-              styleButton={styles.editPhotoButton}
-              handleClick={() => {}}
-            />
-
-            <span className={styles.editPhotoIcon}>
-              <GaleryEdit />
-            </span>
-          </div>
+      <div className={styles.avatar}>
+        <img
+          src={user?.avatar || userPhoto}
+          alt={profileText.userAvatarAlt}
+          className={styles.userPhoto}
+        />
+        <div className={styles.editPhotoControl}>
+          <ButtonDefault
+            name=""
+            type="button"
+            styleButton={styles.editPhotoButton}
+            handleClick={() => {}}
+          >
+            <GaleryEdit />
+          </ButtonDefault>
         </div>
       </div>
     </main>
