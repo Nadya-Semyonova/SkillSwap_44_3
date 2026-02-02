@@ -3,7 +3,7 @@ import styles from './FavouritesContent.module.css';
 import type { FavouritesContentProps } from './libs/types';
 
 export function FavouritesContent({ users }: FavouritesContentProps) {
-  if (!users) {
+  if (users === null || !users) {
     return (
       <section className={styles.wrapper}>
         <h1 className={styles.title}>Избранное</h1>
@@ -11,20 +11,21 @@ export function FavouritesContent({ users }: FavouritesContentProps) {
     );
   }
 
-  const favouriteUsers = users?.filter((user) => user.liked && user.liked > 0);
+  const hasNoFavourites = users.length === 0;
 
   return (
     <section className={styles.wrapper}>
-      <h1 className={styles.title}>Избранное</h1>
-
-      {favouriteUsers.length === 0 ? (
-        <p className={styles.empty}>Нет избранных пользователей</p>
+      {hasNoFavourites ? (
+        <h1 className={styles.empty}>Нет избранных пользователей</h1>
       ) : (
-        <div className={styles.container}>
-          {favouriteUsers.map((user) => (
-            <Card key={user.id} user={user} onDetailsClick={() => {}} />
-          ))}
-        </div>
+        <>
+          <h1 className={styles.title}>Избранное</h1>
+          <div className={styles.container}>
+            {users.map((user) => (
+              <Card key={user.id} user={user} />
+            ))}
+          </div>
+        </>
       )}
     </section>
   );
