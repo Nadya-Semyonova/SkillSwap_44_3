@@ -90,7 +90,7 @@
   background-color: #8e8e8e99;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding-top: 110px;
   z-index: 4;
 }

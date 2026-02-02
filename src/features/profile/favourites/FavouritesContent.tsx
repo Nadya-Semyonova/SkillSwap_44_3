@@ -22,7 +22,7 @@ export function FavouritesContent({ users }: FavouritesContentProps) {
       ) : (
         <div className={styles.container}>
           {favouriteUsers.map((user) => (
-            <Card key={user.id} user={user} onDetailsClick={() => {}} />
+            <Card key={user.id} user={user} />
           ))}
         </div>
       )}

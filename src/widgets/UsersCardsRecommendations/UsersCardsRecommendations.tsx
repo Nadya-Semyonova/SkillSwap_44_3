@@ -19,7 +19,7 @@ export default function UsersCardsRecommendations({
 
   const loadMore = () => {
     if (visibleCount < users.length) {
-      setVisibleCount((prev) => prev + 3);
+      setVisibleCount((prev) => prev + 20);
     }
   };
 
