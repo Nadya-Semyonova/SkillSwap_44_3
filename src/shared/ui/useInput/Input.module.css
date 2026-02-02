@@ -41,6 +41,12 @@
   box-shadow: 0 0 0 2px var(--color-accent-hover);
 }
 
+.inputReadOnly,
+.input:read-only {
+  background-color: var(--color-bg-disabled);
+  cursor: default;
+}
+
 .inputDisabled,
 .input:disabled {
   background-color: var(--color-bg-disabled);

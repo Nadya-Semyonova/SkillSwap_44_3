@@ -1,61 +1,43 @@
-import { useState, useMemo } from 'react';
 import userPhoto from '@shared/assets/images/userPhoto.png';
 import Edit from '@/shared/assets/images/IconsSvg/Edit';
 import GaleryEdit from '@/shared/assets/images/IconsSvg/GaleryEdit';
-import { useDispatch, useSelector, type RootState } from '@/store/store';
 import { Input } from '@/shared/ui/useInput/Input';
+import { Textarea } from '@/shared/ui/Textarea/Textarea';
 import ButtonDefault from '@/shared/ui/ButtonDefault/ButtonDefault';
 import ToggledSelect from '@/shared/ui/ToggleSelector/ToggledSelect';
 import { UserSelector } from '@/features/auth/UserCalendar/UserSelector';
-
-import styles from '@/features/profile/ProfileData.module.css';
-import { profileText, genderOptions } from '@/features/profile/ProfileDataConstants';
-import { saveProfileEdit, setUserData } from '@/store/slices/profileEditSlice/profileEditSlice';
-import type { IEditUser } from '@/types/types';
+import styles from '@/pages/ProfilePage/ProfileData/ProfileData.module.css';
+import { profileText, genderOptions } from '@/pages/ProfilePage/ProfileData/ProfileDataConstants';
+import { useProfileData } from '@/pages/ProfilePage/ProfileData/libs/useProfileData';
 
 function ProfileData() {
-  const user = useSelector((state: RootState) => state.auth.user);
-  const citiesData = useSelector((state: RootState) => state.users.cities);
-  const cities = useMemo(() => citiesData || [], [citiesData]);
-  const [email, setEmail] = useState<string>(user?.email || '');
-  const [name, setName] = useState<string>(user?.name || '');
-  const [bithDay, setBirthDay] = useState<string>(user?.dateOfBirth || '');
-  const [gender, setGender] = useState(user?.gender || '');
-  const [city, setCity] = useState(user?.city || '');
-  const [about, setAbout] = useState(user?.about || '');
-  const dispatch = useDispatch();
-
-  const genderLabel = useMemo(
-    () =>
-      genderOptions.find((option) => option.value === gender)?.label ??
-      profileText.genderPlaceholder,
-    [gender]
-  );
-
-  const isGenderSelected = useMemo(() => Boolean(gender), [gender]);
-
-  const cityPlaceholder = useMemo(() => city || profileText.cityPlaceholder, [city]);
-
-  const buttonActive =
-    email !== user?.email ||
-    name !== user.name ||
-    bithDay !== user.dateOfBirth ||
-    gender !== user.gender ||
-    city !== user.city ||
-    about !== user.about;
-
-  const handleClickSave = () => {
-    const userEdit: IEditUser = {
-      email,
-      name,
-      dateOfBirth: bithDay,
-      gender,
-      city,
-      about,
-    };
-    dispatch(setUserData(userEdit));
-    dispatch(saveProfileEdit());
-  };
+  const {
+    user,
+    email,
+    setEmail,
+    name,
+    setName,
+    bithDay,
+    setBirthDay,
+    gender,
+    setGender,
+    city,
+    setCity,
+    about,
+    setAbout,
+    cities,
+    genderLabel,
+    isGenderSelected,
+    cityPlaceholder,
+    buttonActive,
+    handleClickSave,
+    emailEditable,
+    setEmailEditable,
+    nameEditable,
+    setNameEditable,
+    aboutEditable,
+    setAboutEditable,
+  } = useProfileData();
 
   return (
     <main className={styles.profileContainer}>
@@ -63,44 +45,53 @@ function ProfileData() {
         <section className={styles.formSection}>
           <div className={styles.formRow}>
             <p className={styles.label}>{profileText.email}</p>
-
             <div className={styles.inputContainer}>
               <Input
                 type="email"
                 value={email}
                 className={styles.inputFullWidth}
                 onChange={setEmail}
+                readOnly={!emailEditable}
               />
-              <span className={styles.editIcon}>
+              <button
+                type="button"
+                className={styles.editIcon}
+                onClick={() => setEmailEditable(true)}
+                aria-label="Редактировать почту"
+              >
                 <Edit />
-              </span>
+              </button>
             </div>
           </div>
-
           <div className={styles.passwordLink}>
             <a href="/change-password" className={styles.link}>
               {profileText.changePassword}
             </a>
           </div>
         </section>
-
         <div className={styles.formRow}>
           <p className={styles.label}>{profileText.name}</p>
-
           <div className={styles.inputContainer}>
-            <Input value={name} className={styles.inputFullWidth} onChange={setName} />
-
-            <span className={styles.editIcon}>
+            <Input
+              value={name}
+              className={styles.inputFullWidth}
+              onChange={setName}
+              readOnly={!nameEditable}
+            />
+            <button
+              type="button"
+              className={styles.editIcon}
+              onClick={() => setNameEditable(true)}
+              aria-label="Редактировать имя"
+            >
               <Edit />
-            </span>
+            </button>
           </div>
         </div>
-
         <div className={styles.infoDateGender}>
           <div className={styles.formRow}>
             <UserSelector bithDay={bithDay} setBithDay={setBirthDay} />
           </div>
-
           <div
             className={`${styles.formRow} ${styles.genderSelect} ${
               isGenderSelected ? styles.genderSelected : ''
@@ -119,7 +110,7 @@ function ProfileData() {
                     className={`${styles.dropdownOption} ${
                       gender === option.value ? styles.optionActive : ''
                     }`}
-                    onClick={() => setGender(option.label)}
+                    onClick={() => setGender(option.value)}
                   >
                     {option.label}
                   </button>
@@ -128,7 +119,6 @@ function ProfileData() {
             </ToggledSelect>
           </div>
         </div>
-
         <div
           className={`${styles.formRow} ${styles.citySelect} ${city ? styles.citySelectFilled : ''}`}
         >
@@ -149,55 +139,49 @@ function ProfileData() {
             </div>
           </ToggledSelect>
         </div>
-
         <div className={`${styles.formRow} ${styles.aboutRow}`}>
           <p className={styles.label}>{profileText.about}</p>
-
           <div className={styles.textareaContainer}>
-            <textarea
+            <Textarea
               value={about}
-              onChange={(e) => setAbout(e.target.value)}
-              className={styles.textareaField}
+              onChange={setAbout}
+              textareaClassName={styles.textareaField}
               rows={4}
+              readOnly={!aboutEditable}
             />
-
-            <span className={styles.editIcon}>
-              <Edit />
-            </span>
-          </div>
-        </div>
-
-        <div className={styles.saveButtonContainer}>
-          <ButtonDefault
-            name={profileText.save}
-            type="button"
-            styleButton={`${styles.saveButton} ${buttonActive ? styles.saveButtonActive : ''}`} // доделать стили
-            handleClick={handleClickSave}
-            status={buttonActive}
-          />
-        </div>
-      </form>
-
-      <div className={styles.avatarSection}>
-        <div className={styles.avatar}>
-          <img
-            src={user?.avatar || userPhoto}
-            alt={profileText.userAvatarAlt}
-            className={styles.userPhoto}
-          />
-
-          <div className={styles.editPhotoControl}>
-            <ButtonDefault
-              name=""
+            <button
               type="button"
-              styleButton={styles.editPhotoButton}
-              handleClick={() => {}}
-            />
-
-            <span className={styles.editPhotoIcon}>
-              <GaleryEdit />
-            </span>
+              className={styles.editIcon}
+              onClick={() => setAboutEditable(true)}
+              aria-label="Редактировать поле О себе"
+            >
+              <Edit />
+            </button>
           </div>
+        </div>
+        <ButtonDefault
+          name={profileText.save}
+          type="button"
+          styleButton={`${styles.saveButton} ${buttonActive ? styles.saveButtonActive : ''}`}
+          handleClick={handleClickSave}
+          status={buttonActive}
+        />
+      </form>
+      <div className={styles.avatar}>
+        <img
+          src={user?.avatar || userPhoto}
+          alt={profileText.userAvatarAlt}
+          className={styles.userPhoto}
+        />
+        <div className={styles.editPhotoControl}>
+          <ButtonDefault
+            name=""
+            type="button"
+            styleButton={styles.editPhotoButton}
+            handleClick={() => {}}
+          >
+            <GaleryEdit />
+          </ButtonDefault>
         </div>
       </div>
     </main>
