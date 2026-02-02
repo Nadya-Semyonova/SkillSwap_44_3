@@ -1,6 +1,7 @@
 .wrapper {
   display: grid;
   gap: 32px;
+  align-content: start;
 }
 
 .container {
@@ -17,4 +18,6 @@
   font-weight: var(--font-body-weight);
   color: var(--color-text-primary);
   text-align: center;
+  width: 100%;
+  margin: 0;
 }
