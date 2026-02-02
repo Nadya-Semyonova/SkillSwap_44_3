@@ -60,3 +60,77 @@
   background-color: var(--color-accent-pressed);
   color: var(--color-bg-card);
 }
+
+/* для превью модал */
+.previewModal {
+  padding-top: 44px;
+  max-inline-size: 1024px;
+}
+
+.previewSubtitle {
+  text-align: center;
+}
+
+.previewSubtitleText {
+  text-align: center;
+}
+
+.customButtonsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding-top: 20px;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-h4-size);
+  border-radius: 12px;
+  color: var(--color-text-primary);
+}
+
+.saveButton,
+.editButton {
+  padding-block: 12px;
+  padding-inline: 24px;
+  border-radius: 12px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-h4-size);
+  line-height: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-regular);
+}
+
+/* Специфичные стили для кнопки Готово */
+.saveButton {
+  background-color: var(--color-accent);
+  border: none;
+}
+
+.saveButton:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.saveButton:active {
+  background-color: var(--color-accent-pressed);
+}
+
+/* Специфичные стили для кнопки Редактировать */
+.editButton {
+  border: 1px solid var(--color-accent);
+  background-color: transparent;
+}
+
+.editButton:hover {
+  background-color: var(--color-bg-secondary);
+}
+
+.editButton:active {
+  background-color: var(--color-bg-tertiary);
+}

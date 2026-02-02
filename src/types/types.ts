@@ -67,9 +67,11 @@ export interface IInput {
   value?: string;
   type?: 'text' | 'email' | 'password' | 'number' | 'tel';
   disabled?: boolean;
+  readOnly?: boolean;
 }
 
 export interface IEditUser {
+  avatar: string;
   email: string;
   name: string;
   dateOfBirth: string;

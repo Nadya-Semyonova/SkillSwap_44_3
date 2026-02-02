@@ -42,6 +42,7 @@ export const saveProfileEdit = createAsyncThunk<IEditUser, void, { rejectValue: 
       }
 
       return {
+        avatar: updatedUser.avatar,
         email: updatedUser.email,
         name: updatedUser.name,
         dateOfBirth: updatedUser.dateOfBirth,

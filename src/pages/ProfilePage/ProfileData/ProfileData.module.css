@@ -4,7 +4,7 @@
   gap: 196px;
   padding: 60px;
   background-color: var(--color-bg-card);
-  border-radius: 12px 12px 0 0;
+  border-radius: 24px;
 }
 
 .userForm {
@@ -45,7 +45,7 @@
 
 .textareaField {
   width: 100%;
-  padding: 12px 20px;
+  padding: 12px 30px 12px 20px;
   border: 1px solid var(--color-text-primary);
   border-radius: 12px;
   font-family: var(--font-family-base);
@@ -60,23 +60,10 @@
   resize: vertical;
 }
 
-/* .selectField + .dropdownIcon {
-  pointer-events: none;
-  z-index: 1;
-} */
-
-/* .inputField:focus,
-.selectField:focus,
-.textareaField:focus {
-  outline: none;
-  border-color: var(--color-text-primary);
-} */
-
-/* .inputField:focus-visible,
-.selectField:focus-visible,
-.textareaField:focus-visible {
-  outline: none;
-} */
+.textareaField:read-only {
+  background-color: var(--color-bg-disabled);
+  cursor: default;
+}
 
 .infoDateGender {
   display: grid;
@@ -90,6 +77,13 @@
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .passwordLink {
@@ -105,15 +99,12 @@
   text-decoration: underline;
 }
 
-.saveButtonContainer {
-  margin-top: 10px;
-}
-
 .aboutRow {
   min-height: 120px;
 }
 
 .saveButton {
+  margin-top: 10px;
   width: 100%;
   padding: 12px;
   background-color: var(--color-bg-disabled);
@@ -124,25 +115,32 @@
   font-size: var(--font-h4-size);
   font-weight: var(--font-weight-regular);
   height: 48px;
-  cursor: pointer;
+  cursor: default;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
 
 .saveButtonActive {
-  background-color: red; /* mock */
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+  cursor: pointer;
 }
 
-.avatarSection {
-  position: relative;
-  width: 244px;
-  height: 244px;
+.saveButtonActive:hover {
+  background-color: var(--color-accent-hover);
 }
 
 .avatar {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 244px;
+  height: 244px;
   border-radius: 12px;
   overflow: hidden;
+}
+
+.avatar img {
+  border-radius: 50%;
 }
 
 .userPhoto {
@@ -162,6 +160,7 @@
 .editPhotoButton {
   width: 56px;
   height: 56px;
+  padding: 0;
   background-color: var(--color-accent-hover);
   border: 1px solid var(--color-accent-hover);
   border-radius: 50%;
@@ -171,18 +170,13 @@
   cursor: pointer;
 }
 
-.editPhotoIcon {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-}
-
-.editPhotoIcon svg {
-  width: 24px;
-  height: 24px;
+.editPhotoButton svg {
+  width: 50%;
+  height: 50%;
+  min-width: 0;
+  min-height: 0;
+  flex: 1 1 0;
+  display: block;
   fill: var(--color-text-primary);
 }
 

@@ -46,6 +46,12 @@
   box-shadow: 0 0 0 2px var(--color-accent-hover);
 }
 
+.textareaReadOnly,
+.textarea:read-only {
+  background-color: var(--color-bg-disabled);
+  cursor: default;
+}
+
 .textareaDisabled,
 .textarea:disabled {
   background-color: var(--color-bg-disabled);

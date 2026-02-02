@@ -96,9 +96,3 @@
   color: var(--color-text-primary);
   max-height: 200px;
 }
-
-.buttonsWrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}

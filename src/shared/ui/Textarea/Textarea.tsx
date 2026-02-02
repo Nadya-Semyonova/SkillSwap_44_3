@@ -14,11 +14,14 @@ export function Textarea({
   maxLength,
   value: externalValue,
   disabled = false,
+  readOnly = false,
+  rows,
   children,
   errorMessage: externalErrorMessage,
   autoFocus = false,
   required = false,
   requiredErrorMessage = 'Поле не может быть пустым',
+  textareaClassName = '',
 }: ITextarea) {
   const [internalValue, setInternalValue] = useState('');
   const value = externalValue !== undefined ? externalValue : internalValue;
@@ -62,9 +65,11 @@ export function Textarea({
 
   const errorMessage = externalErrorMessage || internalErrorMessage;
 
-  const textareaClassName = `${styles.textarea} ${
+  const textareaClassNames = `${styles.textarea} ${
     disabled ? styles.textareaDisabled : ''
-  } ${errorMessage ? styles.textareaError : ''}`;
+  } ${readOnly ? styles.textareaReadOnly : ''} ${
+    errorMessage ? styles.textareaError : ''
+  } ${textareaClassName}`.trim();
 
   const handleBlur = () => {
     if (required) {
@@ -77,12 +82,14 @@ export function Textarea({
       <textarea
         ref={textareaRef}
         id={textareaId}
-        className={textareaClassName}
+        className={textareaClassNames}
         placeholder={placeholder}
         value={value}
         onChange={handleChange}
         onBlur={handleBlur}
         disabled={disabled}
+        readOnly={readOnly}
+        rows={rows}
         aria-label={title || placeholder}
         aria-required={required}
         aria-invalid={errorMessage ? 'true' : 'false'}
