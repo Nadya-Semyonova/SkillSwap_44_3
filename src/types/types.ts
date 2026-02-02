@@ -71,6 +71,7 @@ export interface IInput {
 }
 
 export interface IEditUser {
+  avatar: string;
   email: string;
   name: string;
   dateOfBirth: string;

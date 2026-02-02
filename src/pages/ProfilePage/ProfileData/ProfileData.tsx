@@ -12,7 +12,6 @@ import { useProfileData } from '@/pages/ProfilePage/ProfileData/libs/useProfileD
 
 function ProfileData() {
   const {
-    user,
     email,
     setEmail,
     name,
@@ -37,6 +36,8 @@ function ProfileData() {
     setNameEditable,
     aboutEditable,
     setAboutEditable,
+    avatarChange,
+    avatar,
   } = useProfileData();
 
   return (
@@ -168,17 +169,15 @@ function ProfileData() {
         />
       </form>
       <div className={styles.avatar}>
-        <img
-          src={user?.avatar || userPhoto}
-          alt={profileText.userAvatarAlt}
-          className={styles.userPhoto}
-        />
+        <img src={avatar} alt={profileText.userAvatarAlt} className={styles.userPhoto} />
         <div className={styles.editPhotoControl}>
           <ButtonDefault
             name=""
             type="button"
-            styleButton={styles.editPhotoButton}
-            handleClick={() => {}}
+            styleButton={styles.editPhotoButton || userPhoto}
+            handleClick={() => {
+              avatarChange();
+            }}
           >
             <GaleryEdit />
           </ButtonDefault>
