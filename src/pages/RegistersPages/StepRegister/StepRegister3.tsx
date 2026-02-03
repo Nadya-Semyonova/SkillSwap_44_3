@@ -27,7 +27,19 @@ function StepRegister3({
   onDescriptionChange,
 
   setPhotos,
+  errors,
 }: StepRegister3Props) {
+  // Проверка только для кнопки (без проверки фото)
+  const isFormValid =
+    skillName.trim() &&
+    category &&
+    subcategory &&
+    description.trim() &&
+    !errors?.skillName &&
+    !errors?.category &&
+    !errors?.subcategory &&
+    !errors?.description;
+
   return (
     <div className={styles.content}>
       <div className={styles.containerForm}>
@@ -97,11 +109,12 @@ function StepRegister3({
               handleClick={onBack}
             />
 
+            {/* Только кнопку "Продолжить" меняем */}
             <ButtonDefault
               type="button"
               name="Продолжить"
-              styleButton={`${styles.button} ${styles.buttonContinue} ${styles.buttonStep3}`}
-              handleClick={onNext}
+              styleButton={`${styles.button} ${styles.buttonContinue} ${styles.buttonStep3} ${!isFormValid ? styles.buttonDisabled : ''}`}
+              handleClick={isFormValid ? onNext : () => {}}
             />
           </div>
         </div>

@@ -36,7 +36,23 @@ function StepRegister2({
 
   avatar,
   setAvatar,
+  errors,
 }: StepRegister2Props) {
+  // Проверка только для кнопки
+  const isFormValid =
+    name.trim() &&
+    dateOfBirth &&
+    gender &&
+    city &&
+    category &&
+    subcategory &&
+    !errors?.name &&
+    !errors?.dateOfBirth &&
+    !errors?.gender &&
+    !errors?.city &&
+    !errors?.category &&
+    !errors?.subcategory;
+
   return (
     <div className={styles.content}>
       <div className={styles.containerForm}>
@@ -60,6 +76,7 @@ function StepRegister2({
             </button>
           </div>
 
+          {/* Имя - оставляем как было */}
           <Input
             className={styles.inputField}
             title="Имя"
@@ -69,8 +86,10 @@ function StepRegister2({
           />
 
           <div className={styles.rowFields}>
+            {/* Дата рождения - оставляем как было */}
             <UserSelector bithDay={dateOfBirth} setBithDay={onDateOfBirthChange} />
 
+            {/* Пол - оставляем как было */}
             <ToggledSelect
               className={styles.toggledSelectField}
               title="Пол"
@@ -89,6 +108,7 @@ function StepRegister2({
             </ToggledSelect>
           </div>
 
+          {/* Город - оставляем как было */}
           <ToggledSelect
             className={styles.toggledSelectField}
             title="Город"
@@ -102,6 +122,7 @@ function StepRegister2({
             ))}
           </ToggledSelect>
 
+          {/* Категория - оставляем как было */}
           <ToggledSelect
             className={styles.toggledSelectField}
             title="Категория навыка, которому хотите научиться"
@@ -115,6 +136,7 @@ function StepRegister2({
             ))}
           </ToggledSelect>
 
+          {/* Подкатегория - оставляем как было */}
           <ToggledSelect
             className={styles.toggledSelectField}
             title="Подкатегория навыка, которому хотите научиться"
@@ -137,12 +159,13 @@ function StepRegister2({
               handleClick={onBack}
             />
 
+            {/* Только кнопка "Продолжить" меняем */}
             <ButtonDefault
               type="button"
               name="Продолжить"
               variant="continue"
-              styleButton={`${styles.button} ${styles.buttonContinue}`}
-              handleClick={onNext}
+              styleButton={`${styles.button} ${styles.buttonContinue} ${!isFormValid ? styles.buttonDisabled : ''}`}
+              handleClick={isFormValid ? onNext : () => {}}
             />
           </div>
         </form>
