@@ -327,15 +327,18 @@
 
 .upload {
   width: 100%;
+  min-width: 0;
   box-sizing: border-box;
-  height: 100px;
+  min-height: 100px;
+  max-height: 280px;
   padding: 18px;
   border: 1px dashed var(--color-text-primary);
   border-radius: 12px;
-  display: grid;
-  align-content: center;
-  justify-items: center;
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  overflow-y: auto;
 }
 
 .uploadLink {
@@ -364,6 +367,8 @@
 
 .photosPreview {
   width: 100%;
+  min-width: 0;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -381,6 +386,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .photosPreviewImg {

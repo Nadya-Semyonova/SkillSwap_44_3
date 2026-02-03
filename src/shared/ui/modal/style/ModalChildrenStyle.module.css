@@ -156,7 +156,7 @@
 .previewPhoto {
   width: 100%;
   max-height: 324px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 12px;
 }
 
@@ -171,13 +171,15 @@
   position: relative;
   border-radius: 12px;
   overflow: hidden;
+  height: 324px;
+  background: var(--color-bg-secondary, #f5f5f5);
 }
 
 .previewSliderContainer img {
   display: block;
   height: 324px;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .previewStaticPhotosContainer {
