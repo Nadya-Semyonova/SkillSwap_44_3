@@ -33,10 +33,10 @@ function StepRegister2({
   subcategory,
   subcategories,
   onSubcategoryChange,
-}: StepRegister2Props) {
-  const handleAvatarClick = () => {};
-  const handleAvatarAdd = () => {};
 
+  avatar,
+  setAvatar,
+}: StepRegister2Props) {
   return (
     <div className={styles.content}>
       <div className={styles.containerForm}>
@@ -45,18 +45,17 @@ function StepRegister2({
             <button
               type="button"
               className={styles.avatarIcon}
-              onClick={handleAvatarClick}
               aria-label="Аватар пользователя"
+              onClick={() => setAvatar()}
             >
-              <UserCircle />
+              {avatar ? (
+                <img src={avatar} alt="Аватар" className={styles.avatarUser} />
+              ) : (
+                <UserCircle />
+              )}
             </button>
 
-            <button
-              type="button"
-              className={styles.avatarPlus}
-              onClick={handleAvatarAdd}
-              aria-label="Добавить аватар"
-            >
+            <button type="button" className={styles.avatarPlus} aria-label="Добавить аватар">
               <Add />
             </button>
           </div>

@@ -256,6 +256,13 @@
   overflow: hidden;
 }
 
+.avatarUser {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
 .avatarIcon svg {
   width: 32px;
   height: 32px;
@@ -266,6 +273,11 @@
 
 .avatarIcon svg path {
   stroke-width: 0.5;
+}
+
+.buttonAddPhotos {
+  border: none;
+  background-color: transparent;
 }
 
 .avatarPlus {

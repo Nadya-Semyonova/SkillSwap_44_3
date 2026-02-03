@@ -14,8 +14,7 @@ const sleep = (ms: number) =>
     setTimeout(resolve, ms);
   });
 
-const calculateAge = (date: string) => {
-  console.log(date);
+const calculateAge = () => {
   return 0;
 };
 
@@ -34,7 +33,7 @@ export const saveProfileEdit = createAsyncThunk<IEditUser, void, { rejectValue: 
 
       const updatedUser = updateUserInLocalStorage({
         ...user,
-        age: calculateAge(user.dateOfBirth),
+        age: calculateAge(),
       });
 
       if (!updatedUser) {

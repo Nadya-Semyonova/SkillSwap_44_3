@@ -32,6 +32,9 @@ export interface StepRegister2Props {
   subcategory: string;
   subcategories: string[];
   onSubcategoryChange: (value: string) => void;
+
+  avatar: string;
+  setAvatar: () => void;
 }
 
 export interface StepRegister3Props {
@@ -51,4 +54,6 @@ export interface StepRegister3Props {
 
   description: string;
   onDescriptionChange: (value: string) => void;
+
+  setPhotos: () => void;
 }
