@@ -11,12 +11,13 @@ import AppRoute from './AppRoute';
 
 export default function App() {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getUsersData());
     dispatch(getCitiesData());
     dispatch(getSkillsData());
     dispatch(loadUserFromStorage());
-  }, [dispatch]); // Иницилизация приложения
+  }, [dispatch]);
 
   return (
     <div className={styles.app}>

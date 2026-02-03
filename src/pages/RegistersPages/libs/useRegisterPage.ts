@@ -18,6 +18,8 @@ import {
   setLearnSubcategory,
   setSkillOff,
   registerUser,
+  setAvatar,
+  setPhotos,
 } from '@/store/slices/registerUserSlice.ts/registerUserSlice';
 
 import { getCitiesData, getSkillsData } from '@/store/slices/userDataSlice/userDataSlice';
@@ -117,19 +119,19 @@ export function useRegisterPage() {
 
   const handleSaveProfile = useCallback(async () => {
     try {
-      const result = await dispatch(registerUser()).unwrap();
+      await dispatch(registerUser()).unwrap();
       setIsPreviewModalOpen(false);
       setIsSuccessModalOpen(true);
-      console.log('Профиль сохранен с ID:', result.id);
+      return { success: true };
     } catch (error) {
-      console.error('Ошибка сохранения профиля:', error);
+      return { success: false, error };
     }
   }, [dispatch]);
 
   const handleSuccessConfirm = useCallback(() => {
     setIsSuccessModalOpen(false);
-    // Редирект на страницу профиля
     navigate('/profile');
+    window.location.reload();
   }, [navigate]);
 
   const previewData = useMemo(() => {
@@ -150,6 +152,49 @@ export function useRegisterPage() {
 
     return userData;
   }, [registration, buildSkillOff]);
+
+  const handleClickImage = () => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+
+    input.onchange = (event: Event) => {
+      const target = event.target as HTMLInputElement;
+      const file = target.files?.[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const dataUrl = e.target?.result as string;
+        dispatch(setAvatar(dataUrl));
+      };
+      reader.readAsDataURL(file);
+    };
+
+    input.click();
+  };
+
+  const handleClickPhotos = () => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.multiple = true;
+
+    input.onchange = (event: Event) => {
+      const { files } = event.target as HTMLInputElement;
+      if (!files) return;
+
+      Array.from(files).forEach((file) => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          dispatch(setPhotos([e.target?.result as string]));
+        };
+        reader.readAsDataURL(file);
+      });
+    };
+
+    input.click();
+  };
 
   const step1Props: StepRegister1Props = {
     email: registration.email,
@@ -183,6 +228,9 @@ export function useRegisterPage() {
     subcategory: registration.learn_subcategory,
     subcategories: learnSubcategories,
     onSubcategoryChange: (value) => dispatch(setLearnSubcategory(value)),
+
+    avatar: registration.avatar,
+    setAvatar: handleClickImage,
   };
 
   const step3Props: StepRegister3Props = {
@@ -202,6 +250,8 @@ export function useRegisterPage() {
 
     description: registration.card_people.description,
     onDescriptionChange: handleDescriptionChange,
+
+    setPhotos: handleClickPhotos,
   };
 
   return {

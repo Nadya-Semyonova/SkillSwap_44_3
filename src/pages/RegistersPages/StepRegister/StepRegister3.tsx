@@ -25,6 +25,8 @@ function StepRegister3({
 
   description,
   onDescriptionChange,
+
+  setPhotos,
 }: StepRegister3Props) {
   return (
     <div className={styles.content}>
@@ -77,12 +79,14 @@ function StepRegister3({
           <div className={styles.upload}>
             <p className={styles.uploadText}>Перетащите или выберите изображения навыка</p>
 
-            <a className={styles.uploadLink} href="/">
+            <div className={styles.uploadLink}>
               <span className={styles.uploadLinkIcon} aria-hidden="true">
                 <GaleryAdd />
               </span>
-              <span>Выбрать изображения</span>
-            </a>
+              <button className={styles.buttonAddPhotos} onClick={() => setPhotos()}>
+                Выбрать изображения
+              </button>
+            </div>
           </div>
 
           <div className={styles.actions}>

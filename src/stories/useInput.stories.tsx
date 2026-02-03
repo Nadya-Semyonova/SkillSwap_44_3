@@ -127,11 +127,7 @@ export const UsageDocumentation: Story = {
           borderRadius: '8px',
         }}
       >
-        <Input
-          title="Имя"
-          placeholder="Введите ваше имя"
-          // onChange={(value) => console.log('Имя изменено:', value)}
-        />
+        <Input title="Имя" placeholder="Введите ваше имя" />
       </div>
       <pre
         style={{

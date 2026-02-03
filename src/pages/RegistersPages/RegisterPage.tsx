@@ -56,6 +56,8 @@ export default function RegisterPage() {
           subcategory={step2Props.subcategory}
           subcategories={step2Props.subcategories}
           onSubcategoryChange={step2Props.onSubcategoryChange}
+          avatar={step2Props.avatar}
+          setAvatar={step2Props.setAvatar}
         />
       );
     }
@@ -75,6 +77,7 @@ export default function RegisterPage() {
           onSubcategoryChange={step3Props.onSubcategoryChange}
           description={step3Props.description}
           onDescriptionChange={step3Props.onDescriptionChange}
+          setPhotos={step3Props.setPhotos}
         />
       );
     }

@@ -11,19 +11,6 @@ export default function useSelectedUserPage() {
   const usersData = useSelector((state: RootState) => state.users.users);
   const userSelected = usersData?.find((user) => user.id === Number(id));
 
-  // Обработчики
-  const handleLikeClick = (userId?: number, isLiked?: boolean) => {
-    console.log(`Like clicked for user ${userId}, liked: ${isLiked}`);
-  };
-
-  const handleShareClick = (userId?: number) => {
-    console.log(`Share clicked for user ${userId}`);
-  };
-
-  const handleMoreDetails = (userId?: number) => {
-    console.log(`More details clicked for user ${userId}`);
-  };
-
   const handleExchangeClick = () => {
     if (!currentUser) {
       navigate('/Login');
@@ -35,7 +22,6 @@ export default function useSelectedUserPage() {
   };
 
   const handleModalConfirm = () => {
-    console.log('Модалка подтверждена');
     setIsModalOpen(false);
   };
 
@@ -44,9 +30,6 @@ export default function useSelectedUserPage() {
     usersData,
     isModalOpen,
     isExchangeSent,
-    handleLikeClick,
-    handleShareClick,
-    handleMoreDetails,
     handleExchangeClick,
     handleModalConfirm,
     setIsModalOpen,
