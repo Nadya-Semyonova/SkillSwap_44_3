@@ -1,4 +1,4 @@
-export type RegisterStep = 0 | 1 | 2 | 3;
+export type RegisterStep = 1 | 2 | 3;
 
 export interface StepRegister1Props {
   email: string;
@@ -6,6 +6,7 @@ export interface StepRegister1Props {
   onEmailChange: (value: string) => void;
   onPasswordChange: (value: string) => void;
   onNext: () => void;
+  errors?: { email?: string; password?: string }; // ДОБАВЛЕНО
 }
 
 export interface StepRegister2Props {
@@ -35,6 +36,15 @@ export interface StepRegister2Props {
 
   avatar: string;
   setAvatar: () => void;
+  errors?: {
+    // ДОБАВЛЕНО
+    name?: string;
+    dateOfBirth?: string;
+    gender?: string;
+    city?: string;
+    category?: string;
+    subcategory?: string;
+  };
 }
 
 export interface StepRegister3Props {
@@ -56,4 +66,11 @@ export interface StepRegister3Props {
   onDescriptionChange: (value: string) => void;
 
   setPhotos: () => void;
+  errors?: {
+    // ДОБАВЛЕНО
+    skillName?: string;
+    category?: string;
+    subcategory?: string;
+    description?: string;
+  };
 }

@@ -14,7 +14,11 @@ function StepRegister1({
   onEmailChange,
   onPasswordChange,
   onNext,
+  errors,
 }: StepRegister1Props) {
+  const isButtonDisabled =
+    !email || !password || password.length < 8 || !!errors?.email || !!errors?.password;
+
   return (
     <div className={styles.content}>
       <div className={styles.containerForm}>
@@ -76,12 +80,13 @@ function StepRegister1({
             <p className={styles.passwordText}>Пароль должен содержать не менее 8 знаков</p>
           </div>
 
+          {/* Только кнопку оставляем с disabled */}
           <ButtonDefault
             name="Далее"
             type="button"
-            styleButton={styles.loginButton}
+            styleButton={`${styles.loginButton} ${isButtonDisabled ? styles.buttonDisabled : ''}`}
             aria-label="Продолжить"
-            handleClick={onNext}
+            handleClick={isButtonDisabled ? () => {} : onNext}
           />
         </form>
 

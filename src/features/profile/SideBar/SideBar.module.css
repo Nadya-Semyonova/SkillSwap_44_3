@@ -1,19 +1,19 @@
 .sideBarContainer {
   border-radius: 24px;
   background-color: var(--color-bg-card);
-  display: flex;
-  width: 324px;
-  flex-shrink: 0;
-  justify-content: center;
+  display: grid;
+  padding: 40px;
+
+  /* height: fit-content; */
+  position: sticky;
+  top: 120px;
+  height: 752px;
 }
 
 .sideBar {
   display: flex;
   flex-direction: column;
-  padding-block-start: 40px;
-  width: 244px;
   gap: 8px;
-  justify-items: start;
 }
 
 .item {

@@ -2,14 +2,14 @@
   display: grid;
   gap: 32px;
   align-content: start;
+  position: sticky;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   align-items: start;
-  max-inline-size: 100%;
 }
 
 .empty {

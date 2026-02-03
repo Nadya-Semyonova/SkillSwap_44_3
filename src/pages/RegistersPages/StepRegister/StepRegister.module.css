@@ -235,8 +235,8 @@
 
 .avatarContainer {
   position: relative;
-  width: 72px;
-  height: 72px;
+  width: 60px;
+  height: 62px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -369,4 +369,13 @@
   gap: 18px;
   width: 100%;
   box-sizing: border-box;
+}
+
+.buttonDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.buttonDisabled:hover {
+  opacity: 0.5;
 }
