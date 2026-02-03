@@ -59,7 +59,7 @@ export function useProfileData() {
       setEmailEditable(false);
       setNameEditable(false);
       setAboutEditable(false);
-      // window.location.reload();
+      window.location.reload();
     } catch {
       // Ошибка сохранения уже в state.profileEdit.error
     }
