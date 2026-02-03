@@ -362,6 +362,35 @@
   display: block;
 }
 
+.photosPreview {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.photosPreviewTitle {
+  font-family: var(--font-family-base);
+  font-size: var(--font-body-size);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.photosPreviewGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.photosPreviewImg {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--color-text-secondary);
+}
+
 .actions {
   display: grid;
   grid-template-columns: 1fr 1fr;

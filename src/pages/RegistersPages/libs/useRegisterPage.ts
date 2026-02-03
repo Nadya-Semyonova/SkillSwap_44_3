@@ -229,16 +229,28 @@ export function useRegisterPage() {
     const input = document.createElement('input');
     input.type = 'file';
     input.accept = 'image/*';
+    input.style.position = 'absolute';
+    input.style.left = '-9999px';
+    document.body.appendChild(input);
 
     input.onchange = (event: Event) => {
       const target = event.target as HTMLInputElement;
       const file = target.files?.[0];
-      if (!file) return;
+      if (!file) {
+        input.remove();
+        return;
+      }
 
       const reader = new FileReader();
       reader.onload = (e) => {
         const dataUrl = e.target?.result as string;
         dispatch(setAvatar(dataUrl));
+        input.value = '';
+        input.remove();
+      };
+      reader.onerror = () => {
+        input.value = '';
+        input.remove();
       };
       reader.readAsDataURL(file);
     };
@@ -251,11 +263,17 @@ export function useRegisterPage() {
     input.type = 'file';
     input.accept = 'image/*';
     input.multiple = true;
+    input.style.position = 'absolute';
+    input.style.left = '-9999px';
+    document.body.appendChild(input);
 
     input.onchange = (event: Event) => {
       const target = event.target as HTMLInputElement;
       const files = target.files ? Array.from(target.files) : [];
-      if (files.length === 0) return;
+      if (files.length === 0) {
+        input.remove();
+        return;
+      }
 
       const readFileAsDataUrl = (file: File): Promise<string> =>
         new Promise((resolve, reject) => {
@@ -269,7 +287,13 @@ export function useRegisterPage() {
         .then((dataUrls) => {
           dispatch(setPhotos(dataUrls));
         })
-        .catch(() => {});
+        .catch((error) => {
+          console.error('Ошибка загрузки изображений:', error);
+        })
+        .finally(() => {
+          input.value = '';
+          input.remove();
+        });
     };
 
     input.click();
@@ -421,6 +445,7 @@ export function useRegisterPage() {
     },
 
     setPhotos: handleClickPhotos,
+    photos: registration.card_people.photos ?? [],
     errors: step3Errors,
   };
 

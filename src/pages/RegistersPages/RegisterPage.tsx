@@ -78,6 +78,7 @@ export default function RegisterPage() {
           description={step3Props.description}
           onDescriptionChange={step3Props.onDescriptionChange}
           setPhotos={step3Props.setPhotos}
+          photos={step3Props.photos}
         />
       );
     }

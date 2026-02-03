@@ -78,24 +78,47 @@ function PreviewModal({ userData, onEdit, onSave }: PreviewModalProps) {
           buttons={customButtons}
         >
           {userForCard.card_people.photos && userForCard.card_people.photos.length > 0 ? (
-            <CarouselSlider
-              spaceBetween={0}
-              slidesPerView={1}
-              bgButtons="transparent"
-              sliderId="preview-photos"
-            >
-              <>
-                {userForCard.card_people.photos.map((photo, index) => (
-                  <SwiperSlide key={photo}>
-                    <img
-                      src={photo}
-                      alt={`${userForCard.card_people.skill} - фото ${index + 1}`}
-                      className={styles.previewPhoto}
-                    />
-                  </SwiperSlide>
-                ))}
-              </>
-            </CarouselSlider>
+            <div className={styles.previewPhotoSection}>
+              <div className={styles.previewSliderContainer}>
+                <CarouselSlider
+                  spaceBetween={0}
+                  slidesPerView={1}
+                  bgButtons="transparent"
+                  sliderId="preview-photos"
+                >
+                  {userForCard.card_people.photos.map((photo, index) => (
+                    <SwiperSlide key={photo}>
+                      <img
+                        src={photo}
+                        alt={`${userForCard.card_people.skill} - фото ${index + 1}`}
+                        className={styles.previewPhoto}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </CarouselSlider>
+              </div>
+              {userForCard.card_people.photos.length > 1 && (
+                <div className={styles.previewStaticPhotosContainer}>
+                  {userForCard.card_people.photos.slice(1, 4).map((photo, index) => {
+                    const isLast = index === 2;
+                    const extraCount = userForCard.card_people.photos.length - 4;
+                    const showOverlay = isLast && extraCount > 0;
+                    return (
+                      <div key={photo} className={styles.previewStaticPhotoWrapper}>
+                        <img
+                          src={photo}
+                          alt={`${userForCard.card_people.skill} - фото ${index + 2}`}
+                          className={styles.previewStaticPhoto}
+                        />
+                        {showOverlay && (
+                          <span className={styles.previewPhotoOverlay}>+{extraCount}</span>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
           ) : (
             <div className={styles.photoPlaceholder}>
               <p>Фото навыка</p>
