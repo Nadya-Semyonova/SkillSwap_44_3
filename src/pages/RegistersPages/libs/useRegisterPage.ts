@@ -253,16 +253,23 @@ export function useRegisterPage() {
     input.multiple = true;
 
     input.onchange = (event: Event) => {
-      const { files } = event.target as HTMLInputElement;
-      if (!files) return;
+      const target = event.target as HTMLInputElement;
+      const files = target.files ? Array.from(target.files) : [];
+      if (files.length === 0) return;
 
-      Array.from(files).forEach((file) => {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          dispatch(setPhotos([e.target?.result as string]));
-        };
-        reader.readAsDataURL(file);
-      });
+      const readFileAsDataUrl = (file: File): Promise<string> =>
+        new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = (e) => resolve(e.target?.result as string);
+          reader.onerror = () => reject(reader.error);
+          reader.readAsDataURL(file);
+        });
+
+      Promise.all(files.map(readFileAsDataUrl))
+        .then((dataUrls) => {
+          dispatch(setPhotos(dataUrls));
+        })
+        .catch(() => {});
     };
 
     input.click();

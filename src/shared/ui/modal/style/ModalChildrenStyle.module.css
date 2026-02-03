@@ -134,3 +134,28 @@
 .editButton:active {
   background-color: var(--color-bg-tertiary);
 }
+
+.cardWrapper {
+  width: 100%;
+}
+
+.photoPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  background: var(--color-bg-secondary, #f5f5f5);
+  border-radius: 12px;
+  color: var(--color-text-secondary);
+}
+
+.photoPlaceholder p {
+  margin: 0;
+}
+
+.previewPhoto {
+  width: 100%;
+  max-height: 324px;
+  object-fit: cover;
+  border-radius: 12px;
+}
