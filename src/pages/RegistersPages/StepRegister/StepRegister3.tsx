@@ -27,6 +27,7 @@ function StepRegister3({
   onDescriptionChange,
 
   setPhotos,
+  photos,
   errors,
 }: StepRegister3Props) {
   // Проверка только для кнопки (без проверки фото)
@@ -95,10 +96,25 @@ function StepRegister3({
               <span className={styles.uploadLinkIcon} aria-hidden="true">
                 <GaleryAdd />
               </span>
-              <button className={styles.buttonAddPhotos} onClick={() => setPhotos()}>
+              <button type="button" className={styles.buttonAddPhotos} onClick={() => setPhotos()}>
                 Выбрать изображения
               </button>
             </div>
+
+            {photos.length > 0 && (
+              <div className={styles.photosPreview}>
+                <div className={styles.photosPreviewGrid}>
+                  {photos.map((url) => (
+                    <img
+                      key={url}
+                      src={url}
+                      alt="Фото навыка"
+                      className={styles.photosPreviewImg}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           <div className={styles.actions}>

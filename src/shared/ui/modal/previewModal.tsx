@@ -1,5 +1,7 @@
+import { SwiperSlide } from 'swiper/react';
 import ButtonDefault from '@shared/ui/ButtonDefault';
 import CardPhoto from '@/widgets/CardPhoto';
+import { CarouselSlider } from '@/shared/ui/CarouselSlider';
 import styles from './style/ModalChildrenStyle.module.css';
 import ButtonAllSkills from '../AllButtons/ButtonAllSkills';
 import Edit from '@/shared/assets/images/IconsSvg/Edit';
@@ -18,6 +20,7 @@ interface PreviewModalProps {
       category: string;
       subcategory: string;
       description: string;
+      photos?: string[];
     };
     skill_off: string[];
   };
@@ -41,7 +44,7 @@ function PreviewModal({ userData, onEdit, onSave }: PreviewModalProps) {
     about: userData.about,
     card_people: {
       ...userData.card_people,
-      photos: [],
+      photos: userData.card_people.photos ?? [],
     },
     skill_off: userData.skill_off,
   };
@@ -74,9 +77,53 @@ function PreviewModal({ userData, onEdit, onSave }: PreviewModalProps) {
           onMoreDetails={() => {}}
           buttons={customButtons}
         >
-          <div className={styles.photoPlaceholder}>
-            <p>Фото навыка</p>
-          </div>
+          {userForCard.card_people.photos && userForCard.card_people.photos.length > 0 ? (
+            <div className={styles.previewPhotoSection}>
+              <div className={styles.previewSliderContainer}>
+                <CarouselSlider
+                  spaceBetween={0}
+                  slidesPerView={1}
+                  bgButtons="transparent"
+                  sliderId="preview-photos"
+                >
+                  {userForCard.card_people.photos.map((photo, index) => (
+                    <SwiperSlide key={photo}>
+                      <img
+                        src={photo}
+                        alt={`${userForCard.card_people.skill} - фото ${index + 1}`}
+                        className={styles.previewPhoto}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </CarouselSlider>
+              </div>
+              {userForCard.card_people.photos.length > 1 && (
+                <div className={styles.previewStaticPhotosContainer}>
+                  {userForCard.card_people.photos.slice(1, 4).map((photo, index) => {
+                    const isLast = index === 2;
+                    const extraCount = userForCard.card_people.photos.length - 4;
+                    const showOverlay = isLast && extraCount > 0;
+                    return (
+                      <div key={photo} className={styles.previewStaticPhotoWrapper}>
+                        <img
+                          src={photo}
+                          alt={`${userForCard.card_people.skill} - фото ${index + 2}`}
+                          className={styles.previewStaticPhoto}
+                        />
+                        {showOverlay && (
+                          <span className={styles.previewPhotoOverlay}>+{extraCount}</span>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          ) : (
+            <div className={styles.photoPlaceholder}>
+              <p>Фото навыка</p>
+            </div>
+          )}
         </CardPhoto>
       </div>
     </div>

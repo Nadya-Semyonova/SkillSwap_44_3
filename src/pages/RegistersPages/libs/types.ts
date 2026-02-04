@@ -66,6 +66,7 @@ export interface StepRegister3Props {
   onDescriptionChange: (value: string) => void;
 
   setPhotos: () => void;
+  photos: string[];
   errors?: {
     // ДОБАВЛЕНО
     skillName?: string;

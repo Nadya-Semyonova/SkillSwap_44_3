@@ -25,7 +25,6 @@ function ModalWithOverlay({ isOpen, onClose, children }: ModalWithOverlayProps) 
   return (
     <div
       className={styles.overlay}
-      onClick={onClose}
       role="button"
       tabIndex={-1}
       aria-label="Закрыть модальное окно"
