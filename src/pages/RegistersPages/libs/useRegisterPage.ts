@@ -287,9 +287,9 @@ export function useRegisterPage() {
         .then((dataUrls) => {
           dispatch(setPhotos(dataUrls));
         })
-        .catch((error) => {
-          console.error('Ошибка загрузки изображений:', error);
-        })
+        // .catch((error) => {
+        //   console.error('Ошибка загрузки изображений:', error);
+        // })
         .finally(() => {
           input.value = '';
           input.remove();
