@@ -7,7 +7,6 @@ import RegisterPage from '@pages/RegistersPages/RegisterPage';
 
 import { lazy, Suspense } from 'react';
 import { LAZY } from '@shared/lib/constants/lazyApp';
-import { TestPage } from '@pages/TestPage/TestPage';
 
 const ProfilePage = lazy(() => import('@pages/ProfilePage/ProfilePage'));
 const SelectedUserPage = lazy(() => import('@pages/SelectedUserPage/SelectedUserPage'));
@@ -64,8 +63,6 @@ export default function AppRoute() {
 
         <Route path={ROUTES.LOGIN} element={<LoginPage />} />
         <Route path={ROUTES.REGISTER} element={<RegisterPage />} />
-
-        <Route path={ROUTES.PAGE} element={<TestPage />} />
       </Routes>
     </BrowserRouter>
   );
