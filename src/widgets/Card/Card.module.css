@@ -1,0 +1,141 @@
+.content {
+  width: 320px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: var(--color-bg-card);
+  color: var(--color-text-primary);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.contentInfo {
+  display: grid;
+}
+
+.name {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-h3-size);
+  line-height: var(--font-h3-line-height);
+}
+
+.caption {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-caption-size);
+  line-height: var(--font-caption-line-height);
+}
+
+.skillsSection {
+  padding-bottom: 20px;
+}
+
+.skillTitle {
+  font-family: var(--font-h4-family);
+  font-weight: var(--font-h4-weight);
+  font-size: var(--font-h4-size);
+  line-height: var(--font-h4-line-height);
+  padding-bottom: 10px;
+}
+
+.skillItemsContainer {
+  display: flex;
+  gap: 4px;
+
+  /* здесь */
+  width: 100%;
+}
+
+.likeContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.skillItem {
+  display: inline-block; /* вместо inline-flex */
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-caption-size);
+  line-height: var(--font-caption-line-height);
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+
+  /* Стили для обрезки текста */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 120px;
+  box-sizing: border-box; /* важно для корректного расчета ширины с padding */
+}
+
+.skillItemNumber {
+  display: inline-block; /* вместо inline-flex */
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-caption-size);
+  line-height: var(--font-caption-line-height);
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.detailsButton {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-body-size);
+}
+
+/* Дополнительные стили */
+
+.moreTag {
+  background-color: var(--color-tag-more);
+  cursor: pointer;
+}
+
+/* Текст под аватаркой (скрыт по умолчанию) */
+.aboutText {
+  text-align: start;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-body-size);
+
+  /* здесь */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 24px;
+}
+
+/* Показываем текст под аватаркой только в profile варианте */
+.profile .aboutText {
+  display: block;
+}

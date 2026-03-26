@@ -1,0 +1,419 @@
+.content {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 32px;
+}
+
+.form {
+  background-color: var(--color-bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 12px;
+  padding-inline: 60px;
+  inline-size: 556px;
+  max-block-size: 692px;
+}
+
+.containerForm {
+  display: flex;
+  gap: 24px;
+}
+
+/* Стили для нативных элементов формы */
+.form input {
+  border-radius: 12px;
+  padding: 10px 16px;
+  border-color: var(--color-text-secondary);
+}
+
+.form label {
+  font-family: var(--font-family-base);
+  font-size: var(--font-body-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-body-line-height);
+  letter-spacing: 0.32px; /* 2% от 16px */
+}
+
+/* --- 2.2. Поля ввода --- */
+
+.inputField,
+.textarea,
+.toggledSelectField {
+  inline-size: 100%;
+}
+
+/* --- 2.3. Кнопки --- */
+
+.button {
+  flex: 1;
+  padding: 12px 24px;
+  border: 2px solid var(--color-accent);
+  border-radius: 12px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-h4-size);
+  line-height: 24px;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--color-text-primary);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+}
+
+.buttonsRow {
+  display: flex;
+  gap: 20px;
+  inline-size: 100%;
+  align-self: flex-end;
+}
+
+/* --- 2.4. Онбординг (общие стили) --- */
+
+/* Базовый контейнер для онбординга и превью */
+.onboarding {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  inline-size: 556px;
+  block-size: 692px;
+  background-color: var(--color-bg-card);
+}
+
+/* --- 2.5. Типографика (базовые стили) --- */
+
+/* Базовый стиль для заголовков */
+.onboardingTitle,
+.previewTitle {
+  font-size: var(--font-h2-size);
+  font-weight: var(--font-h2-weight);
+  line-height: var(--font-h2-line-height);
+  color: var(--color-text-primary);
+}
+
+.onboardingTitle {
+  font-family: var(--font-h2-family);
+  line-height: var(--font-h3-line-height);
+  text-align: center;
+  padding-bottom: 12px;
+  white-space: nowrap;
+  letter-spacing: 0.1px;
+}
+
+.previewTitle {
+  font-family: var(--font-family-heading);
+}
+
+/* Базовый стиль для текста */
+.onboardingText,
+.previewText,
+.socialText,
+.uploadText {
+  font-size: var(--font-body-size);
+  font-weight: var(--font-body-weight);
+  font-family: var(--font-body-family);
+  line-height: var(--font-body-line-height);
+  color: var(--color-text-primary);
+}
+
+.onboardingText {
+  text-align: center;
+}
+
+.previewText {
+  max-width: 436px;
+}
+
+.uploadText {
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+/* --- 3.2. Модификаторы кнопок --- */
+
+.buttonStep3 {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Объединенный стиль для кнопок с заливкой */
+.buttonContinue,
+.loginButton {
+  background-color: var(--color-accent);
+  cursor: pointer;
+}
+
+/* --- 3.3. Модификаторы онбординга --- */
+
+.onboardingStep2 {
+  gap: 40px;
+}
+
+.onboardingTextStep1 {
+  padding: 2px 92px 0;
+  letter-spacing: 0.3px;
+}
+
+/* ============================================
+   4. УНИКАЛЬНЫЕ СТИЛИ STEP 1
+   ============================================ */
+
+.formButtonsLogin {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  inline-size: 100%;
+}
+
+.socialButton {
+  max-block-size: 48px;
+  border: 1px solid var(--color-text-secondary);
+  border-radius: 12px;
+  background: transparent;
+  padding-block: 12px;
+  padding-inline: 24px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.formText {
+  text-align: center;
+}
+
+.formInput {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+}
+
+.formInput .inputField input {
+  padding: 8px 20px;
+  letter-spacing: 0.2px;
+}
+
+.eyeButton {
+  position: absolute;
+  right: 20px;
+  top: 78%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--color-text-primary);
+  z-index: 2;
+}
+
+.passwordText {
+  margin-block-start: 4px;
+  font-size: var(--font-caption-size);
+  font-weight: var(--font-caption-weight);
+  font-family: var(--font-caption-family);
+  line-height: var(--font-caption-line-height);
+  color: var(--color-text-primary);
+  letter-spacing: 0.2px;
+}
+
+.avatarContainer {
+  position: relative;
+  width: 60px;
+  height: 62px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.avatarIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.avatarUser {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.avatarIcon svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+  transform: scale(2.5);
+  transform-origin: center;
+}
+
+.avatarIcon svg path {
+  stroke-width: 0.5;
+}
+
+.buttonAddPhotos {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.avatarPlus {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  border: none;
+  transform: translate(50%, 50%);
+  z-index: 1;
+}
+
+.avatarPlus svg path {
+  fill: var(--color-bg-card);
+}
+
+.rowFields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  inline-size: 100%;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconWrapper svg {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
+
+.onboardingContent {
+  padding-left: 60px;
+  padding-right: 60px;
+  align-self: center;
+}
+
+.upload {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  min-height: 100px;
+  max-height: 280px;
+  padding: 18px;
+  border: 1px dashed var(--color-text-primary);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.uploadLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--color-text-link);
+  font-size: var(--font-body-size);
+  line-height: var(--font-body-line-height);
+  font-weight: var(--font-weight-medium);
+}
+
+.uploadLinkIcon {
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+}
+
+.uploadLinkIcon svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.photosPreview {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.photosPreviewTitle {
+  font-family: var(--font-family-base);
+  font-size: var(--font-body-size);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.photosPreviewGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.photosPreviewImg {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--color-text-secondary);
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: stretch;
+  gap: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.buttonDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.buttonDisabled:hover {
+  opacity: 0.5;
+}

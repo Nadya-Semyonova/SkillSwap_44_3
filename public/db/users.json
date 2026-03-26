@@ -1,0 +1,1578 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "liked": 1,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Jameson&backgroundColor=b6e3f4",
+      "name": "Александр",
+      "city": "Москва",
+      "age": 30,
+      "dateOfBirth": "22-03-1995",
+      "gender": "Мужской",
+      "email": "alexander95@email.com",
+      "password": "aB3kL9mNpQ7rS2tU",
+      "createdAt": "2022-06-14",
+      "about": "Привет! Увлекаюсь проектным управлением и всегда рад поделиться опытом — особенно если речь о том, как не сгореть на работе.",
+      "card_people": {
+        "skill": "Проектное управление",
+        "category": "Бизнес и карьера",
+        "subcategory": "Проектное управление",
+        "description": "Работаю в IT-проектах уже 6 лет и прошёл путь от аналитика до руководителя. Научу ставить реалистичные дедлайны, распределять задачи без перегруза команды и использовать методологии вроде Scrum или Kanban так, чтобы они работали, а не мешали. Покажу, как вести документацию, которая действительно помогает, а не лежит мёртвым грузом.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Навыки преподавания",
+        "Маркетинг и реклама",
+        "Предпринимательство",
+        "Резюме и собеседование",
+        "Лидерство"
+      ]
+    },
+    {
+      "id": 2,
+      "liked": 2,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Mackenzie&backgroundColor=b6e3f4",
+      "name": "Анна",
+      "city": "Санкт-Петербург",
+      "age": 28,
+      "dateOfBirth": "05-11-1997",
+      "gender": "Женский",
+      "email": "anna97@email.com",
+      "password": "Xy8vW4cRnM6bZ1qE",
+      "createdAt": "2022-09-03",
+      "about": "Люблю учиться новому, особенно если это можно делать за чаем и в пижаме. Всегда готова пообщаться и обменяться чем-то интересным.",
+      "card_people": {
+        "skill": "Личностное развитие",
+        "category": "Образование и развитие",
+        "subcategory": "Личностное развитие",
+        "description": "Я верю, что рост начинается с маленьких шагов — и сама каждый день пробую что-то новое. Поделюсь практиками осознанности, техниками постановки целей и способами находить мотивацию даже в сложные дни. Помогу разобраться в своих ценностях и начать жить в согласии с ними, а не по чужим ожиданиям.",
+        "photos": [
+          "https://c.pxhere.com/photos/ff/c2/ux_prototyping_design_webdesign_app_mobile_business_interface-723648.jpg!d",
+          "https://c.pxhere.com/photos/08/0a/flower_life_crack_desert_drought_survival_loneliness_one-865929.jpg!d",
+          "https://c.pxhere.com/photos/af/67/startup_business_businessman_notebook_laptop_computer_company_office-914296.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Музыка и звук",
+        "Навыки преподавания",
+        "Скорочтение",
+        "Коучинг"
+      ]
+    },
+    {
+      "id": 3,
+      "liked": 3,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Aidan&backgroundColor=b6e3f4",
+      "name": "Дмитрий",
+      "city": "Новосибирск",
+      "age": 27,
+      "dateOfBirth": "17-08-1998",
+      "gender": "Мужской",
+      "email": "dmitry98@email.com",
+      "password": "Kj5hG2fD9sA7wP3L",
+      "createdAt": "2023-01-28",
+      "about": "Фотографирую всё подряд — от закатов до кофе в кружке. Готов научить основам композиции).",
+      "card_people": {
+        "skill": "Фотография",
+        "category": "Творчество и искусство",
+        "subcategory": "Фотография",
+        "description": "Снимаю больше 5 лет — от уличной фотографии до портретов друзей. Научу видеть свет, выстраивать кадр по правилам (и когда их можно нарушать), работать с композицией и цветом. Покажу, как делать сильные фото даже на смартфон, и поделюсь базовыми приёмами в Lightroom для быстрой и красивой обработки.",
+        "photos": [
+          "https://c.pxhere.com/photos/9c/e6/camera_photography_vintage_photographer_antique-72.jpg!d",
+          "https://c.pxhere.com/photos/e2/2b/track_photographer_railway_person_walk_away-38140.jpg!d",
+          "https://c.pxhere.com/photos/b7/5e/photography_camera_photographer_digital_camera_dslr-99202.jpg!d",
+          "https://c.pxhere.com/photos/65/09/photographer_hand_man_holding_len-32792.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Лидерство",
+        "Арт-терапия",
+        "Музыка и звук",
+        "Видеомонтаж"
+      ]
+    },
+    {
+      "id": 4,
+      "liked": 4,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Jessica&backgroundColor=b6e3f4",
+      "name": "Екатерина",
+      "city": "Екатеринбург",
+      "age": 23,
+      "dateOfBirth": "12-04-2002",
+      "gender": "Женский",
+      "email": "ekaterina02@email.com",
+      "password": "Qw9eR8tY4uI6oP1a",
+      "createdAt": "2022-11-17",
+      "about": "Мне 23, и я только начинаю разбираться в английском. Готова помочь с рисованием или йогой!",
+      "card_people": {
+        "skill": "Рисование и иллюстрация",
+        "category": "Творчество и искусство",
+        "subcategory": "Рисование и иллюстрация",
+        "description": "Рисую с детства и сейчас веду мини-курсы для начинающих. Покажу, как преодолеть страх чистого листа, освоить базовые приёмы акварели и создавать простые, но выразительные зарисовки. Научу видеть формы и тени, работать с композицией и превращать обычные моменты в маленькие произведения искусства.",
+        "photos": [
+          "https://c.pxhere.com/photos/27/31/kids_girl_pencil_drawing_notebook_study_vdvoem_friends-837883.jpg!d",
+          "https://c.pxhere.com/photos/f5/60/pencil_crayon_colored_several_colors_wooden_natural_drawing-893050.jpg!d",
+          "https://c.pxhere.com/photos/d2/8e/charcoal_drawing_charcoal_pencil_portrait_profile_man_face_head_human-558649.jpg!d",
+          "https://c.pxhere.com/photos/f5/2a/hand_hand_drawing_drawing_sketch_design_symbol_drawn_pencil-1379092.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Управление командой",
+        "Фотография",
+        "Креативное письмо"
+      ]
+    },
+    {
+      "id": 5,
+      "liked": 5,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Adrian&backgroundColor=b6e3f4",
+      "name": "Сергей",
+      "city": "Казань",
+      "age": 42,
+      "dateOfBirth": "01-12-1983",
+      "gender": "Мужской",
+      "email": "sergey83@email.com",
+      "password": "Mz3xC7vB2nM9kL4s",
+      "createdAt": "2022-04-22",
+      "about": "Опытный предприниматель, но до сих пор учусь слушать. Могу подсказать, как выстроить личный бренд.",
+      "card_people": {
+        "skill": "Личный бренд",
+        "category": "Бизнес и карьера",
+        "subcategory": "Личный бренд",
+        "description": "За 15 лет в бизнесе я запускал несколько проектов и понял: люди покупают не продукт, а доверие к человеку. Поделюсь, как выстроить узнаваемый образ в соцсетях, говорить на своём языке и привлекать клиентов без агрессивного маркетинга. Помогу определить вашу уникальную ценность и показать её миру — без фальши и шаблонов.",
+        "photos": [
+          "https://c.pxhere.com/photos/b0/2d/student_typing_keyboard_text_woman_startup_business_people-871986.jpg!d",
+          "https://c.pxhere.com/photos/e3/64/notebook_workplace_desk_iphone_library_study_studying_learning-971381.jpg!d",
+          "https://c.pxhere.com/photos/ce/aa/keyboard_coffee_watch_notebook_hand-36717.jpg!d",
+          "https://c.pxhere.com/photos/7a/9e/socialmedia_facebook_twitter_network_instagram_marketing_online-858156.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Уборка и организация",
+        "Лидерство",
+        "Проектное управление"
+      ]
+    },
+    {
+      "id": 6,
+      "liked": 6,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Valentina&backgroundColor=b6e3f4",
+      "name": "Ольга",
+      "city": "Нижний Новгород",
+      "age": 40,
+      "dateOfBirth": "19-07-1985",
+      "gender": "Женский",
+      "email": "olga85@email.com",
+      "password": "Tp6oI1uY5tR8eW2q",
+      "createdAt": "2023-03-09",
+      "about": "Обожаю готовить — от борща до суши. Если хотите научиться - приходите!",
+      "card_people": {
+        "skill": "Приготовление еды",
+        "category": "Дом и уют",
+        "subcategory": "Приготовление еды",
+        "description": "Готовлю с 16 лет и пробовала всё — от домашней выпечки до японской кухни. Научу готовить вкусно, быстро и без стресса: от базовых соусов до праздничных блюд. Поделюсь лайфхаками по планированию меню, хранению продуктов и тому, как удивлять близких даже в будни.",
+        "photos": [
+          "https://c.pxhere.com/photos/ca/d2/olive_oil_salad_dressing_cooking_olive_healthy_vegetarian_food_diet-853081.jpg!d",
+          "https://c.pxhere.com/photos/88/be/woman_kitchen_man_everyday_life_blond_brunette_board_vegetables-1281998.jpg!d",
+          "https://c.pxhere.com/photos/42/30/slimming_cleaning_dish_stew_eating_meal_food_kitchen-1283880.jpg!d",
+          "https://c.pxhere.com/photos/f8/6f/food_eat_waffle_breakfast_gathering-4389.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Предпринимательство",
+        "Домашние финансы",
+        "Уборка и организация"
+      ]
+    },
+    {
+      "id": 7,
+      "liked": 7,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Ryan&backgroundColor=b6e3f4",
+      "name": "Артём",
+      "city": "Челябинск",
+      "age": 25,
+      "dateOfBirth": "29-02-2000",
+      "gender": "Мужской",
+      "email": "artem00@email.com",
+      "password": "Nm4bV9cX3zL7kJ6h",
+      "createdAt": "2022-07-31",
+      "about": "Учу тайм-менеджменту (сам только начал осваивать 😅). А ещё могу показать, как делать классные фото на телефон!",
+      "card_people": {
+        "skill": "Тайм-менеджмент",
+        "category": "Бизнес и карьера",
+        "subcategory": "Тайм-менеджмент",
+        "description": "Я сам недавно вылез из хаоса дедлайнов и теперь делюсь тем, что реально работает. Покажу, как планировать день без выгорания, расставлять приоритеты и использовать метод «помидора» так, чтобы он не надоел через неделю. Научу находить время и на работу, и на отдых — без чувства вины.",
+        "photos": [
+          "https://c.pxhere.com/photos/58/a3/hourglass_clock_time_deadline_hour_rush_hurry_minute-484055.jpg!d",
+          "https://c.pxhere.com/photos/bc/5c/time_clock_movement_motion_time_change_time_travel_minute_hour-551763.jpg!d",
+          "https://c.pxhere.com/photos/11/6b/waiting_appointment_schedule_time_hurry_urgent_timetable_watch-948348.jpg!d",
+          "https://c.pxhere.com/photos/91/bb/clock_time_hour_alarm_clock_alarm-237.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Питание и ЗОЖ",
+        "Управление командой",
+        "Личный бренд",
+        "Предпринимательство",
+        "Продажи и переговоры"
+      ]
+    },
+    {
+      "id": 8,
+      "liked": 8,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Liliana&backgroundColor=b6e3f4",
+      "name": "Татьяна",
+      "city": "Самара",
+      "age": 36,
+      "dateOfBirth": "30-10-1989",
+      "gender": "Женский",
+      "email": "tatiana89@email.com",
+      "password": "Fg7dS2aQ9wE5rT1y",
+      "createdAt": "2022-12-25",
+      "about": "Практикую йогу уже 7 лет и с радостью поделюсь базовыми асанами.",
+      "card_people": {
+        "skill": "Йога и медитация",
+        "category": "Здоровье и лайфстайл",
+        "subcategory": "Йога и медитация",
+        "description": "Занимаюсь хатха-йогой и медитацией с 2017 года и прошла обучение как инструктор. Научу выполнять базовые асаны безопасно, подстроив под ваш уровень гибкости и состояние тела. Поделюсь простыми техниками дыхания и медитации, которые помогут снять тревожность и лучше спать — даже если у вас всего 10 минут в день.",
+        "photos": [
+          "https://c.pxhere.com/photos/a7/36/plank_fitness_muscular_exercising_girl_shape_strong_arms-634799.jpg!d",
+          "https://c.pxhere.com/photos/9a/a1/fitness_yoga_healthy_exercise_yoga_woman_pose_woman_body-634798.jpg!d",
+          "https://c.pxhere.com/photos/77/bc/silhouette_yoga_person_adult_human-23886.jpg!d",
+          "https://c.pxhere.com/photos/20/fc/women_yoga_classes_asana_fitness_instructor_hatha_yoga_professor_posture-826575.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Личный бренд",
+        "Ментальное здоровье",
+        "Осознанность",
+        "Питание и ЗОЖ"
+      ]
+    },
+    {
+      "id": 9,
+      "liked": 9,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Leah&backgroundColor=b6e3f4",
+      "name": "Максим",
+      "city": "Омск",
+      "age": 33,
+      "dateOfBirth": "14-05-1992",
+      "gender": "Мужской",
+      "email": "maksim92@email.com",
+      "password": "Hj8kL3mN6bV4cX9z",
+      "createdAt": "2023-05-18",
+      "about": "Занимаюсь продажами и умею отлично готовить пасту — обмен интересен?",
+      "card_people": {
+        "skill": "Продажи и переговоры",
+        "category": "Бизнес и карьера",
+        "subcategory": "Продажи и переговоры",
+        "description": "Работаю в B2B-продажах более 8 лет и закрыл сотни сделок — от холодных звонков до сложных переговоров с топ-менеджерами. Научу слушать клиента по-настоящему, задавать правильные вопросы и вести диалог так, чтобы решение о покупке пришло само. Поделюсь техниками работы с возражениями и построения долгосрочных отношений.",
+        "photos": [
+          "https://c.pxhere.com/images/19/60/4f2f49bb3104905dcfdee2622452-1442697.jpg!d",
+          "https://c.pxhere.com/images/03/9c/6ffa1ef16717d4a2b0a50f2b8e69-1652040.jpg!d",
+          "https://c.pxhere.com/images/e0/10/dfb33e33d1a965f3b8482620586d-1652044.jpg!d",
+          "https://c.pxhere.com/photos/3a/bc/handshake_hand_give_business_man_giving_offer_cooperation-1187331.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Маркетинг и реклама",
+        "Личный бренд",
+        "Предпринимательство",
+        "Управление командой",
+        "Лидерство"
+      ]
+    },
+    {
+      "id": 10,
+      "liked": 10,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Christian&backgroundColor=b6e3f4",
+      "name": "Наталья",
+      "city": "Ростов-на-Дону",
+      "age": 36,
+      "dateOfBirth": "09-01-1994",
+      "gender": "Женский",
+      "email": "natalya94@email.com",
+      "password": "Uy2iO7pL4kM9nB5v",
+      "createdAt": "2022-08-12",
+      "about": "Работаю в HR и помогу с резюме или подготовкой к собеседованию. А сама хочу научиться ухаживать за домашними растениями — они у меня почему-то чахнут :(",
+      "card_people": {
+        "skill": "Резюме и собеседование",
+        "category": "Бизнес и карьера",
+        "subcategory": "Резюме и собеседование",
+        "description": "Как HR с 10-летним стажем, я просмотрела тысячи резюме и провела сотни собеседований. Помогу составить резюме, которое пройдёт ATS и зацепит рекрутера, и подготовлю к любому формату интервью — от case-задач до поведенческих вопросов. Научу говорить о себе уверенно, но без пафоса, и находить сильные стороны даже в нестандартном опыте.",
+        "photos": [
+          "https://c.pxhere.com/images/43/16/5d20214868c848d4f2108329aef9-1437771.jpg!d",
+          "https://c.pxhere.com/images/9a/0e/807a956089bcb072dcb00005eef4-1578383.jpg!d",
+          "https://c.pxhere.com/photos/c8/8f/handshake_business_hand_agreement_communication_contract_cooperation_happiness-583378.jpg!d",
+          "https://c.pxhere.com/images/82/8a/fc8055a91dee3a352a02fd7e4920-1440163.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Арт-терапия",
+        "Маркетинг и реклама",
+        "Продажи и переговоры",
+        "Управление командой"
+      ]
+    },
+    {
+      "id": 11,
+      "liked": 9,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Sara&backgroundColor=b6e3f4",
+      "name": "Игорь",
+      "city": "Уфа",
+      "age": 38,
+      "dateOfBirth": "03-09-1987",
+      "gender": "Мужской",
+      "email": "igor87@email.com",
+      "password": "Rf5gH1jK8lM3nQ6w",
+      "createdAt": "2023-02-14",
+      "about": "Увлекаюсь видеомонтажом и могу показать базовые фишки в DaVinci.",
+      "card_people": {
+        "skill": "Видеомонтаж",
+        "category": "Творчество и искусство",
+        "subcategory": "Видеомонтаж",
+        "description": "Монтирую видео больше 7 лет — от корпоративных роликов до авторских короткометражек. Научу работать в DaVinci Resolve: от импорта и организации материала до цветокоррекции и экспорта в нужном формате. Покажу, как выстраивать ритм, работать со звуком и делать видео, которое не скучно смотреть до конца.",
+        "photos": [
+          "https://c.pxhere.com/photos/be/13/film_tv_video_camera_photo_camera_news_film_society_cameraman-775996.jpg!d",
+          "https://c.pxhere.com/photos/ee/6c/news_reporting_crew_reporter_television_camera_news_crew_man_media-927151.jpg!d",
+          "https://c.pxhere.com/photos/4a/75/editing_video_computer_video_editing_adobe_digital_production_professional-1052875.jpg!d",
+          "https://c.pxhere.com/photos/8e/93/video_cinematography_film_movie_cinema_camera_entertainment_movie_camera-693703.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Актёрское мастерство",
+        "Декор и DIY",
+        "Арт-терапия"
+      ]
+    },
+    {
+      "id": 12,
+      "liked": 8,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=George&backgroundColor=b6e3f4",
+      "name": "Юлия",
+      "city": "Красноярск",
+      "age": 22,
+      "dateOfBirth": "21-06-2003",
+      "gender": "Женский",
+      "email": "julia03@email.com",
+      "password": "Zx9cV4bN7mK2jH5s",
+      "createdAt": "2022-10-30",
+      "about": "Обожаю рисовать акварелью и делиться этим с новичками!",
+      "card_people": {
+        "skill": "Рисование и иллюстрация",
+        "category": "Творчество и искусство",
+        "subcategory": "Рисование и иллюстрация",
+        "description": "Акварель — мой любимый материал, и я веду онлайн-занятия для начинающих уже 2 года. Научу контролировать воду и пигмент, создавать мягкие градиенты и живые текстуры. Поделюсь набором простых упражнений, которые помогут преодолеть страх ошибки и начать рисовать с удовольствием — даже если вы «не умеете».",
+        "photos": [
+          "https://c.pxhere.com/photos/27/31/kids_girl_pencil_drawing_notebook_study_vdvoem_friends-837883.jpg!d",
+          "https://c.pxhere.com/photos/f5/60/pencil_crayon_colored_several_colors_wooden_natural_drawing-893050.jpg!d",
+          "https://c.pxhere.com/photos/d2/8e/charcoal_drawing_charcoal_pencil_portrait_profile_man_face_head_human-558649.jpg!d",
+          "https://c.pxhere.com/photos/f5/2a/hand_hand_drawing_drawing_sketch_design_symbol_drawn_pencil-1379092.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Продажи и переговоры",
+        "Декор и DIY",
+        "Видеомонтаж"
+      ]
+    },
+    {
+      "id": 13,
+      "liked": 7,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Destiny&backgroundColor=b6e3f4",
+      "name": "Павел",
+      "city": "Воронеж",
+      "age": 41,
+      "dateOfBirth": "11-11-1984",
+      "gender": "Мужской",
+      "email": "pavel84@email.com",
+      "password": "Qa3wS8eD1rF6tY9u",
+      "createdAt": "2023-04-05",
+      "about": "Руковожу командой, но постоянно учусь быть лучше как лидер. Готов обсудить управление проектами — а взамен хочу понять, как работает осознанность.",
+      "card_people": {
+        "skill": "Управление командой",
+        "category": "Бизнес и карьера",
+        "subcategory": "Управление командой",
+        "description": "Управляю командами в IT более 10 лет и прошёл путь от микроменеджмента до доверительного лидерства. Поделюсь, как мотивировать без давления, проводить эффективные встречи и выстраивать обратную связь, которая развивает, а не ранит. Научу создавать среду, где люди хотят расти и брать ответственность.",
+        "photos": [
+          "https://c.pxhere.com/images/75/62/4a4a01028a07fc42b82cb86712d6-1433619.jpg!d",
+          "https://c.pxhere.com/images/4c/dc/b8241ba96f9b05d4fbe13846acb5-1446037.jpg!d",
+          "https://c.pxhere.com/photos/c9/7c/startup_start_up_people_silicon_valley_teamwork_business_team_office-764669.jpg!d",
+          "https://c.pxhere.com/photos/ce/5d/startup_meeting_brainstorming_business_teamwork_team_people_office-764425.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Домашние финансы",
+        "Продажи и переговоры"
+      ]
+    },
+    {
+      "id": 14,
+      "liked": 6,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Eliza&backgroundColor=b6e3f4",
+      "name": "Елена",
+      "city": "Пермь",
+      "age": 34,
+      "dateOfBirth": "27-03-1991",
+      "gender": "Женский",
+      "email": "elena91@email.com",
+      "password": "Lk7jH2gF5dS9aQ4w",
+      "createdAt": "2022-05-21",
+      "about": "Пишу тексты и учу креативному письму.",
+      "card_people": {
+        "skill": "Креативное письмо",
+        "category": "Творчество и искусство",
+        "subcategory": "Креативное письмо",
+        "description": "Пишу рассказы, сценарии и посты уже 12 лет, а последние 4 года веду мастер-классы по креативному письму. Научу генерировать идеи, выстраивать сюжет и создавать живых персонажей. Поделюсь упражнениями, которые разблокируют воображение, и покажу, как писать легко — без внутреннего цензора и страха чистого листа.",
+        "photos": [
+          "https://c.pxhere.com/photos/e3/f3/pencil_sharpener_notebook_paper_education_office_supplies_stationery-697821.jpg!d",
+          "https://c.pxhere.com/photos/bc/db/texture_handwriting_s_tterlin_vintage_antique_font_stationery_nostalgia-629962.jpg!d",
+          "https://c.pxhere.com/photos/ed/91/book_page_bookstore_bookshelf-503957.jpg!d",
+          "https://c.pxhere.com/photos/73/bb/book_book_gift_by_heart_cord_gift_read_heart_give-399102.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Китайский",
+        "Актёрское мастерство"
+      ]
+    },
+    {
+      "id": 15,
+      "liked": 5,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Amaya&backgroundColor=b6e3f4",
+      "name": "Владимир",
+      "city": "Волгоград",
+      "age": 43,
+      "dateOfBirth": "15-07-1982",
+      "gender": "Мужской",
+      "email": "vladimir82@email.com",
+      "password": "Pm6nB9vC3xZ1lK8j",
+      "createdAt": "2023-07-02",
+      "about": "Занимаюсь ремонтом и могу подсказать, как не испортить стены. А вот с питанием — беда. Ищу советы по ЗОЖ!",
+      "card_people": {
+        "skill": "Ремонт",
+        "category": "Дом и уют",
+        "subcategory": "Ремонт",
+        "description": "Делал ремонт в десятках квартир — как профессионально, так и своими руками. Подскажу, как выровнять стены без бригады, выбрать материалы по бюджету и не наделать ошибок на этапе подготовки. Научу основам электрики и сантехники, чтобы вы могли решать мелкие проблемы сами и не переплачивать за простое.",
+        "photos": [
+          "https://c.pxhere.com/photos/9b/ab/electrician_electric_electricity_worker_building_professional_employee_builder-1324058.jpg!d",
+          "https://c.pxhere.com/photos/69/b1/electric_electricity_building_builder_repair_safety_cables_an_array_of_electric-1056726.jpg!d",
+          "https://c.pxhere.com/photos/4c/c0/building_painter_painting_strips_paint_professional_employee_builder-1056724.jpg!d",
+          "https://c.pxhere.com/photos/52/5c/building_glazurkarz_ceramic_tiles_terrakota_tile_tarakota_professional-1324057.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Японский",
+        "Приготовление еды",
+        "Хранение вещей",
+        "Уборка и организация",
+        "Домашние финансы"
+      ]
+    },
+    {
+      "id": 16,
+      "liked": 4,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Aiden&backgroundColor=b6e3f4",
+      "name": "Ирина",
+      "city": "Краснодар",
+      "age": 29,
+      "dateOfBirth": "08-12-1996",
+      "gender": "Женский",
+      "email": "irina96@email.com",
+      "password": "Wq4eR7tY2uI5oP1a",
+      "createdAt": "2022-11-08",
+      "about": "Помогу с подготовкой к экзаменам! А ещё обожаю устраивать уют дома и могу научить хранению вещей.",
+      "card_people": {
+        "skill": "Подготовка к экзаменам",
+        "category": "Иностранные языки",
+        "subcategory": "Подготовка к экзаменам",
+        "description": "Сдала IELTS на 8.0 и помогла более 50 студентам подготовиться к международным экзаменам. Научу стратегиям выполнения каждого задания, работе с академическим текстом и написанию эссе по шаблону, который принимают экзаменаторы. Поделюсь ресурсами для самостоятельной практики и покажу, как побороть страх устной части.",
+        "photos": [
+          "https://c.pxhere.com/photos/ff/da/studying_exams_preparation_knowledge_teenage_male_room_study-858304.jpg!d",
+          "https://c.pxhere.com/photos/a2/8b/books_read_reading_education_school_study_student_literature-756129.jpg!d",
+          "https://c.pxhere.com/photos/af/89/book_textbook_college_learning_highlight_school_education_literature-710892.jpg!d",
+          "https://c.pxhere.com/photos/ae/66/books_student_study_education_university_studying_school_college-1061854.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Предпринимательство",
+        "Корейский",
+        "Японский",
+        "Китайский",
+        "Английский"
+      ]
+    },
+    {
+      "id": 17,
+      "liked": 3,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Ryker&backgroundColor=b6e3f4",
+      "name": "Андрей",
+      "city": "Саратов",
+      "age": 24,
+      "dateOfBirth": "02-04-2001",
+      "gender": "Мужской",
+      "email": "andrey01@email.com",
+      "password": "Nb5vC8xZ1mK4jH7g",
+      "createdAt": "2023-01-15",
+      "about": "Учусь маркетингу и пробую запускать свои мини-проекты. Готов делиться идеями — а сам хочу научиться фотографировать людей.",
+      "card_people": {
+        "skill": "Маркетинг и реклама",
+        "category": "Бизнес и карьера",
+        "subcategory": "Маркетинг и реклама",
+        "description": "Запускал несколько digital-кампаний для стартапов и личных проектов — от таргета до email-маркетинга. Поделюсь проверенными фреймворками для анализа аудитории, создания контента и построения воронки. Научу тестировать гипотезы быстро и дёшево, чтобы не тратить бюджет впустую.",
+        "photos": [
+          "https://c.pxhere.com/photos/c3/b0/times_square_advertising_ad_new_york_city-194.jpg!d",
+          "https://c.pxhere.com/photos/2c/1d/usa_new_york_ny_nyc_new_york_city_city_advertising_posters-992871.jpg!d",
+          "https://c.pxhere.com/photos/9f/77/city_night_illuminated_promotion_advertising_neon_lights_colorful-745571.jpg!d",
+          "https://c.pxhere.com/photos/e6/37/usa_new_york_city_nyc_broadway_time_square_taxi-1124189.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Рисование и иллюстрация",
+        "Резюме и собеседование",
+        "Предпринимательство"
+      ]
+    },
+    {
+      "id": 18,
+      "liked": 2,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Valentina&backgroundColor=b6e3f4",
+      "name": "Светлана",
+      "city": "Тюмень",
+      "age": 37,
+      "dateOfBirth": "14-02-1988",
+      "gender": "Женский",
+      "email": "svetlana88@email.com",
+      "password": "Tf3gH6jK9lM2nQ5w",
+      "createdAt": "2022-09-27",
+      "about": "Провожу арт-терапию и верю, что творчество лечит.",
+      "card_people": {
+        "skill": "Арт-терапия",
+        "category": "Творчество и искусство",
+        "subcategory": "Арт-терапия",
+        "description": "Практикую арт-терапию более 8 лет и веду групповые и индивидуальные сессии. Через рисунок, коллаж или лепку помогаю клиентам выразить то, что сложно сказать словами. Научу простым техникам, которые снижают тревожность, улучшают самопонимание и восстанавливают внутренние ресурсы — даже если вы «не художник».",
+        "photos": [
+          "https://c.pxhere.com/photos/4d/49/hand_showing_index_finger_thumb_sketch_drawing_pencil_drawing_black_and_white-700902.jpg!d",
+          "https://c.pxhere.com/photos/96/e7/ladybug_beetle_children_drawing_lucky_ladybug_drawing_animal_character_development_insect-1252659.jpg!d",
+          "https://c.pxhere.com/photos/4c/e5/window_children_drawing_pattern_many_window_background_colorful_color_child-1134065.jpg!d",
+          "https://c.pxhere.com/photos/63/4f/butterfly_children_drawing_colorful_animal_spring_child_children_painted-979312.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Баланс жизни и работы",
+        "Видеомонтаж",
+        "Рисование и иллюстрация",
+        "Актёрское мастерство",
+        "Креативное письмо"
+      ]
+    },
+    {
+      "id": 19,
+      "liked": 1,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Andrea&backgroundColor=b6e3f4",
+      "name": "Николай",
+      "city": "Тольятти",
+      "age": 32,
+      "dateOfBirth": "25-10-1993",
+      "gender": "Мужской",
+      "email": "nikolay93@email.com",
+      "password": "Yr8tU1iO4pL7kM3v",
+      "createdAt": "2023-06-10",
+      "about": "Занимаюсь коучингом и помогаю находить баланс между работой и жизнью.",
+      "card_people": {
+        "skill": "Коучинг",
+        "category": "Образование и развитие",
+        "subcategory": "Коучинг",
+        "description": "Сертифицированный коуч с опытом более 5 лет. Помогаю людям находить ясность в целях, преодолевать прокрастинацию и выстраивать жизнь, в которой есть место и карьере, и семье, и себе. Использую мощные вопросы и упражнения, которые запускают изменения без давления и мотивационных клише.",
+        "photos": [
+          "https://c.pxhere.com/images/4c/dc/b8241ba96f9b05d4fbe13846acb5-1446037.jpg!d",
+          "https://c.pxhere.com/images/75/62/4a4a01028a07fc42b82cb86712d6-1433619.jpg!d",
+          "https://c.pxhere.com/photos/c9/7c/startup_start_up_people_silicon_valley_teamwork_business_team_office-764669.jpg!d",
+          "https://c.pxhere.com/photos/ce/5d/startup_meeting_brainstorming_business_teamwork_team_people_office-764425.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Домашние финансы",
+        "Баланс жизни и работы"
+      ]
+    },
+    {
+      "id": 20,
+      "liked": 2,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Sophia&backgroundColor=b6e3f4",
+      "name": "Марина",
+      "city": "Ижевск",
+      "age": 21,
+      "dateOfBirth": "30-08-2004",
+      "gender": "Женский",
+      "email": "marina04@email.com",
+      "password": "Ds6fG9hJ2kL5zX8c",
+      "createdAt": "2022-12-03",
+      "about": "Учусь на дизайнере и обожаю DIY-проекты. Могу научить делать декор из ничего — а сама хочу разобраться в английском для творческих профессий.",
+      "card_people": {
+        "skill": "Декор и DIY",
+        "category": "Творчество и искусство",
+        "subcategory": "Декор и DIY",
+        "description": "Создаю интерьерный декор из подручных материалов — от старых банок до обрезков ткани. Покажу, как превратить хлам в стильные вещи: рамки, вазы, светильники и органайзеры. Поделюсь идеями для бюджетного обновления интерьера и научу видеть потенциал в самых неожиданных предметах.",
+        "photos": [
+          "https://c.pxhere.com/photos/61/6c/decor_interior_wood_lamp_frame-111204.jpg!d",
+          "https://c.pxhere.com/photos/04/06/home_interior_room_house_furniture_design_decor_modern-610551.jpg!d",
+          "https://c.pxhere.com/photos/15/fa/house_history_old_furniture_warm_glow_light_historical_room-1191792.jpg!d",
+          "https://c.pxhere.com/images/1f/71/40179c1481d681e615701f624a87-1590901.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Приготовление еды",
+        "Рисование и иллюстрация",
+        "Музыка и звук",
+        "Актёрское мастерство"
+      ]
+    },
+    {
+      "id": 21,
+      "liked": 3,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Jade&backgroundColor=b6e3f4",
+      "name": "Роман",
+      "city": "Москва",
+      "age": 39,
+      "dateOfBirth": "18-01-1986",
+      "gender": "Мужской",
+      "email": "roman86@email.com",
+      "password": "Aq2wE5rT8yU1iO4p",
+      "createdAt": "2023-03-24",
+      "about": "Организую пространство — дома и в голове. Могу подсказать по хранению вещей, а сам хочу научиться готовить как шеф-повар!",
+      "card_people": {
+        "skill": "Хранение вещей",
+        "category": "Дом и уют",
+        "subcategory": "Хранение вещей",
+        "description": "Помогаю людям наводить порядок уже 6 лет — от гардеробов до гаражей. Научу систематизировать вещи так, чтобы всё было под рукой, но не мешало жить. Поделюсь принципами минимализма, подбором контейнеров и лайфхаками для малогабаритных квартир. После наших занятий вы перестанете терять ключи и искать носки!",
+        "photos": [
+          "https://c.pxhere.com/photos/5a/06/store_shop_light_shelf_hanger-111226.jpg!d",
+          "https://c.pxhere.com/photos/8b/ec/shirts_exhibition_shop_shopping_shelf_buy_business_clothing-940715.jpg!d",
+          "https://c.pxhere.com/photos/ef/0b/shirts_hangers_exhibition_shop_shopping_shelf_buy_business-940712.jpg!d",
+          "https://c.pxhere.com/photos/5e/3f/shop_clothes_clothing_shopping_mall_shopping_kielce_crown_poland-862477.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Видеомонтаж",
+        "Приготовление еды",
+        "Уборка и организация",
+        "Ремонт",
+        "Домашние финансы"
+      ]
+    },
+    {
+      "id": 22,
+      "liked": 4,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Nolan&backgroundColor=b6e3f4",
+      "name": "Дарья",
+      "city": "Санкт-Петербург",
+      "age": 26,
+      "dateOfBirth": "07-05-1999",
+      "gender": "Женский",
+      "email": "daria99@email.com",
+      "password": "Mj7kL3hG6fD9sA2q",
+      "createdAt": "2022-07-19",
+      "about": "Пишу музыку и играю на гитаре. Готова поделиться основами — а сама хочу научиться медитировать и лучше спать.",
+      "card_people": {
+        "skill": "Музыка и звук",
+        "category": "Творчество и искусство",
+        "subcategory": "Музыка и звук",
+        "description": "Пишу песни и играю на гитаре больше 10 лет, записывала мини-альбомы дома. Научу играть первые аккорды, подбирать мелодии и записывать демо на смартфон. Поделюсь основами гармонии и ритма, чтобы вы могли не просто повторять, а создавать свою музыку — даже без нотной грамоты.",
+        "photos": [
+          "https://c.pxhere.com/photos/cf/ac/microphone_boy_studio_screaming_yelling_sing_singing_black_and_white-595225.jpg!d",
+          "https://c.pxhere.com/photos/ae/db/music_concert_singer_band_guitar-314.jpg!d",
+          "https://c.pxhere.com/photos/c4/78/guitar_classical_guitar_acoustic_guitar_electric_guitar_musician_band_recording_studio_sound-732161.jpg!d",
+          "https://c.pxhere.com/photos/95/15/guitar_music_instrumental_melodic_musical_instrument_sound_rock-727442.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Рисование и иллюстрация",
+        "Креативное письмо"
+      ]
+    },
+    {
+      "id": 23,
+      "liked": 5,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Brooklynn&backgroundColor=b6e3f4",
+      "name": "Константин",
+      "city": "Новосибирск",
+      "age": 20,
+      "dateOfBirth": "13-09-2005",
+      "gender": "Мужской",
+      "email": "konstantin05@email.com",
+      "password": "Xn5bV8cM1zL4kJ7h",
+      "createdAt": "2023-02-27",
+      "about": "Учусь программированию, но обожаю фотографировать. Могу показать базовые приёмы — а сам хочу научиться скорочтению для учёбы.",
+      "card_people": {
+        "skill": "Фотография",
+        "category": "Творчество и искусство",
+        "subcategory": "Фотография",
+        "description": "Фотографирую с телефона и зеркалки, участвовал в студенческих выставках. Покажу, как ловить интересный свет, работать с перспективой и делать кадры, которые хочется сохранить. Научу базовой обработке в бесплатных приложениях и поделюсь идеями для фотопроектов, которые развивают взгляд.",
+        "photos": [
+          "https://c.pxhere.com/photos/9c/e6/camera_photography_vintage_photographer_antique-72.jpg!d",
+          "https://c.pxhere.com/photos/e2/2b/track_photographer_railway_person_walk_away-38140.jpg!d",
+          "https://c.pxhere.com/photos/b7/5e/photography_camera_photographer_digital_camera_dslr-99202.jpg!d",
+          "https://c.pxhere.com/photos/65/09/photographer_hand_man_holding_len-32792.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Маркетинг и реклама",
+        "Видеомонтаж",
+        "Арт-терапия",
+        "Креативное письмо",
+        "Рисование и иллюстрация"
+      ]
+    },
+    {
+      "id": 24,
+      "liked": 6,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Mackenzie&backgroundColor=b6e3f4",
+      "name": "Алёна",
+      "city": "Екатеринбург",
+      "age": 35,
+      "dateOfBirth": "22-12-1990",
+      "gender": "Женский",
+      "email": "alena90@email.com",
+      "password": "Wr9eT2yU5iO8pL3k",
+      "createdAt": "2022-10-05",
+      "about": "Помогаю с личностным развитием и навыками обучения.",
+      "card_people": {
+        "skill": "Личностное развитие",
+        "category": "Образование и развитие",
+        "subcategory": "Личностное развитие",
+        "description": "Более 8 лет работаю коучем и фасилитатором в сфере развития. Помогаю находить внутренние ресурсы, ставить осознанные цели и двигаться к ним без выгорания. Делюсь практиками рефлексии, техниками работы с прокрастинацией и методами, которые делают обучение глубоким и устойчивым — не ради галочки, а для настоящего роста.",
+        "photos": [
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d",
+          "https://c.pxhere.com/photos/ff/c2/ux_prototyping_design_webdesign_app_mobile_business_interface-723648.jpg!d",
+          "https://c.pxhere.com/photos/08/0a/flower_life_crack_desert_drought_survival_loneliness_one-865929.jpg!d",
+          "https://c.pxhere.com/photos/af/67/startup_business_businessman_notebook_laptop_computer_company_office-914296.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Тайм-менеджмент",
+        "Баланс жизни и работы"
+      ]
+    },
+    {
+      "id": 25,
+      "liked": 7,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Andrea&backgroundColor=b6e3f4",
+      "name": "Виктор",
+      "city": "Казань",
+      "age": 44,
+      "dateOfBirth": "04-06-1981",
+      "gender": "Мужской",
+      "email": "viktor81@email.com",
+      "password": "Kf4gH7jM2nB5vC8x",
+      "createdAt": "2023-04-30",
+      "about": "Предприниматель с 20-летним стажем. Готов делиться опытом — особенно по переговорам.",
+      "card_people": {
+        "skill": "Продажи и переговоры",
+        "category": "Бизнес и карьера",
+        "subcategory": "Продажи и переговоры",
+        "description": "Основал и продал три компании, вёл переговоры с инвесторами и госструктурами. Научу вести переговоры так, чтобы находить win-win даже в конфликте. Поделюсь техниками подготовки, чтения невербалики и управления эмоциями за столом переговоров. Главное — не победить, а договориться.",
+        "photos": [
+          "https://c.pxhere.com/images/19/60/4f2f49bb3104905dcfdee2622452-1442697.jpg!d",
+          "https://c.pxhere.com/images/03/9c/6ffa1ef16717d4a2b0a50f2b8e69-1652040.jpg!d",
+          "https://c.pxhere.com/images/e0/10/dfb33e33d1a965f3b8482620586d-1652044.jpg!d",
+          "https://c.pxhere.com/photos/3a/bc/handshake_hand_give_business_man_giving_offer_cooperation-1187331.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Декор и DIY",
+        "Проектное управление",
+        "Тайм-менеджмент",
+        "Маркетинг и реклама",
+        "Резюме и собеседование"
+      ]
+    },
+    {
+      "id": 26,
+      "liked": 8,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Valentina&backgroundColor=b6e3f4",
+      "name": "Вера",
+      "city": "Нижний Новгород",
+      "age": 19,
+      "dateOfBirth": "19-11-2006",
+      "gender": "Женский",
+      "email": "vera06@email.com",
+      "password": "Lp6oI9uY3tR7eW1q",
+      "createdAt": "2022-08-28",
+      "about": "Учусь актёрскому мастерству и обожаю импровизацию! Готова провести мини-тренинг — а сама хочу научиться уверенно говорить по-английски.",
+      "card_people": {
+        "skill": "Актёрское мастерство",
+        "category": "Творчество и искусство",
+        "subcategory": "Актёрское мастерство",
+        "description": "Обучаюсь в театральной студии и участвую в любительских постановках. Провожу мини-тренинги по импровизации и раскрепощению. Научу чувствовать тело, работать с голосом и выражать эмоции искренне — навыки, которые полезны не только на сцене, но и в презентациях, собеседованиях и личной жизни.",
+        "photos": [
+          "https://c.pxhere.com/photos/5a/c0/ben_turpin_charlie_chaplin_comedian_actor_scene_movie_motion_picture_vintage-925144.jpg!d",
+          "https://c.pxhere.com/images/c5/1c/fc760ea61065e82a10007a9f139e-1588373.jpg!d",
+          "https://c.pxhere.com/photos/d8/6c/cinema_theatre_tv_camera-870677.jpg!d",
+          "https://c.pxhere.com/photos/ac/cf/universal_studios_cinema_movies_theme_park_usa_florida-503347.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Ремонт",
+        "Видеомонтаж",
+        "Фотография",
+        "Декор и DIY"
+      ]
+    },
+    {
+      "id": 27,
+      "liked": 9,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Aiden&backgroundColor=b6e3f4",
+      "name": "Борис",
+      "city": "Челябинск",
+      "age": 45,
+      "dateOfBirth": "28-02-1980",
+      "gender": "Мужской",
+      "email": "boris80@email.com",
+      "password": "Zm3xC6vB9nM2kL5s",
+      "createdAt": "2023-01-03",
+      "about": "Разбираюсь в домашних финансах и могу помочь составить бюджет.",
+      "card_people": {
+        "skill": "Домашние финансы",
+        "category": "Дом и уют",
+        "subcategory": "Домашние финансы",
+        "description": "Управляю личными финансами более 20 лет и помогаю другим с 2018 года. Научу вести бюджет без стресса, распределять доходы по правилу 50/30/20 и создавать финансовую подушку. Поделюсь простыми инструментами учёта и покажу, как избавиться от долгов и начать откладывать — даже при скромном доходе.",
+        "photos": [
+          "https://c.pxhere.com/photos/16/f8/ruble_thousand_rubles_five_thousand_rubles_money_finances_symbol_profit_bank-498310.jpg!d",
+          "https://c.pxhere.com/photos/b8/a8/cat_beautiful_cat_pets_british_cat_cat_looking_housecat_british_cat_sitting-668431.jpg!d",
+          "https://c.pxhere.com/photos/45/8c/calculation_accounting_money_finances_financial_economy_investment_calculator-952358.jpg!d",
+          "https://c.pxhere.com/photos/64/e1/piggy_ruble_penny_kopek_coin_russia_handful_coins-658356.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Приготовление еды",
+        "Хранение вещей",
+        "Ремонт"
+      ]
+    },
+    {
+      "id": 28,
+      "liked": 10,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Sawyer&backgroundColor=b6e3f4",
+      "name": "Полина",
+      "city": "Самара",
+      "age": 28,
+      "dateOfBirth": "03-07-1997",
+      "gender": "Женский",
+      "email": "polina97@email.com",
+      "password": "Qw8eR1tY4uI7oP2a",
+      "createdAt": "2022-05-08",
+      "about": "Занимаюсь уборкой и организацией пространства — превращаю хаос в порядок!",
+      "card_people": {
+        "skill": "Уборка и организация",
+        "category": "Дом и уют",
+        "subcategory": "Уборка и организация",
+        "description": "Профессионально занимаюсь организацией пространства уже 5 лет. Помогу превратить захламлённую комнату в функциональную зону за один день. Поделюсь чек-листами для регулярной уборки, системами сортировки и лайфхаками для поддержания порядка без ежедневного стресса. Порядок — это не про идеал, а про комфорт.",
+        "photos": [
+          "https://c.pxhere.com/photos/5a/06/store_shop_light_shelf_hanger-111226.jpg!d",
+          "https://c.pxhere.com/photos/8b/ec/shirts_exhibition_shop_shopping_shelf_buy_business_clothing-940715.jpg!d",
+          "https://c.pxhere.com/photos/ef/0b/shirts_hangers_exhibition_shop_shopping_shelf_buy_business-940712.jpg!d",
+          "https://c.pxhere.com/photos/5e/3f/shop_clothes_clothing_shopping_mall_shopping_kielce_crown_poland-862477.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Тайм-менеджмент",
+        "Ремонт",
+        "Хранение вещей",
+        "Домашние финансы",
+        "Приготовление еды"
+      ]
+    },
+    {
+      "id": 29,
+      "liked": 9,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Sophia&backgroundColor=b6e3f4",
+      "name": "Георгий",
+      "city": "Омск",
+      "age": 32,
+      "dateOfBirth": "11-03-1994",
+      "gender": "Мужской",
+      "email": "georgy94@email.com",
+      "password": "Hj5kL8mN3bV6cX9z",
+      "createdAt": "2023-07-22",
+      "about": "Помогу с резюме и подготовкой к собеседованию — сам прошёл через десятки! А взамен хочу научиться играть на укулеле.",
+      "card_people": {
+        "skill": "Резюме и собеседование",
+        "category": "Бизнес и карьера",
+        "subcategory": "Резюме и собеседование",
+        "description": "Прошёл более 50 собеседований и получил офферы от компаний уровня Big Tech. Помогу составить резюме, которое проходит автоматические фильтры и цепляет рекрутера. Подготовлю к техническим и поведенческим вопросам, научу рассказывать о своём опыте структурированно и уверенно — без заученных шаблонов.",
+        "photos": [
+          "https://c.pxhere.com/images/82/8a/fc8055a91dee3a352a02fd7e4920-1440163.jpg!d",
+          "https://c.pxhere.com/images/43/16/5d20214868c848d4f2108329aef9-1437771.jpg!d",
+          "https://c.pxhere.com/images/9a/0e/807a956089bcb072dcb00005eef4-1578383.jpg!d",
+          "https://c.pxhere.com/photos/c8/8f/handshake_business_hand_agreement_communication_contract_cooperation_happiness-583378.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Домашние финансы",
+        "Маркетинг и реклама",
+        "Предпринимательство",
+        "Тайм-менеджмент"
+      ]
+    },
+    {
+      "id": 30,
+      "liked": 8,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Wyatt&backgroundColor=b6e3f4",
+      "name": "Ксения",
+      "city": "Ростов-на-Дону",
+      "age": 25,
+      "dateOfBirth": "16-10-2000",
+      "gender": "Женский",
+      "email": "ksenia00@email.com",
+      "password": "Uy7iO2pL5kM8nB4v",
+      "createdAt": "2022-11-22",
+      "about": "Обожаю скорочтение и техники запоминания. Готова поделиться — а сама хочу научиться вести переговоры уверенно и спокойно.",
+      "card_people": {
+        "skill": "Скорочтение",
+        "category": "Образование и развитие",
+        "subcategory": "Скорочтение",
+        "description": "Освоила скорочтение в университете и с тех пор читаю в 3–4 раза быстрее. Научу техникам, которые увеличивают скорость без потери понимания: работа с фиксацией, подавление артикуляции, вертикальное чтение. Поделюсь упражнениями для тренировки и покажу, как применять это на лекциях, в работе и при чтении книг.",
+        "photos": [
+          "https://c.pxhere.com/photos/40/da/knowledge_book_library_glasses_textbook_information_education_literature-674238.jpg!d",
+          "https://c.pxhere.com/photos/9e/60/reading_woman_book_hand_girl-175683.jpg!d",
+          "https://c.pxhere.com/photos/11/41/read_book_girl_study_learn_sofa_leisure_education-923667.jpg!d",
+          "https://c.pxhere.com/photos/1f/af/school_book_know_study_education_read_learn_browse-494733.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Подготовка к экзаменам",
+        "Навыки преподавания",
+        "Баланс жизни и работы"
+      ]
+    },
+    {
+      "id": 31,
+      "liked": 7,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Jade&backgroundColor=b6e3f4",
+      "name": "Степан",
+      "city": "Уфа",
+      "age": 42,
+      "dateOfBirth": "29-08-1983",
+      "gender": "Мужской",
+      "email": "stepan83@email.com",
+      "password": "Rf2gH5jK8lM1nQ6w",
+      "createdAt": "2023-02-09",
+      "about": "Работаю с ментальным здоровьем и помогаю находить ресурсы внутри себя.",
+      "card_people": {
+        "skill": "Ментальное здоровье",
+        "category": "Здоровье и лайфстайл",
+        "subcategory": "Ментальное здоровье",
+        "description": "Практикую психологическую поддержку более 10 лет. Помогаю справляться с тревогой, выгоранием и чувством «я не справляюсь». Делюсь простыми, но эффективными техниками саморегуляции, основанными на КПТ и mindfulness. Научу замечать триггеры, устанавливать границы и заботиться о себе без чувства вины.",
+        "photos": [
+          "https://c.pxhere.com/photos/38/3a/sadness_alone_being_alone_archetype_archetypes_expression_burnout_exhausted-775653.jpg!d",
+          "https://c.pxhere.com/photos/4e/b9/despair_alone_being_alone_archetype_archetypes_expression_burnout_exhausted-1048705.jpg!d",
+          "https://c.pxhere.com/images/b1/d9/5f0e5dbb8fa5b860376e29e81574-1687258.jpg!d",
+          "https://c.pxhere.com/images/38/30/12d5509a55bf391289619ac7359d-1447403.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Баланс жизни и работы",
+        "Осознанность"
+      ]
+    },
+    {
+      "id": 32,
+      "liked": 6,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Jude&backgroundColor=b6e3f4",
+      "name": "Анастасия",
+      "city": "Красноярск",
+      "age": 35,
+      "dateOfBirth": "14-01-1992",
+      "gender": "Женский",
+      "email": "anastasia92@email.com",
+      "password": "Nx9cV3bN6mK9jH4s",
+      "createdAt": "2022-06-29",
+      "about": "Преподаю и помогаю другим учиться эффективнее. А сама мечтаю научиться рисовать — даже простые зарисовки кажутся мне волшебством!",
+      "card_people": {
+        "skill": "Навыки преподавания",
+        "category": "Образование и развитие",
+        "subcategory": "Навыки преподавания",
+        "description": "Преподаю в вузе и онлайн более 8 лет. Помогу выстроить учебный процесс, который вовлекает и даёт результат. Поделюсь методами адаптации материала под разные типы восприятия, техниками обратной связи и способами мотивировать учеников без давления. Научу делать обучение живым — даже по скучной теме.",
+        "photos": [
+          "https://c.pxhere.com/photos/d4/d4/university_lecture_campus_education_people_seminar_study_school-1246944.jpg!d",
+          "https://c.pxhere.com/photos/c0/16/audience_speech_speaker_presentation_business_seminar_meeting_public-489447.jpg!d",
+          "https://c.pxhere.com/photos/16/f6/castle_lawn_great_britain_england_mansion_villa_turrets_architecture-971447.jpg!d",
+          "https://c.pxhere.com/photos/81/c5/library_quiet_education_school_university_technology_online_education_web-686177.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Осознанность",
+        "Баланс жизни и работы"
+      ]
+    },
+    {
+      "id": 33,
+      "liked": 5,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Brooklynn&backgroundColor=b6e3f4",
+      "name": "Лев",
+      "city": "Воронеж",
+      "age": 23,
+      "dateOfBirth": "05-12-2002",
+      "gender": "Мужской",
+      "email": "lev02@email.com",
+      "password": "Qa7wS4eD8rF1tY5u",
+      "createdAt": "2023-05-12",
+      "about": "Учусь китайскому и обожаю японскую культуру. Могу поделиться базовыми фразами — а сам хочу научиться готовить рамен как в Токио!",
+      "card_people": {
+        "skill": "Китайский",
+        "category": "Иностранные языки",
+        "subcategory": "Китайский",
+        "description": "Изучаю китайский язык уже 3 года и прошёл HSK 3. Научу читать иероглифы, правильно произносить тоны и строить простые фразы для путешествий или общения. Поделюсь ресурсами, которые помогут вам не забросить обучение, и покажу, как китайская грамматика проще, чем кажется.",
+        "photos": [
+          "https://c.pxhere.com/photos/06/f9/office_file_paper_chinese_language_writing-1177739.jpg!d",
+          "https://c.pxhere.com/photos/72/08/city_street_urban_china_building-138145.jpg!d",
+          "https://c.pxhere.com/photos/8d/8a/old_man_vietnam_copy_fonts_work_the_translator_of_saigon_ho_chi_minh_city-687560.jpg!d",
+          "https://c.pxhere.com/photos/12/03/child_noodle_high_land_family_pass_north_vietnam_breakfast_emotion_happy-606519.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Ментальное здоровье",
+        "Подготовка к экзаменам"
+      ]
+    },
+    {
+      "id": 34,
+      "liked": 4,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Nolan&backgroundColor=b6e3f4",
+      "name": "Валентина",
+      "city": "Пермь",
+      "age": 40,
+      "dateOfBirth": "27-04-1985",
+      "gender": "Женский",
+      "email": "valentina85@email.com",
+      "password": "Lk2jH5gF8dS3aQ9w",
+      "createdAt": "2022-12-14",
+      "about": "Помогаю с питанием и ЗОЖ — без фанатизма!",
+      "card_people": {
+        "skill": "Питание и ЗОЖ",
+        "category": "Здоровье и лайфстайл",
+        "subcategory": "Питание и ЗОЖ",
+        "description": "Практикую сбалансированное питание уже 10 лет и помогаю другим отказаться от диет. Научу составлять рацион без подсчёта калорий, выбирать полезные продукты в магазине и готовить быстро. Поделюсь подходом, который работает в реальной жизни — с детьми, работой и без идеального холодильника.",
+        "photos": [
+          "https://c.pxhere.com/photos/d8/c0/steamed_cooked_organic_the_freshness_horizontal_food_nature_macro-1216156.jpg!d",
+          "https://c.pxhere.com/photos/09/de/hunger_hungry_eating_cookie_biscuit_cracker_people_snack-946992.jpg!d",
+          "https://c.pxhere.com/photos/70/6b/diet_calorie_counter_weight_loss_health_food_lifestyle_slimming_snack-891844.jpg!d",
+          "https://c.pxhere.com/photos/a8/e4/diet_fat_health_weight_healthy_loss_nutrition_dieting-950856.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Рисование и иллюстрация",
+        "Ментальное здоровье",
+        "Осознанность"
+      ]
+    },
+    {
+      "id": 35,
+      "liked": 3,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Kimberly&backgroundColor=b6e3f4",
+      "name": "Ярослав",
+      "city": "Волгоград",
+      "age": 34,
+      "dateOfBirth": "19-09-1991",
+      "gender": "Мужской",
+      "email": "yaroslav91@email.com",
+      "password": "Pm9nB6vC2xZ5lK1j",
+      "createdAt": "2023-03-17",
+      "about": "Занимаюсь видеомонтажом и могу показать, как сделать ролик цепляющим. А сам хочу научиться говорить по-испански — ради путешествий!",
+      "card_people": {
+        "skill": "Видеомонтаж",
+        "category": "Творчество и искусство",
+        "subcategory": "Видеомонтаж",
+        "description": "Монтирую ролики для YouTube и бизнеса более 6 лет. Научу делать видео, которые удерживают внимание с первой секунды: работа с ритмом, саунд-дизайн, цветокоррекция и storytelling. Покажу, как использовать бесплатные программы и стоки, чтобы результат выглядел профессионально — даже без дорогого оборудования.",
+        "photos": [
+          "https://c.pxhere.com/photos/4a/75/editing_video_computer_video_editing_adobe_digital_production_professional-1052875.jpg!d",
+          "https://c.pxhere.com/photos/be/13/film_tv_video_camera_photo_camera_news_film_society_cameraman-775996.jpg!d",
+          "https://c.pxhere.com/photos/ee/6c/news_reporting_crew_reporter_television_camera_news_crew_man_media-927151.jpg!d",
+          "https://c.pxhere.com/photos/8e/93/video_cinematography_film_movie_cinema_camera_entertainment_movie_camera-693703.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Актёрское мастерство",
+        "Фотография",
+        "Рисование и иллюстрация",
+        "Музыка и звук",
+        "Арт-терапия"
+      ]
+    },
+    {
+      "id": 36,
+      "liked": 2,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Mackenzie&backgroundColor=b6e3f4",
+      "name": "Зоя",
+      "city": "Краснодар",
+      "age": 22,
+      "dateOfBirth": "10-02-2003",
+      "gender": "Женский",
+      "email": "zoya03@email.com",
+      "password": "Wq1eR4tY7uI2oP8a",
+      "createdAt": "2022-10-19",
+      "about": "Обожаю креативное письмо и пишу мини-рассказы. Готова поделиться — а сама хочу научиться уверенно говорить по-английски.",
+      "card_people": {
+        "skill": "Креативное письмо",
+        "category": "Творчество и искусство",
+        "subcategory": "Креативное письмо",
+        "description": "Пишу рассказы и участвую в литературных конкурсах с 16 лет. Веду клуб креативного письма для подростков. Научу генерировать идеи, выстраивать сюжет без клише и писать диалоги, которые звучат живо. Поделюсь упражнениями, которые разблокируют воображение и помогут писать регулярно — даже без вдохновения.",
+        "photos": [
+          "https://c.pxhere.com/photos/ed/91/book_page_bookstore_bookshelf-503957.jpg!d",
+          "https://c.pxhere.com/photos/e3/f3/pencil_sharpener_notebook_paper_education_office_supplies_stationery-697821.jpg!d",
+          "https://c.pxhere.com/photos/bc/db/texture_handwriting_s_tterlin_vintage_antique_font_stationery_nostalgia-629962.jpg!d",
+          "https://c.pxhere.com/photos/73/bb/book_book_gift_by_heart_cord_gift_read_heart_give-399102.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Предпринимательство",
+        "Актёрское мастерство"
+      ]
+    },
+    {
+      "id": 37,
+      "liked": 1,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Liliana&backgroundColor=b6e3f4",
+      "name": "Тимофей",
+      "city": "Саратов",
+      "age": 37,
+      "dateOfBirth": "30-11-1988",
+      "gender": "Мужской",
+      "email": "timofey88@email.com",
+      "password": "Nb8vC5xZ9mK6jH3g",
+      "createdAt": "2023-06-25",
+      "about": "Помогу с тайм-менеджментом и планированием дня.",
+      "card_people": {
+        "skill": "Тайм-менеджмент",
+        "category": "Бизнес и карьера",
+        "subcategory": "Тайм-менеджмент",
+        "description": "Протестировал десятки систем тайм-менеджмента и остановился на гибридном подходе. Помогу найти метод, который подходит именно вам — от Eisenhower Matrix до time-blocking. Научу планировать неделю за 20 минут, минимизировать отвлечения и оставлять время на важное, а не только срочное.",
+        "photos": [
+          "https://c.pxhere.com/photos/11/6b/waiting_appointment_schedule_time_hurry_urgent_timetable_watch-948348.jpg!d",
+          "https://c.pxhere.com/photos/58/a3/hourglass_clock_time_deadline_hour_rush_hurry_minute-484055.jpg!d",
+          "https://c.pxhere.com/photos/bc/5c/time_clock_movement_motion_time_change_time_travel_minute_hour-551763.jpg!d",
+          "https://c.pxhere.com/photos/91/bb/clock_time_hour_alarm_clock_alarm-237.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Йога и медитация",
+        "Предпринимательство",
+        "Лидерство"
+      ]
+    },
+    {
+      "id": 38,
+      "liked": 2,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Jameson&backgroundColor=b6e3f4",
+      "name": "Людмила",
+      "city": "Тюмень",
+      "age": 38,
+      "dateOfBirth": "23-06-1987",
+      "gender": "Женский",
+      "email": "lyudmila87@email.com",
+      "password": "Tf6gH9jK3lM7nQ2w",
+      "createdAt": "2022-04-15",
+      "about": "Провожу занятия по осознанности и помогаю находить внутренний покой. А сама давно хочу научиться готовить вкусно и быстро — семья ждёт!",
+      "card_people": {
+        "skill": "Осознанность",
+        "category": "Здоровье и лайфстайл",
+        "subcategory": "Осознанность",
+        "description": "Практикую mindfulness более 7 лет и веду групповые практики. Научу простым техникам, которые помогают остановить поток мыслей, снизить тревожность и быть здесь и сейчас. Поделюсь упражнениями для повседневной жизни — от осознанного дыхания до mindful eating — без духовности и сложной терминологии.",
+        "photos": [
+          "https://c.pxhere.com/photos/27/31/kids_girl_pencil_drawing_notebook_study_vdvoem_friends-837883.jpg!d",
+          "https://c.pxhere.com/photos/f5/60/pencil_crayon_colored_several_colors_wooden_natural_drawing-893050.jpg!d",
+          "https://c.pxhere.com/photos/d2/8e/charcoal_drawing_charcoal_pencil_portrait_profile_man_face_head_human-558649.jpg!d",
+          "https://c.pxhere.com/photos/f5/2a/hand_hand_drawing_drawing_sketch_design_symbol_drawn_pencil-1379092.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Тайм-менеджмент",
+        "Йога и медитация"
+      ]
+    },
+    {
+      "id": 39,
+      "liked": 3,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Alexander&backgroundColor=b6e3f4",
+      "name": "Фёдор",
+      "city": "Тольятти",
+      "age": 21,
+      "dateOfBirth": "17-05-2004",
+      "gender": "Мужской",
+      "email": "fedor04@email.com",
+      "password": "Yr5tU8iO1pL4kM9v",
+      "createdAt": "2023-01-20",
+      "about": "Учусь актёрскому мастерству и обожаю импровизацию! Готов попрактиковаться в переговорах — а сам хочу научиться увереннее говорить по-английски.",
+      "card_people": {
+        "skill": "Актёрское мастерство",
+        "category": "Творчество и искусство",
+        "subcategory": "Актёрское мастерство",
+        "description": "Обучаюсь в театральной студии и активно участвую в импровизационных спектаклях. Помогу раскрепоститься, научиться импровизировать и выражать эмоции телом и голосом. Эти навыки полезны не только на сцене, но и в публичных выступлениях, переговорах и личных отношениях — ведь уверенность начинается с тела.",
+        "photos": [
+          "https://c.pxhere.com/photos/5a/c0/ben_turpin_charlie_chaplin_comedian_actor_scene_movie_motion_picture_vintage-925144.jpg!d",
+          "https://c.pxhere.com/images/c5/1c/fc760ea61065e82a10007a9f139e-1588373.jpg!d",
+          "https://c.pxhere.com/photos/d8/6c/cinema_theatre_tv_camera-870677.jpg!d",
+          "https://c.pxhere.com/photos/ac/cf/universal_studios_cinema_movies_theme_park_usa_florida-503347.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Лидерство",
+        "Фотография",
+        "Креативное письмо"
+      ]
+    },
+    {
+      "id": 40,
+      "liked": 4,
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Sara&backgroundColor=b6e3f4",
+      "name": "Галина",
+      "city": "Ижевск",
+      "age": 39,
+      "dateOfBirth": "09-10-1986",
+      "gender": "Женский",
+      "email": "galina86@email.com",
+      "password": "Ds3fG6hJ9kL2zX5c",
+      "createdAt": "2022-09-11",
+      "about": "Помогаю с личным брендом и самопрезентацией.",
+      "card_people": {
+        "skill": "Личный бренд",
+        "category": "Бизнес и карьера",
+        "subcategory": "Личный бренд",
+        "description": "Помогаю экспертам и предпринимателям выстраивать личный бренд более 6 лет. Научу формулировать своё УТП, создавать контент, который привлекает целевую аудиторию, и выступать публично без страха. Поделюсь стратегией, как быть узнаваемым и востребованным — без саморекламы и навязчивости.",
+        "photos": [
+          "https://c.pxhere.com/photos/b0/2d/student_typing_keyboard_text_woman_startup_business_people-871986.jpg!d",
+          "https://c.pxhere.com/photos/e3/64/notebook_workplace_desk_iphone_library_study_studying_learning-971381.jpg!d",
+          "https://c.pxhere.com/photos/ce/aa/keyboard_coffee_watch_notebook_hand-36717.jpg!d",
+          "https://c.pxhere.com/photos/7a/9e/socialmedia_facebook_twitter_network_instagram_marketing_online-858156.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Тайм-менеджмент",
+        "Лидерство"
+      ]
+    },
+    {
+      "id": 41,
+      "liked": 9,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Владимир&backgroundColor=b6e3f4",
+      "name": "Владимир",
+      "city": "Казань",
+      "age": 21,
+      "dateOfBirth": "16-12-1981",
+      "gender": "Мужской",
+      "email": "vladimirkuznecov@email.com",
+      "password": "Gvu2DWLnLEuudakc",
+      "createdAt": "2023-06-08",
+      "about": "Помогу вам построить и развивать свой личный бренд в цифровом пространстве.",
+      "card_people": {
+        "skill": "Личный бренд",
+        "category": "Бизнес и карьера",
+        "subcategory": "Личный бренд",
+        "description": "Практикующий эксперт в создании и продвижении личного бренда. Помогу вам выделиться на рынке и привлечь правильную аудиторию через стратегическое позиционирование.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Личностное развитие",
+        "Маркетинг и реклама",
+        "Резюме и собеседование",
+        "Тайм-менеджмент",
+        "Лидерство"
+      ]
+    },
+    {
+      "id": 42,
+      "liked": 7,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Леонид&backgroundColor=b6e3f4",
+      "name": "Леонид",
+      "city": "Смоленск",
+      "age": 43,
+      "dateOfBirth": "13-11-1982",
+      "gender": "Мужской",
+      "email": "leonidd@email.com",
+      "password": "jaXIznnCe4ibUJVm",
+      "createdAt": "2023-08-12",
+      "about": "С удовольствием поделюсь своим опытом в области запуска и развития собственного бизнеса.",
+      "card_people": {
+        "skill": "Предпринимательство",
+        "category": "Бизнес и карьера",
+        "subcategory": "Предпринимательство",
+        "description": "Опытный предприниматель с многолетней практикой в создании и масштабировании бизнеса. Помогу вам разобраться в стратегии, финансировании и развитии своего проекта.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Личностное развитие",
+        "Тайм-менеджмент"
+      ]
+    },
+    {
+      "id": 43,
+      "liked": 9,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Владимир&backgroundColor=b6e3f4",
+      "name": "Владимир",
+      "city": "Рязань",
+      "age": 22,
+      "dateOfBirth": "12-09-1977",
+      "gender": "Мужской",
+      "email": "vladimirvolk@email.com",
+      "password": "Kev5hxKggfitvO9t",
+      "createdAt": "2022-07-01",
+      "about": "Помогу вам найти гармонию между карьерой и личной жизнью, чтобы чувствовать себя счастливым везде.",
+      "card_people": {
+        "skill": "Баланс жизни и работы",
+        "category": "Образование и развитие",
+        "subcategory": "Баланс жизни и работы",
+        "description": "Коуч по гармонизации жизни и карьеры. Помогу вам создать устойчивый режим, избежать выгорания и наслаждаться жизнью во всех её аспектах.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Управление командой",
+        "Личностное развитие",
+        "Скорочтение",
+        "Навыки преподавания",
+        "Коучинг"
+      ]
+    },
+    {
+      "id": 44,
+      "liked": 6,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Кирилл&backgroundColor=b6e3f4",
+      "name": "Кирилл",
+      "city": "Сочи",
+      "age": 39,
+      "dateOfBirth": "18-07-1986",
+      "gender": "Мужской",
+      "email": "kirillpetrov@email.com",
+      "password": "8hU8s3nm1V8qnhZu",
+      "createdAt": "2023-11-26",
+      "about": "Обменяюсь знаниями о том, как построить и успешно развивать свой бизнес с нуля.",
+      "card_people": {
+        "skill": "Предпринимательство",
+        "category": "Бизнес и карьера",
+        "subcategory": "Предпринимательство",
+        "description": "Серьёзный бизнесмен с опытом создания прибыльных проектов. Делюсь практическими советами по стратегии, управлению ресурсами и достижению целей в предпринимательстве.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Уборка и организация",
+        "Проектное управление",
+        "Управление командой",
+        "Резюме и собеседование"
+      ]
+    },
+    {
+      "id": 45,
+      "liked": 4,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Виктория&backgroundColor=b6e3f4",
+      "name": "Виктория",
+      "city": "Рязань",
+      "age": 40,
+      "dateOfBirth": "09-08-1989",
+      "gender": "Женский",
+      "email": "viktoriayivanovа@email.com",
+      "password": "VOg6hUCkWz0Sjai5",
+      "createdAt": "2023-08-05",
+      "about": "Люблю готовить вкусно и просто — научу вас кулинарному искусству без сложностей!",
+      "card_people": {
+        "skill": "Приготовление еды",
+        "category": "Дом и уют",
+        "subcategory": "Приготовление еды",
+        "description": "Опытная кулинар, которая делает приготовление пищи доступным и удовольствием. Делюсь быстрыми рецептами, секретами техник и советами по выбору продуктов.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Йога и медитация",
+        "Ремонт",
+        "Уборка и организация",
+        "Хранение вещей"
+      ]
+    },
+    {
+      "id": 46,
+      "liked": 3,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Денис&backgroundColor=b6e3f4",
+      "name": "Денис",
+      "city": "Сочи",
+      "age": 27,
+      "dateOfBirth": "21-06-1979",
+      "gender": "Мужской",
+      "email": "denissinica@email.com",
+      "password": "eggSTrOEi346jg3r",
+      "createdAt": "2023-12-27",
+      "about": "Преподаю японский язык с увлечением и помогу вам освоить это интересное языковое путешествие.",
+      "card_people": {
+        "skill": "Японский",
+        "category": "Иностранные языки",
+        "subcategory": "Японский",
+        "description": "Преподаватель японского языка с глубоким знанием культуры. Научу вас не только грамматике, но и погружу в мир японского языка через аутентичный материал и живое общение.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Йога и медитация",
+        "Английский",
+        "Корейский",
+        "Подготовка к экзаменам"
+      ]
+    },
+    {
+      "id": 47,
+      "liked": 5,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Александра&backgroundColor=b6e3f4",
+      "name": "Александра",
+      "city": "Москва",
+      "age": 28,
+      "dateOfBirth": "04-06-1986",
+      "gender": "Женский",
+      "email": "aleksandracolosova@email.com",
+      "password": "vgJ4FPFRF6tszkvB",
+      "createdAt": "2022-03-26",
+      "about": "Помогаю людям заботиться о своём психическом здоровье через полезные практики и поддержку.",
+      "card_people": {
+        "skill": "Ментальное здоровье",
+        "category": "Здоровье и лайфстайл",
+        "subcategory": "Ментальное здоровье",
+        "description": "Психолог и консультант по ментальному здоровью. Помогу вам разобраться с эмоциями, стрессом и найти путь к внутреннему благополучию через проверенные методы.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Японский",
+        "Йога и медитация",
+        "Питание и ЗОЖ"
+      ]
+    },
+    {
+      "id": 48,
+      "liked": 1,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Ирина&backgroundColor=b6e3f4",
+      "name": "Елена",
+      "city": "Екатеринбург",
+      "age": 48,
+      "dateOfBirth": "05-08-1982",
+      "gender": "Женский",
+      "email": "elenasmirnova@email.com",
+      "password": "sJXM2TPeCV4CPQay",
+      "createdAt": "2022-10-28",
+      "about": "Обучаю английскому языку на продвинутом уровне, помогу вам говорить свободно и уверенно.",
+      "card_people": {
+        "skill": "Английский",
+        "category": "Иностранные языки",
+        "subcategory": "Английский",
+        "description": "Опытный преподаватель английского с международным опытом. Делюсь не только грамматикой, но и культурой, помогу вам общаться естественно и без барьеров.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Питание и ЗОЖ",
+        "Корейский",
+        "Японский",
+        "Китайский"
+      ]
+    },
+    {
+      "id": 49,
+      "liked": 5,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Сергей&backgroundColor=b6e3f4",
+      "name": "Сергей",
+      "city": "Рязань",
+      "age": 48,
+      "dateOfBirth": "26-02-2001",
+      "gender": "Мужской",
+      "email": "sergeypetrov@email.com",
+      "password": "iXHHr5TIFFtceld9",
+      "createdAt": "2022-01-17",
+      "about": "Увлечён здоровым образом жизни и с удовольствием помогу вам начать путь к лучшему самочувствию.",
+      "card_people": {
+        "skill": "Питание и ЗОЖ",
+        "category": "Здоровье и лайфстайл",
+        "subcategory": "Питание и ЗОЖ",
+        "description": "Энтузиаст здорового образа жизни и правильного питания. Помогу вам построить устойчивые привычки, улучшить самочувствие и найти баланс между удовольствием и здоровьем.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Английский",
+        "Осознанность",
+        "Ментальное здоровье",
+        "Йога и медитация"
+      ]
+    },
+    {
+      "id": 50,
+      "liked": 6,
+      "avatar": "https://api.dicebear.com/9.x/avataaars/svg?seed=Алин&backgroundColor=b6e3f4",
+      "name": "Алина",
+      "city": "Братск",
+      "age": 36,
+      "dateOfBirth": "10-05-1991",
+      "gender": "Женский",
+      "email": "alinasergeeva@email.com",
+      "password": "06EILhEYU04xWgTl",
+      "createdAt": "2022-01-05",
+      "about": "Помогу вам организовать жизнь так, чтобы была энергия и для работы, и для семьи, и для себя.",
+      "card_people": {
+        "skill": "Баланс жизни и работы",
+        "category": "Образование и развитие",
+        "subcategory": "Баланс жизни и работы",
+        "description": "Коуч по жизненному балансу, помогу вам найти правильный режим и приоритеты. Покажу, как работать продуктивно, не теряя при этом качество жизни и время на себя.",
+        "photos": [
+          "https://c.pxhere.com/photos/46/93/white_board_startup_start_up_presentation_board_diagram_present_show-764635.jpg!d",
+          "https://c.pxhere.com/photos/e5/16/code_data_programming_code_computer_programming_information_technology_technology_security_development-693080.jpg!d",
+          "https://c.pxhere.com/photos/53/20/digital_marketing_emarketing_the_positioning_of_the_seo_sem_serp_google_business-450236.jpg!d",
+          "https://c.pxhere.com/photos/84/a1/cactus_eyes_book_pot_reading_education_study_schoolboy-672564.jpg!d"
+        ]
+      },
+      "skill_off": [
+        "Ментальное здоровье",
+        "Навыки преподавания"
+      ]
+    }
+  ]
+}

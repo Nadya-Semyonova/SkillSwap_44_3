@@ -1,0 +1,60 @@
+.app {
+  min-height: 100vh;
+  min-width: 470px;
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: var(--font-body-family);
+  font-size: var(--font-body-size);
+  line-height: var(--font-body-line-height);
+  font-weight: var(--font-body-weight);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-main);
+}
+
+/* Headings */
+
+h1 {
+  font-family: var(--font-h1-family);
+  font-size: var(--font-h1-size);
+  line-height: var(--font-h1-line-height);
+  font-weight: var(--font-h1-weight);
+}
+
+h2 {
+  font-family: var(--font-h2-family);
+  font-size: var(--font-h2-size);
+  line-height: var(--font-h2-line-height);
+  font-weight: var(--font-h2-weight);
+}
+
+h3 {
+  font-family: var(--font-h3-family);
+  font-size: var(--font-h3-size);
+  line-height: var(--font-h3-line-height);
+  font-weight: var(--font-h3-weight);
+}
+
+h4 {
+  font-family: var(--font-h4-family);
+  font-size: var(--font-h4-size);
+  line-height: var(--font-h4-line-height);
+  font-weight: var(--font-h4-weight);
+}
+
+/* Text styles */
+
+.caption {
+  font-family: var(--font-caption-family);
+  font-size: var(--font-caption-size);
+  line-height: var(--font-caption-line-height);
+  font-weight: var(--font-caption-weight);
+  color: var(--color-text-secondary);
+}
+
+a {
+  color: var(--color-text-link);
+}
+
+a:hover {
+  text-decoration: underline;
+}

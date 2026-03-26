@@ -1,0 +1,23 @@
+.wrapper {
+  display: grid;
+  gap: 32px;
+  align-content: start;
+  position: sticky;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.empty {
+  font-family: var(--font-family-base);
+  font-size: var(--font-h3-size);
+  font-weight: var(--font-body-weight);
+  color: var(--color-text-primary);
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}

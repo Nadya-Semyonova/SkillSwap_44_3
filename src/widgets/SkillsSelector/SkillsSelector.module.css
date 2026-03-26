@@ -1,0 +1,85 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1050px;
+  max-height: 500px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 12px;
+  border-width: 1px;
+  background-color: var(--color-bg-card);
+  overflow: auto;
+}
+
+.category {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 20px;
+}
+
+.categoryIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+}
+
+.categoryIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.iconBusiness {
+  background-color: var(--color-tag-business);
+}
+
+.iconArt {
+  background-color: var(--color-tag-art);
+}
+
+.iconLanguages {
+  background-color: var(--color-tag-languages);
+}
+
+.iconEducation {
+  background-color: var(--color-tag-education);
+}
+
+.iconHome {
+  background-color: var(--color-tag-home);
+}
+
+.iconHealth {
+  background-color: var(--color-tag-health);
+}
+
+.categoryContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.skill {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.skill:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.skill.selected {
+  background-color: var(--color-accent);
+}

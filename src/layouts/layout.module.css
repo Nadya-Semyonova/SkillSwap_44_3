@@ -1,0 +1,6 @@
+.content {
+  background-color: var(--color-bg-main);
+  padding: 35px;
+
+  /* min-height: calc(100vh - высота_хедера - высота_футера); */
+}

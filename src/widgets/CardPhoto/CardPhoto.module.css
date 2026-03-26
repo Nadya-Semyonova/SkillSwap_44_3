@@ -1,0 +1,98 @@
+.cardTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.skillExchangeCard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: var(--color-bg-card);
+  border-radius: 12px;
+  padding: 32px 52px 40px;
+  height: min(max(420px, 50vh), 460px);
+}
+
+.actionSection {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.sectionButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.sectionButton svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.sectionButton:hover {
+  transform: scale(1.1);
+}
+
+.sectionButton:active {
+  transform: scale(0.95);
+}
+
+.likeCount {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-caption-size);
+  margin-left: 4px;
+}
+
+.contentSection {
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  gap: 77px;
+}
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.skillTitle {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-h1-size);
+  line-height: var(--font-h1-line-height);
+  letter-spacing: -0.011em;
+  color: var(--color-text-primary);
+}
+
+.category {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-caption-size);
+  line-height: var(--font-caption-line-height);
+  letter-spacing: 0.02em;
+  color: var(--color-text-secondary);
+  padding: 4px 0 20px;
+}
+
+.description {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-h4-size);
+  line-height: var(--font-h4-line-height);
+  letter-spacing: 0.02em;
+  color: var(--color-text-primary);
+  max-height: 200px;
+}

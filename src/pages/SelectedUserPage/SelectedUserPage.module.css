@@ -1,0 +1,96 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* 1. Верхняя часть: две колонки */
+.topSection {
+  display: flex;
+  gap: 30px;
+}
+
+.photoSection {
+  display: flex;
+  gap: 24px;
+}
+
+.sliderContainer {
+  flex: 0 0 75%; /* 3/4 ширины для карусели */
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Фото внутри слайда */
+.sliderContainer img {
+  display: flex;
+  height: 324px;
+  width: 324px;
+}
+
+/* Контейнер для статических фото - вертикальный ряд */
+.staticPhotosContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1; /* Оставшиеся 1/4 ширины */
+  width: 25%; /* 1/4 ширины */
+}
+
+.staticPhoto {
+  width: 100%;
+  height: calc((100% - 48px) / 3); /* Распределяем высоту между 3 фото с учетом отступов */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.fullWidthButtonWrapper {
+  grid-column: 1 / -1; /* Растягивается на все колонки, переопроеделяю стиль дня кнопки */
+  width: 100%;
+}
+
+/* Стили для кнопки */
+.exchangeButton {
+  background-color: var(--color-accent);
+  color: var(--color-text-on-accent);
+  margin-top: 20px;
+}
+
+.exchangeButton:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.exchangeButtonActive {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-accent);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.sectionTitle {
+  margin-bottom: 32px;
+}
+
+.buttonContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Для карусели с похожими пользователями */
+.similarCarouselWrapper {
+  position: relative;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: #8e8e8e99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 110px;
+  z-index: 4;
+}

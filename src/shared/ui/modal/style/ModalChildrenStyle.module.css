@@ -1,0 +1,221 @@
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 62px 60px;
+  gap: 52px;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconWrapper svg {
+  inline-size: 100px;
+  block-size: 100px;
+}
+
+.modalControl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.modalTitle {
+  margin: 0;
+  font-family: var(--font-h2-family);
+  font-size: var(--font-h2-size);
+  font-weight: var(--font-h2-weight);
+  line-height: var(--font-h2-line-height);
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.modalMessage {
+  margin: 0;
+  font-family: var(--font-body-family);
+  font-size: var(--font-body-size);
+  font-weight: var(--font-body-weight);
+  line-height: var(--font-body-line-height);
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.modalButton {
+  cursor: pointer;
+  background: var(--color-accent);
+  margin-top: 32px;
+}
+
+.modalButton:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.modalButton:active {
+  background-color: var(--color-accent-pressed);
+  color: var(--color-bg-card);
+}
+
+/* для превью модал */
+.previewModal {
+  padding-top: 44px;
+  max-inline-size: 1024px;
+}
+
+.previewSubtitle {
+  text-align: center;
+}
+
+.previewSubtitleText {
+  text-align: center;
+}
+
+.customButtonsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding-top: 20px;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-h4-size);
+  border-radius: 12px;
+  color: var(--color-text-primary);
+}
+
+.saveButton,
+.editButton {
+  padding-block: 12px;
+  padding-inline: 24px;
+  border-radius: 12px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-h4-size);
+  line-height: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-regular);
+}
+
+/* Специфичные стили для кнопки Готово */
+.saveButton {
+  background-color: var(--color-accent);
+  border: none;
+}
+
+.saveButton:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.saveButton:active {
+  background-color: var(--color-accent-pressed);
+}
+
+/* Специфичные стили для кнопки Редактировать */
+.editButton {
+  border: 1px solid var(--color-accent);
+  background-color: transparent;
+}
+
+.editButton:hover {
+  background-color: var(--color-bg-secondary);
+}
+
+.editButton:active {
+  background-color: var(--color-bg-tertiary);
+}
+
+.cardWrapper {
+  width: 100%;
+}
+
+.photoPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  background: var(--color-bg-secondary, #f5f5f5);
+  border-radius: 12px;
+  color: var(--color-text-secondary);
+}
+
+.photoPlaceholder p {
+  margin: 0;
+}
+
+.previewPhoto {
+  width: 100%;
+  max-height: 324px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* Макет: одна большая фото + колонка маленьких */
+.previewPhotoSection {
+  display: flex;
+  gap: 24px;
+}
+
+.previewSliderContainer {
+  flex: 0 0 75%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 324px;
+  background: var(--color-bg-secondary, #f5f5f5);
+}
+
+.previewSliderContainer img {
+  display: block;
+  height: 324px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.previewStaticPhotosContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+  width: 25%;
+  height: 324px;
+}
+
+.previewStaticPhotoWrapper {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.previewStaticPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.previewPhotoOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-h4-size);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent);
+}

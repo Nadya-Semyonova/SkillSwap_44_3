@@ -1,0 +1,59 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg-card);
+  padding: 35px 35px 20px;
+  max-inline-size: 1440px;
+  gap: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.modalContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 500px;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-30px) scale(0.95);
+  transition:
+    opacity 0.3s ease-out,
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    visibility 0.3s;
+  margin-top: 88px;
+  margin-left: 36px;
+  pointer-events: none;
+}
+
+.modalContainer.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-shrink: 0;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  justify-content: flex-end;
+}

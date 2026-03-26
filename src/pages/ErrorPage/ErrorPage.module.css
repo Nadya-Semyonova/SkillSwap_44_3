@@ -1,0 +1,74 @@
+.content {
+  min-height: calc(100vh - 105px - 232px - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color-bg-main);
+  padding-top: 40px;
+  gap: 32px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.illustration {
+  width: 460px;
+  height: 304px;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-h2-size);
+  line-height: var(--font-h2-line-height);
+  font-weight: var(--font-h2-weight);
+  color: var(--color-text-primary);
+}
+
+.text {
+  max-width: 420px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-body-size);
+  line-height: var(--font-body-line-height);
+  font-weight: var(--font-body-weight);
+  color: var(--color-text-secondary);
+}
+
+.actions {
+  display: flex;
+  gap: 24px;
+}
+
+.button {
+  font-family: var(--font-family-base);
+  font-size: var(--font-body-size);
+  line-height: var(--font-body-line-height);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+  background-color: transparent;
+  border: 1px solid var(--color-accent);
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 218px;
+  height: 48px;
+}
+
+.buttonActive {
+  background-color: var(--color-accent);
+}
